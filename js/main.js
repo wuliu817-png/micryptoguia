@@ -34,7 +34,7 @@
       { title: 'Inicio', desc: 'Página principal de MiCryptoGuía', url: '#inicio', keywords: 'home inicio' },
       { title: 'Fundamentos Crypto', desc: 'Aprende los fundamentos: Bitcoin, blockchain, Ethereum, smart contracts, seguridad', url: '#fundamentos', keywords: 'bitcoin blockchain ethereum smart contracts seguridad fundamentos básico' },
       { title: 'Guías Paso a Paso', desc: 'Tutoriales para comprar crypto, trading, wallets, DeFi y seguridad', url: '#guias', keywords: 'guias tutoriales comprar trading wallets defi seguridad paso a paso' },
-      { title: 'Comparativa de Exchanges', desc: 'Compara Binance, Coinbase, Kraken, KuCoin y Bit2Me', url: '#exchanges', keywords: 'exchanges binance coinbase kraken kucoin bit2me comparativa comisiones' },
+      { title: 'Comparativa de Exchanges', desc: 'Compara Binance y OKX, los mejores exchanges de criptomonedas', url: '#exchanges', keywords: 'exchanges binance okx comparativa comisiones trading' },
       { title: 'Wallets y Custodia', desc: 'Hot wallets, cold wallets, MetaMask, Trust Wallet, Ledger, Trezor', url: '#wallets', keywords: 'wallets billeteras metamask trust wallet ledger trezor custodia hot cold' },
       { title: 'DeFi y Web3', desc: 'Finanzas descentralizadas, DEXs, staking, NFTs, DAOs, puentes cross-chain', url: '#defi', keywords: 'defi finanzas descentralizadas dex staking nft dao web3 uniswap aave' },
       { title: 'Seguridad Crypto', desc: 'Reglas de seguridad, protección contra estafas, 2FA, phishing', url: '#seguridad', keywords: 'seguridad protección estafas phishing 2fa clave privada frase semilla' },
