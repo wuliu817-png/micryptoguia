@@ -54,6 +54,7 @@
       { title: 'Qué es USDT', desc: 'Guía completa de USDT: qué es, cómo funciona y para qué sirve la stablecoin', url: 'articulos/que-es-usdt.html', keywords: 'usdt stablecoin tether que es como usar comprar' },
       { title: 'Cómo usar Uniswap', desc: 'Guía paso a paso para intercambiar tokens en Uniswap, el DEX más grande', url: 'articulos/como-usar-uniswap.html', keywords: 'uniswap dex intercambiar tokens defi swap amm' },
       { title: 'Hot Wallet vs Cold Wallet', desc: 'Comparativa de wallets: cuál elegir según tu nivel de experiencia y cantidad', url: 'articulos/hot-wallet-vs-cold-wallet.html', keywords: 'hot wallet cold wallet metamask trust ledger trezor billetera' },
+      { title: 'Sobre MiCryptoGuía', desc: 'Conoce al autor y la misión de MiCryptoGuía', url: 'sobre.html', keywords: 'sobre autor contacto misión equipo' },
     ];
 
     articles.forEach(function (a) {
