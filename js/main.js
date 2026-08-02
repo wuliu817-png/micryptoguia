@@ -55,6 +55,17 @@
       { title: 'Cómo usar Uniswap', desc: 'Guía paso a paso para intercambiar tokens en Uniswap, el DEX más grande', url: 'articulos/como-usar-uniswap.html', keywords: 'uniswap dex intercambiar tokens defi swap amm' },
       { title: 'Hot Wallet vs Cold Wallet', desc: 'Comparativa de wallets: cuál elegir según tu nivel de experiencia y cantidad', url: 'articulos/hot-wallet-vs-cold-wallet.html', keywords: 'hot wallet cold wallet metamask trust ledger trezor billetera' },
       { title: 'Sobre MiCryptoGuía', desc: 'Conoce al autor y la misión de MiCryptoGuía', url: 'sobre.html', keywords: 'sobre autor contacto misión equipo' },
+      { title: 'Ethereum y Smart Contracts', desc: 'Qué es Ethereum, cómo funcionan los contratos inteligentes y sus aplicaciones', url: 'articulos/ethereum-smart-contracts.html', keywords: 'ethereum smart contracts contratos inteligentes gas evm' },
+      { title: 'Claves Privadas y Direcciones', desc: 'Entiende las claves privadas, públicas y direcciones crypto', url: 'articulos/claves-privadas-direcciones.html', keywords: 'clave privada clave pública dirección wallet seguridad' },
+      { title: 'Cómo Enviar y Recibir Cripto', desc: 'Guía paso a paso para enviar y recibir criptomonedas sin errores', url: 'articulos/como-enviar-recibir-cripto.html', keywords: 'enviar recibir criptomonedas transferencia red gas fee' },
+      { title: 'Verificación KYC en Exchanges', desc: 'Guía completa del proceso KYC: documentos, tiempos y consejos', url: 'articulos/verificacion-kyc-exchanges.html', keywords: 'kyc verificación identidad exchange registro documentos' },
+      { title: 'Análisis Técnico Básico', desc: 'Aprende a leer gráficos de velas, soporte, resistencia e indicadores', url: 'articulos/analisis-tecnico-basico.html', keywords: 'análisis técnico velas trading rsi soporte resistencia' },
+      { title: 'Yield Farming', desc: 'Guía de yield farming: liquidity pools, impermanent loss y plataformas', url: 'articulos/yield-farming.html', keywords: 'yield farming liquidity pool impermanent loss aave compound' },
+      { title: 'Cartera Crypto Diversificada', desc: 'Cómo crear y gestionar una cartera de criptomonedas diversificada', url: 'articulos/cartera-crypto-diversificada.html', keywords: 'cartera diversificada portfolio dca rebalanceo inversión' },
+      { title: 'Impuestos Criptomonedas España', desc: 'Guía fiscal: cómo declarar criptomonedas en España', url: 'articulos/impuestos-criptomonedas-espana.html', keywords: 'impuestos criptomonedas españa irpf declaración fiscal hacienda' },
+      { title: 'Verificar Smart Contracts', desc: 'Cómo verificar contratos inteligentes en Etherscan y detectar estafas', url: 'articulos/verificar-smart-contracts.html', keywords: 'verificar smart contract etherscan seguridad token estafa' },
+      { title: 'Puentes Cross-Chain', desc: 'Cómo mover fondos entre blockchains usando puentes cross-chain', url: 'articulos/puentes-cross-chain.html', keywords: 'puente cross-chain bridge mover fondos ethereum arbitrum layerzero' },
+      { title: 'Análisis On-Chain con Dune', desc: 'Guía de análisis on-chain usando Dune Analytics para investigar proyectos', url: 'articulos/analisis-on-chain-dune.html', keywords: 'análisis on-chain dune analytics datos blockchain tvl métricas' },
     ];
 
     articles.forEach(function (a) {

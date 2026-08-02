@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre qué es Ethereum, cómo funcionan los smart contracts y por qué es mucho más que una criptomoneda. Guía completa para principiantes en español 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://micryptoguia.com/articulos/ethereum-smart-contracts.html">
+    <meta property="og:title" content="Qué es Ethereum y Smart Contracts | Guía para Principiantes 2026 — MiCryptoGuía">
+    <meta property="og:description" content="Descubre qué es Ethereum, cómo funcionan los smart contracts y por qué es mucho más que una criptomoneda. Guía completa para principiantes en español.">
+    <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Qué es Ethereum y Smart Contracts | Guía para Principiantes 2026 — MiCryptoGuía</title>
+    <style>
+        .article-page{padding:140px 24px 80px;max-width:800px;margin:0 auto}
+        .article-page h1{font-size:2.2rem;font-weight:800;margin-bottom:8px;color:var(--text-primary);line-height:1.2}
+        .article-page .article-meta{color:var(--text-muted);font-size:.85rem;margin-bottom:16px}
+        .speed-read{background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:32px}
+        .speed-read h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-bottom:8px}
+        .speed-read ul{list-style:disc;padding-left:20px;color:var(--text-secondary);font-size:.9rem;line-height:1.6}
+        .toc{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:24px;margin-bottom:36px}
+        .toc h2{font-size:1.1rem;font-weight:700;margin-bottom:12px}
+        .toc ol{padding-left:20px;color:var(--text-secondary);font-size:.9rem;line-height:2}
+        .toc ol li a{color:var(--text-secondary)}.toc ol li a:hover{color:var(--accent)}
+        .article-page h2{font-size:1.4rem;font-weight:700;margin:36px 0 12px;color:var(--text-primary)}
+        .article-page h3{font-size:1.15rem;font-weight:600;margin:24px 0 8px;color:var(--text-primary)}
+        .article-page p{font-size:.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:16px}
+        .article-page ul,.article-page ol{color:var(--text-secondary);font-size:.95rem;line-height:1.8;margin-bottom:16px;padding-left:24px}
+        .article-page a{color:var(--accent);text-decoration:underline}.article-page a:hover{opacity:.8}
+        .highlight-box{background:var(--gradient-card);border:1px solid var(--accent);border-radius:var(--radius-md);padding:16px 20px;margin:20px 0}
+        .highlight-box p{margin:0;font-size:.9rem}
+        .warning-box{background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius-md);padding:16px 20px;margin:20px 0}
+        .warning-box p{margin:0;font-size:.9rem;color:var(--red)}
+        .comparison-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-color)}
+        .comparison-table th{background:var(--bg-surface);padding:12px 16px;text-align:left;font-weight:600;color:var(--text-secondary);font-size:.8rem;text-transform:uppercase}
+        .comparison-table td{padding:12px 16px;border-top:1px solid var(--border-color);color:var(--text-secondary)}
+        .faq-section{margin-top:40px}.faq-item{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:20px 24px;margin-bottom:12px}
+        .faq-item h3{font-size:1rem;font-weight:600;color:var(--accent);margin:0 0 8px 0}
+        .cta-card{margin-top:40px}
+        .internal-links{margin:40px 0;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:28px}
+        .internal-links h2{font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--text-primary)}
+        .internal-links a{display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:.9rem;margin-bottom:8px}
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://micryptoguia.com/articulos/ethereum-smart-contracts.html#article",
+          "headline": "Qué es Ethereum y Smart Contracts | Guía para Principiantes 2026",
+          "description": "Descubre qué es Ethereum, cómo funcionan los smart contracts y por qué es mucho más que una criptomoneda. Guía completa para principiantes en español.",
+          "inLanguage": "es",
+          "datePublished": "2026-08-02",
+          "dateModified": "2026-08-02",
+          "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
+          "publisher": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://micryptoguia.com/articulos/ethereum-smart-contracts.html" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://micryptoguia.com/articulos/ethereum-smart-contracts.html#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "¿Ethereum es una criptomoneda o una plataforma?", "acceptedAnswer": { "@type": "Answer", "text": "Ethereum es ambas cosas. ETH (ether) es la criptomoneda nativa que se usa para pagar comisiones en la red. Pero Ethereum como tal es una plataforma descentralizada que permite ejecutar smart contracts y aplicaciones (dApps). Piensa en Ethereum como un ordenador mundial descentralizado donde ETH es el combustible." } },
+            { "@type": "Question", "name": "¿Qué es un smart contract en palabras simples?", "acceptedAnswer": { "@type": "Answer", "text": "Un smart contract es un programa informático que se ejecuta automáticamente en la blockchain cuando se cumplen ciertas condiciones. La mejor analogía es una máquina expendedora: introduces una moneda, seleccionas un producto y la máquina te lo entrega automáticamente, sin necesidad de un intermediario humano." } },
+            { "@type": "Question", "name": "¿En qué se diferencia Ethereum de Bitcoin?", "acceptedAnswer": { "@type": "Answer", "text": "Bitcoin fue diseñado como dinero digital descentralizado, su función principal es ser reserva de valor y medio de intercambio. Ethereum va más allá: es una plataforma programable donde cualquiera puede crear aplicaciones descentralizadas, tokens, y contratos inteligentes. Bitcoin es como una calculadora potente; Ethereum es como un smartphone con un sistema operativo completo." } },
+            { "@type": "Question", "name": "¿Qué son las gas fees y por qué existen?", "acceptedAnswer": { "@type": "Answer", "text": "Las gas fees (comisiones de gas) son el coste que pagas para que tu transacción o smart contract se ejecute en la red Ethereum. Existen para compensar a los validadores que mantienen la red segura y para evitar el spam. El coste varía según la congestión de la red: a más demanda, más caro. Se pagan en gwei, una fracción diminuta de ETH." } },
+            { "@type": "Question", "name": "¿Es caro usar Ethereum?", "acceptedAnswer": { "@type": "Answer", "text": "Durante momentos de alta congestión, las gas fees en la red principal de Ethereum (mainnet) pueden ser elevadas — entre 5 y 50 dólares por transacción. Sin embargo, existen soluciones de capa 2 (Layer 2) como Arbitrum, Optimism y Base que reducen drásticamente los costes a centavos. Para un principiante, empezar en una L2 es la opción más inteligente." } },
+            { "@type": "Question", "name": "¿Cómo compro ETH por primera vez?", "acceptedAnswer": { "@type": "Answer", "text": "La forma más sencilla es crear una cuenta en un exchange regulado como Binance (código BN522) u OKX (código OK800), completar la verificación KYC, depositar euros por transferencia o tarjeta, y comprar ETH. Una vez comprado, puedes dejarlo en el exchange o transferirlo a una wallet propia como MetaMask para interactuar con dApps." } }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar"><div class="nav-container">
+        <a href="../" class="nav-logo"><span class="logo-icon">₿</span><span>Mi<span class="logo-accent">Crypto</span>Guía</span></a>
+        <ul class="nav-menu"><li><a href="../#inicio" class="nav-link">Inicio</a></li><li><a href="../#fundamentos" class="nav-link">Fundamentos</a></li><li><a href="../#guias" class="nav-link">Guías</a></li><li><a href="../#exchanges" class="nav-link">Exchanges</a></li><li><a href="../#wallets" class="nav-link">Wallets</a></li><li><a href="../#defi" class="nav-link">DeFi</a></li><li><a href="../#seguridad" class="nav-link">Seguridad</a></li><li><a href="../sobre.html" class="nav-link">Sobre</a></li></ul>
+        <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></div></div></nav>
+
+    <main class="article-page">
+
+        <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📖 Fundamentos</span>
+
+        <h1>Qué es Ethereum y Cómo Funcionan los Smart Contracts: Guía para Principiantes</h1>
+        <p class="article-meta">Publicado el 2 de agosto, 2026 &nbsp;|&nbsp; Tiempo de lectura: ~12 min &nbsp;|&nbsp; Por MiCryptoGuía</p>
+
+        <p><strong>Ethereum es una plataforma blockchain descentralizada que permite ejecutar programas informáticos llamados smart contracts (contratos inteligentes) sin necesidad de intermediarios.</strong> A diferencia de Bitcoin, que funciona principalmente como dinero digital, Ethereum es como un ordenador mundial programable: cualquiera puede crear aplicaciones, servicios financieros y organizaciones autónomas sobre su infraestructura. Su criptomoneda nativa, el ether (ETH), es el segundo activo digital más valioso del mundo por capitalización de mercado.</p>
+
+        <p>Si acabas de llegar al mundo crypto, probablemente hayas oído hablar de Bitcoin primero. Pero cuando empieces a explorar, rápidamente descubrirás que gran parte del ecosistema — DeFi, NFTs, DAOs, staking — funciona sobre Ethereum. Entender qué es y cómo operan sus smart contracts es la llave que abre la puerta a todo ese universo.</p>
+
+        <div class="speed-read">
+            <h3>📖 Analogía Rápida</h3>
+            <p style="color:var(--text-secondary);font-size:.9rem;line-height:1.6;margin:0;">Imagina que <strong>Bitcoin es un billete digital</strong>: su función es ser intercambiado y almacenar valor. <strong>Ethereum es un ordenador mundial</strong>: puedes ejecutar programas en él, y esos programas se llaman smart contracts. El ether (ETH) es el combustible que hace funcionar ese ordenador. Así como pagas electricidad para usar tu PC, pagas ETH para usar Ethereum. Los smart contracts son como máquinas expendedoras: metes una moneda (ETH), eliges un producto (activas una función) y la máquina ejecuta la acción automáticamente — sin empleados, sin horarios, sin posibilidad de trampa.</p>
+        </div>
+
+        <div class="toc">
+            <h2>📑 Tabla de Contenidos</h2>
+            <ol>
+                <li><a href="#que-es-ethereum">¿Qué es Ethereum realmente?</a></li>
+                <li><a href="#ethereum-vs-bitcoin">Ethereum vs Bitcoin: diferencias clave</a></li>
+                <li><a href="#smart-contracts">Smart Contracts explicados con analogías</a></li>
+                <li><a href="#gas-fees">Gas fees: el combustible de Ethereum</a></li>
+                <li><a href="#casos-de-uso">Casos de uso reales: DeFi, NFTs, DAOs</a></li>
+                <li><a href="#comprar-eth">Cómo comprar ETH paso a paso</a></li>
+                <li><a href="#mi-experiencia">Mi experiencia personal con Ethereum</a></li>
+                <li><a href="#riesgos">Riesgos y precauciones</a></li>
+                <li><a href="#faq">Preguntas Frecuentes (FAQ)</a></li>
+            </ol>
+        </div>
+
+        <h2 id="que-es-ethereum">¿Qué es Ethereum realmente?</h2>
+        <p>Ethereum nació en 2015, creado por Vitalik Buterin, un programador ruso-canadiense que con solo 19 años propuso una idea revolucionaria: ¿y si la blockchain no solo sirviera para mover dinero, sino para ejecutar programas?</p>
+
+        <p>En esencia, Ethereum es una <strong>máquina de estados distribuida</strong>. Suena complejo, pero la idea es simple: hay miles de ordenadores (nodos) repartidos por todo el mundo que mantienen una copia idéntica de la blockchain. Cuando alguien envía una transacción o ejecuta un smart contract, todos esos ordenadores procesan la operación y actualizan su copia al mismo tiempo. El resultado es un sistema que <strong>nadie controla, nadie puede censurar y todos pueden verificar</strong>.</p>
+
+        <p>Piensa en Ethereum como Google Docs comparado con Microsoft Word. En Word, un solo archivo existe en tu ordenador. En Google Docs, el documento vive en la nube y todos los colaboradores ven los cambios en tiempo real. Ethereum es como Google Docs pero <strong>sin Google</strong>: no hay una empresa central que controle los servidores. La "nube" son miles de ordenadores independientes ejecutando el mismo software.</p>
+
+        <div class="highlight-box">
+            <p><strong>💡 Dato clave:</strong> Ethereum procesa más de 1 millón de transacciones al día y alberga más de 4.000 aplicaciones descentralizadas (dApps) activas. Es, con diferencia, la blockchain más utilizada del mundo para aplicaciones más allá de los pagos.</p>
+        </div>
+
+        <h2 id="ethereum-vs-bitcoin">Ethereum vs Bitcoin: diferencias clave</h2>
+        <p>Mucha gente nueva en crypto piensa que Ethereum es "otra criptomoneda como Bitcoin, pero más barata". Este error de concepto es comprensible pero fundamental. Son tecnologías con propósitos diferentes. Veamos las diferencias:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Bitcoin (BTC)</th>
+                    <th>Ethereum (ETH)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Propósito principal</strong></td>
+                    <td>Dinero digital descentralizado</td>
+                    <td>Plataforma para aplicaciones descentralizadas</td>
+                </tr>
+                <tr>
+                    <td><strong>Año de lanzamiento</strong></td>
+                    <td>2009</td>
+                    <td>2015</td>
+                </tr>
+                <tr>
+                    <td><strong>Creador</strong></td>
+                    <td>Satoshi Nakamoto (anónimo)</td>
+                    <td>Vitalik Buterin y equipo</td>
+                </tr>
+                <tr>
+                    <td><strong>Oferta máxima</strong></td>
+                    <td>21 millones de BTC (fijo)</td>
+                    <td>Sin límite fijo (emisión controlada)</td>
+                </tr>
+                <tr>
+                    <td><strong>Lenguaje de programación</strong></td>
+                    <td>Script limitado (no Turing-completo)</td>
+                    <td>Solidity (Turing-completo)</td>
+                </tr>
+                <tr>
+                    <td><strong>Tiempo de bloque</strong></td>
+                    <td>~10 minutos</td>
+                    <td>~12 segundos</td>
+                </tr>
+                <tr>
+                    <td><strong>Consenso</strong></td>
+                    <td>Proof of Work (PoW)</td>
+                    <td>Proof of Stake (PoS) desde 2022</td>
+                </tr>
+                <tr>
+                    <td><strong>Smart Contracts</strong></td>
+                    <td>Capacidad muy limitada</td>
+                    <td>Nativo y completo</td>
+                </tr>
+                <tr>
+                    <td><strong>Capitalización (2026)</strong></td>
+                    <td>~1.2 billones USD</td>
+                    <td>~400 mil millones USD</td>
+                </tr>
+                <tr>
+                    <td><strong>Analogía</strong></td>
+                    <td>Oro digital</td>
+                    <td>Petróleo digital (combustible)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Bitcoin busca ser la mejor forma de dinero que ha existido. Ethereum busca ser la capa de infraestructura sobre la que se construya el futuro sistema financiero y de aplicaciones descentralizadas. <strong>No compiten: se complementan.</strong></p>
+
+        <h2 id="smart-contracts">Smart Contracts explicados con analogías</h2>
+
+        <p>Un <strong>smart contract</strong> (contrato inteligente) es un programa informático almacenado en la blockchain que se ejecuta automáticamente cuando se cumplen las condiciones programadas. Una vez desplegado, <strong>nadie puede modificarlo ni detenerlo</strong>. Funciona exactamente como fue escrito, para siempre.</p>
+
+        <h3>La analogía de la máquina expendedora</h3>
+        <p>Esta es la mejor forma de entenderlo. Una máquina expendedora tiene reglas programadas: si introduces 1 euro y pulsas el botón B4, la máquina te entrega el producto que está en la posición B4. No hay un empleado decidiendo si te da el producto o no. La máquina ejecuta la regla automáticamente.</p>
+
+        <p>Un smart contract funciona igual pero en el mundo digital. Por ejemplo, un smart contract de intercambio (como Uniswap) tiene una regla: "si alguien envía 1 ETH a esta dirección, transfiere automáticamente 3.000 USDC a la dirección que lo envió". No hay un banco, un bróker ni una persona verificando la operación. <strong>El código se ejecuta solo.</strong></p>
+
+        <h3>Ejemplo práctico: alquiler de un apartamento</h3>
+        <p>Imagina que quieres alquilar un apartamento. Hoy necesitas: un contrato en papel, un casero, una inmobiliaria, un notario y confianza mutua. Con un smart contract, podrías programar lo siguiente: "el primer día de cada mes, si el inquilino envía 800 USDC a este contrato, el contrato le envía automáticamente el código digital de acceso a la cerradura inteligente del apartamento. Si no paga antes del día 5, el código se desactiva".</p>
+
+        <p>Esto elimina la necesidad de confiar en la otra parte o de pagar intermediarios. <strong>Confías en el código, no en personas.</strong></p>
+
+        <div class="highlight-box">
+            <p><strong>🔑 Concepto fundamental:</strong> Los smart contracts son "trustless" (no requieren confianza). No necesitas confiar en que la otra parte cumplirá su palabra. El código se ejecutará exactamente como está programado, pase lo que pase. Es una de las innovaciones más profundas de la tecnología blockchain.</p>
+        </div>
+
+        <h2 id="gas-fees">Gas fees: el combustible de Ethereum</h2>
+        <p>Cada vez que realizas una transacción o ejecutas una función de un smart contract en Ethereum, tienes que pagar una comisión llamada <strong>gas fee</strong>. El gas se paga en ETH (concretamente en <strong>gwei</strong>, que es una fracción diminuta de ETH: 1 gwei = 0.000000001 ETH).</p>
+
+        <p>El gas tiene dos propósitos fundamentales:</p>
+        <ol>
+            <li><strong>Compensar a los validadores</strong> que mantienen la red segura procesando transacciones.</li>
+            <li><strong>Prevenir el spam:</strong> si enviar transacciones fuera gratis, cualquiera podría saturar la red con millones de operaciones inútiles.</li>
+        </ol>
+
+        <p>El coste del gas varía según la demanda. En 2026, tras la actualización Dencun y la adopción masiva de soluciones Layer 2 (L2), las gas fees en la red principal (mainnet) suelen oscilar entre 2 y 10 USD para una transferencia simple, y pueden superar los 20-50 USD para interacciones complejas con smart contracts.</p>
+
+        <div class="highlight-box">
+            <p><strong>⚡ Consejo práctico:</strong> Para la mayoría de principiantes, la mejor estrategia es usar redes de Capa 2 (Layer 2) como <strong>Arbitrum, Optimism o Base</strong>. Estas redes procesan transacciones fuera de la mainnet pero heredan la seguridad de Ethereum. Las comisiones en L2 son de centavos en lugar de dólares. Puedes configurarlas fácilmente en MetaMask añadiendo la red correspondiente.</p>
+        </div>
+
+        <h2 id="casos-de-uso">Casos de uso reales: DeFi, NFTs y DAOs</h2>
+        <p>Los smart contracts no son una tecnología en busca de un problema. Ya están transformando industrias enteras. Estos son los tres casos de uso más importantes en 2026:</p>
+
+        <h3>DeFi (Finanzas Descentralizadas)</h3>
+        <p>DeFi es el ecosistema de servicios financieros construidos sobre smart contracts que eliminan intermediarios. Hoy puedes prestar tus USDC en Aave y ganar un 4-8% de interés anual, pedir un préstamo poniendo ETH como garantía sin papeleo, o intercambiar tokens al instante en Uniswap. En 2026, el valor total bloqueado en DeFi supera los 80 mil millones de dólares. Si quieres empezar, consulta nuestra <a href="../articulos/como-usar-uniswap.html">guía para usar Uniswap</a>.</p>
+
+        <h3>NFTs (Tokens No Fungibles)</h3>
+        <p>Los NFTs representan propiedad digital única sobre la blockchain: arte digital, música, artículos de videojuegos, identidad digital y mucho más. Aunque la burbuja especulativa de 2021 ya pasó, los NFTs han madurado hacia casos de uso prácticos como entradas de eventos, títulos de propiedad y certificados verificables.</p>
+
+        <h3>DAOs (Organizaciones Autónomas Descentralizadas)</h3>
+        <p>Una DAO es una organización gobernada por smart contracts y sus miembros, sin jerarquía tradicional. Los miembros votan propuestas con tokens de gobernanza y el smart contract ejecuta automáticamente el resultado. Es como una empresa donde los accionistas toman todas las decisiones directamente, sin directivos ni juntas.</p>
+
+        <h2 id="comprar-eth">Cómo comprar ETH paso a paso</h2>
+        <p>Comprar tus primeros ETH es sencillo. Aquí tienes el proceso en 5 pasos:</p>
+
+        <ol>
+            <li><strong>Elige un exchange regulado:</strong> Te recomiendo <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored">Binance</a> (el más grande del mundo) o <a href="https://www.hnrvqbxkptm.org/join/OK800" target="_blank" rel="nofollow sponsored">OKX</a>. Ambos son seguros y tienen interfaz en español.</li>
+            <li><strong>Completa la verificación KYC:</strong> Necesitarás tu documento de identidad (DNI, pasaporte) y una foto selfie. Lee nuestra <a href="../articulos/verificacion-kyc-exchanges.html">guía completa de verificación KYC</a> para evitar rechazos.</li>
+            <li><strong>Deposita euros:</strong> Puedes hacerlo por transferencia bancaria SEPA (gratis y la opción más barata) o con tarjeta de débito/crédito (más rápido pero con comisiones del 1-2%).</li>
+            <li><strong>Compra ETH:</strong> Busca el par ETH/EUR, introduce la cantidad que quieres comprar y confirma la orden. Puedes comprar desde 10-20 euros para empezar.</li>
+            <li><strong>Retira a tu wallet (opcional pero recomendado):</strong> Si quieres interactuar con dApps, transfiere tus ETH a una wallet como MetaMask. Consulta nuestro tutorial de <a href="../articulos/crear-configurar-metamask.html">cómo configurar MetaMask</a>.</li>
+        </ol>
+
+        <div class="highlight-box">
+            <p><strong>🎁 Bono de bienvenida:</strong> Al registrarte en <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored">Binance con el código BN522</a> o en <a href="https://www.hnrvqbxkptm.org/join/OK800" target="_blank" rel="nofollow sponsored">OKX con el código OK800</a>, obtienes un <strong>20% de descuento en comisiones de por vida</strong>. Es un descuento permanente que se aplica automáticamente en todas tus operaciones.</p>
+        </div>
+
+        <h2 id="mi-experiencia">Mi experiencia personal con Ethereum</h2>
+        <p>La primera vez que interactué con un smart contract fue en 2020, durante el verano del "DeFi Summer". Había leído sobre Uniswap y decidí probar. Compré 100 euros de ETH en Binance, los transferí a una wallet de MetaMask que acababa de crear, y conecté mi wallet al sitio de Uniswap.</p>
+
+        <p>Recuerdo estar mirando la pantalla sin entender muy bien qué estaba pasando. La interfaz me pedía "aprobar" el token primero (una transacción) y luego "hacer swap" (otra transacción). Cada paso costaba gas, y en ese momento las comisiones estaban por las nubes. Pagué casi 15 dólares en gas por un simple intercambio de 100 euros. Me sentí estafado.</p>
+
+        <p>Pero luego entendí lo que estaba ocurriendo: no había ningún banco, ningún bróker, ningún formulario de registro. Acababa de intercambiar dos activos digitales directamente con un protocolo controlado por código, sin dar mi nombre ni esperar la aprobación de nadie. La transacción se confirmó en 30 segundos y los tokens aparecieron en mi wallet. Esa experiencia cambió mi percepción de lo que era posible con la tecnología.</p>
+
+        <p>Hoy, años después, uso Ethereum casi a diario. He pedido préstamos en Aave, he hecho staking de ETH, he votado en DAOs y he probado docenas de dApps. Mi consejo para quien empieza: <strong>no te asustes por las gas fees de la mainnet, usa las redes de Capa 2</strong>. Empieza con cantidades pequeñas (20-50 euros), explora, equivócate con poco dinero y aprende. La curva de aprendizaje es pronunciada las primeras semanas, pero una vez que lo entiendes, se abre un mundo completamente nuevo de posibilidades financieras.</p>
+
+        <h2 id="riesgos">Riesgos y precauciones con Smart Contracts</h2>
+
+        <div class="warning-box">
+            <p><strong>⚠️ Advertencia importante:</strong> Los smart contracts son código informático, y el código puede tener errores (bugs) o vulnerabilidades. Un smart contract mal programado puede resultar en la pérdida total de los fondos depositados. Grandes protocolos como Aave o Uniswap tienen auditorías de seguridad y miles de millones en valor bloqueado, pero aun así existe riesgo. Investiga siempre antes de depositar fondos en cualquier protocolo.</p>
+        </div>
+
+        <ul>
+            <li><strong>Riesgo de contrato:</strong> Si el código tiene un bug, un hacker puede drenar los fondos. Solo interactúa con protocolos auditados por empresas reconocidas como Trail of Bits u OpenZeppelin.</li>
+            <li><strong>Riesgo de phishing:</strong> Sitios web falsos que imitan dApps reales. Siempre verifica la URL exacta y usa marcadores para tus protocolos de confianza.</li>
+            <li><strong>Riesgo de gas:</strong> Transacciones pueden quedar atascadas si pones muy poco gas. Aprende a usar exploradores de bloques como Etherscan para monitorizar tus transacciones.</li>
+            <li><strong>Riesgo de custodia:</strong> Si guardas tus fondos en una wallet descentralizada (MetaMask, Rabby), tú eres el único responsable de la semilla de recuperación. Léete nuestra <a href="../articulos/seguridad-criptomonedas.html">guía de seguridad crypto</a> para proteger tus fondos.</li>
+        </ul>
+
+        <div class="faq-section">
+            <h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
+
+            <div class="faq-item">
+                <h3>¿Ethereum es una criptomoneda o una plataforma?</h3>
+                <p>Ethereum es ambas cosas. ETH (ether) es la criptomoneda nativa que se usa para pagar comisiones (gas) en la red. Pero Ethereum como tal es una plataforma descentralizada que permite ejecutar smart contracts y aplicaciones (dApps). Piensa en Ethereum como un ordenador mundial descentralizado donde ETH es el combustible que lo hace funcionar.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Qué es un smart contract en palabras simples?</h3>
+                <p>Un smart contract es un programa informático que se ejecuta automáticamente en la blockchain cuando se cumplen ciertas condiciones. La mejor analogía es una máquina expendedora: introduces una moneda, seleccionas un producto y la máquina te lo entrega automáticamente, sin necesidad de un empleado. El código reemplaza al intermediario humano.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿En qué se diferencia Ethereum de Bitcoin?</h3>
+                <p>Bitcoin fue diseñado como oro digital: reserva de valor y medio de intercambio. Ethereum es una plataforma programable donde cualquiera puede crear aplicaciones descentralizadas. Bitcoin es como una calculadora (hace una cosa, muy bien). Ethereum es como un smartphone (es una plataforma donde otros construyen miles de aplicaciones distintas).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Qué son las gas fees y por qué existen?</h3>
+                <p>Las gas fees son el coste que pagas para que tu transacción se ejecute en Ethereum. Existen para compensar a los validadores que mantienen la red segura y para prevenir ataques de spam. El precio del gas fluctúa con la demanda: a más gente usando la red, más caro. Se miden en gwei, la unidad más pequeña de ETH.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Es caro usar Ethereum en 2026?</h3>
+                <p>Depende. En la red principal (mainnet), una transferencia simple puede costar entre 2 y 10 USD, y una operación compleja hasta 50 USD. Pero existen soluciones de Capa 2 (Arbitrum, Optimism, Base) donde las mismas operaciones cuestan centavos. Para un principiante, empezar directamente en una L2 es lo más recomendable y económico.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Cómo compro ETH por primera vez?</h3>
+                <p>La forma más sencilla es crear una cuenta en un exchange como <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored">Binance</a> (código BN522) u <a href="https://www.hnrvqbxkptm.org/join/OK800" target="_blank" rel="nofollow sponsored">OKX</a> (código OK800), completar la verificación KYC, depositar euros y comprar ETH. Si quieres usar dApps, luego transfiere tus ETH a una wallet como MetaMask. Todo el proceso te llevará unos 15 minutos la primera vez.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="margin:24px 0;background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:14px 20px">
+            <p style="margin:0;font-size:.82rem;color:var(--text-muted);"><strong>📢 Transparencia:</strong> Algunos enlaces son de afiliado. Si te registras, podemos recibir una comisión sin costo extra. <a href="../sobre.html" style="color:var(--accent)">Más info →</a></p>
+        </div>
+
+        <div class="internal-links">
+            <h2>📚 Artículos relacionados</h2>
+            <a href="../articulos/blockchain-explicacion-sencilla.html">Blockchain explicada de forma sencilla</a>
+            <a href="../articulos/que-es-bitcoin.html">Qué es Bitcoin y cómo funciona</a>
+            <a href="../articulos/como-usar-uniswap.html">Cómo usar Uniswap paso a paso</a>
+            <a href="../articulos/crear-configurar-metamask.html">Cómo crear y configurar MetaMask</a>
+            <a href="../articulos/como-hacer-staking.html">Cómo hacer staking de criptomonedas</a>
+            <a href="../articulos/seguridad-criptomonedas.html">10 reglas de seguridad en criptomonedas</a>
+        </div>
+
+        <div class="highlight-box" style="margin:28px 0;background:var(--blue-bg, rgba(77,124,254,0.1));border:1px solid var(--blue, #4d7cfe);border-radius:var(--radius-md);padding:20px 24px;">
+            <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
+            <ul style="list-style:none;padding:0;margin:0;">
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://ethereum.org/es/" target="_blank" rel="noopener" style="color:var(--accent);">Ethereum.org</a> — Web oficial de Ethereum con documentación en español</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — Explorador de bloques de Ethereum</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://coinmarketcap.com/currencies/ethereum/" target="_blank" rel="noopener" style="color:var(--accent);">CoinMarketCap ETH</a> — Datos de mercado actualizados</li>
+            </ul>
+        </div>
+
+        <h2 id="conclusion">Conclusión: ¿Merece la pena entender Ethereum?</h2>
+        <p>Ethereum es mucho más que la segunda criptomoneda por capitalización. Es la infraestructura sobre la que se está construyendo el sistema financiero descentralizado del futuro. Entender qué es un smart contract, cómo funcionan las gas fees y qué son las dApps te da una ventaja de conocimiento que la mayoría de la gente no tiene.</p>
+
+        <p>No necesitas ser programador ni experto en tecnología para empezar. Con 50 euros, una wallet como MetaMask y curiosidad, puedes explorar este mundo y decidir por ti mismo si la tecnología tiene valor. El peor error que puedes cometer es ignorarlo por completo.</p>
+
+        <div class="cta-card">
+            <h2>🚀 ¿Listo para comprar tus primeros ETH?</h2>
+            <p>Regístrate en Binance u OKX con los códigos de descuento exclusivos de MiCryptoGuía y empieza a explorar el ecosistema Ethereum con las mejores condiciones. Ambos exchanges ofrecen compra de ETH en euros y app en español.</p>
+            <div class="cta-buttons">
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg">Binance (BN522) →</a>
+                <a href="https://www.hnrvqbxkptm.org/join/OK800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg">OKX (OK800) →</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 MiCryptoGuía. Contenido educativo — no es asesoramiento financiero. | <a href="../sobre.html">Sobre</a> | <a href="../privacidad.html">Privacidad</a> | <a href="../terminos.html">Términos</a> | 📧 <a href="mailto:hola@micryptoguia.com">hola@micryptoguia.com</a></p></div></div></footer>
+
+    <script src="../js/main.js"></script>
+    <script>(function(){var theme=localStorage.getItem('micryptoguia-theme')||'dark';document.documentElement.setAttribute('data-theme',theme);document.getElementById('themeToggle').addEventListener('click',function(){var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('micryptoguia-theme',t)})})()</script>
+</body>
+</html>

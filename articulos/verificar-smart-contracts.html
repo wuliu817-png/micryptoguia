@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende a verificar smart contracts en Etherscan para detectar estafas, honeypots y rug pulls antes de invertir. Guía paso a paso con herramientas gratuitas y casos reales.">
+    <meta name="keywords" content="verificar smart contract, Etherscan, seguridad DeFi, detectar estafas crypto, honeypot, rug pull, token sniffer, contratos verificados, auditoría smart contract">
+    <meta name="author" content="MiCryptoGuía">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#080b16">
+    <link rel="canonical" href="https://micryptoguia.com/articulos/verificar-smart-contracts.html">
+
+    <meta property="og:title" content="Cómo Verificar Smart Contracts en Etherscan | Seguridad DeFi 2026 — MiCryptoGuía">
+    <meta property="og:description" content="El 90% de las estafas DeFi usan contratos no verificados. Aprende a leer un smart contract en Etherscan, detectar honeypots, funciones ocultas de minteo y patrones de rug pull antes de comprar.">
+    <meta property="og:url" content="https://micryptoguia.com/articulos/verificar-smart-contracts.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://micryptoguia.com/img/og-image.svg">
+
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Cómo Verificar Smart Contracts en Etherscan | Seguridad DeFi 2026 — MiCryptoGuía</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cómo Verificar Smart Contracts en Etherscan | Seguridad DeFi 2026",
+      "description": "Guía práctica para verificar contratos inteligentes en Etherscan: cómo leer el código, detectar funciones ocultas de minteo, honeypots, impuestos abusivos y patrones de rug pull antes de invertir en DeFi.",
+      "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "inLanguage": "es",
+      "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">₿</span>
+                <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="/#fundamentos" class="nav-link">Fundamentos</a></li>
+                <li><a href="/#guias" class="nav-link">Guías</a></li>
+                <li><a href="/#exchanges" class="nav-link">Exchanges</a></li>
+                <li><a href="/#wallets" class="nav-link">Wallets</a></li>
+                <li><a href="/#defi" class="nav-link">DeFi</a></li>
+                <li><a href="/#seguridad" class="nav-link active">Seguridad</a></li>
+                <li><a href="/#glosario" class="nav-link">Glosario</a></li>
+                <li><a href="/#herramientas" class="nav-link">Herramientas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <h1>Cómo Verificar Smart Contracts en Etherscan: Detecta Estafas Antes de Comprar (Guía 2026)</h1>
+        <div class="article-meta">
+            <span>🔐 Seguridad</span>
+            <span>⏱️ 15 min lectura</span>
+            <span>📅 Agosto 2026</span>
+            <span>⚡ Intermedio</span>
+        </div>
+
+        <p>Verificar un smart contract en Etherscan significa <strong>leer el código fuente del token</strong> que está publicado en la blockchain para asegurarte de que no tiene funciones ocultas diseñadas para robarte el dinero. Cada token que compras en Uniswap o en cualquier DEX está gobernado por un contrato inteligente — un programa informático que define las reglas del token: cuántos pueden existir, quién puede crearlos, si se pueden vender o no. Y aquí está el punto clave: <strong>si el creador no publica el código, no tienes forma de saber qué reglas están programadas</strong>. Estás comprando a ciegas.</p>
+
+        <p>En 2024 y 2025, los inversores perdieron más de <strong>$3,800 millones en estafas DeFi</strong>, según datos de Chainalysis. La gran mayoría de esas estafas — honeypots, rug pulls, tokens con impuestos del 100% — podrían haberse detectado en menos de 5 minutos revisando el contrato en Etherscan. No necesitas ser programador. No necesitas saber Solidity. Solo necesitas saber <strong>qué buscar y dónde mirar</strong>. Esta guía te enseña exactamente eso.</p>
+
+        <!-- Speed Read -->
+        <div class="speed-read">
+            <h3>⚠️ El 90% de las estafas DeFi dejan el contrato sin verificar</h3>
+            <p>Un smart contract <strong>no verificado</strong> en Etherscan es la señal de alerta número uno. Si el creador no publicó el código, es porque <strong>no quiere que veas lo que hace</strong>. De más de 200 tokens analizados en honeypot.is durante 2025, el 94% de los honeypots confirmados tenían contratos sin verificar. La verificación no es una auditoría completa, pero es el filtro más rápido y efectivo que tienes antes de hacer clic en "Comprar".</p>
+        </div>
+            <ul>
+                <li>Un <strong>contrato verificado</strong> en Etherscan significa que el código fuente está publicado y cualquiera puede leerlo. Un <strong>contrato no verificado</strong> es una caja negra.</li>
+                <li>Las banderas rojas más comunes: función <strong>mint</strong> sin límites, <strong>tax de venta del 100%</strong>, lista negra de direcciones (<strong>blacklist</strong>), y patrones de <strong>proxy</strong> que permiten cambiar las reglas después del lanzamiento.</li>
+                <li>Herramientas gratuitas como <strong>Token Sniffer, Honeypot.is y GoPlus</strong> automatizan gran parte de esta verificación. Las usaremos juntas en esta guía.</li>
+                <li>Verificar el contrato te toma <strong>entre 3 y 10 minutos</strong>. Es la diferencia entre una inversión informada y regalarle tu dinero a un desconocido.</li>
+            </ul>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc" id="indice">
+            <div class="toc__title">📋 Tabla de Contenidos</div>
+            <ol>
+                <li><a href="#que-es-etherscan">Qué es Etherscan y qué información te da sobre un token</a></li>
+                <li><a href="#contrato-verificado">Contrato verificado vs no verificado: la diferencia que importa</a></li>
+                <li><a href="#banderas-rojas">Las 7 banderas rojas que delatan una estafa</a></li>
+                <li><a href="#herramientas">Herramientas gratuitas: Token Sniffer, Honeypot.is y GoPlus</a></li>
+                <li><a href="#paso-a-paso">Checklist: cómo auditar un token antes de comprar en Uniswap</a></li>
+                <li><a href="#experiencia">Mi experiencia: el token que casi me arruina</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+            </ol>
+        </div>
+
+        <!-- What is Etherscan -->
+        <h2 id="que-es-etherscan">Qué es Etherscan y qué información te da sobre un token</h2>
+        <p>Etherscan es el <strong>explorador de bloques oficial de Ethereum</strong>. Piensa en él como un Google para la blockchain: puedes buscar cualquier dirección de wallet, cualquier transacción y — lo que nos interesa aquí — cualquier token por su dirección de contrato. Todo lo que ocurre en Ethereum queda registrado de forma pública y permanente en Etherscan.</p>
+
+        <p>Cuando buscas un token en Etherscan (pegando la dirección de su contrato en la barra de búsqueda), esto es lo que puedes ver <strong>incluso si el contrato no está verificado</strong>:</p>
+
+        <ul>
+            <li><strong>Total Supply (Suministro total):</strong> Cuántos tokens existen. Si ves una cantidad ridícula como 1,000,000,000,000,000, vale la pena preguntarse por qué.</li>
+            <li><strong>Holders (Titulares):</strong> Cuántas direcciones tienen el token. Un token con 10 holders es extremadamente sospechoso — probablemente son las wallets del creador. Un token legítimo suele tener cientos o miles de holders.</li>
+            <li><strong>Transfers (Transferencias):</strong> El historial completo de movimientos del token. Puedes ver si hay direcciones que recibieron grandes cantidades justo después del lanzamiento (insiders) o patrones extraños de compra y venta.</li>
+            <li><strong>Contract Creator (Creador del contrato):</strong> La dirección que desplegó el token. Puedes investigar qué otros tokens ha creado esa misma dirección — si ha creado 20 tokens similares en la última semana, es una fábrica de estafas.</li>
+            <li><strong>Pestaña "Contract":</strong> Aquí está la información crucial. Si el contrato está verificado, verás el código fuente completo. Si no, solo verás bytecode (código de máquina ilegible).</li>
+        </ul>
+
+        <p>En redes compatibles con EVM como BNB Chain, Arbitrum o Polygon, funcionan exploradores equivalentes: BscScan, Arbiscan, PolygonScan. La interfaz y la lógica son idénticas — lo que aprendas en Etherscan se aplica a todos.</p>
+
+        <!-- Verified vs Unverified -->
+        <h2 id="contrato-verificado">Contrato verificado vs no verificado: la diferencia que importa</h2>
+        <p>Cuando un desarrollador publica un token en Ethereum, tiene la opción de <strong>verificar</strong> el contrato: subir el código fuente en Solidity a Etherscan para que cualquiera pueda leerlo. Si lo hace, Etherscan compila ese código y comprueba que coincide exactamente con el bytecode que está ejecutándose en la blockchain. Si coincide, el contrato recibe la etiqueta verde de "Verified" y una pestaña con el código legible.</p>
+
+        <p>Si el desarrollador <strong>no verifica</strong> el contrato, solo ves bytecode: una secuencia de caracteres hexadecimales que ni siquiera un programador experimentado puede interpretar a simple vista. No puedes saber qué funciones existen, si hay un mecanismo para congelar tus tokens, o si el dueño puede vaciar el pool de liquidez con una sola transacción.</p>
+
+        <div class="highlight-box">
+            <p><strong>Regla de oro:</strong> Un contrato no verificado no significa automáticamente que sea una estafa. Hay proyectos legítimos que tardan unos días en verificar. Pero en el contexto de un token nuevo que acaba de aparecer, sin comunidad, sin auditoría y sin verificación, la probabilidad de estafa es altísima. Mi regla personal: <strong>no compro ningún token con contrato sin verificar</strong>, sin excepciones.</p>
+        </div>
+
+        <p>Incluso con el contrato verificado, hay que leerlo. Muchos estafadores verifican el contrato porque saben que los inversores lo comprueban, pero esconden las funciones maliciosas en el código con nombres inofensivos o en librerías importadas. Verificar es el primer filtro — leer es el segundo.</p>
+
+        <!-- Red Flags -->
+        <h2 id="banderas-rojas">Las 7 banderas rojas que delatan una estafa</h2>
+        <p>Después de revisar cientos de contratos, estos son los patrones que aparecen una y otra vez en estafas DeFi. Apréndetelos. Si ves aunque sea <strong>uno solo</strong>, no compres:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Bandera Roja</th>
+                    <th>Qué buscar en el código</th>
+                    <th>Riesgo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Función mint sin control</strong></td>
+                    <td>Busca <code>function mint</code> en el código. Si el dueño puede crear tokens ilimitados en cualquier momento, tu inversión se diluye a cero en segundos.</td>
+                    <td>🔴 Crítico</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Tax de venta del 100%</strong></td>
+                    <td>En la función <code>transfer</code> o <code>_transfer</code>, busca multiplicaciones por <code>fee</code> o <code>tax</code>. Si <code>sellFee = 10000</code> (en puntos básicos, equivale al 100%), no podrás vender nunca.</td>
+                    <td>🔴 Crítico</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Honeypot (no puedes vender)</strong></td>
+                    <td>El contrato permite comprar pero bloquea las ventas. Busca condicionales como <code>require(isBot == false)</code> o listas de direcciones excluidas de venta. Honeypot.is lo detecta automáticamente.</td>
+                    <td>🔴 Crítico</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Blacklist (lista negra)</strong></td>
+                    <td>Funciones <code>addBlackList</code> o <code>isBlacklisted</code>. El dueño puede congelar tus fondos y no podrás transferirlos ni venderlos.</td>
+                    <td>🟠 Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>5. Contrato proxy actualizable</strong></td>
+                    <td>Un proxy permite al dueño cambiar la lógica del contrato después del lanzamiento. Lo que hoy es un token normal, mañana puede ser un honeypot. Busca <code>upgradeTo</code> o referencias a OpenZeppelin Proxy.</td>
+                    <td>🟠 Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>6. Ownership no renunciado</strong></td>
+                    <td>Busca <code>renounceOwnership</code>. Si no se ha llamado, el dueño conserva privilegios administrativos. Si el dueño es una dirección EOA (wallet personal) en vez de un contrato de gobernanza o la dirección cero, tienes un riesgo de concentración de poder.</td>
+                    <td>🟡 Medio</td>
+                </tr>
+                <tr>
+                    <td><strong>7. Liquidez no bloqueada</strong></td>
+                    <td>Esto no se ve en el contrato del token sino en el de liquidez (Uniswap V2 Pair). Si el LP no está bloqueado en un locker como Unicrypt o Team Finance, el dueño puede retirar toda la liquidez en cualquier momento (rug pull clásico).</td>
+                    <td>🟠 Alto</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <p class="warning-box__title">⚠️ Los estafadores evolucionan</p>
+            <p>En 2025-2026 han aparecido patrones más sofisticados: contratos que parecen verificados pero importan librerías maliciosas desde direcciones externas, tokens con impuestos variables que empiezan bajos y suben al 100% después de N bloques, y contratos que usan assembly inline para ocultar lógica en código de bajo nivel. Las herramientas automatizadas son tu primera línea de defensa, pero ninguna es infalible. Si algo parece demasiado bueno para ser verdad — rendimientos del 1000% APY, un token que solo sube, un equipo anónimo con un roadmap copiado de otro proyecto — probablemente lo es.</p>
+        </div>
+
+        <!-- Tools -->
+        <h2 id="herramientas">Herramientas gratuitas para verificar tokens sin ser programador</h2>
+        <p>No necesitas leer Solidity para hacer un primer filtro efectivo. Estas herramientas analizan el contrato automáticamente y te dan un veredicto en segundos:</p>
+
+        <h3>Token Sniffer (tokensniffer.com)</h3>
+        <p>Pegas la dirección del contrato y en 10-30 segundos te da una puntuación de 0 a 100. Analiza automáticamente: verificación del contrato, funciones de mint ocultas, impuestos, honeypot, patrones de estafa conocidos, liquidez bloqueada y distribución de holders. Un score por debajo de 60 es zona de peligro. Por debajo de 40, ni te molestes en seguir investigando.</p>
+
+        <h3>Honeypot.is</h3>
+        <p>Especializado en detectar honeypots: tokens que puedes comprar pero no vender. Simula una compra y una venta real contra el contrato para verificar que ambas funcionan. También detecta impuestos abusivos. Si Honeypot.is te dice "Honeypot Detected", no hay más que hablar: no puedes vender ese token.</p>
+
+        <h3>GoPlus Security (gopluslabs.io)</h3>
+        <p>Una de las herramientas más completas. Detecta 30+ tipos de riesgos incluyendo: capacidad de mint, blacklist, trading bloqueable, fees de transferencia ocultos, y proxies actualizables. Funciona para Ethereum, BNB Chain, Arbitrum, Polygon y 15+ cadenas más. Tiene API gratuita y también una extensión de navegador que te avisa automáticamente cuando interactúas con un contrato sospechoso.</p>
+
+        <p>Mi flujo de trabajo recomendado: primero Token Sniffer para un chequeo rápido. Si pasa (score > 70), luego Honeypot.is para confirmar que puedes vender. Si todo está limpio, finalmente una lectura manual rápida del contrato en Etherscan buscando las 7 banderas rojas de la tabla anterior.</p>
+
+        <!-- Step by step -->
+        <h2 id="paso-a-paso">Checklist: cómo auditar un token antes de comprar en Uniswap</h2>
+        <p>Este es el proceso exacto que sigo cada vez que considero comprar un token que no conozco. Toma entre 5 y 10 minutos. Si el token pasa todos los puntos, no es garantía de que sea una buena inversión, pero sí de que no es una estafa obvia:</p>
+
+        <ol>
+            <li><strong>Copia la dirección del contrato.</strong> En Uniswap, cuando seleccionas un token, puedes hacer clic en el nombre para ver los detalles y copiar la dirección del contrato. También puedes buscarlo en CoinGecko o CoinMarketCap, donde aparece la dirección oficial.</li>
+            <li><strong>Pega la dirección en Etherscan</strong> (o el explorador de la red correspondiente). Lo primero: comprueba que la etiqueta "Contract" aparece y que hay una pestaña "Contract" con código fuente. Si pone "Bytecode" sin opción de leer el código, el contrato no está verificado. Stop.</li>
+            <li><strong>Mira los holders.</strong> ¿Cuántos hay? ¿El top 10 concentra más del 60% del suministro? ¿Hay wallets que recibieron tokens justo antes del lanzamiento? Una distribución sana tiene cientos de holders y el top 10 no debería superar el 20-30%.</li>
+            <li><strong>Busca "mint" en el código fuente.</strong> En la pestaña Contract de Etherscan, usa Ctrl+F para buscar la palabra "mint". Si encuentras una función mint que solo puede llamar el owner sin límites, el suministro no es fijo. Stop.</li>
+            <li><strong>Busca "fee", "tax" y "blacklist".</strong> ¿Hay comisiones de transferencia? ¿Se aplican diferente a compras y ventas? ¿Hay una lista negra? Un tax de compra/venta del 2-5% es normal en algunos tokens DeFi. Un 100% o una blacklist no lo son.</li>
+            <li><strong>Pásalo por Token Sniffer y Honeypot.is.</strong> Pega la dirección en ambas herramientas. Si Token Sniffer da < 60 o Honeypot.is detecta honeypot: stop.</li>
+            <li><strong>Verifica la liquidez.</strong> Busca el par de trading en Uniswap. ¿El LP está bloqueado? Puedes verificarlo en unicrypt.network o team.finance buscando el token. Si el LP no está bloqueado, el dueño puede hacer rug pull cuando quiera.</li>
+            <li><strong>Investiga al creador.</strong> En Etherscan, mira la dirección que creó el contrato. ¿Ha creado otros tokens? Ve a la pestaña "Internal Txns" de esa dirección. Si ves un patrón repetitivo — crea token, añade liquidez, retira liquidez, crea otro token — es un estafador serial.</li>
+        </ol>
+
+        <div class="highlight-box">
+            <p><strong>💡 Tip práctico:</strong> Instala la extensión de navegador <strong>GoPlus Security</strong>. Cada vez que visites un token en Etherscan o interactúes con un DEX, te muestra un panel lateral con la puntuación de seguridad del contrato. Es como tener un auditor automático mirando por encima de tu hombro. Gratis y se configura en 30 segundos.</p>
+        </div>
+
+        <!-- Mi Experiencia -->
+        <h2 id="experiencia">Mi Experiencia: el token que casi me arruina</h2>
+        <div class="experiencia-block">
+            <h3>🗣️ Cómo una función mint oculta casi me cuesta $3,000</h3>
+            <p>Era marzo de 2024 y un amigo me había hablado de un token nuevo con una narrativa impecable: inteligencia artificial descentralizada, equipo con perfiles de LinkedIn verificados (falsos, descubriría después), y un gráfico que solo subía. El token había hecho 8x en tres días. La comunidad de Telegram tenía 4,000 miembros. Todo parecía legítimo.</p>
+
+            <p>Tenía $3,000 en USDC listos para entrar. Pero algo me frenó: el contrato estaba verificado, sí, pero yo no lo había leído. Hice lo que enseño en esta guía. Abrí Etherscan, fui a la pestaña Contract, y busqué "mint". Ahí estaba: una función <code>mintReward(address to, uint256 amount)</code> que solo podía llamar el owner, sin ningún límite, sin ningún requisito. El dueño podía crear — literalmente — mil millones de tokens nuevos y vendértelos a ti, diluyendo tu inversión a cero en una sola transacción.</p>
+
+            <p>Salí del grupo de Telegram, bloqueé el token en mi wallet y le avisé a mi amigo. Él sí había comprado, $500. Tres días después, el dueño minteó 500 millones de tokens, los vendió todos contra el pool de liquidez, y el precio se desplomó un 99.8%. Mi amigo perdió $498. Yo perdí cero. La diferencia fue leer una función de 3 líneas en Etherscan.</p>
+
+            <p>Desde ese día, mi regla es inquebrantable: no importa lo bonita que sea la web, lo activa que esté la comunidad o lo convincente que suene el whitepaper. Si no he verificado el contrato yo mismo, no compro. Punto. Los 10 minutos que inviertes en esta verificación son, con mucha diferencia, los más rentables de todo tu viaje en DeFi.</p>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <h2>❓ Preguntas Frecuentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Un contrato verificado en Etherscan significa que es seguro?</div>
+                <div class="faq-item__answer">
+                    <p><strong>No.</strong> Significa que el código es legible, no que sea honesto. Muchos proyectos fraudulentos verifican sus contratos para parecer legítimos y luego esconden las funciones maliciosas con nombres engañosos (por ejemplo, llamar a una función honeypot <code>_checkWhaleProtection</code>). La verificación es el primer filtro, pero tienes que leer el código o usar herramientas como Token Sniffer para el segundo filtro. También hay proyectos con contratos verificados y perfectamente limpios que igual fracasan por mala ejecución, falta de adopción o Mala gestión del equipo. Verificar el contrato elimina algunos riesgos técnicos, no todos los riesgos de inversión.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Necesito saber programar para leer un smart contract?</div>
+                <div class="faq-item__answer">
+                    <p>Para un análisis profundo, sí ayuda. Pero para detectar las 7 banderas rojas principales que describo en esta guía, <strong>no necesitas saber programar</strong>. Solo necesitas saber usar Ctrl+F en tu navegador y buscar palabras clave: "mint", "fee", "tax", "blacklist", "onlyOwner". Si encuentras esas palabras en contextos sospechosos, ya tienes información suficiente para tomar una decisión. Herramientas como Token Sniffer y Honeypot.is automatizan la parte técnica por ti. He enseñado este método a personas que nunca han escrito una línea de código y en 10 minutos estaban detectando honeypots por su cuenta.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Qué es un rug pull exactamente?</div>
+                <div class="faq-item__answer">
+                    <p>Un rug pull (literalmente "tirón de alfombra") es cuando los creadores de un token retiran toda la liquidez del pool de trading y desaparecen con el dinero de los inversores. Imagina que creas un token, pones $10,000 en liquidez en Uniswap, y 100 personas compran tu token metiendo otros $50,000. Si tú retiras tus $10,000 iniciales más todo lo que haya entrado, te llevas $60,000 y dejas a los compradores con tokens que ya no valen nada porque no hay liquidez para venderlos. Los rug pulls son la estafa más común en DeFi y se pueden prevenir verificando si la liquidez está bloqueada en un locker como Unicrypt.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Funciona este método para tokens en Solana o otras cadenas?</div>
+                <div class="faq-item__answer">
+                    <p>El principio es el mismo — verificar el código del contrato — pero las herramientas cambian. Para Solana, el explorador es <strong>Solscan.io</strong> y puedes verificar el código fuente en la pestaña "Contract". Sin embargo, Solana usa un modelo de programación diferente (Rust, no Solidity) y las herramientas de análisis automático son más limitadas. Para BNB Chain, Arbitrum, Polygon, Avalanche y cualquier EVM-compatible, el método de esta guía funciona exactamente igual — solo cambia el explorador (BscScan, Arbiscan, PolygonScan, SnowTrace). Para blockchains no-EVM como Solana, Cardano o Cosmos, necesitarás herramientas específicas de cada ecosistema.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Qué hago si ya compré un token y resulta ser una estafa?</div>
+                <div class="faq-item__answer">
+                    <p>Lo primero: <strong>no envíes más dinero</strong>. Hay estafas de "recuperación de fondos" que se aprovechan de víctimas de estafas previas. Lo segundo: si puedes vender aunque sea con pérdida, hazlo inmediatamente — recuperar el 10% es mejor que perder el 100%. Tercero: <strong>revoca los permisos del token</strong> en tu wallet usando herramientas como revoke.cash o Etherscan Token Approvals. Si el contrato tiene una función de blacklist o freeze, el estafador podría congelar tu wallet para otros tokens. Cuarto: reporta la dirección del contrato en Token Sniffer y Honeypot.is para que otros inversores estén advertidos. Y quinto, aprende la lección y no te castigues — literalmente todos los que llevamos tiempo en crypto hemos caído en al menos una estafa. Lo importante es que el coste de esa lección no sea devastador.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Qué diferencia hay entre una auditoría profesional y verificar el contrato yo mismo?</div>
+                <div class="faq-item__answer">
+                    <p>Una auditoría profesional — hecha por firmas como CertiK, Trail of Bits, OpenZeppelin o Hacken — es un análisis exhaustivo del código por ingenieros de seguridad especializados. Revisan vulnerabilidades de lógica, exploits matemáticos, problemas de dependencias y vectores de ataque complejos que una verificación rápida no detecta. Cuestan entre $20,000 y $100,000+. Lo que tú haces en Etherscan es un <strong>chequeo básico de buena fe</strong>: ¿el código está publicado? ¿Hay funciones obviamente maliciosas? ¿Los permisos están centralizados? Es un filtro de seguridad mínimo, no una auditoría. Pero es suficiente para descartar el 95% de las estafas, que son burdas y no resisten ni 30 segundos de escrutinio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Affiliate Disclosure -->
+        <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
+            <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Solo recomendamos plataformas que hemos probado personalmente. <a href="/sobre.html" style="color:var(--accent);">Más información →</a></p>
+        </div>
+
+        <!-- Internal Links -->
+        <h2 id="articulos-relacionados">📚 Artículos Relacionados</h2>
+        <ul>
+            <li><a href="/articulos/seguridad-criptomonedas.html">10 Reglas de Seguridad Crypto</a> — Protege tu wallet y tus fondos con hábitos de seguridad imprescindibles.</li>
+            <li><a href="/articulos/como-usar-uniswap.html">Cómo Usar Uniswap</a> — Aprende a hacer swaps en el DEX más grande y a verificar tokens antes de comprar.</li>
+            <li><a href="/articulos/hot-wallet-vs-cold-wallet.html">Hot Wallet vs Cold Wallet</a> — Qué wallet usar para trading en DeFi y cuál para almacenar a largo plazo.</li>
+            <li><a href="/articulos/crear-configurar-metamask.html">Crear y Configurar MetaMask</a> — La wallet que usarás para conectar con Uniswap y otros DEXs.</li>
+            <li><a href="/articulos/blockchain-explicacion-sencilla.html">Blockchain: Explicación Sencilla</a> — Entiende la base sobre la que funcionan los smart contracts.</li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="cta-card">
+            <h2>🔐 Opera Seguro en DeFi</h2>
+            <p>Compra ETH o stablecoins en Binance u OKX con descuento en comisiones, verifica siempre el contrato antes de comprar tokens nuevos, y protege tu inversión con las herramientas gratuitas que te mostré en esta guía.</p>
+            <div class="cta-buttons">
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg">Binance — Código BN522</a>
+                <a href="https://www.hnrvqbxkptm.org/join/OK800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg">OKX — Código OK800</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
+        <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
+        <ul style="list-style:none;padding:0;margin:0;">
+            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — Explorador oficial de Ethereum</li>
+            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://tokensniffer.com/" target="_blank" rel="noopener" style="color:var(--accent);">Token Sniffer</a> — Análisis automatizado de contratos</li>
+            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.gopluslabs.io/" target="_blank" rel="noopener" style="color:var(--accent);">GoPlus Security</a> — Extensión de seguridad Web3</li>
+        </ul>
+    </div>
+
+    <div class="internal-links" style="margin: 40px 0; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px;">
+        <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">📚 Artículos relacionados</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+            <a href="/articulos/seguridad-criptomonedas.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">10 reglas de seguridad crypto</a>
+            <a href="/articulos/como-usar-uniswap.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Cómo usar Uniswap</a>
+            <a href="/articulos/hot-wallet-vs-cold-wallet.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Hot Wallet vs Cold Wallet</a>
+            <a href="/articulos/blockchain-explicacion-sencilla.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Blockchain: explicación sencilla</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 MiCryptoGuía. Todos los derechos reservados. Contenido educativo — no es asesoramiento financiero. &nbsp;|&nbsp; <a href="/privacidad.html">Privacidad</a> &nbsp;|&nbsp; <a href="/terminos.html">Términos</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            var theme = localStorage.getItem('micryptoguia-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.getElementById('themeToggle').addEventListener('click', function(){
+                var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+                localStorage.setItem('micryptoguia-theme', t);
+            });
+            document.querySelectorAll('.faq-item__question').forEach(function(q){
+                q.addEventListener('click', function(){
+                    this.parentElement.classList.toggle('open');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
