@@ -427,6 +427,13 @@ img {
     position: absolute;
     inset: 0;
     overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(247, 147, 26, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(77, 124, 254, 0.06) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(247,147,26,0.12)'/%3E%3Ccircle cx='0' cy='0' r='1' fill='rgba(247,147,26,0.06)'/%3E%3Ccircle cx='60' cy='0' r='1' fill='rgba(247,147,26,0.06)'/%3E%3Ccircle cx='0' cy='60' r='1' fill='rgba(247,147,26,0.06)'/%3E%3Ccircle cx='60' cy='60' r='1' fill='rgba(247,147,26,0.06)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100% 100%, 100% 100%, 60px 60px;
+    background-position: center;
+    background-repeat: no-repeat, no-repeat, repeat;
 }
 
 .hero-grid {

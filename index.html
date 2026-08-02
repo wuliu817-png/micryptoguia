@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MiCryptoGuía — Tu guía completa de criptomonedas. Aprende desde cero sobre Bitcoin, blockchain, DeFi, wallets, seguridad y más. Guías paso a paso en español.">
-    <meta name="keywords" content="criptomonedas, bitcoin, guía crypto, blockchain, defi, wallets, trading, español, aprender crypto, seguridad crypto">
+    <meta name="description" content="MiCryptoGuía — Tu guía completa de criptomonedas en español. Aprende Bitcoin, blockchain, DeFi, seguridad y más. Tutoriales paso a paso para principiantes, intermedios y avanzados.">
+    <meta name="keywords" content="criptomonedas, bitcoin, blockchain, ethereum, defi, crypto, guía, tutorial, exchanges, wallets, seguridad, web3, nft, trading, español">
     <meta name="author" content="MiCryptoGuía">
-    <meta property="og:title" content="MiCryptoGuía — Aprende Criptomonedas desde Cero">
-    <meta property="og:description" content="Guías paso a paso, tutoriales y recursos para dominar el mundo de las criptomonedas. Para principiantes y avanzados.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://micryptoguia.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#080b16">
     <link rel="canonical" href="https://micryptoguia.com/">
-    <title>MiCryptoGuía — Tu Guía Completa de Criptomonedas</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MiCryptoGuía — Guía Completa de Criptomonedas">
+    <meta property="og:description" content="Aprende criptomonedas desde cero. Tutoriales, guías y comparativas de exchanges, wallets, DeFi y seguridad.">
+    <meta property="og:url" content="https://micryptoguia.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>MiCryptoGuía — Guía Completa de Criptomonedas 🇪🇸</title>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ===== Navigation ===== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#inicio" class="nav-logo">
                 <span class="logo-icon">₿</span>
-                <span class="logo-text">MiCrypto<span class="logo-accent">Guía</span></span>
+                <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
             </a>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio" class="nav-link active">Inicio</a></li>
                 <li><a href="#fundamentos" class="nav-link">Fundamentos</a></li>
@@ -35,33 +49,38 @@
                 <li><a href="#defi" class="nav-link">DeFi</a></li>
                 <li><a href="#seguridad" class="nav-link">Seguridad</a></li>
                 <li><a href="#glosario" class="nav-link">Glosario</a></li>
+                <li><a href="#herramientas" class="nav-link">Herramientas</a></li>
             </ul>
+
             <div class="nav-actions">
                 <button class="search-toggle" id="searchToggle" aria-label="Buscar">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </button>
                 <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                 </button>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
-                    <span></span><span></span><span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-            </div>
-        </div>
-        <!-- Search Overlay -->
-        <div class="search-overlay" id="searchOverlay">
-            <div class="search-container">
-                <input type="text" class="search-input" id="searchInput" placeholder="Buscar guías, términos, tutoriales...">
-                <button class="search-close" id="searchClose">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
-                </button>
-                <div class="search-results" id="searchResults"></div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== Search Overlay ===== -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Buscar guías, términos, conceptos...">
+            <button class="search-close" id="searchClose" aria-label="Cerrar búsqueda">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- ===== Hero Section ===== -->
     <section class="hero" id="inicio">
         <div class="hero-bg">
             <div class="hero-grid"></div>
@@ -69,446 +88,447 @@
             <div class="hero-orb hero-orb-2"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-badge">🌐 Guía Actualizada 2026</span>
-            <h1 class="hero-title">
-                Aprende <span class="gradient-text">Criptomonedas</span><br>Desde Cero
-            </h1>
-            <p class="hero-subtitle">
-                La guía más completa en español para entender Bitcoin, blockchain, DeFi y todo el ecosistema crypto.
-                Desde principiante hasta avanzado, sin noticias, solo conocimiento.
-            </p>
+            <span class="hero-badge">🇪🇸 La guía crypto en español</span>
+            <h1 class="hero-title">Domina el mundo de las <span class="gradient-text">Criptomonedas</span></h1>
+            <p class="hero-subtitle">Desde cero hasta avanzado. Aprende a comprar, almacenar y hacer crecer tus criptoactivos de forma segura con guías paso a paso en español.</p>
             <div class="hero-cta">
-                <a href="#fundamentos" class="btn btn-primary">
-                    Comenzar Ahora
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="#guias" class="btn btn-secondary">Ver Guías</a>
+                <a href="#fundamentos" class="btn btn-primary btn-lg">🚀 Empieza aquí</a>
+                <a href="#guias" class="btn btn-secondary btn-lg">📚 Ver guías</a>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <span class="stat-number">25+</span>
-                    <span class="stat-label">Guías Detalladas</span>
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Guías paso a paso</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="stat-number">100+</span>
-                    <span class="stat-label">Términos del Glosario</span>
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Términos explicados</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="stat-number">3</span>
-                    <span class="stat-label">Niveles de Aprendizaje</span>
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">En español</span>
                 </div>
             </div>
         </div>
-        <a href="#fundamentos" class="scroll-indicator">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        <a href="#fundamentos" class="scroll-indicator" aria-label="Desplazar hacia abajo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
         </a>
     </section>
 
-    <!-- Quick Start Section -->
-    <section class="quickstart section" id="quickstart">
+    <!-- ===== Niveles (Quickstart) ===== -->
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">🚀 Primeros Pasos</span>
-                <h2 class="section-title">Elige tu <span class="gradient-text">camino</span></h2>
-                <p class="section-desc">Selecciona tu nivel y accede a guías personalizadas</p>
+                <span class="section-tag">🎯 Por dónde empezar</span>
+                <h2 class="section-title">Elige tu <span class="gradient-text">nivel</span></h2>
+                <p class="section-desc">No importa si eres nuevo o ya tienes experiencia. Tenemos contenido para cada etapa de tu viaje crypto.</p>
             </div>
             <div class="level-cards">
+                <!-- Principiante -->
                 <div class="level-card">
                     <div class="level-icon">🌱</div>
                     <span class="level-badge principiante">Principiante</span>
                     <h3>Desde Cero</h3>
-                    <p>¿Nunca has usado crypto? Empieza aquí. Aprende qué es Bitcoin, cómo funciona blockchain y crea tu primer wallet.</p>
+                    <p>¿No sabes nada de criptomonedas? Perfecto. Te explicamos todo desde lo más básico, sin tecnicismos.</p>
                     <ul class="level-topics">
-                        <li>¿Qué es Bitcoin?</li>
-                        <li>Blockchain explicado fácil</li>
-                        <li>Cómo crear un wallet</li>
-                        <li>Tu primera compra de crypto</li>
+                        <li>Qué es Bitcoin y cómo funciona</li>
+                        <li>Cómo comprar tus primeras criptos</li>
+                        <li>Crear y proteger tu wallet</li>
+                        <li>Conceptos clave explicados fácil</li>
                     </ul>
-                    <a href="#fundamentos" class="btn btn-outline">Empezar <span>→</span></a>
+                    <a href="#fundamentos" class="btn btn-outline btn-sm">Comenzar →</a>
                 </div>
+
+                <!-- Intermedio (featured) -->
                 <div class="level-card featured">
                     <div class="level-icon">⚡</div>
                     <span class="level-badge intermedio">Intermedio</span>
                     <h3>Sube de Nivel</h3>
-                    <p>Ya conoces lo básico. Aprende trading, análisis técnico, DeFi, staking y diversifica tu portfolio.</p>
+                    <p>Ya conoces lo básico. Aprende a hacer trading, usar DeFi y sacar el máximo provecho a tus criptos.</p>
                     <ul class="level-topics">
-                        <li>Trading básico y órdenes</li>
-                        <li>DeFi y yield farming</li>
-                        <li>Análisis técnico esencial</li>
-                        <li>Gestión de riesgos</li>
+                        <li>Trading y análisis de mercado</li>
+                        <li>DeFi: staking, yield farming</li>
+                        <li>Comparativa de exchanges</li>
+                        <li>Gestión de cartera y riesgos</li>
                     </ul>
-                    <a href="#guias" class="btn btn-primary">Continuar <span>→</span></a>
+                    <a href="#guias" class="btn btn-primary btn-sm">Ver guías →</a>
                 </div>
+
+                <!-- Avanzado -->
                 <div class="level-card">
-                    <div class="level-icon">🔥</div>
+                    <div class="level-icon">🔱</div>
                     <span class="level-badge avanzado">Avanzado</span>
                     <h3>Nivel Pro</h3>
-                    <p>Domina estrategias avanzadas, seguridad máxima, contratos inteligentes, NFTs y el ecosistema Web3.</p>
+                    <p>Domina estrategias avanzadas, seguridad extrema y las herramientas más potentes del ecosistema crypto.</p>
                     <ul class="level-topics">
-                        <li>Smart contracts y dApps</li>
                         <li>Estrategias DeFi avanzadas</li>
-                        <li>Cold storage y multisig</li>
-                        <li>Fiscalidad crypto en España</li>
+                        <li>Seguridad y cold storage</li>
+                        <li>Smart contracts y Web3</li>
+                        <li>Análisis on-chain</li>
                     </ul>
-                    <a href="#defi" class="btn btn-outline">Explorar <span>→</span></a>
+                    <a href="#defi" class="btn btn-outline btn-sm">Explorar →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Fundamentos Section -->
-    <section class="fundamentos section" id="fundamentos">
+    <!-- ===== Fundamentos ===== -->
+    <section class="section" id="fundamentos">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">📚 Aprende</span>
+                <span class="section-tag">📖 Aprende lo esencial</span>
                 <h2 class="section-title">Fundamentos <span class="gradient-text">Crypto</span></h2>
-                <p class="section-desc">Todo lo que necesitas saber para entender el mundo de las criptomonedas</p>
+                <p class="section-desc">Los conceptos clave que necesitas dominar para navegar el mundo de las criptomonedas con confianza.</p>
             </div>
             <div class="fundamentos-grid">
+
                 <div class="fundamento-card">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><path d="M2 12h20"/></svg>
                     </div>
                     <div class="card-content">
                         <h3>¿Qué es Bitcoin?</h3>
-                        <p>Bitcoin es la primera criptomoneda descentralizada del mundo, creada en 2009 por Satoshi Nakamoto. Funciona sin bancos ni intermediarios, permitiendo transacciones directas entre personas en cualquier parte del mundo.</p>
+                        <p>La primera criptomoneda descentralizada del mundo. Descubre cómo funciona, por qué es valiosa y cómo empezó todo.</p>
                         <div class="card-details">
-                            <div class="detail-item">
-                                <strong>Creación:</strong> 2009
-                            </div>
-                            <div class="detail-item">
-                                <strong>Suministro máximo:</strong> 21 millones
-                            </div>
-                            <div class="detail-item">
-                                <strong>Tiempo de bloque:</strong> ~10 minutos
-                            </div>
+                            <span class="detail-item">⏱️ <strong>8</strong> min lectura</span>
+                            <span class="detail-item">🌱 Principiante</span>
                         </div>
-                        <a href="#" class="card-link">Leer guía completa →</a>
+                        <a href="#" class="card-link">Leer más →</a>
                     </div>
                 </div>
+
                 <div class="fundamento-card">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="2" x2="8" y2="22"/><line x1="16" y1="2" x2="16" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
                     </div>
                     <div class="card-content">
-                        <h3>Blockchain: La Tecnología</h3>
-                        <p>Una blockchain es un libro de contabilidad digital, distribuido e inmutable. Cada "bloque" contiene transacciones verificadas. Una vez añadido, no se puede modificar, creando un registro permanente y transparente.</p>
+                        <h3>Blockchain Explicada</h3>
+                        <p>Entiende la tecnología que lo cambia todo. Cómo funciona una cadena de bloques y por qué es revolucionaria.</p>
                         <div class="card-details">
-                            <div class="detail-item">
-                                <strong>Tipos:</strong> Pública, Privada, Híbrida
-                            </div>
-                            <div class="detail-item">
-                                <strong>Mecanismos:</strong> PoW, PoS, DPoS
-                            </div>
-                            <div class="detail-item">
-                                <strong>Característica:</strong> Descentralizada
-                            </div>
+                            <span class="detail-item">⏱️ <strong>10</strong> min lectura</span>
+                            <span class="detail-item">🌱 Principiante</span>
                         </div>
-                        <a href="#" class="card-link">Leer guía completa →</a>
+                        <a href="#" class="card-link">Leer más →</a>
                     </div>
                 </div>
+
                 <div class="fundamento-card">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div class="card-content">
-                        <h3>Seguridad y Privacidad</h3>
-                        <p>La criptografía de clave pública/privada es la base de la seguridad crypto. Tu clave privada es como la contraseña de tu banco: nunca la compartas. La frase semilla es el respaldo maestro de todos tus fondos.</p>
-                        <div class="card-details">
-                            <div class="detail-item">
-                                <strong>Clave privada:</strong> NUNCA compartir
-                            </div>
-                            <div class="detail-item">
-                                <strong>Frase semilla:</strong> 12/24 palabras
-                            </div>
-                            <div class="detail-item">
-                                <strong>2FA:</strong> Always enabled
-                            </div>
-                        </div>
-                        <a href="#" class="card-link">Leer guía completa →</a>
-                    </div>
-                </div>
-                <div class="fundamento-card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 12 12 22 2 12"/></svg>
                     </div>
                     <div class="card-content">
                         <h3>Ethereum y Smart Contracts</h3>
-                        <p>Ethereum llevó la blockchain más allá del dinero. Los smart contracts son programas que se ejecutan automáticamente cuando se cumplen condiciones. Son la base de DeFi, NFTs, DAOs y toda la Web3.</p>
+                        <p>Mucho más que una criptomoneda. Descubre los contratos inteligentes y cómo Ethereum impulsa DeFi, NFTs y Web3.</p>
                         <div class="card-details">
-                            <div class="detail-item">
-                                <strong>Lenguaje:</strong> Solidity
-                            </div>
-                            <div class="detail-item">
-                                <strong>Gas:</strong> Coste de ejecución
-                            </div>
-                            <div class="detail-item">
-                                <strong>EVM:</strong> Máquina Virtual Ethereum
-                            </div>
+                            <span class="detail-item">⏱️ <strong>10</strong> min lectura</span>
+                            <span class="detail-item">🌱 Principiante</span>
                         </div>
-                        <a href="#" class="card-link">Leer guía completa →</a>
+                        <a href="#" class="card-link">Leer más →</a>
                     </div>
                 </div>
+
+                <div class="fundamento-card">
+                    <div class="card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Claves y Direcciones</h3>
+                        <p>Clave privada, clave pública, dirección... Aprende qué son, cómo funcionan y por qué protegerlas es fundamental.</p>
+                        <div class="card-details">
+                            <span class="detail-item">⏱️ <strong>7</strong> min lectura</span>
+                            <span class="detail-item">🌱 Principiante</span>
+                        </div>
+                        <a href="#" class="card-link">Leer más →</a>
+                    </div>
+                </div>
+
+                <div class="fundamento-card">
+                    <div class="card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Seguridad Básica</h3>
+                        <p>Las reglas de oro de la seguridad crypto. Protege tus fondos de hackers, estafas y errores comunes.</p>
+                        <div class="card-details">
+                            <span class="detail-item">⏱️ <strong>12</strong> min lectura</span>
+                            <span class="detail-item">🌱 Principiante</span>
+                        </div>
+                        <a href="#" class="card-link">Leer más →</a>
+                    </div>
+                </div>
+
+                <div class="fundamento-card">
+                    <div class="card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Tokens y Altcoins</h3>
+                        <p>¿Bitcoin o altcoins? ¿Token o coin? Aprende la diferencia entre los distintos tipos de criptoactivos y para qué sirven.</p>
+                        <div class="card-details">
+                            <span class="detail-item">⏱️ <strong>9</strong> min lectura</span>
+                            <span class="detail-item">🌱 Principiante</span>
+                        </div>
+                        <a href="#" class="card-link">Leer más →</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Guías Section -->
-    <section class="guias section" id="guias">
+    <!-- ===== Guías Paso a Paso ===== -->
+    <section class="section" id="guias">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">📖 Tutoriales</span>
+                <span class="section-tag">📋 Tutoriales prácticos</span>
                 <h2 class="section-title">Guías <span class="gradient-text">Paso a Paso</span></h2>
-                <p class="section-desc">Tutoriales detallados para cada aspecto del mundo crypto</p>
+                <p class="section-desc">Tutoriales detallados con capturas de pantalla para que no te pierdas nada.</p>
             </div>
+
+            <!-- Tabs -->
             <div class="guias-tabs">
-                <button class="guia-tab active" data-tab="comprar">Comprar Crypto</button>
-                <button class="guia-tab" data-tab="trading">Trading</button>
-                <button class="guia-tab" data-tab="wallets-guia">Wallets</button>
-                <button class="guia-tab" data-tab="defi-guia">DeFi</button>
-                <button class="guia-tab" data-tab="seguridad-guia">Seguridad</button>
+                <button class="guia-tab active" data-tab="panel-principiante">🌱 Principiante</button>
+                <button class="guia-tab" data-tab="panel-intermedio">⚡ Intermedio</button>
+                <button class="guia-tab" data-tab="panel-avanzado">🔱 Avanzado</button>
             </div>
-            <div class="guias-content">
-                <div class="guia-panel active" id="comprar">
-                    <div class="guia-list">
-                        <div class="guia-item">
-                            <span class="guia-num">01</span>
-                            <div class="guia-info">
-                                <h4>Cómo comprar Bitcoin por primera vez</h4>
-                                <p>Guía completa para comprar tu primer BTC: desde elegir exchange hasta retirar a tu wallet.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 15 min</span>
-                                    <span>📋 6 pasos</span>
-                                </div>
+
+            <!-- Panel: Principiante -->
+            <div class="guia-panel active" id="panel-principiante">
+                <div class="guia-list">
+
+                    <div class="guia-item">
+                        <div class="guia-num">01</div>
+                        <div class="guia-info">
+                            <h4>Cómo comprar Bitcoin por primera vez</h4>
+                            <p>Guía completa para comprar tu primer Bitcoin de forma segura usando un exchange regulado.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 15 min</span>
+                                <span>🌱 Principiante</span>
+                                <span>📸 Con capturas</span>
                             </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
                         </div>
-                        <div class="guia-item">
-                            <span class="guia-num">02</span>
-                            <div class="guia-info">
-                                <h4>Comparativa de exchanges: Binance vs Coinbase vs Kraken</h4>
-                                <p>Análisis detallado de comisiones, seguridad, monedas disponibles y facilidad de uso.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 20 min</span>
-                                    <span>📋 Comparativa</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
-                        <div class="guia-item">
-                            <span class="guia-num">03</span>
-                            <div class="guia-info">
-                                <h4>Métodos de pago para comprar criptomonedas</h4>
-                                <p>Transferencia bancaria, tarjeta, PayPal, P2P… ventajas y desventajas de cada método.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 10 min</span>
-                                    <span>📋 5 métodos</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
-                        <div class="guia-item">
-                            <span class="guia-num">04</span>
-                            <div class="guia-info">
-                                <h4>Verificación KYC: qué es y por qué la necesitas</h4>
-                                <p>Entiende el proceso de identificación en exchanges y cómo completarlo correctamente.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 8 min</span>
-                                    <span>📋 KYC/AML</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
                     </div>
-                </div>
-                <div class="guia-panel" id="trading">
-                    <div class="guia-list">
-                        <div class="guia-item">
-                            <span class="guia-num">01</span>
-                            <div class="guia-info">
-                                <h4>Trading para principiantes: conceptos esenciales</h4>
-                                <p>Aprende qué es una orden de mercado, orden límite, stop-loss y take-profit.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 20 min</span>
-                                </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">02</div>
+                        <div class="guia-info">
+                            <h4>Crear y configurar MetaMask paso a paso</h4>
+                            <p>Aprende a instalar, configurar y proteger MetaMask, la wallet más usada de Web3.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 10 min</span>
+                                <span>🌱 Principiante</span>
+                                <span>📸 Con capturas</span>
                             </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
                         </div>
-                        <div class="guia-item">
-                            <span class="guia-num">02</span>
-                            <div class="guia-info">
-                                <h4>Análisis técnico básico: velas, soportes y resistencias</h4>
-                                <p>Introducción al análisis de gráficos: patrones de velas, tendencias e indicadores clave.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge intermedio">Intermedio</span>
-                                    <span>⏱️ 30 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
-                        <div class="guia-item">
-                            <span class="guia-num">03</span>
-                            <div class="guia-info">
-                                <h4>Gestión de riesgos: cuánto invertir y cómo proteger tu capital</h4>
-                                <p>Estrategias de gestión de riesgo, tamaño de posición y reglas de oro del trading.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge intermedio">Intermedio</span>
-                                    <span>⏱️ 25 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
-                        <div class="guia-item">
-                            <span class="guia-num">04</span>
-                            <div class="guia-info">
-                                <h4>Futuros y derivados: guía de trading avanzado</h4>
-                                <p>Contratos de futuros, perpetuos, apalancamiento y liquidaciones explicados.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge avanzado">Avanzado</span>
-                                    <span>⏱️ 35 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
                     </div>
-                </div>
-                <div class="guia-panel" id="wallets-guia">
-                    <div class="guia-list">
-                        <div class="guia-item">
-                            <span class="guia-num">01</span>
-                            <div class="guia-info">
-                                <h4>Hot Wallets vs Cold Wallets: diferencias clave</h4>
-                                <p>Cuándo usar cada tipo, ventajas y riesgos. Comparativa de las mejores opciones.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 15 min</span>
-                                </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">03</div>
+                        <div class="guia-info">
+                            <h4>Cómo enviar y recibir criptomonedas</h4>
+                            <p>Aprende a hacer tu primera transacción sin miedo a equivocarte. Todo sobre gas fees y redes.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 8 min</span>
+                                <span>🌱 Principiante</span>
+                                <span>📸 Con capturas</span>
                             </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
                         </div>
-                        <div class="guia-item">
-                            <span class="guia-num">02</span>
-                            <div class="guia-info">
-                                <h4>Cómo configurar MetaMask paso a paso</h4>
-                                <p>Instalación, creación de wallet, seguridad inicial y conexión con dApps.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 12 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
-                        <div class="guia-item">
-                            <span class="guia-num">03</span>
-                            <div class="guia-info">
-                                <h4>Ledger y Trezor: guía de hardware wallets</h4>
-                                <p>Configuración inicial, transferencia de fondos y mejores prácticas de seguridad.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge intermedio">Intermedio</span>
-                                    <span>⏱️ 25 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
                     </div>
-                </div>
-                <div class="guia-panel" id="defi-guia">
-                    <div class="guia-list">
-                        <div class="guia-item">
-                            <span class="guia-num">01</span>
-                            <div class="guia-info">
-                                <h4>¿Qué es DeFi? Finanzas descentralizadas explicadas</h4>
-                                <p>Introducción al ecosistema DeFi: protocolos, liquidez, AMMs y más.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 20 min</span>
-                                </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">04</div>
+                        <div class="guia-info">
+                            <h4>Verificar tu identidad (KYC) en un exchange</h4>
+                            <p>Todo lo que necesitas saber sobre el proceso KYC: documentos, tiempos y consejos de privacidad.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 7 min</span>
+                                <span>🌱 Principiante</span>
                             </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
                         </div>
-                        <div class="guia-item">
-                            <span class="guia-num">02</span>
-                            <div class="guia-info">
-                                <h4>Staking: cómo generar ingresos pasivos con crypto</h4>
-                                <p>Qué es el staking, cómo funciona en Ethereum, Solana y otras redes. Rentabilidades.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge intermedio">Intermedio</span>
-                                    <span>⏱️ 18 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
-                        <div class="guia-item">
-                            <span class="guia-num">03</span>
-                            <div class="guia-info">
-                                <h4>Uniswap y DEXs: cómo funcionan los intercambios descentralizados</h4>
-                                <p>Guía práctica para usar Uniswap, entender los pools de liquidez y el slippage.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge intermedio">Intermedio</span>
-                                    <span>⏱️ 25 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
                     </div>
-                </div>
-                <div class="guia-panel" id="seguridad-guia">
-                    <div class="guia-list">
-                        <div class="guia-item">
-                            <span class="guia-num">01</span>
-                            <div class="guia-info">
-                                <h4>10 reglas de oro para la seguridad en crypto</h4>
-                                <p>Protege tus fondos con estas reglas esenciales que todo usuario debe conocer.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 12 min</span>
-                                </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">05</div>
+                        <div class="guia-info">
+                            <h4>Qué es una stablecoin y cómo usarlas</h4>
+                            <p>USDT, USDC, DAI... Entiende las stablecoins y cómo te ayudan a protegerte de la volatilidad.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 10 min</span>
+                                <span>🌱 Principiante</span>
                             </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
                         </div>
-                        <div class="guia-item">
-                            <span class="guia-num">02</span>
-                            <div class="guia-info">
-                                <h4>Cómo detectar y evitar estafas crypto</h4>
-                                <p>Phishing, rug pulls, ponzis, fake giveaways… aprende a identificarlos.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge principiante">Principiante</span>
-                                    <span>⏱️ 15 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
-                        <div class="guia-item">
-                            <span class="guia-num">03</span>
-                            <div class="guia-info">
-                                <h4>Qué hacer si te hackean: plan de acción</h4>
-                                <p>Pasos inmediatos para mitigar daños y proteger lo que queda tras un incidente.</p>
-                                <div class="guia-meta">
-                                    <span class="level-badge avanzado">Avanzado</span>
-                                    <span>⏱️ 10 min</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-sm">Ver Guía</a>
-                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
                     </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">06</div>
+                        <div class="guia-info">
+                            <h4>Cómo leer el mercado: precio, volumen y velas</h4>
+                            <p>Primeros pasos en análisis técnico. Aprende a leer gráficos de velas, volumen y tendencias básicas.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 12 min</span>
+                                <span>🌱 Principiante</span>
+                                <span>📸 Con capturas</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
                 </div>
             </div>
+
+            <!-- Panel: Intermedio -->
+            <div class="guia-panel" id="panel-intermedio">
+                <div class="guia-list">
+
+                    <div class="guia-item">
+                        <div class="guia-num">01</div>
+                        <div class="guia-info">
+                            <h4>Hacer staking de Ethereum paso a paso</h4>
+                            <p>Aprende a hacer staking de ETH y generar ingresos pasivos de forma segura con Lido y Rocket Pool.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 15 min</span>
+                                <span>⚡ Intermedio</span>
+                                <span>📸 Con capturas</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">02</div>
+                        <div class="guia-info">
+                            <h4>Usar un DEX: swap en Uniswap</h4>
+                            <p>Aprende a intercambiar tokens en Uniswap, configurar slippage y entender los pools de liquidez.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 12 min</span>
+                                <span>⚡ Intermedio</span>
+                                <span>📸 Con capturas</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">03</div>
+                        <div class="guia-info">
+                            <h4>Yield Farming: guía para principiantes</h4>
+                            <p>Qué es el yield farming, cómo funciona, riesgos y cómo empezar en plataformas como Aave.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 18 min</span>
+                                <span>⚡ Intermedio</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">04</div>
+                        <div class="guia-info">
+                            <h4>Crear una cartera crypto diversificada</h4>
+                            <p>Aprende los principios de diversificación aplicados a criptomonedas. Estrategias y ejemplos prácticos.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 14 min</span>
+                                <span>⚡ Intermedio</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">05</div>
+                        <div class="guia-info">
+                            <h4>Impuestos crypto en España: guía básica</h4>
+                            <p>Cómo declarar tus criptomonedas correctamente. Obligaciones fiscales y herramientas para el IRPF.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 20 min</span>
+                                <span>⚡ Intermedio</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Panel: Avanzado -->
+            <div class="guia-panel" id="panel-avanzado">
+                <div class="guia-list">
+
+                    <div class="guia-item">
+                        <div class="guia-num">01</div>
+                        <div class="guia-info">
+                            <h4>Configurar un hardware wallet (Ledger)</h4>
+                            <p>Guía completa de configuración de Ledger Nano. Máxima seguridad para tus criptoactivos.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 20 min</span>
+                                <span>🔱 Avanzado</span>
+                                <span>📸 Con capturas</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">02</div>
+                        <div class="guia-info">
+                            <h4>Verificar smart contracts en Etherscan</h4>
+                            <p>Aprende a leer y verificar contratos inteligentes. Cómo detectar funciones sospechosas antes de firmar.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 16 min</span>
+                                <span>🔱 Avanzado</span>
+                                <span>📸 Con capturas</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">03</div>
+                        <div class="guia-info">
+                            <h4>Usar puentes cross-chain sin riesgos</h4>
+                            <p>Guía para mover fondos entre blockchains. Los puentes más seguros y cómo evitar errores costosos.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 15 min</span>
+                                <span>🔱 Avanzado</span>
+                                <span>📸 Con capturas</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                    <div class="guia-item">
+                        <div class="guia-num">04</div>
+                        <div class="guia-info">
+                            <h4>Análisis on-chain con Dune Analytics</h4>
+                            <p>Cómo usar Dune para investigar proyectos, ballenas y tendencias. Dashboards que todo inversor debe conocer.</p>
+                            <div class="guia-meta">
+                                <span>⏱️ 18 min</span>
+                                <span>🔱 Avanzado</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Ver guía →</a>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Exchanges Section -->
-    <section class="exchanges section" id="exchanges">
+    <!-- ===== Comparativa de Exchanges ===== -->
+    <section class="section" id="exchanges">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">🏦 Plataformas</span>
-                <h2 class="section-title">Comparativa de <span class="gradient-text">Exchanges</span></h2>
-                <p class="section-desc">Elige el exchange que mejor se adapte a tus necesidades</p>
+                <span class="section-tag">🏦 Compara y elige</span>
+                <h2 class="section-title">Mejores <span class="gradient-text">Exchanges</span></h2>
+                <p class="section-desc">Compara las plataformas más seguras para comprar y vender criptomonedas. Elige la que mejor se adapte a ti.</p>
             </div>
+
             <div class="exchange-table-wrapper">
                 <table class="exchange-table">
                     <thead>
@@ -517,9 +537,8 @@
                             <th>Comisiones</th>
                             <th>Criptos</th>
                             <th>Seguridad</th>
-                            <th>Nivel</th>
                             <th>Destacado</th>
-                            <th></th>
+                            <th>Acción</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -529,18 +548,15 @@
                                     <span class="exchange-icon">🟡</span>
                                     <div>
                                         <strong>Binance</strong>
-                                        <small>Global</small>
+                                        <small>Mundial</small>
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="highlight">0.1%</span></td>
+                            <td><span class="highlight">0.10%</span> spot</td>
                             <td>350+</td>
-                            <td>
-                                <div class="security-stars">★★★★★</div>
-                            </td>
-                            <td><span class="level-badge principiante">Principiante</span></td>
-                            <td>Mayor liquidez global, staking, launchpad, P2P, earn</td>
-                            <td><a href="https://www.binance.com/es" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-primary">Visitar</a></td>
+                            <td><span class="security-stars">★★★★★</span></td>
+                            <td>Mayor liquidez global, staking</td>
+                            <td><a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-sm">Ir →</a></td>
                         </tr>
                         <tr>
                             <td>
@@ -548,37 +564,31 @@
                                     <span class="exchange-icon">🔵</span>
                                     <div>
                                         <strong>Coinbase</strong>
-                                        <small>EE.UU.</small>
+                                        <small>EE.UU. / Europa</small>
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="highlight">0.6%</span></td>
-                            <td>250+</td>
-                            <td>
-                                <div class="security-stars">★★★★★</div>
-                            </td>
-                            <td><span class="level-badge principiante">Principiante</span></td>
-                            <td>Ideal para beginners, interfaz intuitiva, regulado</td>
-                            <td><a href="https://www.coinbase.com/es" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-outline">Visitar</a></td>
+                            <td><span class="highlight">0.40%</span> maker</td>
+                            <td>240+</td>
+                            <td><span class="security-stars">★★★★★</span></td>
+                            <td>Interfaz ideal para principiantes</td>
+                            <td><a href="#" class="btn btn-outline btn-sm">Ir →</a></td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="exchange-cell">
-                                    <span class="exchange-icon">⚪</span>
+                                    <span class="exchange-icon">🟣</span>
                                     <div>
                                         <strong>Kraken</strong>
-                                        <small>EE.UU.</small>
+                                        <small>EE.UU. / Europa</small>
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="highlight">0.16%</span></td>
-                            <td>200+</td>
-                            <td>
-                                <div class="security-stars">★★★★★</div>
-                            </td>
-                            <td><span class="level-badge intermedio">Intermedio</span></td>
-                            <td>Excelente seguridad, staking, margen, futuros</td>
-                            <td><a href="https://www.kraken.com/es" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-outline">Visitar</a></td>
+                            <td><span class="highlight">0.16%</span> maker</td>
+                            <td>220+</td>
+                            <td><span class="security-stars">★★★★★</span></td>
+                            <td>Auditoría proof-of-reserves</td>
+                            <td><a href="#" class="btn btn-outline btn-sm">Ir →</a></td>
                         </tr>
                         <tr>
                             <td>
@@ -586,37 +596,31 @@
                                     <span class="exchange-icon">🟢</span>
                                     <div>
                                         <strong>KuCoin</strong>
-                                        <small>Global</small>
+                                        <small>Mundial</small>
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="highlight">0.1%</span></td>
+                            <td><span class="highlight">0.10%</span> spot</td>
                             <td>700+</td>
-                            <td>
-                                <div class="security-stars">★★★★☆</div>
-                            </td>
-                            <td><span class="level-badge intermedio">Intermedio</span></td>
-                            <td>Gran variedad de altcoins, trading bots, earn</td>
-                            <td><a href="https://www.kucoin.com/es" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-outline">Visitar</a></td>
+                            <td><span class="security-stars">★★★★☆</span></td>
+                            <td>Más variedad de altcoins</td>
+                            <td><a href="#" class="btn btn-outline btn-sm">Ir →</a></td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="exchange-cell">
-                                    <span class="exchange-icon">🇪🇸</span>
+                                    <span class="exchange-icon">🔴</span>
                                     <div>
                                         <strong>Bit2Me</strong>
                                         <small>España</small>
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="highlight">1%</span></td>
-                            <td>300+</td>
-                            <td>
-                                <div class="security-stars">★★★★★</div>
-                            </td>
-                            <td><span class="level-badge principiante">Principiante</span></td>
-                            <td>Regulado en España (Banco de España), soporte en español</td>
-                            <td><a href="https://www.bit2me.com/" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-outline">Visitar</a></td>
+                            <td><span class="highlight">0.50%</span> spot</td>
+                            <td>100+</td>
+                            <td><span class="security-stars">★★★★★</span></td>
+                            <td>Regulado en España, soporte local</td>
+                            <td><a href="#" class="btn btn-outline btn-sm">Ir →</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -624,457 +628,513 @@
         </div>
     </section>
 
-    <!-- Wallets Section -->
-    <section class="wallets section" id="wallets">
+    <!-- ===== Wallets ===== -->
+    <section class="section" id="wallets">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">🔐 Almacenamiento</span>
+                <span class="section-tag">🔐 Custodia tus criptos</span>
                 <h2 class="section-title">Wallets y <span class="gradient-text">Custodia</span></h2>
-                <p class="section-desc">Protege tus criptomonedas con la wallet adecuada para cada uso</p>
+                <p class="section-desc">"Not your keys, not your coins." Aprende a elegir y usar la wallet adecuada para cada necesidad.</p>
             </div>
             <div class="wallets-grid">
+
+                <!-- Hot Wallet -->
                 <div class="wallet-card">
                     <div class="wallet-type hot">Hot Wallet</div>
                     <div class="wallet-body">
-                        <h3>MetaMask</h3>
-                        <p>La wallet más popular para interactuar con DeFi y dApps en Ethereum y EVMs.</p>
+                        <h3>🦊 MetaMask</h3>
+                        <p>La wallet más popular para interactuar con dApps y DeFi. Extensión de navegador y app móvil.</p>
                         <div class="wallet-features">
-                            <span>🌐 Extensión navegador</span>
-                            <span>📱 App móvil</span>
-                            <span>🔗 Multi-chain</span>
-                            <span>🆓 Gratis</span>
+                            <span>Ethereum</span><span>EVM chains</span><span>dApps</span><span>Swaps</span>
                         </div>
                         <div class="wallet-pros">
-                            <strong>Ideal para:</strong> DeFi, NFTs, dApps
+                            <strong>✅ Ideal para:</strong> DeFi, NFTs, dApps, principiantes en Web3
                         </div>
-                        <a href="https://metamask.io/es/" target="_blank" rel="nofollow noopener" class="btn btn-outline btn-block">Web Oficial</a>
+                        <a href="#" class="btn btn-primary btn-sm btn-block">Más info →</a>
                     </div>
                 </div>
+
                 <div class="wallet-card">
                     <div class="wallet-type hot">Hot Wallet</div>
                     <div class="wallet-body">
-                        <h3>Trust Wallet</h3>
-                        <p>Wallet móvil multi-chain con soporte para 70+ blockchains y dApp browser integrado.</p>
+                        <h3>📱 Trust Wallet</h3>
+                        <p>Wallet multi-chain comprada por Binance. Soporta 70+ blockchains y millones de tokens.</p>
                         <div class="wallet-features">
-                            <span>📱 Solo móvil</span>
-                            <span>🔗 70+ blockchains</span>
-                            <span>💱 Swap integrado</span>
-                            <span>🆓 Gratis</span>
+                            <span>Multi-chain</span><span>Staking</span><span>dApp Browser</span><span>NFTs</span>
                         </div>
                         <div class="wallet-pros">
-                            <strong>Ideal para:</strong> Móvil, multi-chain
+                            <strong>✅ Ideal para:</strong> Múltiples blockchains, staking integrado, uso móvil
                         </div>
-                        <a href="https://trustwallet.com/es/" target="_blank" rel="nofollow noopener" class="btn btn-outline btn-block">Web Oficial</a>
+                        <a href="#" class="btn btn-primary btn-sm btn-block">Más info →</a>
                     </div>
                 </div>
+
+                <!-- Cold Wallet -->
                 <div class="wallet-card">
                     <div class="wallet-type cold">Cold Wallet</div>
                     <div class="wallet-body">
-                        <h3>Ledger</h3>
-                        <p>Hardware wallet líder del mercado. Almacenamiento offline de máxima seguridad.</p>
+                        <h3>🔒 Ledger</h3>
+                        <p>Hardware wallet líder del mercado. Almacenamiento offline con chip seguro certificado.</p>
                         <div class="wallet-features">
-                            <span>🔒 Offline storage</span>
-                            <span>💻 USB/Bluetooth</span>
-                            <span>📱 App Ledger Live</span>
-                            <span>💰 Desde 79€</span>
+                            <span>Offline</span><span>5,500+ tokens</span><span>Staking</span><span>Certificado</span>
                         </div>
                         <div class="wallet-pros">
-                            <strong>Ideal para:</strong> Largo plazo, grandes cantidades
+                            <strong>✅ Ideal para:</strong> Grandes cantidades, máxima seguridad, holding a largo plazo
                         </div>
-                        <a href="https://www.ledger.com/es" target="_blank" rel="nofollow noopener" class="btn btn-outline btn-block">Web Oficial</a>
+                        <a href="#" class="btn btn-primary btn-sm btn-block">Más info →</a>
                     </div>
                 </div>
+
                 <div class="wallet-card">
                     <div class="wallet-type cold">Cold Wallet</div>
                     <div class="wallet-body">
-                        <h3>Trezor</h3>
-                        <p>Primer hardware wallet del mundo. Código abierto y máxima transparencia.</p>
+                        <h3>🔐 Trezor</h3>
+                        <p>Primer hardware wallet del mundo. Código abierto, seguridad probada y fácil de usar.</p>
                         <div class="wallet-features">
-                            <span>🔒 Offline storage</span>
-                            <span>🔓 Open source</span>
-                            <span>💻 USB-C</span>
-                            <span>💰 Desde 69€</span>
+                            <span>Open Source</span><span>1,800+ tokens</span><span>Shamir Backup</span><span>Touchscreen</span>
                         </div>
                         <div class="wallet-pros">
-                            <strong>Ideal para:</strong> Seguridad máxima, open source
+                            <strong>✅ Ideal para:</strong> Entusiastas de la seguridad, código abierto, respaldo avanzado
                         </div>
-                        <a href="https://www.trezor.io/es" target="_blank" rel="nofollow noopener" class="btn btn-outline btn-block">Web Oficial</a>
+                        <a href="#" class="btn btn-primary btn-sm btn-block">Más info →</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- DeFi Section -->
-    <section class="defi section" id="defi">
+    <!-- ===== DeFi y Web3 ===== -->
+    <section class="section" id="defi">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">💎 Ecosistema</span>
+                <span class="section-tag">🌐 Finanzas del futuro</span>
                 <h2 class="section-title">DeFi y <span class="gradient-text">Web3</span></h2>
-                <p class="section-desc">Descubre el mundo de las finanzas descentralizadas y la nueva internet</p>
+                <p class="section-desc">Descubre el ecosistema descentralizado: exchanges sin intermediarios, préstamos, NFTs y mucho más.</p>
             </div>
             <div class="defi-grid">
-                <div class="defi-card">
-                    <span class="defi-emoji">🏦</span>
-                    <h3>Préstamos DeFi</h3>
-                    <p>Pide prestado o presta crypto sin bancos. Protocolos como Aave y Compound permiten ganar intereses o acceder a liquidez con tus crypto como colateral.</p>
-                    <div class="defi-stats">
-                        <div class="defi-stat">
-                            <span class="defi-stat-value">$5.2B</span>
-                            <span class="defi-stat-label">TVL en lending</span>
-                        </div>
-                        <div class="defi-stat">
-                            <span class="defi-stat-value">2-15%</span>
-                            <span class="defi-stat-label">APY estimado</span>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="defi-card">
                     <span class="defi-emoji">🔄</span>
-                    <h3>DEXs y AMMs</h3>
-                    <p>Intercambia tokens directamente desde tu wallet sin intermediarios. Uniswap, PancakeSwap y SushiSwap usan pools de liquidez automatizados.</p>
+                    <h3>DEXs — Exchanges Descentralizados</h3>
+                    <p>Intercambia tokens sin intermediarios. Uniswap, PancakeSwap y SushiSwap lideran este sector con miles de millones en liquidez.</p>
                     <div class="defi-stats">
                         <div class="defi-stat">
-                            <span class="defi-stat-value">$12.8B</span>
-                            <span class="defi-stat-label">Volumen 24h DEX</span>
+                            <span class="defi-stat-value">$50B+</span>
+                            <span class="defi-stat-label">TVL en DEXs</span>
                         </div>
                         <div class="defi-stat">
-                            <span class="defi-stat-value">0.3%</span>
-                            <span class="defi-stat-label">Fee típico swap</span>
+                            <span class="defi-stat-value">Uniswap</span>
+                            <span class="defi-stat-label">Líder del sector</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="defi-card">
-                    <span class="defi-emoji">🥩</span>
-                    <h3>Staking Líquido</h3>
-                    <p>Haz staking de ETH, SOL o DOT y recibe tokens líquidos que puedes usar en más DeFi. Lido y Rocket Pool lideran el staking líquido de Ethereum.</p>
+                    <span class="defi-emoji">💰</span>
+                    <h3>Staking y Yield Farming</h3>
+                    <p>Genera ingresos pasivos con tus criptos. Bloquea tus tokens para asegurar la red y recibe recompensas.</p>
                     <div class="defi-stats">
                         <div class="defi-stat">
-                            <span class="defi-stat-value">$25B+</span>
-                            <span class="defi-stat-label">TVL LSD</span>
+                            <span class="defi-stat-value">3-20%</span>
+                            <span class="defi-stat-label">APY típico</span>
                         </div>
                         <div class="defi-stat">
-                            <span class="defi-stat-value">3-5%</span>
-                            <span class="defi-stat-label">APR ETH</span>
+                            <span class="defi-stat-value">Lido / Aave</span>
+                            <span class="defi-stat-label">Plataformas top</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="defi-card">
+                    <span class="defi-emoji">🎨</span>
+                    <h3>NFTs — Tokens No Fungibles</h3>
+                    <p>Arte digital, coleccionables, música y más. Los NFTs representan propiedad única verificable en la blockchain.</p>
+                    <div class="defi-stats">
+                        <div class="defi-stat">
+                            <span class="defi-stat-value">OpenSea</span>
+                            <span class="defi-stat-label">Marketplace líder</span>
+                        </div>
+                        <div class="defi-stat">
+                            <span class="defi-stat-value">Ethereum</span>
+                            <span class="defi-stat-label">Red principal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="defi-card">
+                    <span class="defi-emoji">🏛️</span>
+                    <h3>DAOs — Organizaciones Autónomas</h3>
+                    <p>Organizaciones gobernadas por smart contracts y votos de tokens. El futuro de la gestión colectiva descentralizada.</p>
+                    <div class="defi-stats">
+                        <div class="defi-stat">
+                            <span class="defi-stat-value">MakerDAO</span>
+                            <span class="defi-stat-label">DAO más grande</span>
+                        </div>
+                        <div class="defi-stat">
+                            <span class="defi-stat-value">10,000+</span>
+                            <span class="defi-stat-label">DAOs activas</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="defi-card">
                     <span class="defi-emoji">🌉</span>
                     <h3>Puentes Cross-Chain</h3>
-                    <p>Transfiere activos entre diferentes blockchains. LayerZero, Wormhole y Across permiten mover tokens entre Ethereum, Arbitrum, Solana y más.</p>
+                    <p>Mueve tus activos entre diferentes blockchains. Conecta Ethereum, Solana, Polygon y más sin complicaciones.</p>
                     <div class="defi-stats">
                         <div class="defi-stat">
-                            <span class="defi-stat-value">50+</span>
-                            <span class="defi-stat-label">Cadenas conectadas</span>
+                            <span class="defi-stat-value">LayerZero</span>
+                            <span class="defi-stat-label">Protocolo líder</span>
                         </div>
                         <div class="defi-stat">
-                            <span class="defi-stat-value">~5 min</span>
-                            <span class="defi-stat-label">Tiempo medio</span>
+                            <span class="defi-stat-value">Arbitrum</span>
+                            <span class="defi-stat-label">L2 más usado</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="defi-card">
-                    <span class="defi-emoji">🖼️</span>
-                    <h3>NFTs</h3>
-                    <p>Tokens no fungibles: arte digital, coleccionables, música y más en la blockchain. OpenSea, Blur y Magic Eden son los marketplaces principales.</p>
+                    <span class="defi-emoji">🏦</span>
+                    <h3>Lending y Borrowing</h3>
+                    <p>Presta tus criptos y gana intereses, o pide préstamos usando tus activos como colateral. Sin bancos ni papeleo.</p>
                     <div class="defi-stats">
                         <div class="defi-stat">
-                            <span class="defi-stat-value">$1.8B</span>
-                            <span class="defi-stat-label">Cap. mercado NFT</span>
+                            <span class="defi-stat-value">$40B+</span>
+                            <span class="defi-stat-label">TVL en lending</span>
                         </div>
                         <div class="defi-stat">
-                            <span class="defi-stat-value">ETH/SOL</span>
-                            <span class="defi-stat-label">Redes principales</span>
+                            <span class="defi-stat-value">Aave</span>
+                            <span class="defi-stat-label">Plataforma líder</span>
                         </div>
                     </div>
                 </div>
-                <div class="defi-card">
-                    <span class="defi-emoji">🏛️</span>
-                    <h3>DAOs</h3>
-                    <p>Organizaciones Autónomas Descentralizadas: comunidades que gobiernan protocolos mediante tokens de voto. MakerDAO, Uniswap DAO y Arbitrum DAO.</p>
-                    <div class="defi-stats">
-                        <div class="defi-stat">
-                            <span class="defi-stat-value">13,000+</span>
-                            <span class="defi-stat-label">DAOs activas</span>
-                        </div>
-                        <div class="defi-stat">
-                            <span class="defi-stat-value">$25B+</span>
-                            <span class="defi-stat-label">Tesorería total</span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Seguridad Section -->
-    <section class="seguridad section" id="seguridad">
+    <!-- ===== Seguridad ===== -->
+    <section class="section" id="seguridad">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">🛡️ Protégete</span>
+                <span class="section-tag">🛡️ Protege tus fondos</span>
                 <h2 class="section-title">Seguridad <span class="gradient-text">Crypto</span></h2>
-                <p class="section-desc">Las reglas esenciales para mantener tus criptomonedas a salvo</p>
+                <p class="section-desc">En crypto, la seguridad es tu responsabilidad. Sigue estas reglas para mantener tus fondos a salvo.</p>
             </div>
             <div class="seguridad-grid">
+
                 <div class="seguridad-card">
-                    <div class="seguridad-num">01</div>
-                    <h3>Nunca compartas tu clave privada o frase semilla</h3>
-                    <p>Tu frase semilla de 12/24 palabras es el acceso maestro a todos tus fondos. Guárdala offline, en papel o metal, en un lugar seguro. Nunca la introduzcas en una web ni se la envíes a nadie.</p>
+                    <span class="seguridad-num">01</span>
+                    <h3>Nunca compartas tu frase semilla</h3>
+                    <p>Las 12 o 24 palabras de recuperación son el acceso total a tus fondos. Guárdalas offline, nunca en digital, nunca las compartas con nadie.</p>
                 </div>
+
                 <div class="seguridad-card">
-                    <div class="seguridad-num">02</div>
+                    <span class="seguridad-num">02</span>
                     <h3>Activa 2FA en todas tus cuentas</h3>
-                    <p>Usa autenticación de dos factores (preferiblemente con app como Google Authenticator o Authy, no SMS) en exchanges, wallets y servicios crypto.</p>
+                    <p>Usa autenticación de dos factores (preferiblemente con app como Google Authenticator, no SMS) en exchanges, wallets y servicios crypto.</p>
                 </div>
+
                 <div class="seguridad-card">
-                    <div class="seguridad-num">03</div>
+                    <span class="seguridad-num">03</span>
                     <h3>Desconfía de ofertas "demasiado buenas"</h3>
-                    <p>Si prometen rendimientos garantizados del 1% diario o regalos por enviar crypto, es una estafa. Los giveaways de famosos en redes sociales son siempre falsos.</p>
+                    <p>Si algo promete rendimientos increíbles o regalos por enviar cripto, es una estafa. Nadie regala criptomonedas. Nadie.</p>
                 </div>
+
                 <div class="seguridad-card">
-                    <div class="seguridad-num">04</div>
-                    <h3>Verifica siempre las direcciones</h3>
-                    <p>Antes de enviar una transacción, comprueba que la dirección de destino es correcta. Hay malware que modifica direcciones en el portapapeles. Verifica los primeros y últimos 4 caracteres.</p>
+                    <span class="seguridad-num">04</span>
+                    <h3>Verifica siempre las URLs</h3>
+                    <p>El phishing es la estafa más común. Revisa cada URL antes de conectar tu wallet. Usa bookmarks para exchanges y dApps.</p>
                 </div>
+
                 <div class="seguridad-card">
-                    <div class="seguridad-num">05</div>
-                    <h3>Usa un email exclusivo para crypto</h3>
-                    <p>Crea una cuenta de correo nueva solo para tus cuentas crypto. Así reduces la exposición a filtraciones de datos y phishing dirigido.</p>
+                    <span class="seguridad-num">05</span>
+                    <h3>Usa hardware wallet para grandes cantidades</h3>
+                    <p>Para cantidades significativas, un monedero físico (Ledger, Trezor) es imprescindible. El almacenamiento offline es la máxima seguridad.</p>
                 </div>
+
                 <div class="seguridad-card">
-                    <div class="seguridad-num">06</div>
-                    <h3>Diversifica el almacenamiento</h3>
-                    <p>No tengas todos los huevos en la misma cesta. Usa un hardware wallet para el largo plazo, una hot wallet para DeFi y mantén solo lo necesario en exchanges.</p>
+                    <span class="seguridad-num">06</span>
+                    <h3>Revisa los permisos al firmar transacciones</h3>
+                    <p>Antes de firmar cualquier transacción en MetaMask, lee qué permisos estás otorgando. Revoca regularmente los accesos innecesarios.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Herramientas Section -->
-    <section class="tools section" id="herramientas">
+    <!-- ===== Glosario ===== -->
+    <section class="section" id="glosario">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">🧰 Utilidades</span>
-                <h2 class="section-title">Herramientas <span class="gradient-text">Útiles</span></h2>
-                <p class="section-desc">Recursos esenciales para el día a día en crypto</p>
-            </div>
-            <div class="tools-grid">
-                <a href="https://coinmarketcap.com/es/" target="_blank" rel="nofollow noopener" class="tool-card">
-                    <span class="tool-icon">📊</span>
-                    <h4>CoinMarketCap</h4>
-                    <p>Precios, capitalización de mercado, rankings y datos de todas las criptomonedas.</p>
-                </a>
-                <a href="https://www.coingecko.com/es" target="_blank" rel="nofollow noopener" class="tool-card">
-                    <span class="tool-icon">🦎</span>
-                    <h4>CoinGecko</h4>
-                    <p>Alternativa a CMC con datos de mercado, análisis on-chain y herramientas DeFi.</p>
-                </a>
-                <a href="https://www.cryptorank.io/es" target="_blank" rel="nofollow noopener" class="tool-card">
-                    <span class="tool-icon">📈</span>
-                    <h4>CryptoRank</h4>
-                    <p>Análisis de mercado, ICOs, IDOs, fundraising y comparativas de proyectos.</p>
-                </a>
-                <a href="https://defillama.com/" target="_blank" rel="nofollow noopener" class="tool-card">
-                    <span class="tool-icon">🦙</span>
-                    <h4>DefiLlama</h4>
-                    <p>El rastreador DeFi más completo: TVL por cadena, protocolo y categoría.</p>
-                </a>
-                <a href="https://etherscan.io/" target="_blank" rel="nofollow noopener" class="tool-card">
-                    <span class="tool-icon">🔍</span>
-                    <h4>Etherscan</h4>
-                    <p>Explorador de bloques de Ethereum: transacciones, contratos, gas tracker.</p>
-                </a>
-                <a href="https://dune.com/" target="_blank" rel="nofollow noopener" class="tool-card">
-                    <span class="tool-icon">📊</span>
-                    <h4>Dune Analytics</h4>
-                    <p>Dashboards y análisis on-chain creados por la comunidad. Datos en tiempo real.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Glosario Section -->
-    <section class="glosario section" id="glosario">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">📖 Referencia</span>
+                <span class="section-tag">📚 Aprende el lenguaje</span>
                 <h2 class="section-title">Glosario <span class="gradient-text">Crypto</span></h2>
-                <p class="section-desc">Los términos más importantes del ecosistema explicados de forma clara</p>
+                <p class="section-desc">El mundo crypto tiene su propio idioma. Aquí tienes los términos más importantes explicados de forma sencilla.</p>
             </div>
+
+            <!-- Filter Tags -->
             <div class="glosario-filter">
                 <button class="glosario-tag active" data-filter="all">Todos</button>
-                <button class="glosario-tag" data-filter="A-C">A–C</button>
-                <button class="glosario-tag" data-filter="D-F">D–F</button>
-                <button class="glosario-tag" data-filter="G-M">G–M</button>
-                <button class="glosario-tag" data-filter="N-R">N–R</button>
-                <button class="glosario-tag" data-filter="S-Z">S–Z</button>
+                <button class="glosario-tag" data-filter="basico">🌱 Básico</button>
+                <button class="glosario-tag" data-filter="defi">🌐 DeFi</button>
+                <button class="glosario-tag" data-filter="trading">📈 Trading</button>
+                <button class="glosario-tag" data-filter="seguridad">🛡️ Seguridad</button>
             </div>
-            <div class="glosario-grid" id="glosarioGrid">
-                <div class="glosario-item" data-category="A-C">
+
+            <!-- Glossary Grid -->
+            <dl class="glosario-grid">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>Altcoin</dt>
-                    <dd>Cualquier criptomoneda que no sea Bitcoin. Ethereum, Solana y Cardano son ejemplos de altcoins.</dd>
+                    <dd>Cualquier criptomoneda que no sea Bitcoin. Ethereum, Solana, Cardano y miles más son altcoins.</dd>
                 </div>
-                <div class="glosario-item" data-category="A-C">
+
+                <div class="glosario-item" data-category="trading">
                     <dt>ATH (All-Time High)</dt>
-                    <dd>El precio máximo histórico alcanzado por una criptomoneda.</dd>
+                    <dd>El precio máximo histórico que ha alcanzado una criptomoneda. Lo opuesto es ATL (All-Time Low).</dd>
                 </div>
-                <div class="glosario-item" data-category="A-C">
+
+                <div class="glosario-item" data-category="defi">
                     <dt>AMM (Automated Market Maker)</dt>
-                    <dd>Protocolo que usa pools de liquidez y fórmulas matemáticas para fijar precios en lugar de libros de órdenes tradicionales.</dd>
+                    <dd>Protocolo que usa fórmulas matemáticas para fijar precios en lugar de libros de órdenes tradicionales. Uniswap es el más famoso.</dd>
                 </div>
-                <div class="glosario-item" data-category="A-C">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>Blockchain</dt>
-                    <dd>Cadena de bloques: libro de contabilidad digital descentralizado, distribuido e inmutable.</dd>
+                    <dd>Cadena de bloques descentralizada. Un registro digital compartido, inmutable y transparente donde se anotan todas las transacciones.</dd>
                 </div>
-                <div class="glosario-item" data-category="A-C">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>CEX (Centralized Exchange)</dt>
-                    <dd>Exchange de criptomonedas gestionado por una empresa centralizada, como Binance o Coinbase.</dd>
+                    <dd>Exchange centralizado como Binance o Coinbase. Una empresa gestiona la plataforma y custodia los fondos.</dd>
                 </div>
-                <div class="glosario-item" data-category="D-F">
+
+                <div class="glosario-item" data-category="defi">
                     <dt>DeFi (Decentralized Finance)</dt>
-                    <dd>Ecosistema de aplicaciones financieras construidas sobre blockchain que operan sin intermediarios.</dd>
+                    <dd>Finanzas descentralizadas. Ecosistema de aplicaciones financieras construidas sobre blockchain sin intermediarios.</dd>
                 </div>
-                <div class="glosario-item" data-category="D-F">
+
+                <div class="glosario-item" data-category="defi">
                     <dt>DEX (Decentralized Exchange)</dt>
-                    <dd>Exchange que opera sin intermediarios, permitiendo intercambios directos entre wallets mediante smart contracts.</dd>
+                    <dd>Exchange descentralizado como Uniswap. Los usuarios intercambian tokens directamente sin que una empresa custodie los fondos.</dd>
                 </div>
-                <div class="glosario-item" data-category="D-F">
+
+                <div class="glosario-item" data-category="trading">
                     <dt>DYOR (Do Your Own Research)</dt>
-                    <dd>"Haz tu propia investigación". Principio fundamental: no inviertas basándote solo en recomendaciones de terceros.</dd>
+                    <dd>"Haz tu propia investigación". Principio fundamental: nunca inviertas sin investigar antes por tu cuenta.</dd>
                 </div>
-                <div class="glosario-item" data-category="D-F">
+
+                <div class="glosario-item" data-category="trading">
                     <dt>FOMO (Fear Of Missing Out)</dt>
-                    <dd>Miedo a perderse una oportunidad. Emoción que lleva a comprar en máximos por impulso.</dd>
+                    <dd>Miedo a quedarse fuera. Impulso emocional que lleva a comprar cuando el precio ya ha subido mucho por miedo a perder la oportunidad.</dd>
                 </div>
-                <div class="glosario-item" data-category="D-F">
+
+                <div class="glosario-item" data-category="trading">
                     <dt>FUD (Fear, Uncertainty, Doubt)</dt>
-                    <dd>Miedo, incertidumbre y duda. Información negativa (a menudo exagerada) que afecta al mercado.</dd>
+                    <dd>Miedo, incertidumbre y duda. Noticias negativas o rumores que generan pánico y ventas masivas en el mercado.</dd>
                 </div>
-                <div class="glosario-item" data-category="G-M">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>Gas Fee</dt>
-                    <dd>Comisión pagada a los validadores/mineros por procesar una transacción en la blockchain.</dd>
+                    <dd>Comisión que se paga a la red blockchain por procesar una transacción. En Ethereum varía según la congestión de la red.</dd>
                 </div>
-                <div class="glosario-item" data-category="G-M">
+
+                <div class="glosario-item" data-category="trading">
                     <dt>HODL</dt>
-                    <dd>Término nacido de un error tipográfico de "hold". Estrategia de mantener criptomonedas a largo plazo sin vender.</dd>
+                    <dd>Originalmente un typo de "hold". Significa mantener tus criptos a largo plazo sin vender, sin importar la volatilidad.</dd>
                 </div>
-                <div class="glosario-item" data-category="G-M">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>KYC (Know Your Customer)</dt>
-                    <dd>Proceso de verificación de identidad requerido por exchanges y servicios financieros regulados.</dd>
+                    <dd>Proceso de verificación de identidad que exigen los exchanges regulados. Requiere documento de identidad y foto.</dd>
                 </div>
-                <div class="glosario-item" data-category="G-M">
+
+                <div class="glosario-item" data-category="defi">
                     <dt>Liquidity Pool</dt>
-                    <dd>Fondo colectivo de tokens bloqueados en un smart contract que facilita intercambios en DEXs.</dd>
+                    <dd>Fondo colectivo de tokens bloqueados en un smart contract que proporciona liquidez para DEXs y protocolos DeFi.</dd>
                 </div>
-                <div class="glosario-item" data-category="G-M">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>Market Cap</dt>
-                    <dd>Capitalización de mercado: precio × suministro circulante. Indica el tamaño total de una criptomoneda.</dd>
+                    <dd>Capitalización de mercado. Precio actual × número total de monedas en circulación. Mide el tamaño de una criptomoneda.</dd>
                 </div>
-                <div class="glosario-item" data-category="N-R">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>NFT (Non-Fungible Token)</dt>
-                    <dd>Token no fungible: activo digital único en blockchain que representa propiedad de arte, coleccionables, etc.</dd>
+                    <dd>Token no fungible. Activo digital único que representa propiedad de arte, coleccionables, música, etc. en la blockchain.</dd>
                 </div>
-                <div class="glosario-item" data-category="N-R">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>PoS (Proof of Stake)</dt>
-                    <dd>Prueba de participación: mecanismo de consenso donde validadores bloquean tokens para asegurar la red.</dd>
+                    <dd>Prueba de participación. Sistema de consenso donde los validadores bloquean criptos para asegurar la red (Ethereum, Solana).</dd>
                 </div>
-                <div class="glosario-item" data-category="N-R">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>PoW (Proof of Work)</dt>
-                    <dd>Prueba de trabajo: mecanismo de consenso de Bitcoin donde mineros resuelven problemas computacionales.</dd>
+                    <dd>Prueba de trabajo. Sistema donde mineros resuelven problemas matemáticos para validar transacciones (Bitcoin).</dd>
                 </div>
-                <div class="glosario-item" data-category="N-R">
+
+                <div class="glosario-item" data-category="seguridad">
                     <dt>Private Key</dt>
-                    <dd>Clave privada: código secreto que permite acceder y controlar tus criptomonedas. Nunca debe compartirse.</dd>
+                    <dd>Clave privada. Código secreto que permite acceder y gastar tus criptomonedas. Si alguien la obtiene, tiene control total de tus fondos.</dd>
                 </div>
-                <div class="glosario-item" data-category="N-R">
+
+                <div class="glosario-item" data-category="seguridad">
                     <dt>Rug Pull</dt>
-                    <dd>Estafa donde los desarrolladores abandonan un proyecto y se llevan los fondos de los inversores.</dd>
+                    <dd>Estafa donde los desarrolladores abandonan un proyecto y se llevan los fondos de los inversores. Muy común en DeFi y nuevos tokens.</dd>
                 </div>
-                <div class="glosario-item" data-category="S-Z">
+
+                <div class="glosario-item" data-category="seguridad">
                     <dt>Seed Phrase</dt>
-                    <dd>Frase semilla de 12/24 palabras que respalda todas las claves privadas de una wallet.</dd>
+                    <dd>Frase semilla de 12-24 palabras que permite recuperar el acceso a tu wallet. Debe guardarse offline y nunca compartirse.</dd>
                 </div>
-                <div class="glosario-item" data-category="S-Z">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>Smart Contract</dt>
-                    <dd>Programa autoejecutable en la blockchain que se activa cuando se cumplen condiciones predefinidas.</dd>
+                    <dd>Contrato inteligente. Programa que se ejecuta automáticamente en la blockchain cuando se cumplen condiciones predefinidas.</dd>
                 </div>
-                <div class="glosario-item" data-category="S-Z">
+
+                <div class="glosario-item" data-category="basico">
                     <dt>Stablecoin</dt>
-                    <dd>Criptomoneda diseñada para mantener un valor estable, normalmente vinculada al dólar (USDT, USDC, DAI).</dd>
+                    <dd>Criptomoneda diseñada para mantener un valor estable, normalmente vinculado al dólar (USDT, USDC, DAI).</dd>
                 </div>
-                <div class="glosario-item" data-category="S-Z">
+
+                <div class="glosario-item" data-category="defi">
                     <dt>TVL (Total Value Locked)</dt>
-                    <dd>Valor total bloqueado en un protocolo DeFi. Métrica clave para medir su tamaño y adopción.</dd>
+                    <dd>Valor total bloqueado. Cantidad total de fondos depositados en un protocolo DeFi. Mide su popularidad y confianza.</dd>
                 </div>
-                <div class="glosario-item" data-category="S-Z">
+
+                <div class="glosario-item" data-category="defi">
                     <dt>Yield Farming</dt>
-                    <dd>Estrategia DeFi que busca maximizar rendimientos moviendo fondos entre protocolos.</dd>
+                    <dd>"Cosecha" de rendimientos. Estrategia DeFi que busca maximizar ganancias moviendo fondos entre diferentes protocolos.</dd>
                 </div>
+
+            </dl>
+        </div>
+    </section>
+
+    <!-- ===== Herramientas ===== -->
+    <section class="section" id="herramientas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🧰 Caja de herramientas</span>
+                <h2 class="section-title">Herramientas <span class="gradient-text">Útiles</span></h2>
+                <p class="section-desc">Las herramientas imprescindibles que todo crypto-inversor debe conocer.</p>
+            </div>
+            <div class="tools-grid">
+
+                <a href="#" class="tool-card">
+                    <span class="tool-icon">📊</span>
+                    <h4>CoinMarketCap</h4>
+                    <p>Precios, market cap, volumen y datos de miles de criptomonedas en tiempo real.</p>
+                </a>
+
+                <a href="#" class="tool-card">
+                    <span class="tool-icon">🦎</span>
+                    <h4>CoinGecko</h4>
+                    <p>Alternativa a CMC con análisis independiente, puntuaciones de salud y datos DeFi.</p>
+                </a>
+
+                <a href="#" class="tool-card">
+                    <span class="tool-icon">🦙</span>
+                    <h4>DefiLlama</h4>
+                    <p>El rastreador DeFi más completo. TVL de todos los protocolos y cadenas en un solo lugar.</p>
+                </a>
+
+                <a href="#" class="tool-card">
+                    <span class="tool-icon">🔍</span>
+                    <h4>Etherscan</h4>
+                    <p>Explorador de bloques de Ethereum. Verifica transacciones, contratos y direcciones.</p>
+                </a>
+
+                <a href="#" class="tool-card">
+                    <span class="tool-icon">📈</span>
+                    <h4>Dune Analytics</h4>
+                    <p>Análisis on-chain con SQL. Dashboards comunitarios para investigar cualquier proyecto.</p>
+                </a>
+
+                <a href="#" class="tool-card">
+                    <span class="tool-icon">🗺️</span>
+                    <h4>TradingView</h4>
+                    <p>Gráficos avanzados y análisis técnico profesional. La herramienta estándar para traders.</p>
+                </a>
+
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta section">
+    <!-- ===== CTA Section ===== -->
+    <section class="section" id="cta">
         <div class="container">
             <div class="cta-card">
-                <h2>¿Listo para empezar tu viaje crypto?</h2>
-                <p>Elige tu nivel y comienza a aprender hoy. Todo el contenido es gratuito, en español y actualizado para 2026.</p>
+                <h2>🚀 ¿Listo para empezar tu viaje crypto?</h2>
+                <p>Elige tu nivel y comienza a aprender hoy. Todo el contenido es gratuito, en español y actualizado constantemente.</p>
                 <div class="cta-buttons">
-                    <a href="#fundamentos" class="btn btn-primary btn-lg">Empezar desde Cero →</a>
-                    <a href="#guias" class="btn btn-outline-light btn-lg">Ver Todas las Guías</a>
+                    <a href="#fundamentos" class="btn btn-primary btn-lg">Empieza desde cero →</a>
+                    <a href="#guias" class="btn btn-secondary btn-lg">Ver todas las guías</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Brand -->
                 <div class="footer-brand">
                     <a href="#inicio" class="nav-logo">
                         <span class="logo-icon">₿</span>
-                        <span class="logo-text">MiCrypto<span class="logo-accent">Guía</span></span>
+                        <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
                     </a>
-                    <p>La guía más completa en español para aprender sobre criptomonedas. Sin noticias, solo conocimiento.</p>
-                    <p class="footer-disclaimer">
-                        <strong>Aviso:</strong> Este sitio es solo para fines educativos. No constituye asesoramiento financiero.
-                        Invertir en criptomonedas conlleva riesgos. Haz siempre tu propia investigación (DYOR).
-                    </p>
+                    <p>Tu guía completa de criptomonedas en español. Aprende, invierte y protégete en el mundo crypto con contenido educativo de calidad.</p>
+                    <div class="footer-disclaimer">
+                        <strong>⚠️ Descargo de responsabilidad:</strong> Este sitio es solo con fines educativos. No constituye asesoramiento financiero. Invertir en criptomonedas conlleva riesgos. Investiga siempre por tu cuenta (DYOR).
+                    </div>
                 </div>
+
+                <!-- Navegación -->
                 <div class="footer-links">
-                    <h4>Contenido</h4>
+                    <h4>Navegación</h4>
+                    <a href="#inicio">Inicio</a>
                     <a href="#fundamentos">Fundamentos</a>
                     <a href="#guias">Guías</a>
                     <a href="#exchanges">Exchanges</a>
                     <a href="#wallets">Wallets</a>
-                    <a href="#defi">DeFi</a>
+                    <a href="#defi">DeFi y Web3</a>
                     <a href="#seguridad">Seguridad</a>
                     <a href="#glosario">Glosario</a>
+                    <a href="#herramientas">Herramientas</a>
                 </div>
+
+                <!-- Recursos -->
                 <div class="footer-links">
-                    <h4>Herramientas</h4>
-                    <a href="https://coinmarketcap.com/es/" target="_blank" rel="nofollow noopener">CoinMarketCap</a>
-                    <a href="https://www.coingecko.com/es" target="_blank" rel="nofollow noopener">CoinGecko</a>
-                    <a href="https://defillama.com/" target="_blank" rel="nofollow noopener">DefiLlama</a>
-                    <a href="https://etherscan.io/" target="_blank" rel="nofollow noopener">Etherscan</a>
+                    <h4>Recursos</h4>
+                    <a href="#">📊 CoinMarketCap</a>
+                    <a href="#">🦎 CoinGecko</a>
+                    <a href="#">🔍 Etherscan</a>
+                    <a href="#">📈 TradingView</a>
+                    <a href="#">🦙 DefiLlama</a>
                 </div>
+
+                <!-- Comunidad -->
                 <div class="footer-links">
-                    <h4>Exchanges</h4>
-                    <a href="https://www.binance.com/es" target="_blank" rel="nofollow noopener">Binance</a>
-                    <a href="https://www.coinbase.com/es" target="_blank" rel="nofollow noopener">Coinbase</a>
-                    <a href="https://www.bit2me.com/" target="_blank" rel="nofollow noopener">Bit2Me</a>
-                    <a href="https://www.kucoin.com/es" target="_blank" rel="nofollow noopener">KuCoin</a>
+                    <h4>Comunidad</h4>
+                    <a href="#">🐦 Twitter / X</a>
+                    <a href="#">📢 Telegram</a>
+                    <a href="#">💬 Discord</a>
+                    <a href="#">📧 Contacto</a>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 MiCryptoGuía. Contenido educativo gratuito sobre criptomonedas.</p>
+                <p>© 2026 MiCryptoGuía. Todos los derechos reservados. Contenido educativo — no es asesoramiento financiero. &nbsp;|&nbsp; <a href="privacidad.html">Privacidad</a> &nbsp;|&nbsp; <a href="terminos.html">Términos</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>
