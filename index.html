@@ -16,6 +16,11 @@
     <meta property="og:url" content="https://micryptoguia.com/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://micryptoguia.com/img/og-image.svg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
@@ -29,6 +34,50 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>MiCryptoGuía — Guía Completa de Criptomonedas 🇪🇸</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://micryptoguia.com/#website",
+          "url": "https://micryptoguia.com/",
+          "name": "MiCryptoGuía",
+          "description": "Guía completa de criptomonedas en español. Aprende Bitcoin, blockchain, DeFi, seguridad y más con tutoriales paso a paso.",
+          "inLanguage": "es",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://micryptoguia.com/#glosario",
+            "query-input": "required name=search_term"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://micryptoguia.com/#organization",
+          "name": "MiCryptoGuía",
+          "url": "https://micryptoguia.com/",
+          "description": "Plataforma educativa sobre criptomonedas en español",
+          "sameAs": [
+            "https://x.com/CoinTrailHub",
+            "https://www.youtube.com/@CoinTrailCrypto",
+            "https://t.me/+0ZKfUqf0xKpkMjFl"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://micryptoguia.com/#webpage",
+          "url": "https://micryptoguia.com/",
+          "name": "MiCryptoGuía — Inicio",
+          "description": "Domina el mundo de las criptomonedas. Desde cero hasta avanzado con guías paso a paso en español.",
+          "inLanguage": "es",
+          "isPartOf": { "@id": "https://micryptoguia.com/#website" },
+          "about": { "@id": "https://micryptoguia.com/#organization" }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 

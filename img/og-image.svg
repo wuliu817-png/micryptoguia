@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080b16"/>
+      <stop offset="100%" stop-color="#111633"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7931a"/>
+      <stop offset="100%" stop-color="#fbb040"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="60" y1="0" x2="60" y2="630" stroke="#f7931a" stroke-width="1"/>
+    <line x1="120" y1="0" x2="120" y2="630" stroke="#f7931a" stroke-width="1"/>
+    <!-- skip full grid for simplicity, just a few lines -->
+  </g>
+
+  <!-- Bitcoin symbol -->
+  <text x="600" y="280" text-anchor="middle" font-size="120" font-family="sans-serif" font-weight="bold" fill="url(#accent)">₿</text>
+
+  <!-- Title -->
+  <text x="600" y="380" text-anchor="middle" font-size="64" font-family="Inter, sans-serif" font-weight="800" fill="#eeeff4">
+    Mi<tspan fill="url(#accent)">Crypto</tspan>Guía
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="440" text-anchor="middle" font-size="28" font-family="Inter, sans-serif" font-weight="400" fill="#9ca3c8">
+    Tu guía completa de criptomonedas en español
+  </text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="626" width="1200" height="4" fill="url(#accent)"/>
+</svg>
