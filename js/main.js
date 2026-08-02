@@ -42,6 +42,24 @@
       { title: 'Herramientas Útiles', desc: 'CoinMarketCap, CoinGecko, DefiLlama, Etherscan, Dune Analytics', url: '#herramientas', keywords: 'herramientas coinmarketcap coingecko defillama etherscan dune analytics' },
     ];
 
+    // Articles
+    const articles = [
+      { title: 'Qué es Bitcoin', desc: 'Guía completa para principiantes: cómo funciona Bitcoin, por qué tiene valor y cómo empezar', url: 'articulos/que-es-bitcoin.html', keywords: 'bitcoin que es bitcoin criptomoneda descentralizada satoshi nakamoto' },
+      { title: 'Cómo comprar Bitcoin', desc: 'Guía paso a paso para comprar Bitcoin por primera vez en Binance u OKX', url: 'articulos/como-comprar-bitcoin.html', keywords: 'comprar bitcoin como comprar bitcoin exchange binance okx kyc' },
+      { title: 'Crear y configurar MetaMask', desc: 'Guía completa para instalar, configurar y proteger MetaMask paso a paso', url: 'articulos/crear-configurar-metamask.html', keywords: 'metamask crear metamask configurar wallet billetera web3' },
+      { title: 'Blockchain explicada', desc: 'Qué es blockchain, cómo funciona y por qué es importante — explicación sencilla', url: 'articulos/blockchain-explicacion-sencilla.html', keywords: 'blockchain cadena bloques como funciona explicacion sencilla' },
+      { title: 'Binance vs OKX', desc: 'Comparativa completa de exchanges: comisiones, seguridad, experiencia de usuario', url: 'articulos/binance-vs-okx.html', keywords: 'binance okx comparativa exchange cual elegir comisiones seguridad' },
+      { title: 'Cómo hacer staking', desc: 'Guía de staking de criptomonedas: cómo generar ingresos pasivos con tus criptos', url: 'articulos/como-hacer-staking.html', keywords: 'staking como hacer staking ingresos pasivos pos proof of stake' },
+      { title: 'Seguridad crypto: 10 reglas', desc: '10 reglas de oro para proteger tus criptomonedas de hackers y estafas', url: 'articulos/seguridad-criptomonedas.html', keywords: 'seguridad crypto proteger fondos estafas phishing 2fa clave privada' },
+      { title: 'Qué es USDT', desc: 'Guía completa de USDT: qué es, cómo funciona y para qué sirve la stablecoin', url: 'articulos/que-es-usdt.html', keywords: 'usdt stablecoin tether que es como usar comprar' },
+      { title: 'Cómo usar Uniswap', desc: 'Guía paso a paso para intercambiar tokens en Uniswap, el DEX más grande', url: 'articulos/como-usar-uniswap.html', keywords: 'uniswap dex intercambiar tokens defi swap amm' },
+      { title: 'Hot Wallet vs Cold Wallet', desc: 'Comparativa de wallets: cuál elegir según tu nivel de experiencia y cantidad', url: 'articulos/hot-wallet-vs-cold-wallet.html', keywords: 'hot wallet cold wallet metamask trust ledger trezor billetera' },
+    ];
+
+    articles.forEach(function (a) {
+      index.push(a);
+    });
+
     sections.forEach(function (s) {
       index.push(s);
     });

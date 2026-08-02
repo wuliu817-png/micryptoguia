@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa para crear y configurar MetaMask en 2026. Instala la wallet, protege tu frase semilla, añade redes y tokens, conecta dApps y mantén tus fondos seguros.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://micryptoguia.com/articulos/crear-configurar-metamask.html">
+    <meta property="og:title" content="Cómo Crear y Configurar MetaMask | Guía Completa 2026 — MiCryptoGuía">
+    <meta property="og:description" content="Guía completa para crear y configurar MetaMask en 2026. Instala la wallet, protege tu frase semilla, añade redes y tokens, conecta dApps y mantén tus fondos seguros.">
+    <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cómo Crear y Configurar MetaMask | Guía Completa 2026 — MiCryptoGuía</title>
+    <style>
+        .article-page { padding: 140px 24px 80px; max-width: 800px; margin: 0 auto; }
+        .article-page h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; color: var(--text-primary); line-height: 1.2; }
+        .article-page .article-meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px; }
+        .article-page .speed-read { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 32px; }
+        .article-page .speed-read h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin-bottom: 8px; }
+        .article-page .speed-read ul { list-style: disc; padding-left: 20px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .article-page .toc { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 36px; }
+        .article-page .toc h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+        .article-page .toc ol { padding-left: 20px; color: var(--text-secondary); font-size: 0.9rem; line-height: 2; }
+        .article-page .toc ol li a { color: var(--text-secondary); transition: color var(--transition-fast); }
+        .article-page .toc ol li a:hover { color: var(--accent); }
+        .article-page h2 { font-size: 1.4rem; font-weight: 700; margin: 36px 0 12px; color: var(--text-primary); }
+        .article-page h3 { font-size: 1.15rem; font-weight: 600; margin: 24px 0 8px; color: var(--text-primary); }
+        .article-page p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
+        .article-page ul, .article-page ol { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; padding-left: 24px; }
+        .article-page a { color: var(--accent); text-decoration: underline; }
+        .article-page a:hover { opacity: 0.8; }
+        .article-page .highlight-box { background: var(--gradient-card); border: 1px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 20px 0; }
+        .article-page .highlight-box p { margin: 0; font-size: 0.9rem; }
+        .article-page .warning-box { background: var(--red-bg); border: 1px solid var(--red); border-radius: var(--radius-md); padding: 16px 20px; margin: 20px 0; }
+        .article-page .warning-box p { margin: 0; font-size: 0.9rem; color: var(--red); }
+        .article-page .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); }
+        .article-page .comparison-table th { background: var(--bg-surface); padding: 12px 16px; text-align: left; font-weight: 600; color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; }
+        .article-page .comparison-table td { padding: 12px 16px; border-top: 1px solid var(--border-color); color: var(--text-secondary); }
+        .article-page .faq-section { margin-top: 40px; }
+        .article-page .faq-item { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 12px; }
+        .article-page .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px 0; }
+        .article-page .steps-list { list-style: none; padding-left: 0; counter-reset: step-counter; }
+        .article-page .steps-list li { counter-increment: step-counter; padding: 12px 0 12px 48px; position: relative; margin-bottom: 8px; }
+        .article-page .steps-list li::before { content: counter(step-counter); position: absolute; left: 0; top: 8px; width: 32px; height: 32px; background: var(--accent); color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cómo Crear y Configurar MetaMask | Guía Completa 2026",
+      "description": "Guía completa para crear y configurar MetaMask en 2026. Instala la wallet, protege tu frase semilla, añade redes y tokens, conecta dApps y mantén tus fondos seguros.",
+      "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com" },
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "inLanguage": "es",
+      "publisher": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://micryptoguia.com/articulos/crear-configurar-metamask.html" }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">&#8383;</span>
+                <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="/#fundamentos" class="nav-link">Fundamentos</a></li>
+                <li><a href="/#guias" class="nav-link">Guías</a></li>
+                <li><a href="/#exchanges" class="nav-link">Exchanges</a></li>
+                <li><a href="/#wallets" class="nav-link active">Wallets</a></li>
+                <li><a href="/#defi" class="nav-link">DeFi</a></li>
+                <li><a href="/#seguridad" class="nav-link">Seguridad</a></li>
+                <li><a href="/#glosario" class="nav-link">Glosario</a></li>
+                <li><a href="/#herramientas" class="nav-link">Herramientas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Article Content ===== -->
+    <main class="article-page">
+        <span class="section-tag" style="display:inline-block;margin-bottom:12px;">🔐 Wallets y Seguridad</span>
+        <h1>Cómo Crear y Configurar MetaMask: Guía Completa para Principiantes en 2026</h1>
+        <div class="article-meta">
+            <span>Actualizado: Agosto 2026</span> &nbsp;·&nbsp;
+            <span>⏱️ 14 min lectura</span> &nbsp;·&nbsp;
+            <span>🌱 Principiante</span>
+        </div>
+
+        <!-- Speed Read -->
+        <div class="speed-read">
+            <h3>⚡ 30 Segundos: Lo Esencial</h3>
+            <ul>
+                <li><strong>MetaMask es la wallet más usada del mundo</strong>, con más de 100 millones de usuarios. Es la puerta de entrada a Web3, DeFi y dApps.</li>
+                <li><strong>Tu frase semilla (seed phrase) de 12 palabras es lo ÚNICO que puede recuperar tu wallet.</strong> Si la pierdes y olvidas la contraseña, pierdes el acceso para siempre.</li>
+                <li><strong>Nunca guardes la seed phrase en digital</strong> (fotos, notas del móvil, archivos en la nube). Solo en papel, en un lugar seguro y fuera de internet.</li>
+                <li><strong>MetaMask es una hot wallet (conectada a internet).</strong> Para grandes cantidades, deberías usar una hardware wallet como Ledger combinada con MetaMask.</li>
+                <li><strong>Configurar redes adicionales y tokens es sencillo</strong>, pero debes verificar siempre los datos oficiales para evitar estafas y redes falsas.</li>
+            </ul>
+        </div>
+
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2>📑 Índice de Contenidos</h2>
+            <ol>
+                <li><a href="#que-es-metamask">¿Qué es MetaMask y para qué sirve?</a></li>
+                <li><a href="#instalar">Paso 1: Descargar e instalar MetaMask</a></li>
+                <li><a href="#crear-wallet">Paso 2: Crear tu wallet y generar la frase semilla</a></li>
+                <li><a href="#proteger-seed">Paso 3: Proteger tu frase semilla (lo más importante)</a></li>
+                <li><a href="#interfaz">Paso 4: Entender la interfaz de MetaMask</a></li>
+                <li><a href="#redes">Paso 5: Añadir y configurar redes (Polygon, Arbitrum, BSC, etc.)</a></li>
+                <li><a href="#tokens">Paso 6: Añadir tokens a MetaMask</a></li>
+                <li><a href="#dapps">Paso 7: Conectar MetaMask a dApps</a></li>
+                <li><a href="#consejos-seguridad">10 Consejos de seguridad esenciales</a></li>
+                <li><a href="#comparativa">Comparativa: MetaMask vs Otras Wallets</a></li>
+                <li><a href="#mi-experiencia">Mi experiencia usando MetaMask</a></li>
+                <li><a href="#faq">Preguntas frecuentes (FAQ)</a></li>
+            </ol>
+        </nav>
+
+        <!-- Answer the main question immediately -->
+        <p>MetaMask es un monedero digital (wallet) que te permite almacenar, enviar y recibir criptomonedas, así como interactuar con aplicaciones descentralizadas (dApps) en la blockchain de Ethereum y otras redes compatibles. Es, sin exagerar, <strong>la herramienta más importante que necesitas para entrar en el mundo de las finanzas descentralizadas (DeFi)</strong>. En esta guía te explico cómo instalarlo, configurarlo, protegerlo y sacarle el máximo partido, paso a paso y sin tecnicismos.</p>
+
+        <!-- Section 1: What is MetaMask -->
+        <h2 id="que-es-metamask">¿Qué es MetaMask y Para Qué Sirve?</h2>
+        <p>MetaMask es una <strong>hot wallet</strong> (monedero caliente, conectado a internet) que funciona como extensión de navegador (Chrome, Firefox, Brave, Edge) y también como aplicación móvil (iOS y Android). Fue creada en 2016 por ConsenSys y hoy es, con diferencia, la wallet más utilizada del ecosistema Web3 con más de 100 millones de usuarios activos mensuales.</p>
+
+        <p>Con MetaMask puedes hacer todo esto:</p>
+        <ul>
+            <li><strong>Almacenar criptomonedas:</strong> Ethereum (ETH) y cualquier token ERC-20 de la red Ethereum, además de tokens en redes compatibles como Polygon, Arbitrum, Optimism, BNB Chain, Avalanche y muchas más.</li>
+            <li><strong>Enviar y recibir cripto:</strong> Transfiere fondos a cualquier dirección del mundo en segundos.</li>
+            <li><strong>Conectarte a dApps:</strong> Uniswap, Aave, OpenSea, Lido, GMX y prácticamente cualquier aplicación DeFi o NFT del ecosistema acepta MetaMask como método de conexión.</li>
+            <li><strong>Comprar cripto directamente:</strong> MetaMask integra servicios de compra con tarjeta a través de terceros como Transak, MoonPay o Wyre.</li>
+            <li><strong>Hacer staking:</strong> Puedes hacer staking de ETH directamente desde MetaMask con proveedores como Lido o Rocket Pool.</li>
+            <li><strong>Gestionar NFTs:</strong> La app móvil incluye un visor de NFTs integrado.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>💡 Dato clave:</strong> MetaMask no custodia tus fondos. Tú y solo tú tienes el control total de tus activos mediante tu frase semilla. Esto es empoderador pero también implica una responsabilidad enorme: si pierdes la frase semilla, nadie (ni siquiera el soporte de MetaMask) puede recuperar tu wallet.</p>
+        </div>
+
+        <!-- Section 2: Install -->
+        <h2 id="instalar">Paso 1: Descargar e Instalar MetaMask</h2>
+        <p>El paso más importante aquí es <strong>descargar MetaMask SOLO desde la fuente oficial</strong>. Las wallets falsas son una de las estafas más comunes en el ecosistema crypto.</p>
+
+        <div class="warning-box">
+            <p><strong>⚠️ Alerta de seguridad:</strong> Descarga MetaMask exclusivamente desde <strong>metamask.io</strong>. Nunca desde enlaces de anuncios de Google, mensajes de Telegram, correos electrónicos o tiendas de aplicaciones no verificadas. Los estafadores crean clones idénticos que roban tus fondos en cuanto introduces tu frase semilla.</p>
+        </div>
+
+        <p>Sigue estos pasos:</p>
+        <ol>
+            <li><strong>Ve a la web oficial:</strong> Abre tu navegador y escribe <strong>metamask.io</strong> directamente en la barra de direcciones. No uses buscadores para llegar allí.</li>
+            <li><strong>Selecciona tu plataforma:</strong> Verás opciones para Chrome, Firefox, Brave, Edge (extensión de navegador) y para iOS/Android (app móvil).</li>
+            <li><strong>Para navegador:</strong> Haz clic en "Install MetaMask for [tu navegador]" y serás redirigido a la tienda oficial de extensiones de tu navegador. Verifica que el desarrollador sea "metamask.io" y que tenga millones de descargas y valoraciones positivas. Instálalo.</li>
+            <li><strong>Para móvil:</strong> Descarga la app desde la App Store oficial (iOS) o Google Play Store (Android). Verifica que el desarrollador sea "ConsenSys".</li>
+            <li><strong>Ancla la extensión:</strong> Una vez instalada la extensión del navegador, ancla el icono del zorrito naranja en la barra de herramientas para tenerlo siempre a mano. Haz clic en el icono para abrir MetaMask.</li>
+        </ol>
+
+        <!-- Section 3: Create Wallet -->
+        <h2 id="crear-wallet">Paso 2: Crear tu Wallet y Generar la Frase Semilla</h2>
+        <p>Al abrir MetaMask por primera vez, verás dos opciones: "Crear una wallet" o "Importar una wallet". Como es tu primera vez, selecciona <strong>"Crear una wallet"</strong>.</p>
+
+        <ol>
+            <li><strong>Acepta los términos de uso:</strong> Lee (o al menos revisa) los términos y condiciones. Acepta para continuar.</li>
+            <li><strong>Crea una contraseña:</strong> Esta contraseña solo protege el acceso local a MetaMask en este dispositivo. No es lo mismo que la frase semilla. Debe ser segura: mínimo 12 caracteres, combina mayúsculas, minúsculas, números y símbolos. Esta contraseña la necesitarás cada vez que quieras abrir MetaMask en este dispositivo.</li>
+            <li><strong>Confirma la contraseña:</strong> Vuelve a escribirla para asegurarte de que es correcta.</li>
+            <li><strong>Acepta la responsabilidad:</strong> MetaMask te mostrará un mensaje recordándote que eres el único responsable de tus fondos. Léelo con atención.</li>
+            <li><strong>Revela tu frase semilla secreta de recuperación (Seed Phrase):</strong> Este es EL momento más importante de todo el proceso. MetaMask te mostrará 12 palabras en un orden específico. Esta es tu llave maestra.</li>
+        </ol>
+
+        <div class="warning-box">
+            <p><strong>🚨 LEE ESTO CON ATENCIÓN:</strong> Tu frase semilla de 12 palabras es el acceso ÚNICO e IRREMPLAZABLE a todos los fondos que tengas en esta wallet. Si alguien obtiene estas 12 palabras, tendrá control total de tu dinero. Si pierdes estas 12 palabras y además olvidas tu contraseña, habrás perdido tus fondos PARA SIEMPRE. No hay servicio de atención al cliente, ni recuperación de contraseña, ni forma alguna de restaurar el acceso. La responsabilidad es 100% tuya.</p>
+        </div>
+
+        <!-- Section 4: Protect Seed -->
+        <h2 id="proteger-seed">Paso 3: Proteger tu Frase Semilla (Lo Más Importante)</h2>
+        <p>Este paso merece su propia sección porque es, sin discusión, la parte más crítica de todo el proceso. Aquí van las reglas de oro para proteger tu seed phrase:</p>
+
+        <h3>Cómo guardar tu frase semilla correctamente</h3>
+        <ul>
+            <li><strong>Escríbela en papel.</strong> Usa un papel o una libreta dedicada exclusivamente a esto. Escribe las 12 palabras en el orden exacto en que aparecen. Numéralas del 1 al 12. Verifica dos veces que no hay errores ortográficos.</li>
+            <li><strong>Guárdala en un lugar físico seguro.</strong> Una caja fuerte en casa, un cajón con llave o un lugar escondido al que solo tú tengas acceso. No la guardes en un escritorio compartido o un cajón de la oficina.</li>
+            <li><strong>Haz al menos dos copias.</strong> Guarda las copias en ubicaciones físicas diferentes. Si tu casa sufre un incendio y tu única copia está allí, lo has perdido todo. Una copia en casa, otra en casa de un familiar de máxima confianza o en una caja de seguridad bancaria.</li>
+            <li><strong>Considera grabar las palabras en metal.</strong> Existen dispositivos baratos como Cryptosteel, Cryptotag o Billfodl que te permiten grabar tu seed phrase en acero inoxidable, protegiéndola contra fuego, agua y corrosión. Cuestan entre 50€ y 100€ y son una inversión excelente si manejas cantidades significativas.</li>
+        </ul>
+
+        <h3>Lo que NUNCA debes hacer con tu frase semilla</h3>
+        <ul>
+            <li><strong>Nunca la guardes en formato digital.</strong> No hagas una foto con el móvil. No la escribas en un archivo de texto. No la guardes en Google Drive, Dropbox, iCloud ni ningún servicio en la nube. No la envíes por email, WhatsApp, Telegram ni ningún servicio de mensajería. Si un hacker accede a tu ordenador o a tu cuenta en la nube y encuentra las 12 palabras, tu wallet estará vacía en segundos.</li>
+            <li><strong>Nunca la compartas con nadie.</strong> Ni con el soporte técnico de MetaMask, ni con un amigo que quiere ayudarte, ni con un desconocido que afirma ser de "Binance" o "MetaMask". Nadie legítimo te va a pedir nunca tu frase semilla. Si alguien te la pide, es una estafa.</li>
+            <li><strong>Nunca la introduzcas en una página web.</strong> MetaMask nunca te pedirá que introduzcas tu seed phrase en una web. Si una web te pide la seed phrase para "verificar tu wallet" o "resolver un problema", es una estafa. La seed phrase solo se introduce en la propia extensión o app de MetaMask para restaurar una wallet.</li>
+        </ul>
+
+        <p>Después de anotar tu seed phrase, MetaMask te pedirá que confirmes que la has guardado correctamente seleccionando las palabras en el orden correcto. Esto es una verificación de copia de seguridad. Una vez completada, tu wallet estará creada y lista para usar.</p>
+
+        <!-- Section 5: Interface -->
+        <h2 id="interfaz">Paso 4: Entender la Interfaz de MetaMask</h2>
+        <p>Nada más crearla, MetaMask te mostrará la pantalla principal. Vamos a identificar los elementos más importantes:</p>
+
+        <ul>
+            <li><strong>Cuenta y dirección:</strong> En la parte superior verás "Account 1" (puedes renombrarla) y tu dirección pública. Esta dirección empieza por "0x" y es lo que compartes para que te envíen fondos. No es secreta. Puedes copiarla haciendo clic en ella.</li>
+            <li><strong>Saldo:</strong> Muestra el balance de ETH (la moneda nativa de Ethereum) en tu wallet. Al principio será 0 ETH.</li>
+            <li><strong>Red actual:</strong> En la esquina superior izquierda verás la red seleccionada. Por defecto será "Ethereum Mainnet". Desde ahí puedes cambiar a otras redes.</li>
+            <li><strong>Botones principales:</strong> "Comprar", "Enviar", "Recibir", "Swap" (intercambio de tokens) y "Puente" (bridge entre redes).</li>
+            <li><strong>Pestaña de tokens:</strong> Aquí aparecerán los tokens que tengas en tu wallet. Puedes añadir tokens manualmente con su dirección de contrato.</li>
+            <li><strong>Pestaña de NFTs:</strong> Visualiza los NFTs que posees en esa dirección.</li>
+            <li><strong>Pestaña de Actividad:</strong> Historial de todas las transacciones realizadas desde tu wallet.</li>
+            <li><strong>Menú de configuración:</strong> El icono de los tres puntos o el engranaje. Aquí puedes ajustar preferencias, ver tu frase semilla (requiere contraseña), conectarte a un hardware wallet y más.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>💡 Truco útil:</strong> Puedes crear múltiples cuentas dentro de la misma wallet de MetaMask. Cada cuenta tendrá su propia dirección pública, pero todas se derivan de la misma frase semilla. Esto es útil para separar fondos: una cuenta para DeFi, otra para ahorro a largo plazo, otra para interactuar con dApps nuevas, etc.</p>
+        </div>
+
+        <!-- Section 6: Add Networks -->
+        <h2 id="redes">Paso 5: Añadir y Configurar Redes</h2>
+        <p>Aunque MetaMask se asocia con Ethereum, <strong>es compatible con cualquier blockchain que use la Ethereum Virtual Machine (EVM)</strong>. Esto incluye redes muy populares como Polygon, Arbitrum, Optimism, BNB Smart Chain (BSC), Avalanche, Base, Linea y muchas más.</p>
+
+        <p>Para añadir una nueva red, tienes dos opciones:</p>
+
+        <h3>Opción A: Añadir manualmente</h3>
+        <ol>
+            <li>Abre MetaMask y haz clic en el selector de redes (donde dice "Ethereum Mainnet").</li>
+            <li>Selecciona "Añadir red" o "Add Network".</li>
+            <li>Selecciona "Añadir una red manualmente".</li>
+            <li>Rellena los siguientes campos con los datos oficiales de la red. Aquí tienes los datos para las redes más usadas:</li>
+        </ol>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Parámetro</th>
+                    <th>Polygon (MATIC)</th>
+                    <th>Arbitrum One</th>
+                    <th>BNB Smart Chain</th>
+                    <th>Optimism</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Nombre de Red</strong></td>
+                    <td>Polygon Mainnet</td>
+                    <td>Arbitrum One</td>
+                    <td>BNB Smart Chain</td>
+                    <td>OP Mainnet</td>
+                </tr>
+                <tr>
+                    <td><strong>RPC URL</strong></td>
+                    <td>https://polygon-rpc.com</td>
+                    <td>https://arb1.arbitrum.io/rpc</td>
+                    <td>https://bsc-dataseed.binance.org</td>
+                    <td>https://mainnet.optimism.io</td>
+                </tr>
+                <tr>
+                    <td><strong>ID de Cadena</strong></td>
+                    <td>137</td>
+                    <td>42161</td>
+                    <td>56</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td><strong>Símbolo de Moneda</strong></td>
+                    <td>POL</td>
+                    <td>ETH</td>
+                    <td>BNB</td>
+                    <td>ETH</td>
+                </tr>
+                <tr>
+                    <td><strong>Explorador de Bloques</strong></td>
+                    <td>https://polygonscan.com</td>
+                    <td>https://arbiscan.io</td>
+                    <td>https://bscscan.com</td>
+                    <td>https://optimistic.etherscan.io</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Opción B: Añadir desde Chainlist (recomendado)</h3>
+        <p>La forma más segura y fácil de añadir redes es usando <strong>Chainlist</strong> (chainlist.org), un agregador que verifica los datos oficiales de cada red:</p>
+        <ol>
+            <li>Ve a <strong>chainlist.org</strong> (verifica la URL).</li>
+            <li>Conecta tu MetaMask a la web (haz clic en "Connect Wallet").</li>
+            <li>Busca la red que quieres añadir (por ejemplo "Polygon").</li>
+            <li>Haz clic en "Add to MetaMask" y confirma en la ventana emergente.</li>
+        </ol>
+        <p>Chainlist rellena automáticamente todos los campos con los datos correctos, eliminando el riesgo de equivocarte al copiar un RPC.</p>
+
+        <div class="warning-box">
+            <p><strong>⚠️ Precaución:</strong> Usa siempre los datos oficiales de cada red. Obtén el RPC y el Chain ID desde la documentación oficial del proyecto o desde Chainlist. Añadir una red falsa o maliciosa podría hacer que tus fondos se envíen a un destino fraudulento.</p>
+        </div>
+
+        <!-- Section 7: Add Tokens -->
+        <h2 id="tokens">Paso 6: Añadir Tokens a MetaMask</h2>
+        <p>MetaMask muestra ETH (o la moneda nativa de la red seleccionada) por defecto, pero no muestra automáticamente todos los tokens que puedas tener. Para visualizar USDT, USDC, WETH, MATIC u otros tokens en tu wallet, necesitas añadirlos manualmente cada uno:</p>
+
+        <ol>
+            <li>Abre MetaMask y asegúrate de estar en la red correcta (por ejemplo, si quieres ver USDT en Polygon, selecciona la red Polygon).</li>
+            <li>Haz clic en "Importar tokens" (o "Import Tokens") al final de la lista de tokens.</li>
+            <li>Tienes dos opciones:
+                <ul>
+                    <li><strong>Buscar por nombre/símbolo:</strong> Escribe "USDT", "USDC", "WETH" etc. MetaMask buscará el contrato del token automáticamente. Selecciona el token correcto y haz clic en "Siguiente".</li>
+                    <li><strong>Añadir con dirección de contrato:</strong> Si el token no aparece en la búsqueda, introduce manualmente la dirección del contrato del token. Puedes encontrar esta dirección en CoinMarketCap, CoinGecko o en el explorador de bloques de la red (Etherscan, Polygonscan, etc.).</li>
+                </ul>
+            </li>
+            <li>Confirma la importación. El token aparecerá en tu lista con el símbolo y el saldo correspondiente.</li>
+        </ol>
+
+        <div class="highlight-box">
+            <p><strong>💡 Consejo:</strong> Solo añade tokens que realmente tengas o planees usar. No aceptes imports de tokens de direcciones que desconoces. Algunos estafadores crean tokens con nombres idénticos a los reales para engañarte. Verifica siempre la dirección del contrato en una fuente oficial como CoinGecko.</p>
+        </div>
+
+        <!-- Section 8: Connect to dApps -->
+        <h2 id="dapps">Paso 7: Conectar MetaMask a dApps</h2>
+        <p>Este es el verdadero poder de MetaMask: interactuar con aplicaciones descentralizadas. Plataformas como Uniswap (intercambio de tokens), Aave (préstamos), OpenSea (NFTs) o Lido (staking) requieren conectar tu wallet para funcionar.</p>
+
+        <p>El proceso es siempre similar:</p>
+        <ol>
+            <li><strong>Ve a la web oficial de la dApp</strong> (verifica la URL, los bookmarks son tus aliados).</li>
+            <li><strong>Haz clic en "Connect Wallet"</strong> o "Conectar Wallet", normalmente en la esquina superior derecha.</li>
+            <li><strong>Selecciona MetaMask</strong> de la lista de wallets compatibles.</li>
+            <li><strong>MetaMask se abrirá</strong> pidiéndote que confirmes la conexión. Verás qué información compartes (dirección pública, saldo) y a qué red necesitas cambiar.</li>
+            <li><strong>Confirma la conexión.</strong> A partir de ahí, la dApp podrá leer tu dirección y saldo, y te pedirá que firmes transacciones cuando quieras ejecutar una acción.</li>
+        </ol>
+
+        <p>Para interactuar con una dApp necesitarás ETH (o la moneda nativa de la red correspondiente) para pagar las comisiones de gas de cada transacción. Si estás en Polygon, necesitarás POL; si estás en Arbitrum, ETH; si estás en BSC, BNB.</p>
+
+        <div class="warning-box">
+            <p><strong>⚠️ Antes de firmar cualquier transacción en MetaMask:</strong> Lee SIEMPRE qué estás firmando. Revisa la dirección de destino, la cantidad y los permisos que concedes. Firmar una transacción maliciosa puede resultar en la pérdida total de tus fondos en esa wallet. Si algo parece sospechoso o no lo entiendes, cancela la transacción.</p>
+        </div>
+
+        <!-- Section 9: Safety Tips -->
+        <h2 id="consejos-seguridad">10 Consejos de Seguridad Esenciales para MetaMask</h2>
+        <p>La seguridad en MetaMask es tu responsabilidad. Estos 10 consejos te ayudarán a mantener tus fondos a salvo:</p>
+
+        <ol>
+            <li><strong>Tu frase semilla es sagrada.</strong> Papel, fuera de internet, en lugar seguro, al menos 2 copias en ubicaciones distintas. Ya lo hemos dicho, pero es tan importante que lo repetimos.</li>
+            <li><strong>Usa siempre la web oficial para cada dApp.</strong> Marca como favoritos las páginas que uses con frecuencia (Uniswap, Aave, OpenSea, etc.). Los enlaces falsos en Google Ads son una fuente constante de estafas.</li>
+            <li><strong>Revisa cada transacción antes de firmar.</strong> Mira a qué contrato estás dando permiso, cuánto estás enviando y cuál es la comisión de gas. No firmes por impulso.</li>
+            <li><strong>Revoca los permisos (allowances) periódicamente.</strong> Cuando conectas MetaMask a una dApp y apruebas un token, ese contrato queda autorizado a gastar tus tokens. Usa herramientas como revoke.cash o Etherscan Token Approvals cada pocos meses para revocar permisos innecesarios.</li>
+            <li><strong>No interactúes con tokens desconocidos que aparezcan en tu wallet.</strong> Si de repente ves en tu wallet tokens que nunca compraste, no los toques. Son estafas de "dusting" o "airdrop falso". Intentar venderlos o transferirlos puede activar un contrato malicioso. Simplemente ocúltalos y no interactúes con ellos.</li>
+            <li><strong>No respondas a mensajes directos de "soporte".</strong> MetaMask NUNCA te enviará un mensaje privado primero. Si alguien te contacta por Telegram, X, Discord o email diciendo ser de MetaMask y pidiéndote tu frase semilla, bloquéalo inmediatamente.</li>
+            <li><strong>Combina MetaMask con un hardware wallet.</strong> Para cantidades significativas, usa un Ledger o Trezor conectado a MetaMask. Así, aunque tu ordenador esté comprometido, las transacciones necesitarán confirmación física en el dispositivo.</li>
+            <li><strong>Cierra la sesión de las dApps después de usarlas.</strong> Muchas dApps permiten "desconectar" explícitamente. Hazlo cuando termines de usarlas, especialmente en ordenadores compartidos.</li>
+            <li><strong>No uses MetaMask en ordenadores públicos o compartidos.</strong> Un keylogger (programa que registra lo que tecleas) podría capturar tu contraseña y un malware podría acceder a tu extensión.</li>
+            <li><strong>Mantén MetaMask actualizado.</strong> Las actualizaciones incluyen parches de seguridad. No ignores las notificaciones de actualización de la extensión o la app.</li>
+        </ol>
+
+        <!-- Section 10: Comparison -->
+        <h2 id="comparativa">Comparativa: MetaMask vs Otras Wallets</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>MetaMask</th>
+                    <th>Trust Wallet</th>
+                    <th>Rabby</th>
+                    <th>Ledger (Hardware)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Tipo</strong></td>
+                    <td>Hot Wallet (extensión + app)</td>
+                    <td>Hot Wallet (solo app)</td>
+                    <td>Hot Wallet (extensión)</td>
+                    <td>Cold Wallet (dispositivo físico)</td>
+                </tr>
+                <tr>
+                    <td><strong>Redes soportadas</strong></td>
+                    <td>Ethereum + todas las EVM</td>
+                    <td>70+ blockchains</td>
+                    <td>Ethereum + 100+ EVM</td>
+                    <td>Ethereum + EVM via MetaMask</td>
+                </tr>
+                <tr>
+                    <td><strong>Seguridad</strong></td>
+                    <td>✅ Buena (online)</td>
+                    <td>✅ Buena (online)</td>
+                    <td>✅ Muy buena (simula TXs antes de firmar)</td>
+                    <td>🔒 Máxima (offline)</td>
+                </tr>
+                <tr>
+                    <td><strong>Compatibilidad dApps</strong></td>
+                    <td>✅ La más compatible (estándar del sector)</td>
+                    <td>⚠️ Buena pero limitada en navegador</td>
+                    <td>✅ Excelente (compatible con MetaMask API)</td>
+                    <td>✅ Perfecta (vía MetaMask)</td>
+                </tr>
+                <tr>
+                    <td><strong>Ideal para</strong></td>
+                    <td>Uso diario, DeFi, NFTs, dApps</td>
+                    <td>Múltiples blockchains, staking móvil</td>
+                    <td>Usuarios avanzados, seguridad extra con simulación de TXs</td>
+                    <td>Grandes cantidades, holding a largo plazo</td>
+                </tr>
+                <tr>
+                    <td><strong>Precio</strong></td>
+                    <td>Gratis</td>
+                    <td>Gratis</td>
+                    <td>Gratis</td>
+                    <td>Desde ~80€</td>
+                </tr>
+                <tr>
+                    <td><strong>Principiantes</strong></td>
+                    <td>✅ Excelente (muchos tutoriales disponibles)</td>
+                    <td>✅ Excelente (muy intuitiva)</td>
+                    <td>⚠️ Buena (curva de aprendizaje algo mayor)</td>
+                    <td>⚠️ Requiere conocimientos previos</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Section 11: Personal Experience -->
+        <h2 id="mi-experiencia">Mi Experiencia Usando MetaMask</h2>
+        <p>Instalé MetaMask por primera vez en 2018. Venía de tener mis criptos en exchanges y la idea de "ser mi propio banco" me daba respeto y curiosidad a partes iguales. El momento más estresante fue, sin duda, apuntar mi primera frase semilla. Recuerdo mirar esas 12 palabras y pensar: "¿En serio todo mi dinero depende de esto?". La respuesta era sí.</p>
+
+        <p>Mi primer error fue casi catastrófico: apunté la frase semilla en un post-it y lo pegué en la pantalla del ordenador durante meses. Cualquiera que hubiera entrado en mi habitación habría podido llevarse todos mis fondos. Por suerte, en aquella época mi wallet tenía menos de 100 euros. Aprendí la lección a tiempo.</p>
+
+        <p>Con el tiempo, MetaMask se convirtió en una herramienta cotidiana para mí. La uso para interactuar con protocolos DeFi, para comprar y vender NFTs, para votar en DAOs y para hacer staking de ETH. He probado otras wallets (Trust Wallet, Rabby, Rainbow, Phantom para Solana), pero MetaMask sigue siendo mi caballo de batalla diario por una razón muy simple: <strong>funciona con todo</strong>. Es el estándar de facto de Web3, y prácticamente cualquier dApp que existe acepta MetaMask.</p>
+
+        <p>Si tuviera que dar un solo consejo a alguien que instala MetaMask por primera vez, sería este: <strong>tómate el tiempo necesario para guardar bien tu frase semilla</strong>. Son 10 minutos que pueden ahorrarte un disgusto irreparable. Compra una libreta pequeña dedicada exclusivamente a esto, escribe las 12 palabras con letra clara, guarda la libreta en un cajón con llave y haz una segunda copia en otro lugar. El resto — añadir redes, tokens, conectarte a dApps — lo irás aprendiendo con la práctica. Pero la frase semilla no admite errores ni segundas oportunidades.</p>
+
+        <!-- Section 12: FAQ -->
+        <div class="faq-section">
+            <h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
+
+            <div class="faq-item">
+                <h3>¿MetaMask es gratis?</h3>
+                <p>Sí, MetaMask es completamente gratuito. Descargar la extensión o la app, crear una wallet y almacenar criptomonedas no tiene ningún coste. Sin embargo, realizar transacciones (enviar tokens, interactuar con dApps, hacer swaps) requiere pagar comisiones de red (gas fees) que van a los mineros o validadores de la blockchain, no a MetaMask. Estas comisiones varían según la red y la congestión del momento.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿MetaMask solo funciona con Ethereum?</h3>
+                <p>No. MetaMask funciona con Ethereum y con cualquier blockchain compatible con la Ethereum Virtual Machine (EVM). Esto incluye Polygon, Arbitrum, Optimism, BNB Smart Chain, Avalanche, Base, Linea, Scroll, zkSync y muchas más. Solo necesitas añadir la red manualmente o a través de Chainlist. Si quieres usar Solana, Bitcoin (red nativa) o Cardano, necesitarás otras wallets específicas para esas blockchains.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Puedo tener MetaMask en varios dispositivos?</h3>
+                <p>Sí. Puedes instalar MetaMask en varios navegadores y dispositivos (móvil + ordenador, por ejemplo). Durante la configuración en un nuevo dispositivo, en lugar de "Crear una wallet", selecciona "Importar una wallet" e introduce tu frase semilla de 12 palabras. Esto restaurará el acceso a tu misma wallet en el nuevo dispositivo. Ambos dispositivos funcionarán con la misma dirección y los mismos fondos.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Qué pasa si pierdo mi frase semilla pero tengo la contraseña?</h3>
+                <p>Mientras tengas acceso a MetaMask en un dispositivo donde ya está instalado y recuerdes la contraseña, puedes acceder a tus fondos. Pero es imprescindible que hagas una copia de seguridad de tu frase semilla inmediatamente. Ve a Configuración > Seguridad y Privacidad > Revelar frase de recuperación secreta. Necesitarás tu contraseña. Anota la frase en papel y guárdala de forma segura. Si pierdes el acceso al dispositivo Y no tienes la frase semilla, perderás los fondos para siempre.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿MetaMask es seguro para guardar grandes cantidades de cripto?</h3>
+                <p>MetaMask es una hot wallet (conectada a internet), lo que la hace inherentemente más vulnerable que una hardware wallet. Para cantidades pequeñas o medianas y uso diario de DeFi, es adecuada. Para grandes cantidades (digamos más de 5.000-10.000€), te recomiendo encarecidamente usar un hardware wallet (Ledger o Trezor) y conectarlo a MetaMask. Así combinas la seguridad del almacenamiento offline con la comodidad de MetaMask para interactuar con dApps. Lee nuestra guía de <a href="/articulos/seguridad-criptomonedas-principiantes.html">seguridad crypto</a> para más información.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Necesito ETH en MetaMask para recibir otros tokens?</h3>
+                <p>No necesitas ETH para recibir tokens en tu wallet. La dirección de recepción es la misma para ETH y para cualquier token ERC-20. Sin embargo, sí necesitarás ETH para enviar tokens posteriormente o para interactuar con dApps, ya que el gas fee de las transacciones en la red Ethereum se paga en ETH. Si solo vas a recibir y no a mover los tokens de inmediato, no necesitas tener ETH en ese momento.</p>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <h2 id="conclusion">Conclusión: Tu Puerta de Entrada a Web3</h2>
+        <p>MetaMask es mucho más que una wallet: es tu identidad digital en el mundo descentralizado. Con ella puedes almacenar activos, interactuar con aplicaciones DeFi, comprar NFTs, votar en DAOs y mucho más. La curva de aprendizaje puede parecer pronunciada al principio, pero una vez que entiendes los conceptos básicos — especialmente la gestión de la frase semilla y las comisiones de gas — todo lo demás se vuelve intuitivo con la práctica.</p>
+
+        <p>Resumen de tus próximos pasos:</p>
+        <ol>
+            <li><strong>Descarga MetaMask</strong> desde <strong>metamask.io</strong> (solo desde la web oficial).</li>
+            <li><strong>Crea tu wallet y guarda tu frase semilla</strong> en papel, con al menos dos copias en lugares físicos distintos.</li>
+            <li><strong>Añade redes adicionales</strong> que te interesen usando Chainlist (recomiendo empezar con Polygon o Arbitrum para evitar las altas comisiones de Ethereum).</li>
+            <li><strong>Compra tus primeras criptomonedas</strong> en un exchange como <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored">Binance (código BN522)</a> o <a href="https://www.hnrvqbxkptm.org/join/OK800" target="_blank" rel="nofollow sponsored">OKX (código OK800)</a> y envíalas a tu wallet de MetaMask. Consulta nuestra <a href="/articulos/como-comprar-bitcoin.html">guía para comprar Bitcoin</a> y familiarízate con el proceso de envío.</li>
+            <li><strong>Aprende qué es Bitcoin y cómo funciona el ecosistema</strong> antes de lanzarte a DeFi. Nuestra <a href="/articulos/que-es-bitcoin.html">guía sobre Bitcoin para principiantes</a> es un buen punto de partida.</li>
+        </ol>
+
+        <!-- CTA -->
+        <div class="cta-card">
+            <h2>🚀 Empieza a Construir tu Cartera Crypto Hoy</h2>
+            <p>Crea tu wallet MetaMask, compra tus primeras criptomonedas en Binance u OKX con descuento exclusivo, y da el primer paso hacia tu libertad financiera digital.</p>
+            <div class="cta-buttons">
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg">Binance (BN522) →</a>
+                <a href="https://www.hnrvqbxkptm.org/join/OK800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg">OKX (OK800) →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <span class="logo-icon">&#8383;</span>
+                        <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+                    </a>
+                    <p>Tu guía completa de criptomonedas en español. Aprende, invierte y protégete en el mundo crypto con contenido educativo de calidad.</p>
+                    <div class="footer-disclaimer">
+                        <strong>⚠️ Descargo de responsabilidad:</strong> Este sitio es solo con fines educativos. No constituye asesoramiento financiero. Invertir en criptomonedas conlleva riesgos. Investiga siempre por tu cuenta (DYOR).
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <a href="/#inicio">Inicio</a>
+                    <a href="/#fundamentos">Fundamentos</a>
+                    <a href="/#guias">Guías</a>
+                    <a href="/#exchanges">Exchanges</a>
+                    <a href="/#wallets">Wallets</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Artículos</h4>
+                    <a href="/articulos/que-es-bitcoin.html">Qué es Bitcoin</a>
+                    <a href="/articulos/como-comprar-bitcoin.html">Cómo Comprar Bitcoin</a>
+                    <a href="/articulos/crear-configurar-metamask.html">Configurar MetaMask</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Comunidad</h4>
+                    <a href="https://x.com/CoinTrailHub" target="_blank" rel="noopener">X</a>
+                    <a href="https://www.youtube.com/@CoinTrailCrypto" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://t.me/+0ZKfUqf0xKpkMjFl" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MiCryptoGuía. Todos los derechos reservados. &nbsp;|&nbsp; <a href="/privacidad.html">Privacidad</a> &nbsp;|&nbsp; <a href="/terminos.html">Términos</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
