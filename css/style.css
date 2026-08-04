@@ -1023,6 +1023,17 @@ img {
 .exchange-icon img {
     display: block;
 }
+/* CTA button logos - white circle bg for JPG on dark theme */
+.cta-card .btn img {
+    background: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    object-fit: contain;
+}
+.btn img {
+    vertical-align: middle;
+    flex-shrink: 0;
+}
 
 .highlight {
     color: var(--accent);
