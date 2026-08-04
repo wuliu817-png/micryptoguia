@@ -1016,6 +1016,12 @@ img {
 
 .exchange-icon {
     font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.exchange-icon img {
+    display: block;
 }
 
 .highlight {
