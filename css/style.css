@@ -1964,9 +1964,11 @@ img {
 .cta-card .btn-primary {
     background: #121212;
     color: #fff;
+    border: 1px solid rgba(255,255,255,0.25);
 }
 .cta-card .btn-primary:hover {
     background: #2a2a2a;
+    border-color: rgba(255,255,255,0.45);
 }
 .cta-card .btn-secondary {
     background: #1a6aff;
