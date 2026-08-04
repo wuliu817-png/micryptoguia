@@ -574,6 +574,8 @@ img {
     transition: all var(--transition);
     border: none;
     white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .btn-primary {
@@ -1335,26 +1337,11 @@ img {
 
 /* ===== CTA Section ===== */
 .cta-card {
-    background: var(--gradient-card);
-    border: 1px solid var(--border-color);
+    background: linear-gradient(135deg, #111633 0%, #181e45 100%);
+    border: 1px solid rgba(247, 147, 26, 0.25);
     border-radius: var(--radius-xl);
     padding: 60px 40px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 50%, var(--accent-glow), transparent 70%);
-    opacity: 0.12;
-    pointer-events: none;
-}
-
-.cta-card > * {
-    position: relative;
 }
 
 .cta-card h2 {
@@ -1922,26 +1909,12 @@ img {
 
 /* CTA Card */
 .cta-card {
-    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-hover) 100%);
-    border: 1px solid var(--accent);
+    background: linear-gradient(135deg, #111633 0%, #181e45 100%);
+    border: 1px solid rgba(247, 147, 26, 0.25);
     border-radius: 16px;
     padding: 40px 36px;
     margin: 40px 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-card::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, var(--accent-glow) 0%, transparent 60%);
-    opacity: 0.3;
-    pointer-events: none;
 }
 
 .cta-card > * {
