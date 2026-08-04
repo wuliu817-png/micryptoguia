@@ -1343,8 +1343,9 @@ img {
 
 /* ===== CTA Section ===== */
 .cta-card {
-    background: linear-gradient(135deg, #111633 0%, #181e45 100%);
-    border: 1px solid rgba(247, 147, 26, 0.25);
+    background: linear-gradient(135deg, #1a2040 0%, #252d60 100%);
+    border: 1px solid rgba(247, 147, 26, 0.5);
+    box-shadow: 0 0 40px rgba(247, 147, 26, 0.08);
     border-radius: var(--radius-xl);
     padding: 60px 40px;
     text-align: center;
@@ -1915,8 +1916,9 @@ img {
 
 /* CTA Card */
 .cta-card {
-    background: linear-gradient(135deg, #111633 0%, #181e45 100%);
-    border: 1px solid rgba(247, 147, 26, 0.25);
+    background: linear-gradient(135deg, #1a2040 0%, #252d60 100%);
+    border: 1px solid rgba(247, 147, 26, 0.5);
+    box-shadow: 0 0 40px rgba(247, 147, 26, 0.08);
     border-radius: 16px;
     padding: 40px 36px;
     margin: 40px 0;
