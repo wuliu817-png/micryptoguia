@@ -1961,6 +1961,20 @@ img {
 .cta-card .btn {
     margin: 0 8px;
 }
+.cta-card .btn-primary {
+    background: #121212;
+    color: #fff;
+}
+.cta-card .btn-primary:hover {
+    background: #2a2a2a;
+}
+.cta-card .btn-secondary {
+    background: #1a6aff;
+    color: #fff;
+}
+.cta-card .btn-secondary:hover {
+    background: #3d82ff;
+}
 
 /* Article Breadcrumb */
 .article-breadcrumb {
