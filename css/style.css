@@ -579,11 +579,12 @@ img {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: #f7931a;
     color: #000;
 }
 
 .btn-primary:hover {
+    background: #fbb040;
     box-shadow: var(--shadow-glow);
     transform: translateY(-1px);
 }
