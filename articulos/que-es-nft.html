@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende qué son los NFTs, cómo funcionan, por qué tienen valor y cómo comprar tu primer token no fungible de forma segura. Guía completa para principiantes en español 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://micryptoguia.com/articulos/que-es-nft.html">
+    <meta property="og:title" content="Qué son los NFTs y Cómo Funcionan | Guía 2026 para Principiantes — MiCryptoGuía">
+    <meta property="og:description" content="Aprende qué son los NFTs, cómo funcionan, por qué tienen valor y cómo comprar tu primer token no fungible de forma segura. Guía completa para principiantes en español.">
+    <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Qué son los NFTs y Cómo Funcionan | Guía 2026 para Principiantes — MiCryptoGuía</title>
+    <style>
+        .article-page { padding: 140px 24px 80px; max-width: 800px; margin: 0 auto; }
+        .article-page h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; color: var(--text-primary); line-height: 1.2; }
+        .article-page .article-meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px; }
+        .article-page .speed-read { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 32px; }
+        .article-page .speed-read h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin-bottom: 8px; }
+        .article-page .speed-read ul { list-style: disc; padding-left: 20px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .article-page .toc { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 36px; }
+        .article-page .toc h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+        .article-page .toc ol { padding-left: 20px; color: var(--text-secondary); font-size: 0.9rem; line-height: 2; }
+        .article-page .toc ol li a { color: var(--text-secondary); transition: color var(--transition-fast); }
+        .article-page .toc ol li a:hover { color: var(--accent); }
+        .article-page h2 { font-size: 1.4rem; font-weight: 700; margin: 36px 0 12px; color: var(--text-primary); }
+        .article-page h3 { font-size: 1.15rem; font-weight: 600; margin: 24px 0 8px; color: var(--text-primary); }
+        .article-page p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
+        .article-page ul, .article-page ol { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; padding-left: 24px; }
+        .article-page a { color: var(--accent); text-decoration: underline; }
+        .article-page a:hover { opacity: 0.8; }
+        .article-page .highlight-box { background: var(--gradient-card); border: 1px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 20px 0; }
+        .article-page .highlight-box p { margin: 0; font-size: 0.9rem; }
+        .article-page .warning-box { background: var(--red-bg); border: 1px solid var(--red); border-radius: var(--radius-md); padding: 16px 20px; margin: 20px 0; }
+        .article-page .warning-box p { margin: 0; font-size: 0.9rem; color: var(--red); }
+        .article-page .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); }
+        .article-page .comparison-table th { background: var(--bg-surface); padding: 12px 16px; text-align: left; font-weight: 600; color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; }
+        .article-page .comparison-table td { padding: 12px 16px; border-top: 1px solid var(--border-color); color: var(--text-secondary); }
+        .article-page .faq-section { margin-top: 40px; }
+        .article-page .faq-item { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 12px; }
+        .article-page .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px 0; }
+        .article-page .cta-card { margin-top: 40px; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Qué son los NFTs y Cómo Funcionan | Guía 2026 para Principiantes",
+      "description": "Aprende qué son los NFTs, cómo funcionan, por qué tienen valor y cómo comprar tu primer token no fungible de forma segura. Guía completa para principiantes en español.",
+      "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com" },
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07",
+      "inLanguage": "es",
+      "publisher": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://micryptoguia.com/articulos/que-es-nft.html" }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">&#8383;</span>
+                <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="/#fundamentos" class="nav-link active">Fundamentos</a></li>
+                <li><a href="/#guias" class="nav-link">Guías</a></li>
+                <li><a href="/#exchanges" class="nav-link">Exchanges</a></li>
+                <li><a href="/#wallets" class="nav-link">Wallets</a></li>
+                <li><a href="/#defi" class="nav-link">DeFi</a></li>
+                <li><a href="/#seguridad" class="nav-link">Seguridad</a></li>
+                <li><a href="/#glosario" class="nav-link">Glosario</a></li>
+                <li><a href="/#herramientas" class="nav-link">Herramientas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Article Content ===== -->
+    <main class="article-page">
+        <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📖 Fundamentos</span>
+        <h1>Qué son los NFTs y Cómo Funcionan: Guía Completa para Principiantes</h1>
+        <div class="article-meta">
+            <span>Actualizado: Agosto 2026</span> &nbsp;·&nbsp;
+            <span>⏱️ 10 min lectura</span> &nbsp;·&nbsp;
+            <span>🌱 Principiante</span>
+        </div>
+
+        <!-- Speed Read -->
+        <div class="speed-read">
+            <h3>💡 En pocas palabras</h3>
+            <p>Un NFT (Token No Fungible) es un <strong>certificado digital de propiedad único</strong> registrado en una blockchain. A diferencia de las criptomonedas como Bitcoin, cada NFT es diferente y no puede intercambiarse por otro de igual valor. Los NFTs permiten comprar, vender y demostrar la propiedad de activos digitales como arte, música, objetos de videojuegos y terrenos virtuales. En 2026, el mercado NFT ha madurado más allá del hype inicial y se ha consolidado como una tecnología con casos de uso reales en gaming, identidad digital y tokenización de activos.</p>
+        </div>
+
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2>📑 Índice de Contenidos</h2>
+            <ol>
+                <li><a href="#que-es">¿Qué es un NFT?</a></li>
+                <li><a href="#como-funciona">¿Cómo funcionan los NFTs? Blockchain, metadatos y almacenamiento</a></li>
+                <li><a href="#por-que-vale">¿Por qué tienen valor los NFTs?</a></li>
+                <li><a href="#tipos">Tipos de NFTs: arte, gaming, música, coleccionables y más</a></li>
+                <li><a href="#como-comprar">¿Cómo comprar un NFT de forma segura?</a></li>
+                <li><a href="#riesgos">Riesgos de invertir en NFTs</a></li>
+                <li><a href="#mi-experiencia">Mi experiencia personal con NFTs</a></li>
+                <li><a href="#comparativa">Comparativa: NFTs vs Criptomonedas Fungibles</a></li>
+                <li><a href="#faq">Preguntas frecuentes (FAQ)</a></li>
+                <li><a href="#conclusion">Conclusión y próximos pasos</a></li>
+            </ol>
+        </nav>
+
+        <!-- Answer the main question immediately -->
+        <p>Un NFT (Token No Fungible, por sus siglas en inglés) es un activo digital único que representa la propiedad de un artículo específico registrado en una blockchain. Para entenderlo con un ejemplo cotidiano: un billete de 10 euros es <strong>fungible</strong> porque puedes cambiarlo por otro billete de 10 euros y tienes exactamente lo mismo. Pero una entrada para un concierto en primera fila o una obra de arte original es <strong>no fungible</strong> porque es única y no puede sustituirse por otra idéntica. Los NFTs llevan este concepto de unicidad al mundo digital usando la tecnología blockchain. Vamos a desglosarlo paso a paso.</p>
+
+        <!-- Section 1: What is an NFT -->
+        <h2 id="que-es">¿Qué es un NFT?</h2>
+        <p>NFT son las siglas de <strong>Non-Fungible Token</strong> (Token No Fungible). Técnicamente, es un tipo especial de smart contract (contrato inteligente) que se ejecuta en una blockchain — principalmente Ethereum, aunque también existen en Solana, Polygon, BNB Chain y otras redes. Cada NFT contiene metadatos que lo hacen único: un identificador distinto, información sobre su creador, su historial de transacciones y un enlace al archivo digital que representa.</p>
+
+        <p>La palabra clave aquí es <strong>"no fungible"</strong>. En economía, un bien fungible es aquel que puede intercambiarse por otro de la misma especie y valor. Un bitcoin es fungible: 1 BTC en tu wallet vale exactamente lo mismo que 1 BTC en la wallet de cualquier otra persona. Un NFT, en cambio, es único. Puedes tener un NFT del Bored Ape #1234 y otro del Bored Ape #5678, y aunque ambos pertenecen a la misma colección, tienen propiedades distintas (diferentes fondos, ropa, accesorios) y probablemente valores de mercado muy diferentes.</p>
+
+        <p>Los NFTs se popularizaron entre 2020 y 2021 con colecciones como CryptoPunks, Bored Ape Yacht Club y Art Blocks. En 2026, aunque la euforia especulativa ha disminuido, los NFTs han encontrado casos de uso sólidos en videojuegos, identidad digital, tokenización de activos del mundo real (RWA), membresías y propiedad intelectual.</p>
+
+        <div class="highlight-box">
+            <p><strong>💡 Dato clave:</strong> El primer NFT de la historia se llamó "Quantum" y fue creado por Kevin McCoy en 2014, acuñado en la blockchain de Namecoin. En 2021, esta obra se vendió en Sotheby's por más de 1.4 millones de dólares. Hoy los NFTs mueven miles de millones de dólares al año y están integrados en plataformas como Instagram, Reddit y Spotify.</p>
+        </div>
+
+        <!-- Section 2: How NFTs work -->
+        <h2 id="como-funciona">¿Cómo Funcionan los NFTs? Blockchain, Metadatos y Almacenamiento</h2>
+
+        <h3>La Blockchain como Registro de Propiedad</h3>
+        <p>Cuando compras un NFT, lo que realmente estás comprando es la propiedad de un <strong>token único registrado en la blockchain</strong>. Este token funciona como un certificado digital que dice: "esta persona es la dueña de este activo digital específico". La blockchain garantiza que ese registro sea público, inmutable y verificable por cualquiera.</p>
+
+        <p>Imagina que la blockchain es como un registro de la propiedad público y descentralizado. Cuando compras una casa, se inscribe tu nombre en el registro. Con los NFTs pasa igual: cuando compras uno, la blockchain registra tu dirección como la nueva propietaria de ese token. Nadie puede falsificar ese registro ni modificarlo sin tu consentimiento.</p>
+
+        <h3>Estándares de NFTs: ERC-721 y ERC-1155</h3>
+        <p>La mayoría de NFTs en Ethereum siguen dos estándares técnicos principales:</p>
+        <ul>
+            <li><strong>ERC-721:</strong> El estándar original de NFTs. Cada token es completamente único y tiene su propio smart contract o forma parte de una colección donde cada token tiene propiedades individuales. Es el más usado para arte digital y coleccionables.</li>
+            <li><strong>ERC-1155:</strong> Un estándar más moderno y eficiente que permite crear tanto tokens fungibles como no fungibles en un mismo smart contract. Muy utilizado en videojuegos, donde un mismo contrato puede gestionar tanto objetos únicos (una espada legendaria) como objetos comunes (pociones de curación que son todas iguales).</li>
+        </ul>
+
+        <h3>¿Dónde se Guarda el Archivo Digital?</h3>
+        <p>Un malentendido muy común es pensar que el archivo digital (la imagen, el video, la canción) "vive" en la blockchain. Esto no es así. La blockchain solo guarda los metadatos y un enlace al archivo. El archivo en sí suele almacenarse en sistemas descentralizados como:</p>
+        <ul>
+            <li><strong>IPFS (InterPlanetary File System):</strong> Un sistema de almacenamiento descentralizado que identifica archivos por su contenido, no por su ubicación. Si un nodo de IPFS desaparece, el archivo puede seguir disponible desde otros nodos. <a href="https://ipfs.tech/" target="_blank" rel="noopener">Web oficial de IPFS →</a></li>
+            <li><strong>Arweave:</strong> Una blockchain especializada en almacenamiento permanente. Pagas una vez y el archivo se guarda "para siempre" (teóricamente al menos 200 años). <a href="https://www.arweave.org/" target="_blank" rel="noopener">Web oficial de Arweave →</a></li>
+            <li><strong>Almacenamiento centralizado:</strong> Algunos proyectos menos serios guardan sus archivos en AWS o Google Cloud. Si el proyecto deja de pagar el servidor, el archivo desaparece aunque el token en la blockchain siga existiendo.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>⚠️ Importante:</strong> Antes de comprar un NFT caro, verifica dónde están almacenados sus archivos. Un NFT con metadatos en IPFS o Arweave tiene muchas más garantías de persistencia que uno alojado en un servidor web tradicional. Puedes comprobarlo mirando el enlace en los metadatos del token (si empieza por <code>ipfs://</code> o <code>ar://</code>, estás más protegido).</p>
+        </div>
+
+        <!-- Section 3: Why NFTs have value -->
+        <h2 id="por-que-vale">¿Por Qué Tienen Valor los NFTs?</h2>
+        <p>Esta es la pregunta que todo principiante se hace, y tiene sentido: ¿por qué alguien pagaría miles o millones por una imagen que puedo clicar con el botón derecho y guardar? La respuesta está en varios factores que van más allá de la simple imagen:</p>
+
+        <ul>
+            <li><strong>Escasez verificable:</strong> La blockchain demuestra matemáticamente cuántas copias existen de un NFT. Si una colección tiene 10,000 piezas, puedes verificarlo en el smart contract. No hay forma de crear copias falsas que engañen al sistema.</li>
+            <li><strong>Procedencia y autenticidad:</strong> Puedes trazar la historia completa de un NFT desde su creación: quién lo acuñó, quiénes lo han tenido, a qué precios se ha vendido. En el mercado del arte tradicional, la procedencia es fundamental y los NFTs la hacen transparente por defecto.</li>
+            <li><strong>Regalías para creadores:</strong> Los smart contracts de NFTs pueden incluir regalías programables: cada vez que un NFT se revende en el mercado secundario, un porcentaje (normalmente 5-10%) va automáticamente al creador original. Esto ha revolucionado la economía de los creadores digitales.</li>
+            <li><strong>Utilidad:</strong> Muchos NFTs no son solo imágenes. Pueden funcionar como llaves de acceso a comunidades exclusivas, pases para eventos, objetos utilizables en videojuegos o representaciones de activos del mundo real.</li>
+            <li><strong>Comunidad y pertenencia:</strong> Algunos NFTs, como Bored Ape Yacht Club, funcionan como membresías a clubs exclusivos con eventos, networking y beneficios solo para holders.</li>
+            <li><strong>Especulación:</strong> Seamos honestos: parte del valor proviene de la expectativa de que el NFT se revalorizará. Esto es un arma de doble filo, como veremos en la sección de riesgos.</li>
+        </ul>
+
+        <!-- Section 4: Types of NFTs -->
+        <h2 id="tipos">Tipos de NFTs: Arte, Gaming, Música, Coleccionables y Más</h2>
+
+        <h3>Arte Digital</h3>
+        <p>El caso de uso más conocido. Artistas digitales como Beeple, Pak o XCOPY han vendido obras por millones de dólares. Plataformas como <a href="https://opensea.io/" target="_blank" rel="noopener">OpenSea</a>, <a href="https://foundation.app/" target="_blank" rel="noopener">Foundation</a> y <a href="https://superrare.com/" target="_blank" rel="noopener">SuperRare</a> permiten a cualquier artista acuñar (crear) sus obras como NFTs y venderlas directamente a coleccionistas sin intermediarios como galerías. En 2026, cada vez más artistas tradicionales están experimentando con NFTs como una nueva fuente de ingresos y conexión con su audiencia.</p>
+
+        <h3>Gaming (Videojuegos)</h3>
+        <p>Este es probablemente el caso de uso más prometedor a largo plazo. Juegos como <a href="https://axieinfinity.com/" target="_blank" rel="noopener">Axie Infinity</a>, <a href="https://godsunchained.com/" target="_blank" rel="noopener">Gods Unchained</a> y <a href="https://parallel.life/" target="_blank" rel="noopener">Parallel</a> permiten a los jugadores poseer de verdad sus objetos del juego: personajes, cartas, skins, terrenos virtuales. A diferencia de un juego tradicional donde todos tus objetos desaparecen si el servidor cierra, los NFTs de juego son tuyos para siempre y puedes venderlos en mercados abiertos.</p>
+
+        <h3>Música</h3>
+        <p>Cada vez más músicos están usando NFTs para vender ediciones limitadas de canciones, álbumes completos o experiencias exclusivas. Plataformas como <a href="https://www.sound.xyz/" target="_blank" rel="noopener">Sound.xyz</a> y <a href="https://catalog.works/" target="_blank" rel="noopener">Catalog</a> permiten a los artistas conectar directamente con sus fans y ganar mucho más que con el streaming tradicional (donde Spotify paga aproximadamente 0.003 euros por reproducción).</p>
+
+        <h3>Coleccionables (PFP)</h3>
+        <p>Los NFTs de foto de perfil (PFP, por Profile Picture) como CryptoPunks, Bored Ape Yacht Club, Azuki y Pudgy Penguins se hicieron famosos en 2021. Aunque su valor ha fluctuado mucho, algunos se han consolidado como marcas culturales con productos físicos, colaboraciones con empresas como Adidas y programas de televisión.</p>
+
+        <h3>Terrenos Virtuales (Metaverso)</h3>
+        <p>Plataformas como <a href="https://www.sandbox.game/" target="_blank" rel="noopener">The Sandbox</a> y <a href="https://decentraland.org/" target="_blank" rel="noopener">Decentraland</a> venden parcelas de tierra virtual como NFTs. Los propietarios pueden construir experiencias, alquilar sus terrenos o venderlos. Aunque el hype del metaverso de 2021-2022 se ha enfriado, estas plataformas siguen activas y organizando eventos virtuales.</p>
+
+        <h3>Tokenización de Activos Reales (RWA)</h3>
+        <p>Una tendencia creciente en 2026 es usar NFTs para representar la propiedad de activos del mundo real: bienes inmuebles, obras de arte físicas, vinos de colección, relojes de lujo. Esto permite fraccionar la propiedad de activos caros y facilita su comercio global.</p>
+
+        <!-- Section 5: How to buy -->
+        <h2 id="como-comprar">¿Cómo Comprar un NFT de Forma Segura?</h2>
+        <p>Comprar tu primer NFT puede ser intimidante, pero el proceso es bastante sencillo una vez que tienes lo básico. Aquí tienes los pasos:</p>
+
+        <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
+          <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Solo recomendamos plataformas que hemos probado personalmente. <a href="../sobre.html" style="color:var(--accent);">Más información →</a></p>
+        </div>
+
+        <ol>
+            <li><strong>Consigue una wallet compatible con NFTs:</strong> La opción más popular es <a href="/articulos/crear-configurar-metamask.html">MetaMask</a>, una extensión de navegador que funciona con Ethereum y otras redes compatibles. Otras opciones excelentes son <a href="https://phantom.app/" target="_blank" rel="noopener">Phantom</a> (para Solana) y <a href="https://rainbow.me/" target="_blank" rel="noopener">Rainbow</a>. Instala la extensión, crea tu wallet y guarda tu frase semilla en un lugar seguro.</li>
+            <li><strong>Compra ETH (o la criptomoneda que necesites):</strong> La mayoría de NFTs se compran con ETH (Ethereum). Puedes comprar ETH en exchanges como <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored">Binance</a> o <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored">OKX</a> con euros, y luego enviarlo a tu wallet de MetaMask.</li>
+            <li><strong>Elige un marketplace de NFTs:</strong> El más grande y conocido es <a href="https://opensea.io/" target="_blank" rel="noopener"><strong>OpenSea</strong></a>, que funciona como un eBay de NFTs. Otros marketplaces importantes son <a href="https://blur.io/" target="_blank" rel="noopener">Blur</a> (para traders más activos), <a href="https://magiceden.io/" target="_blank" rel="noopener">Magic Eden</a> (originalmente Solana, ahora multi-chain) y <a href="https://rarible.com/" target="_blank" rel="noopener">Rarible</a>. Conecta tu wallet al marketplace.</li>
+            <li><strong>Explora y compra:</strong> Navega por las colecciones, filtra por precio, verifica la autenticidad de la colección (busca el tick azul de verificación) y cuando encuentres algo que te guste, haz clic en "Buy Now" si tiene precio fijo, o haz una oferta (offer) si el vendedor acepta negociar.</li>
+            <li><strong>Paga el gas fee:</strong> Además del precio del NFT, pagarás una comisión de red (gas fee) por procesar la transacción en la blockchain. En Ethereum, esta comisión puede variar desde unos pocos euros hasta más de 50€ en momentos de congestión. Considera usar redes más baratas como Polygon o Arbitrum para tus primeras compras.</li>
+            <li><strong>Verifica tu compra:</strong> Una vez completada la transacción, el NFT aparecerá en tu wallet y en tu perfil de OpenSea. ¡Ya es tuyo! Puedes verlo, compartirlo o revenderlo cuando quieras.</li>
+        </ol>
+
+        <!-- Section 6: Risks -->
+        <h2 id="riesgos">Riesgos de Invertir en NFTs</h2>
+        <p>Los NFTs pueden ser una oportunidad emocionante, pero también conllevan riesgos significativos que necesitas conocer:</p>
+
+        <div class="warning-box">
+            <p><strong>⚠️ Advertencia YMYL (Your Money or Your Life):</strong> El mercado de NFTs es extremadamente volátil y especulativo. Muchos NFTs han perdido más del 90% de su valor. Este contenido es educativo y no constituye asesoramiento financiero. Nunca inviertas dinero que no puedas permitirte perder.</p>
+        </div>
+
+        <ul>
+            <li><strong>Volatilidad extrema:</strong> Un NFT que hoy vale 2 ETH puede valer 0.1 ETH la semana que viene. Los precios de los NFTs pueden desplomarse sin previo aviso, especialmente en colecciones impulsadas por hype y especulación.</li>
+            <li><strong>Falta de liquidez:</strong> A diferencia de Bitcoin o ETH que puedes vender en segundos, vender un NFT puede llevar días, semanas o meses. Tiene que aparecer un comprador dispuesto a pagar tu precio. Muchos NFTs simplemente nunca encuentran comprador.</li>
+            <li><strong>Estafas (scams) y rug pulls:</strong> El espacio NFT está lleno de proyectos fraudulentos. Los creadores prometen un juego revolucionario, venden miles de NFTs y desaparecen con el dinero (esto se llama "rug pull"). También existen estafas de phishing donde te roban los NFTs de tu wallet si firmas transacciones maliciosas sin leer. Para protegerte, consulta nuestra <a href="/articulos/seguridad-criptomonedas.html">guía completa de seguridad crypto</a>.</li>
+            <li><strong>Wash trading:</strong> Algunas colecciones inflan artificialmente sus precios comprando y vendiendo sus propios NFTs entre carteras controladas para crear una falsa sensación de demanda. Un volumen alto no siempre significa interés real.</li>
+            <li><strong>Problemas de propiedad intelectual:</strong> Comprar un NFT no siempre te da los derechos de autor de la imagen. Algunos proyectos otorgan derechos comerciales completos (como Bored Ape Yacht Club), pero otros solo te dan derecho a uso personal. Lee siempre los términos de la colección.</li>
+            <li><strong>Desaparición del archivo:</strong> Si los metadatos de tu NFT apuntan a un servidor web que cierra, tu NFT se convierte en un token que apunta a nada. Es lo que se conoce como "link rot". Verifica que el almacenamiento sea en IPFS o Arweave.</li>
+            <li><strong>Riesgo de smart contract:</strong> Si el smart contract de la colección tiene un bug o una vulnerabilidad, los NFTs podrían ser robados o quedar inutilizables.</li>
+        </ul>
+
+        <!-- Section 7: Personal Experience -->
+        <h2 id="mi-experiencia">Mi Experiencia Personal con NFTs</h2>
+        <p>Mi primer contacto con los NFTs fue en 2021, durante el boom. Un amigo me habló de un proyecto de "monos digitales" que valían miles de dólares y, sinceramente, pensé que era una broma. ¿Pagar el equivalente a un coche por la imagen de un mono? No le veía sentido.</p>
+
+        <p>Pero en lugar de descartarlo, decidí investigar. Compré un NFT barato (unos 50 euros en ETH) de una colección de arte generativo en Art Blocks. El proceso fue torpe: tuve que instalar MetaMask, comprar ETH en Binance, enviarlo a mi wallet, pagar un gas fee que entonces era una locura (unos 80 euros en horas punta) y finalmente hacer clic en "comprar" sin saber muy bien qué estaba haciendo.</p>
+
+        <p>Ese primer NFT nunca se revalorizó. De hecho, hoy probablemente vale menos de lo que pagué. Pero aprendí lecciones valiosas que me han servido para no cometer errores más caros después:</p>
+
+        <ul>
+            <li><strong>No compres por FOMO.</strong> Si todo el mundo está hablando de una colección y sientes que te estás quedando fuera, respira. Las oportunidades siempre vuelven.</li>
+            <li><strong>Entiende lo que estás comprando.</strong> Mira los metadatos, verifica el smart contract, comprueba el equipo detrás del proyecto. Si no sabes hacer esto, probablemente no deberías estar comprando.</li>
+            <li><strong>El gas fee importa.</strong> En Ethereum, comprar un NFT de 30 euros puede costarte 50 euros de gas. Busca redes más baratas o compra en horas de baja actividad (fines de semana, madrugada).</li>
+            <li><strong>La mayoría de colecciones fracasan.</strong> De cada 100 colecciones que se lanzan, quizás 2 o 3 mantienen valor a largo plazo. El resto se van a cero. Elige con mucho cuidado.</li>
+        </ul>
+
+        <p>Hoy, años después, mi perspectiva sobre los NFTs ha madurado. Ya no los veo como una forma de "hacerse rico rápido", sino como una tecnología con potencial real para creadores, gamers y comunidades. Mis NFTs favoritos no son los más caros, sino los que me dan acceso a comunidades donde he conocido a gente increíble y he aprendido sobre Web3. Si estás empezando, mi consejo es: <strong>compra algo que de verdad te guste y que estarías feliz de tener aunque no puedas venderlo nunca</strong>.</p>
+
+        <!-- Section 8: Comparison Table -->
+        <h2 id="comparativa">Comparativa: NFTs vs Criptomonedas Fungibles</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>NFTs (Tokens No Fungibles)</th>
+                    <th>Criptomonedas (Tokens Fungibles)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Unicidad</strong></td>
+                    <td>✅ Cada token es único</td>
+                    <td>❌ Todas las unidades son idénticas</td>
+                </tr>
+                <tr>
+                    <td><strong>Intercambiabilidad</strong></td>
+                    <td>❌ No intercambiables 1:1</td>
+                    <td>✅ 1 BTC = 1 BTC; 1 ETH = 1 ETH</td>
+                </tr>
+                <tr>
+                    <td><strong>Divisibilidad</strong></td>
+                    <td>❌ Generalmente indivisibles (aunque existen NFTs fraccionables)</td>
+                    <td>✅ Altamente divisibles (8-18 decimales)</td>
+                </tr>
+                <tr>
+                    <td><strong>Liquidez</strong></td>
+                    <td>❌ Baja: vender puede llevar días o semanas</td>
+                    <td>✅ Alta: compra/venta instantánea</td>
+                </tr>
+                <tr>
+                    <td><strong>Valoración</strong></td>
+                    <td>⚠️ Subjetiva: depende de rareza, utilidad, comunidad</td>
+                    <td>✅ Mercado líquido con precio de referencia</td>
+                </tr>
+                <tr>
+                    <td><strong>Casos de uso</strong></td>
+                    <td>✅ Arte, gaming, coleccionables, identidad, RWA</td>
+                    <td>✅ Pagos, reserva de valor, DeFi, remesas</td>
+                </tr>
+                <tr>
+                    <td><strong>Estándar técnico</strong></td>
+                    <td>⚠️ ERC-721, ERC-1155 (más complejo)</td>
+                    <td>✅ ERC-20 (más simple y probado)</td>
+                </tr>
+                <tr>
+                    <td><strong>Volatilidad</strong></td>
+                    <td>❌ Extrema (caídas del 90%+ son comunes)</td>
+                    <td>⚠️ Alta (caídas del 50-80% en mercados bajistas)</td>
+                </tr>
+                <tr>
+                    <td><strong>Madurez del mercado</strong></td>
+                    <td>⚠️ Menos de 10 años, aún experimental</td>
+                    <td>⚠️ ~17 años para Bitcoin, menos para altcoins</td>
+                </tr>
+                <tr>
+                    <td><strong>Mejor para</strong></td>
+                    <td>✅ Creadores, coleccionistas, gamers, comunidades</td>
+                    <td>✅ Inversores, pagos, ahorro, DeFi</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Sources and References -->
+        <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
+        <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://ethereum.org/es/nft/" target="_blank" rel="noopener" style="color:var(--accent);">Ethereum.org — Guía de NFTs</a> — Documentación oficial de Ethereum</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://opensea.io/" target="_blank" rel="noopener" style="color:var(--accent);">OpenSea</a> — El marketplace de NFTs más grande</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank" rel="noopener" style="color:var(--accent);">EIP-721</a> — Especificación técnica del estándar ERC-721</li>
+        </ul>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="internal-links" style="margin: 40px 0; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px;">
+        <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">📚 Artículos relacionados</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+          <a href="../articulos/blockchain-explicacion-sencilla.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Blockchain explicada</a>
+          <a href="../articulos/ethereum-smart-contracts.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Ethereum y Smart Contracts</a>
+          <a href="../articulos/crear-configurar-metamask.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Crear y configurar MetaMask</a>
+          <a href="../articulos/seguridad-criptomonedas.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">10 reglas de seguridad crypto</a>
+          <a href="../articulos/como-comprar-bitcoin.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Cómo comprar Bitcoin</a>
+        </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
+
+            <div class="faq-item">
+                <h3>¿Necesito saber de programación para crear un NFT?</h3>
+                <p>No necesariamente. Plataformas como OpenSea, Rarible y <a href="https://manifold.xyz/" target="_blank" rel="noopener">Manifold</a> te permiten crear (acuñar) NFTs sin escribir una sola línea de código. Solo necesitas una wallet como MetaMask, el archivo que quieres convertir en NFT (imagen, video, audio) y suficiente criptomoneda para pagar el gas fee de acuñación. Sin embargo, para proyectos más complejos (colecciones grandes, NFTs con utilidad avanzada), sí necesitarás conocimientos técnicos o contratar a un desarrollador.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Cuánto cuesta crear un NFT?</h3>
+                <p>El costo varía según la blockchain y la congestión de la red. En Ethereum, acuñar un NFT puede costar entre 5€ y 100€ en gas fees dependiendo del momento. En redes como Polygon, Arbitrum o Solana, el costo puede ser de céntimos. Algunos marketplaces como OpenSea ofrecen "lazy minting" (acuñación diferida), donde el NFT no se acuña en la blockchain hasta que alguien lo compra, y el comprador paga el gas fee, lo que permite a los creadores listar NFTs sin costo inicial.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Puedo perder mi NFT?</h3>
+                <p>Sí, de varias formas. La más común es perder el acceso a tu wallet (si pierdes tu frase semilla y no tienes copia de seguridad). También puedes perder tus NFTs si firmas una transacción maliciosa que da permiso a un estafador para transferir tus tokens (esto se llama "approval scam"). Y si los metadatos de tu NFT apuntan a un servidor que desaparece, tu NFT se queda sin la imagen o archivo asociado. Lee siempre lo que firmas y protege tu frase semilla.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Los NFTs son una buena inversión en 2026?</h3>
+                <p>Depende completamente de tu perfil de riesgo y de qué NFTs compres. La gran mayoría de NFTs han perdido valor desde el pico de 2021. Sin embargo, algunos segmentos como NFTs de gaming con utilidad real, arte digital de artistas establecidos y NFTs de identidad (<a href="https://ens.domains/" target="_blank" rel="noopener">ENS</a>, <a href="https://www.lens.xyz/" target="_blank" rel="noopener">Lens</a>) han mostrado más resistencia. Mi recomendación: si compras NFTs, hazlo porque te gustan y quieres apoyar al creador o formar parte de una comunidad, no porque esperas hacerte rico. Las ganancias económicas deberían ser un bonus, no la motivación principal.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Qué blockchain es mejor para NFTs?</h3>
+                <p><strong>Ethereum</strong> sigue siendo la red más importante para NFTs de alto valor, con la mayor seguridad, los marketplaces más grandes (OpenSea, Blur) y el ecosistema más maduro. <strong>Solana</strong> ofrece transacciones mucho más baratas y rápidas, y tiene una escena NFT vibrante en Magic Eden. <strong>Polygon</strong> (capa 2 de Ethereum) es una excelente opción para principiantes por sus comisiones casi nulas y compatibilidad total con MetaMask. <strong>Bitcoin</strong> ahora también tiene NFTs (llamados Ordinals), aunque todavía es un ecosistema pequeño. Para tu primera compra, te recomendaría Polygon o Solana para experimentar sin gastar mucho en comisiones.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Cuál es la diferencia entre un NFT y una criptomoneda normal?</h3>
+                <p>La diferencia fundamental es la <strong>fungibilidad</strong>. Una criptomoneda como Bitcoin o Ethereum es fungible: cada unidad es idéntica y del mismo valor que cualquier otra. Un NFT es no fungible: cada token es único y diferente. Además, las criptomonedas se usan principalmente como dinero digital, reserva de valor o para pagar comisiones de red, mientras que los NFTs representan la propiedad de activos digitales o físicos específicos: una obra de arte, un objeto de juego, una entrada para un concierto, etc.</p>
+            </div>
+        </div>
+
+        <!-- Section 10: Conclusion -->
+        <h2 id="conclusion">Conclusión y Próximos Pasos</h2>
+        <p>Los NFTs representan una innovación genuina en cómo entendemos la propiedad digital. Más allá del hype y la especulación, la capacidad de tener activos digitales únicos, verificables y transferibles está transformando industrias como el arte, los videojuegos, la música y la identidad digital.</p>
+
+        <p>Sin embargo, estamos todavía en los primeros años de esta tecnología. El mercado es volátil, está lleno de proyectos de baja calidad y los riesgos son reales. La clave para cualquier principiante es acercarse con curiosidad pero también con precaución: aprender antes de invertir, empezar con cantidades pequeñas y no dejarse llevar por las emociones.</p>
+
+        <p>Ahora que sabes qué son los NFTs y cómo funcionan, estos son los siguientes pasos recomendados:</p>
+
+        <ol>
+            <li><strong>Instala MetaMask</strong> y familiarízate con ella. Lee nuestro tutorial sobre <a href="/articulos/crear-configurar-metamask.html">cómo crear y configurar MetaMask</a>.</li>
+            <li><strong>Compra una pequeña cantidad de ETH</strong> en un exchange seguro como Binance u OKX (consulta los pasos detallados en la <a href="#como-comprar">sección "Cómo comprar"</a> más arriba).</li>
+            <li><strong>Explora OpenSea sin comprar nada.</strong> Familiarízate con la interfaz, mira colecciones, entiende cómo funcionan los precios y las subastas. Aprende a distinguir colecciones verificadas de las no verificadas.</li>
+            <li><strong>Considera empezar en Polygon o Arbitrum</strong> en lugar de Ethereum mainnet para tus primeras compras. Las comisiones son minúsculas y puedes aprender sin arriesgar mucho dinero.</li>
+            <li><strong>Únete a comunidades</strong> en Discord o Twitter (X) de proyectos que te interesen. Gran parte del valor de los NFTs está en las comunidades, no solo en las imágenes.</li>
+            <li><strong>Sigue aprendiendo.</strong> Lee sobre <a href="/articulos/blockchain-explicacion-sencilla.html">blockchain</a> y <a href="/articulos/ethereum-smart-contracts.html">smart contracts</a> para entender la base tecnológica sobre la que funcionan los NFTs.</li>
+        </ol>
+
+        <!-- CTA -->
+        <div class="cta-card">
+            <h2>🚀 ¿Listo para entrar en el mundo NFT?</h2>
+            <p>Empieza por crear tu wallet y conseguir ETH. Regístrate en Binance u OKX con los códigos exclusivos de MiCryptoGuía para disfrutar de las mejores condiciones.</p>
+            <div class="cta-buttons">
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="../img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
+                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="../img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <span class="logo-icon">&#8383;</span>
+                        <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+                    </a>
+                    <p>Tu guía completa de criptomonedas en español. Aprende, invierte y protégete en el mundo crypto con contenido educativo de calidad.</p>
+                    <div class="footer-disclaimer">
+                        <strong>⚠️ Descargo de responsabilidad:</strong> Este sitio es solo con fines educativos. No constituye asesoramiento financiero. Invertir en criptomonedas y NFTs conlleva riesgos. Investiga siempre por tu cuenta (DYOR).
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <a href="/#inicio">Inicio</a>
+                    <a href="/#fundamentos">Fundamentos</a>
+                    <a href="/#guias">Guías</a>
+                    <a href="/#exchanges">Exchanges</a>
+                    <a href="/#wallets">Wallets</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Artículos</h4>
+                    <a href="/articulos/que-es-bitcoin.html">Qué es Bitcoin</a>
+                    <a href="/articulos/como-comprar-bitcoin.html">Cómo Comprar Bitcoin</a>
+                    <a href="/articulos/crear-configurar-metamask.html">Configurar MetaMask</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Comunidad</h4>
+                    <a href="https://x.com/CoinTrailHub" target="_blank" rel="noopener">X</a>
+                    <a href="https://www.youtube.com/@CoinTrailCrypto" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://t.me/+0ZKfUqf0xKpkMjFl" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MiCryptoGuía. Todos los derechos reservados. &nbsp;|&nbsp; <a href="/privacidad.html">Privacidad</a> &nbsp;|&nbsp; <a href="/terminos.html">Términos</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
