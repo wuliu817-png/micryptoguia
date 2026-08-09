@@ -46,6 +46,12 @@
         .article-page .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px 0; }
         .article-page .step-box { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; margin: 20px 0; }
         .article-page .step-box .step-num { display: inline-block; background: var(--gradient-primary); color: #000; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 12px; }
+        /* Breadcrumb */
+        .article-breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; padding: 10px 16px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+        .article-breadcrumb a { color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); }
+        .article-breadcrumb a:hover { color: var(--accent); }
+        .article-breadcrumb span { color: var(--text-primary); font-weight: 500; }
+
     </style>
     <script type="application/ld+json">
     {
@@ -98,6 +104,12 @@
 
     <!-- ===== Article Content ===== -->
     <main class="article-page">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a href="../">Inicio</a> &raquo;
+                <a href="../#guias">Guías</a> &raquo;
+                <span>Cómo Vender Cripto</span>
+            </nav>
+
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📋 Guías Paso a Paso</span>
         <h1>Cómo Vender Criptomonedas y Retirar Dinero a tu Banco</h1>
         <div class="article-meta">
@@ -377,13 +389,25 @@
             <li><strong>Consulta nuestra guía de <a href="/articulos/impuestos-criptomonedas-espana.html">impuestos crypto en España</a></strong> para entender en detalle tus obligaciones fiscales.</li>
         </ol>
 
+        <!-- Artículos Relacionados -->
+        <div class="internal-links" style="margin: 40px 0; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px;">
+            <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">📚 Artículos relacionados</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+                <a href="/articulos/como-comprar-bitcoin.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Cómo comprar Bitcoin</a>
+                <a href="/articulos/binance-vs-okx.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Binance vs OKX</a>
+                <a href="/articulos/impuestos-criptomonedas-espana.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Impuestos crypto España</a>
+                <a href="/articulos/como-enviar-recibir-cripto.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Enviar y recibir cripto</a>
+                <a href="/articulos/seguridad-criptomonedas.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">10 reglas de seguridad</a>
+            </div>
+        </div>
+
         <!-- CTA -->
         <div class="cta-card">
             <h2>🚀 ¿Listo para empezar?</h2>
             <p>Regístrate en Binance u OKX con los códigos de descuento exclusivos de MiCryptoGuía y disfruta de un 20% de descuento en comisiones de trading de por vida.</p>
             <div class="cta-buttons">
-                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="../img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
-                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="../img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
+                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
         </div>
     </main>
@@ -424,7 +448,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 MiCryptoGuía. Todos los derechos reservados. &nbsp;|&nbsp; <a href="/privacidad.html">Privacidad</a> &nbsp;|&nbsp; <a href="/terminos.html">Términos</a></p>
+                <p>© 2026 MiCryptoGuía. Todos los derechos reservados. &nbsp;|&nbsp; <a href="/privacidad.html">Privacidad</a> &nbsp;|&nbsp; <a href="/terminos.html">Términos</a> &nbsp;|&nbsp; <a href="/sitemap.html">Mapa del Sitio</a></p>
             </div>
         </div>
     </footer>

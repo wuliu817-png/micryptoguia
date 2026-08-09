@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mapa del sitio de MiCryptoGuía — Todas nuestras guías, tutoriales y artículos sobre criptomonedas en español.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://micryptoguia.com/sitemap.html">
+    <meta property="og:title" content="Mapa del Sitio — MiCryptoGuía">
+    <meta property="og:description" content="Todas nuestras guías, tutoriales y artículos sobre criptomonedas en español.">
+    <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mapa del Sitio — MiCryptoGuía</title>
+    <style>
+        .sitemap-page { padding: 140px 24px 80px; max-width: 900px; margin: 0 auto; }
+        .sitemap-page h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; color: var(--text-primary); }
+        .sitemap-page .sitemap-intro { color: var(--text-secondary); font-size: 1rem; margin-bottom: 40px; line-height: 1.6; }
+        .sitemap-section { margin-bottom: 40px; }
+        .sitemap-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
+        .sitemap-section h2 .section-icon { font-size: 1.5rem; }
+        .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+        .sitemap-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; transition: all var(--transition-fast); }
+        .sitemap-card:hover { border-color: var(--accent); background: var(--bg-card-hover, var(--bg-surface)); }
+        .sitemap-card a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: block; }
+        .sitemap-card a:hover { text-decoration: underline; }
+        .sitemap-card .card-meta { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+        .sitemap-pages { display: flex; flex-wrap: wrap; gap: 10px; }
+        .sitemap-pages a { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 10px 18px; color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all var(--transition-fast); }
+        .sitemap-pages a:hover { border-color: var(--accent); background: var(--bg-card-hover, var(--bg-surface)); }
+        /* Breadcrumb */
+        .article-breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; padding: 10px 16px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+        .article-breadcrumb a { color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); }
+        .article-breadcrumb a:hover { color: var(--accent); }
+        .article-breadcrumb span { color: var(--text-primary); font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">₿</span>
+                <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="/#fundamentos" class="nav-link">Fundamentos</a></li>
+                <li><a href="/#guias" class="nav-link">Guías</a></li>
+                <li><a href="/#exchanges" class="nav-link">Exchanges</a></li>
+                <li><a href="/#wallets" class="nav-link">Wallets</a></li>
+                <li><a href="/#defi" class="nav-link">DeFi</a></li>
+                <li><a href="/#seguridad" class="nav-link">Seguridad</a></li>
+                <li><a href="/#glosario" class="nav-link">Glosario</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="sitemap-page">
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Inicio</a> &raquo;
+            <span>Mapa del Sitio</span>
+        </nav>
+
+        <h1>🗺️ Mapa del Sitio</h1>
+        <p class="sitemap-intro">Todas las páginas y artículos de MiCryptoGuía organizados por categoría. Aquí encontrarás todas nuestras guías sobre criptomonedas en español, desde lo más básico hasta temas avanzados.</p>
+
+        <!-- Páginas principales -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">🏠</span> Páginas Principales</h2>
+            <div class="sitemap-pages">
+                <a href="/">Inicio</a>
+                <a href="/sobre.html">Sobre Nosotros</a>
+                <a href="/privacidad.html">Política de Privacidad</a>
+                <a href="/terminos.html">Términos de Uso</a>
+                <a href="/sitemap.html">Mapa del Sitio</a>
+            </div>
+        </div>
+
+        <!-- Fundamentos -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">📖</span> Fundamentos Crypto</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/que-es-bitcoin.html">Qué es Bitcoin</a><div class="card-meta">🌱 Principiante · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/blockchain-explicacion-sencilla.html">Blockchain Explicada</a><div class="card-meta">🌱 Principiante · 10 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/ethereum-smart-contracts.html">Ethereum y Smart Contracts</a><div class="card-meta">🌱 Principiante · 10 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/claves-privadas-direcciones.html">Claves Privadas y Direcciones</a><div class="card-meta">🌱 Principiante · 10 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/que-es-usdt.html">Qué es USDT</a><div class="card-meta">🌱 Principiante · 12 min</div></div>
+            </div>
+        </div>
+
+        <!-- Guías Paso a Paso -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">📚</span> Guías Paso a Paso</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/como-comprar-bitcoin.html">Cómo Comprar Bitcoin</a><div class="card-meta">🌱 Principiante · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/como-vender-cripto-retirar-banco.html">Cómo Vender Cripto y Retirar a Banco</a><div class="card-meta">🌱 Principiante · 10 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/como-enviar-recibir-cripto.html">Cómo Enviar y Recibir Cripto</a><div class="card-meta">🌱 Principiante · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/analisis-tecnico-basico.html">Análisis Técnico Básico</a><div class="card-meta">⚡ Intermedio · 15 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/analisis-on-chain-dune.html">Análisis On-Chain con Dune</a><div class="card-meta">🔱 Avanzado · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/cartera-crypto-diversificada.html">Cartera Crypto Diversificada</a><div class="card-meta">⚡ Intermedio · 12 min</div></div>
+            </div>
+        </div>
+
+        <!-- Exchanges -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">🏦</span> Exchanges</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/binance-vs-okx.html">Binance vs OKX</a><div class="card-meta">⚡ Intermedio · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/verificacion-kyc-exchanges.html">Verificación KYC en Exchanges</a><div class="card-meta">🌱 Principiante · 12 min</div></div>
+            </div>
+        </div>
+
+        <!-- Wallets -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">👛</span> Wallets y Custodia</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/crear-configurar-metamask.html">Crear y Configurar MetaMask</a><div class="card-meta">🌱 Principiante · 15 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/hot-wallet-vs-cold-wallet.html">Hot Wallet vs Cold Wallet</a><div class="card-meta">🌱 Principiante · 14 min</div></div>
+            </div>
+        </div>
+
+        <!-- DeFi -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">🌐</span> DeFi y Web3</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/como-hacer-staking.html">Cómo Hacer Staking</a><div class="card-meta">⚡ Intermedio · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/como-usar-uniswap.html">Cómo Usar Uniswap</a><div class="card-meta">⚡ Intermedio · 14 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/yield-farming.html">Yield Farming</a><div class="card-meta">⚡ Intermedio · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/puentes-cross-chain.html">Puentes Cross-Chain</a><div class="card-meta">⚡ Intermedio · 12 min</div></div>
+            </div>
+        </div>
+
+        <!-- Seguridad -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">🔒</span> Seguridad</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/seguridad-criptomonedas.html">10 Reglas de Seguridad Crypto</a><div class="card-meta">🌱 Principiante · 12 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/verificar-smart-contracts.html">Cómo Verificar Smart Contracts</a><div class="card-meta">🔱 Avanzado · 12 min</div></div>
+            </div>
+        </div>
+
+        <!-- Ecosistema -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">🪐</span> Ecosistema Crypto</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/que-es-nft.html">Qué son los NFTs</a><div class="card-meta">🌱 Principiante · 14 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/que-son-memecoins.html">Qué son las Memecoins</a><div class="card-meta">🌱 Principiante · 14 min</div></div>
+                <div class="sitemap-card"><a href="/articulos/solana-guia-principiantes.html">Solana para Principiantes</a><div class="card-meta">🌱 Principiante · 14 min</div></div>
+            </div>
+        </div>
+
+        <!-- Legal -->
+        <div class="sitemap-section">
+            <h2><span class="section-icon">⚖️</span> Legal y Fiscal</h2>
+            <div class="sitemap-grid">
+                <div class="sitemap-card"><a href="/articulos/impuestos-criptomonedas-espana.html">Impuestos Criptomonedas España</a><div class="card-meta">⚡ Intermedio · 14 min</div></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <span class="logo-icon">₿</span>
+                        <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+                    </a>
+                    <p>Tu guía completa de criptomonedas en español.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <a href="/#inicio">Inicio</a>
+                    <a href="/#fundamentos">Fundamentos</a>
+                    <a href="/#guias">Guías</a>
+                    <a href="/sitemap.html">Mapa del Sitio</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="/sobre.html">Sobre Nosotros</a>
+                    <a href="/privacidad.html">Privacidad</a>
+                    <a href="/terminos.html">Términos</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MiCryptoGuía. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

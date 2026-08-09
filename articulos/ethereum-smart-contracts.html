@@ -45,6 +45,12 @@
         .internal-links{margin:40px 0;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:28px}
         .internal-links h2{font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--text-primary)}
         .internal-links a{display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:.9rem;margin-bottom:8px}
+        /* Breadcrumb */
+        .article-breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; padding: 10px 16px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+        .article-breadcrumb a { color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); }
+        .article-breadcrumb a:hover { color: var(--accent); }
+        .article-breadcrumb span { color: var(--text-primary); font-weight: 500; }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,6 +92,12 @@
         <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></div></div></nav>
 
     <main class="article-page">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a href="../">Inicio</a> &raquo;
+                <a href="../#fundamentos">Fundamentos</a> &raquo;
+                <span>Ethereum y Smart Contracts</span>
+            </nav>
+
 
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📖 Fundamentos</span>
 
@@ -231,7 +243,7 @@
         <p>Los smart contracts no son una tecnología en busca de un problema. Ya están transformando industrias enteras. Estos son los tres casos de uso más importantes en 2026:</p>
 
         <h3>DeFi (Finanzas Descentralizadas)</h3>
-        <p>DeFi es el ecosistema de servicios financieros construidos sobre smart contracts que eliminan intermediarios. Hoy puedes prestar tus USDC en Aave y ganar un 4-8% de interés anual, pedir un préstamo poniendo ETH como garantía sin papeleo, o intercambiar tokens al instante en Uniswap. En 2026, el valor total bloqueado en DeFi supera los 80 mil millones de dólares. Si quieres empezar, consulta nuestra <a href="../articulos/como-usar-uniswap.html">guía para usar Uniswap</a>.</p>
+        <p>DeFi es el ecosistema de servicios financieros construidos sobre smart contracts que eliminan intermediarios. Hoy puedes prestar tus USDC en Aave y ganar un 4-8% de interés anual, pedir un préstamo poniendo ETH como garantía sin papeleo, o intercambiar tokens al instante en Uniswap. En 2026, el valor total bloqueado en DeFi supera los 80 mil millones de dólares. Si quieres empezar, consulta nuestra <a href="/articulos/como-usar-uniswap.html">guía para usar Uniswap</a>.</p>
 
         <h3>NFTs (Tokens No Fungibles)</h3>
         <p>Los NFTs representan propiedad digital única sobre la blockchain: arte digital, música, artículos de videojuegos, identidad digital y mucho más. Aunque la burbuja especulativa de 2021 ya pasó, los NFTs han madurado hacia casos de uso prácticos como entradas de eventos, títulos de propiedad y certificados verificables.</p>
@@ -244,10 +256,10 @@
 
         <ol>
             <li><strong>Elige un exchange regulado:</strong> Te recomiendo <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored">Binance</a> (el más grande del mundo) o <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored">OKX</a>. Ambos son seguros y tienen interfaz en español.</li>
-            <li><strong>Completa la verificación KYC:</strong> Necesitarás tu documento de identidad (DNI, pasaporte) y una foto selfie. Lee nuestra <a href="../articulos/verificacion-kyc-exchanges.html">guía completa de verificación KYC</a> para evitar rechazos.</li>
+            <li><strong>Completa la verificación KYC:</strong> Necesitarás tu documento de identidad (DNI, pasaporte) y una foto selfie. Lee nuestra <a href="/articulos/verificacion-kyc-exchanges.html">guía completa de verificación KYC</a> para evitar rechazos.</li>
             <li><strong>Deposita euros:</strong> Puedes hacerlo por transferencia bancaria SEPA (gratis y la opción más barata) o con tarjeta de débito/crédito (más rápido pero con comisiones del 1-2%).</li>
             <li><strong>Compra ETH:</strong> Busca el par ETH/EUR, introduce la cantidad que quieres comprar y confirma la orden. Puedes comprar desde 10-20 euros para empezar.</li>
-            <li><strong>Retira a tu wallet (opcional pero recomendado):</strong> Si quieres interactuar con dApps, transfiere tus ETH a una wallet como MetaMask. Consulta nuestro tutorial de <a href="../articulos/crear-configurar-metamask.html">cómo configurar MetaMask</a>.</li>
+            <li><strong>Retira a tu wallet (opcional pero recomendado):</strong> Si quieres interactuar con dApps, transfiere tus ETH a una wallet como MetaMask. Consulta nuestro tutorial de <a href="/articulos/crear-configurar-metamask.html">cómo configurar MetaMask</a>.</li>
         </ol>
 
         <div class="highlight-box">
@@ -273,7 +285,7 @@
             <li><strong>Riesgo de contrato:</strong> Si el código tiene un bug, un hacker puede drenar los fondos. Solo interactúa con protocolos auditados por empresas reconocidas como Trail of Bits u OpenZeppelin.</li>
             <li><strong>Riesgo de phishing:</strong> Sitios web falsos que imitan dApps reales. Siempre verifica la URL exacta y usa marcadores para tus protocolos de confianza.</li>
             <li><strong>Riesgo de gas:</strong> Transacciones pueden quedar atascadas si pones muy poco gas. Aprende a usar exploradores de bloques como Etherscan para monitorizar tus transacciones.</li>
-            <li><strong>Riesgo de custodia:</strong> Si guardas tus fondos en una wallet descentralizada (MetaMask, Rabby), tú eres el único responsable de la semilla de recuperación. Léete nuestra <a href="../articulos/seguridad-criptomonedas.html">guía de seguridad crypto</a> para proteger tus fondos.</li>
+            <li><strong>Riesgo de custodia:</strong> Si guardas tus fondos en una wallet descentralizada (MetaMask, Rabby), tú eres el único responsable de la semilla de recuperación. Léete nuestra <a href="/articulos/seguridad-criptomonedas.html">guía de seguridad crypto</a> para proteger tus fondos.</li>
         </ul>
 
         <div class="faq-section">
@@ -316,12 +328,12 @@
 
         <div class="internal-links">
             <h2>📚 Artículos relacionados</h2>
-            <a href="../articulos/blockchain-explicacion-sencilla.html">Blockchain explicada de forma sencilla</a>
-            <a href="../articulos/que-es-bitcoin.html">Qué es Bitcoin y cómo funciona</a>
-            <a href="../articulos/como-usar-uniswap.html">Cómo usar Uniswap paso a paso</a>
-            <a href="../articulos/crear-configurar-metamask.html">Cómo crear y configurar MetaMask</a>
-            <a href="../articulos/como-hacer-staking.html">Cómo hacer staking de criptomonedas</a>
-            <a href="../articulos/seguridad-criptomonedas.html">10 reglas de seguridad en criptomonedas</a>
+            <a href="/articulos/blockchain-explicacion-sencilla.html">Blockchain explicada de forma sencilla</a>
+            <a href="/articulos/que-es-bitcoin.html">Qué es Bitcoin y cómo funciona</a>
+            <a href="/articulos/como-usar-uniswap.html">Cómo usar Uniswap paso a paso</a>
+            <a href="/articulos/crear-configurar-metamask.html">Cómo crear y configurar MetaMask</a>
+            <a href="/articulos/como-hacer-staking.html">Cómo hacer staking de criptomonedas</a>
+            <a href="/articulos/seguridad-criptomonedas.html">10 reglas de seguridad en criptomonedas</a>
         </div>
 
         <div class="highlight-box" style="margin:28px 0;background:var(--blue-bg, rgba(77,124,254,0.1));border:1px solid var(--blue, #4d7cfe);border-radius:var(--radius-md);padding:20px 24px;">
@@ -342,8 +354,8 @@
             <h2>🚀 ¿Listo para comprar tus primeros ETH?</h2>
             <p>Regístrate en Binance u OKX con los códigos de descuento exclusivos de MiCryptoGuía y empieza a explorar el ecosistema Ethereum con las mejores condiciones. Ambos exchanges ofrecen compra de ETH en euros y app en español.</p>
             <div class="cta-buttons">
-                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="../img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
-                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="../img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
+                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
         </div>
 

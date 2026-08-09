@@ -45,6 +45,12 @@
         .internal-links{margin:40px 0;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:28px}
         .internal-links h2{font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--text-primary)}
         .internal-links a{display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:.9rem;margin-bottom:8px}
+        /* Breadcrumb */
+        .article-breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; padding: 10px 16px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+        .article-breadcrumb a { color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); }
+        .article-breadcrumb a:hover { color: var(--accent); }
+        .article-breadcrumb span { color: var(--text-primary); font-weight: 500; }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,6 +92,12 @@
         <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></div></div></nav>
 
     <main class="article-page">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a href="../">Inicio</a> &raquo;
+                <a href="../#guias">Guías</a> &raquo;
+                <span>Cómo Enviar y Recibir Cripto</span>
+            </nav>
+
 
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📘 Guías</span>
 
@@ -346,7 +358,7 @@
 
             <div class="faq-item">
                 <h3>¿Qué es una dirección de criptomonedas y cómo funciona?</h3>
-                <p>Una dirección crypto es un identificador alfanumérico único en la blockchain, similar a un número IBAN. Compartes tu dirección para recibir fondos. Ejemplos: direcciones de Ethereum empiezan por "0x", Bitcoin por "1", "3" o "bc1". Puedes compartir tu dirección públicamente sin riesgo de que te roben fondos (para eso necesitarían tu clave privada). Lo que NO debes compartir nunca es tu clave privada o seed phrase. Si quieres entender la diferencia, lee nuestro artículo sobre <a href="../articulos/claves-privadas-direcciones.html">claves privadas, públicas y direcciones</a>.</p>
+                <p>Una dirección crypto es un identificador alfanumérico único en la blockchain, similar a un número IBAN. Compartes tu dirección para recibir fondos. Ejemplos: direcciones de Ethereum empiezan por "0x", Bitcoin por "1", "3" o "bc1". Puedes compartir tu dirección públicamente sin riesgo de que te roben fondos (para eso necesitarían tu clave privada). Lo que NO debes compartir nunca es tu clave privada o seed phrase. Si quieres entender la diferencia, lee nuestro artículo sobre <a href="/articulos/claves-privadas-direcciones.html">claves privadas, públicas y direcciones</a>.</p>
             </div>
 
             <div class="faq-item">
@@ -366,7 +378,7 @@
 
             <div class="faq-item">
                 <h3>¿Necesito hacer una transacción de prueba primero?</h3>
-                <p>Sí, altamente recomendado. Especialmente la primera vez que envías a una nueva dirección, una nueva red, o a un exchange nuevo. Envía 5-10 USD primero. Cuando veas que llegó correctamente, envía el resto. El coste adicional en gas es mínimo comparado con el riesgo de perderlo todo por un error. Esta práctica es estándar entre usuarios experimentados de crypto. Si estás empezando, consulta nuestros <a href="../articulos/seguridad-criptomonedas.html">10 mandamientos de seguridad crypto</a>.</p>
+                <p>Sí, altamente recomendado. Especialmente la primera vez que envías a una nueva dirección, una nueva red, o a un exchange nuevo. Envía 5-10 USD primero. Cuando veas que llegó correctamente, envía el resto. El coste adicional en gas es mínimo comparado con el riesgo de perderlo todo por un error. Esta práctica es estándar entre usuarios experimentados de crypto. Si estás empezando, consulta nuestros <a href="/articulos/seguridad-criptomonedas.html">10 mandamientos de seguridad crypto</a>.</p>
             </div>
 
             <div class="faq-item">
@@ -381,12 +393,12 @@
 
         <div class="internal-links">
             <h2>📚 Artículos relacionados</h2>
-            <a href="../articulos/claves-privadas-direcciones.html">Claves privadas, públicas y direcciones</a>
-            <a href="../articulos/seguridad-criptomonedas.html">10 reglas de seguridad en criptomonedas</a>
-            <a href="../articulos/crear-configurar-metamask.html">Cómo crear y configurar MetaMask</a>
-            <a href="../articulos/como-comprar-bitcoin.html">Cómo comprar Bitcoin por primera vez</a>
-            <a href="../articulos/verificacion-kyc-exchanges.html">Verificación KYC en exchanges</a>
-            <a href="../articulos/binance-vs-okx.html">Binance vs OKX: comparativa completa</a>
+            <a href="/articulos/claves-privadas-direcciones.html">Claves privadas, públicas y direcciones</a>
+            <a href="/articulos/seguridad-criptomonedas.html">10 reglas de seguridad en criptomonedas</a>
+            <a href="/articulos/crear-configurar-metamask.html">Cómo crear y configurar MetaMask</a>
+            <a href="/articulos/como-comprar-bitcoin.html">Cómo comprar Bitcoin por primera vez</a>
+            <a href="/articulos/verificacion-kyc-exchanges.html">Verificación KYC en exchanges</a>
+            <a href="/articulos/binance-vs-okx.html">Binance vs OKX: comparativa completa</a>
         </div>
 
         <div class="highlight-box" style="margin:28px 0;background:var(--blue-bg, rgba(77,124,254,0.1));border:1px solid var(--blue, #4d7cfe);border-radius:var(--radius-md);padding:20px 24px;">
@@ -407,8 +419,8 @@
             <h2>🚀 ¿Listo para hacer tu primera transacción?</h2>
             <p>Si aún no tienes cuenta en un exchange, regístrate en Binance u OKX con nuestros códigos exclusivos y empieza con un 20% de descuento en comisiones de por vida. Perfecto para hacer tus primeras transferencias con el menor coste posible.</p>
             <div class="cta-buttons">
-                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="../img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
-                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="../img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
+                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
         </div>
 

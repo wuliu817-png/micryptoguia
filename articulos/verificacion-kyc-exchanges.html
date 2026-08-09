@@ -48,6 +48,12 @@
         .steps-list{counter-reset:step;list-style:none;padding-left:0}
         .steps-list li{counter-increment:step;position:relative;padding-left:52px;margin-bottom:24px;min-height:40px}
         .steps-list li::before{content:counter(step);position:absolute;left:0;top:0;width:36px;height:36px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;color:#fff}
+        /* Breadcrumb */
+        .article-breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; padding: 10px 16px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+        .article-breadcrumb a { color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); }
+        .article-breadcrumb a:hover { color: var(--accent); }
+        .article-breadcrumb span { color: var(--text-primary); font-weight: 500; }
+
     </style>
     <script type="application/ld+json">
     {
@@ -89,6 +95,12 @@
         <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></div></div></nav>
 
     <main class="article-page">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a href="../">Inicio</a> &raquo;
+                <a href="../#exchanges">Exchanges</a> &raquo;
+                <span>Verificación KYC</span>
+            </nav>
+
 
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">🏦 Exchanges</span>
 
@@ -321,7 +333,7 @@
         </ul>
 
         <div class="highlight-box">
-            <p><strong>🔐 Para máxima privacidad:</strong> La estrategia recomendada es comprar criptomonedas en un exchange con KYC (para usar euros) y luego <strong>retirarlas a tu propia wallet</strong> (MetaMask, Ledger). A partir de ahí, puedes operar en protocolos DeFi sin KYC. El exchange solo sabe que compraste y retiraste; no sabe qué haces con tus criptomonedas después. Si quieres más información, consulta nuestra <a href="../articulos/crear-configurar-metamask.html">guía de MetaMask</a> y nuestro artículo sobre <a href="../articulos/hot-wallet-vs-cold-wallet.html">hot wallets vs cold wallets</a>.</p>
+            <p><strong>🔐 Para máxima privacidad:</strong> La estrategia recomendada es comprar criptomonedas en un exchange con KYC (para usar euros) y luego <strong>retirarlas a tu propia wallet</strong> (MetaMask, Ledger). A partir de ahí, puedes operar en protocolos DeFi sin KYC. El exchange solo sabe que compraste y retiraste; no sabe qué haces con tus criptomonedas después. Si quieres más información, consulta nuestra <a href="/articulos/crear-configurar-metamask.html">guía de MetaMask</a> y nuestro artículo sobre <a href="/articulos/hot-wallet-vs-cold-wallet.html">hot wallets vs cold wallets</a>.</p>
         </div>
 
         <h2 id="mi-experiencia">Mi experiencia personal con la verificación KYC</h2>
@@ -359,7 +371,7 @@
 
             <div class="faq-item">
                 <h3>¿Es seguro dar mis datos personales a un exchange?</h3>
-                <p>Los exchanges de primer nivel como Binance y OKX cumplen con GDPR y estándares ISO 27001 de seguridad de información. Tus documentos se almacenan encriptados. Dicho esto, ninguna plataforma es 100% inmune a filtraciones. Para máxima privacidad, retira tus criptomonedas a una wallet propia después de comprar. Lee nuestro artículo sobre <a href="../articulos/seguridad-criptomonedas.html">seguridad en criptomonedas</a> para más información.</p>
+                <p>Los exchanges de primer nivel como Binance y OKX cumplen con GDPR y estándares ISO 27001 de seguridad de información. Tus documentos se almacenan encriptados. Dicho esto, ninguna plataforma es 100% inmune a filtraciones. Para máxima privacidad, retira tus criptomonedas a una wallet propia después de comprar. Lee nuestro artículo sobre <a href="/articulos/seguridad-criptomonedas.html">seguridad en criptomonedas</a> para más información.</p>
             </div>
 
             <div class="faq-item">
@@ -374,12 +386,12 @@
 
         <div class="internal-links">
             <h2>📚 Artículos relacionados</h2>
-            <a href="../articulos/como-comprar-bitcoin.html">Cómo comprar Bitcoin por primera vez</a>
-            <a href="../articulos/binance-vs-okx.html">Binance vs OKX: comparativa completa</a>
-            <a href="../articulos/como-enviar-recibir-cripto.html">Cómo enviar y recibir criptomonedas</a>
-            <a href="../articulos/seguridad-criptomonedas.html">10 reglas de seguridad en criptomonedas</a>
-            <a href="../articulos/ethereum-smart-contracts.html">Qué es Ethereum y smart contracts</a>
-            <a href="../articulos/que-es-usdt.html">Qué es USDT y para qué sirve</a>
+            <a href="/articulos/como-comprar-bitcoin.html">Cómo comprar Bitcoin por primera vez</a>
+            <a href="/articulos/binance-vs-okx.html">Binance vs OKX: comparativa completa</a>
+            <a href="/articulos/como-enviar-recibir-cripto.html">Cómo enviar y recibir criptomonedas</a>
+            <a href="/articulos/seguridad-criptomonedas.html">10 reglas de seguridad en criptomonedas</a>
+            <a href="/articulos/ethereum-smart-contracts.html">Qué es Ethereum y smart contracts</a>
+            <a href="/articulos/que-es-usdt.html">Qué es USDT y para qué sirve</a>
         </div>
 
         <div class="highlight-box" style="margin:28px 0;background:var(--blue-bg, rgba(77,124,254,0.1));border:1px solid var(--blue, #4d7cfe);border-radius:var(--radius-md);padding:20px 24px;">
@@ -400,8 +412,8 @@
             <h2>🪪 ¿Listo para verificarte y empezar a operar?</h2>
             <p>Completa tu verificación KYC en Binance u OKX ahora mismo y consigue un 20% de descuento en comisiones de por vida al registrarte con nuestros códigos exclusivos. El proceso no te llevará más de 10 minutos.</p>
             <div class="cta-buttons">
-                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="../img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
-                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="../img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
+                <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
+                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
         </div>
 
