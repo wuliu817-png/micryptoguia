@@ -1346,6 +1346,13 @@ img {
     color: var(--accent);
     margin-bottom: 6px;
 }
+.glosario-item dt a {
+    color: inherit;
+    text-decoration: none;
+}
+.glosario-item dt a:hover {
+    text-decoration: underline;
+}
 
 .glosario-item dd {
     font-size: 0.875rem;
