@@ -64,7 +64,7 @@
           "description": "Aprende cómo enviar y recibir criptomonedas sin errores. Guía paso a paso con selección de red, gas fees, verificación de direcciones y errores comunes.",
           "inLanguage": "es",
           "datePublished": "2026-08-02",
-          "dateModified": "2026-08-02",
+          "dateModified": "2026-08-23",
           "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "publisher": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://micryptoguia.com/articulos/como-enviar-recibir-cripto.html" }
@@ -103,7 +103,7 @@
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📘 Guías</span>
 
         <h1>Cómo Enviar y Recibir Criptomonedas: Guía Paso a Paso Sin Errores</h1>
-        <p class="article-meta">Publicado el 2 de agosto, 2026 &nbsp;|&nbsp; Tiempo de lectura: ~12 min &nbsp;|&nbsp; Por MiCryptoGuía</p>
+        <p class="article-meta">Actualizado el 23 de agosto, 2026 &nbsp;|&nbsp; Tiempo de lectura: ~12 min &nbsp;|&nbsp; Por MiCryptoGuía</p>
 
         <p><strong>Para enviar criptomonedas necesitas: la dirección del destinatario, seleccionar la red correcta, elegir la comisión de gas y confirmar. Para recibir, solo tienes que compartir tu dirección o código QR.</strong> Parece simple — y en esencia lo es — pero los errores más comunes (red equivocada, dirección mal copiada, gas insuficiente) pueden hacerte perder tus fondos de forma irreversible.</p>
 
@@ -117,7 +117,7 @@
                 <li><strong>La red coincide:</strong> El emisor y el receptor deben usar la misma red (ERC-20, TRC-20, BEP-20, etc.). Si no coinciden, fondos perdidos.</li>
                 <li><strong>El token es el correcto:</strong> ¿Estás enviando USDT, USDC, ETH, BTC? Cada uno tiene su contrato. Verifica el símbolo.</li>
                 <li><strong>Haz una transacción de prueba:</strong> Primero envía una cantidad mínima (5-10 USD). Cuando confirmes que llegó, envía el resto.</li>
-                <li><strong>Tienes suficiente para el gas:</strong> Necesitas ETH para pagar gas en Ethereum, BNB en BSC, TRX en Tron, MATIC en Polygon. Sin el token nativo, no puedes enviar.</li>
+                <li><strong>Tienes suficiente para el gas:</strong> Necesitas ETH para pagar gas en Ethereum, BNB en BSC, TRX en Tron, POL en Polygon. Sin el token nativo, no puedes enviar.</li>
             </ul>
         </div>
 
@@ -130,7 +130,7 @@
                 <li><a href="#gas-fees">Gas fees explicadas de forma práctica</a></li>
                 <li><a href="#interfaces">Cómo se ve en Binance y MetaMask</a></li>
                 <li><a href="#errores-comunes">Tabla de errores comunes y cómo evitarlos</a></li>
-                <li><a href="#mi-experiencia">Mi experiencia personal</a></li>
+                <li><a href="#regla-practica">La regla que evita los errores</a></li>
                 <li><a href="#faq">Preguntas Frecuentes (FAQ)</a></li>
             </ol>
         </div>
@@ -260,7 +260,7 @@
         <ul>
             <li><strong>Ethereum:</strong> pagas gas en ETH</li>
             <li><strong>BSC (Binance Smart Chain):</strong> pagas gas en BNB</li>
-            <li><strong>Polygon:</strong> pagas gas en MATIC</li>
+            <li><strong>Polygon:</strong> pagas gas en POL</li>
             <li><strong>Tron:</strong> pagas gas en TRX</li>
             <li><strong>Solana:</strong> pagas gas en SOL</li>
             <li><strong>Arbitrum:</strong> pagas gas en ETH</li>
@@ -345,14 +345,8 @@
             </tbody>
         </table>
 
-        <h2 id="mi-experiencia">Mi experiencia personal</h2>
-        <p>La primera vez que envié criptomonedas estaba aterrorizado. Era 2018 y quería transferir 200 euros en ETH de Coinbase a Binance. Había leído tantas historias de gente perdiendo fondos que estuve 15 minutos mirando la pantalla antes de atreverme a pulsar "Enviar".</p>
-
-        <p>Copié la dirección, verifiqué los primeros y últimos caracteres tres veces, seleccioné la red (entonces no había tantas opciones, era solo Ethereum) y recé. Envié. Los minutos de espera fueron eternos. Cada 30 segundos actualizaba Etherscan para ver si aparecía la transacción. A los 4 minutos, Binance me notificó que el depósito había llegado. Sentí un alivio enorme.</p>
-
-        <p>Pero no todas mis experiencias fueron tan afortunadas. Años después, en 2022, quise enviar 50 USDT a un amigo que necesitaba hacer una prueba con una dApp. Él me dio su dirección de MetaMask. Yo, con prisas y demasiada confianza, copié, pegué y envié sin verificar la red. Había seleccionado ERC-20 (Ethereum) en lugar de Polygon, que era lo que mi amigo esperaba. Las comisiones fueron de 12 dólares y los USDT no aparecían en su wallet de Polygon. Por suerte, como la dirección era la misma en ambas redes (las direcciones de Ethereum y Polygon son compatibles), pudo acceder a ellos cambiando de red en MetaMask. Pero me llevé un susto importante.</p>
-
-        <p><strong>Desde entonces, mi regla personal es infalible: siempre envío primero una transacción de prueba con 5-10 dólares.</strong> Cuando llega, envío el resto. El coste extra de gas es insignificante al lado del riesgo de perder cientos o miles de euros por un error evitable. Y NUNCA envío con prisas o con el móvil mientras hago otra cosa. Enviar cripto merece 2 minutos de atención plena.</p>
+        <h2 id="regla-practica">La regla que evita la mayoría de errores</h2>
+        <p>Si solo vas a recordar una cosa de esta guía, que sea esta: <strong>antes de mover una cantidad grande, envía una transacción de prueba con 5-10 USD y confirma que llega bien</strong>. Es la práctica estándar entre usuarios experimentados, y el coste extra en gas es insignificante frente al riesgo de perderlo todo por una red equivocada o una dirección mal copiada.</p>
 
         <div class="faq-section">
             <h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
@@ -388,10 +382,6 @@
             </div>
         </div>
 
-        <div class="highlight-box" style="margin:24px 0;background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:14px 20px">
-            <p style="margin:0;font-size:.82rem;color:var(--text-muted);"><strong>📢 Transparencia:</strong> Algunos enlaces son de afiliado. Si te registras, podemos recibir una comisión sin costo extra. <a href="../sobre.html" style="color:var(--accent)">Más info →</a></p>
-        </div>
-
         <div class="internal-links">
             <h2>📚 Artículos relacionados</h2>
             <a href="/articulos/claves-privadas-direcciones.html">Claves privadas, públicas y direcciones</a>
@@ -416,13 +406,15 @@
 
         <p>Pero con los hábitos correctos (verificar dirección, confirmar red, transacción de prueba y calma), es perfectamente seguro. Millones de personas envían criptomonedas cada día sin problemas. Tú puedes ser una de ellas. La clave está en la atención al detalle y en nunca operar con prisas.</p>
 
+        <p>📢 <em>Transparencia:</em> Algunos enlaces son de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. <a href="../sobre.html">Más información →</a></p>
         <div class="cta-card">
-            <h2>🚀 ¿Listo para hacer tu primera transacción?</h2>
+            <h2>¿Listo para hacer tu primera transacción?</h2>
             <p>Si aún no tienes cuenta en un exchange, regístrate en Binance u OKX con nuestros códigos exclusivos y empieza con un 20% de descuento en comisiones de por vida. Perfecto para hacer tus primeras transferencias con el menor coste posible.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
+<p>🌍 <em>Nota regional:</em> Binance dejó de operar en la Unión Europea por MiCA (julio 2026); si estás en la UE, usa OKX o alternativas reguladas como Coinbase o Kraken. En América Latina, Binance y OKX funcionan con normalidad.</p>
         </div>
 
     </main>
