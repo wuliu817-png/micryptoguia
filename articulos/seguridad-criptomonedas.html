@@ -38,9 +38,43 @@
       "description": "10 reglas de oro para proteger tus criptomonedas: seed phrase, 2FA, hardware wallets, verificación de URLs, y más. Con ejemplos reales de estafas.",
       "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
       "datePublished": "2026-08-02",
-      "dateModified": "2026-08-02",
+      "dateModified": "2026-08-23",
       "inLanguage": "es",
       "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué hago si ya compartí mi seed phrase por error?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Actúa de inmediato: crea una wallet nueva con una seed phrase nueva y transfiere todos tus fondos a esa wallet. No intentes arreglar la wallet comprometida cambiando la contraseña — si alguien tiene tu seed phrase, esa wallet queda comprometida para siempre. Abandona la wallet vieja tras mover los fondos." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Google Authenticator o Authy? ¿Cuál es mejor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ambos son buenos, pero Authy es mejor para la mayoría porque permite backup encriptado en la nube y restaurar tus códigos si pierdes el teléfono. Google Authenticator no ofrece ese backup. Para máxima seguridad, considera una llave física como YubiKey." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo confiar en exchanges como Binance para guardar mis criptos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Los exchanges grandes tienen medidas sólidas y fondos de reserva (Binance tiene SAFU), pero el principio «not your keys, not your coins» sigue aplicando. Para montos que no necesitas mover, la auto-custodia en hardware wallet es siempre más segura." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo sé si un smart contract es seguro antes de firmar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No hay garantía absoluta, pero reduce el riesgo: verifica que el contrato esté verificado en el explorador, que el proyecto haya sido auditado (CertiK, Trail of Bits, OpenZeppelin), usa herramientas como Revoke.cash o Pocket Universe que simulan transacciones, y revisa la antigüedad del contrato." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es seguro usar WiFi público para operar con criptomonedas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. El WiFi público es inherentemente inseguro. Si no hay alternativa, usa siempre una VPN de confianza y evita transacciones grandes o conectar tu hardware wallet. Los datos móviles son más seguros que un WiFi abierto." }
+        }
+      ]
     }
     </script>
 </head>
@@ -85,19 +119,18 @@
         <div class="article-meta">
             <span>🛡️ Seguridad</span>
             <span>⏱️ 15 min lectura</span>
-            <span>📅 Agosto 2026</span>
+            <span>📅 Actualizado: 23 de agosto, 2026</span>
             <span>🌱 Todos los niveles</span>
         </div>
 
         <p>La seguridad en criptomonedas <strong>no es opcional</strong>. A diferencia de un banco tradicional, donde puedes llamar a atención al cliente si algo sale mal, en el mundo crypto <strong>tú eres tu propio banco</strong>. Si pierdes tus claves, te estafan o te hackean la wallet, no hay un departamento de fraude al que recurrir. Los fondos desaparecen y punto. Por eso he preparado estas 10 reglas de oro que, si las sigues al pie de la letra, te mantendrán a salvo del 99% de las amenazas que existen en 2026.</p>
 
-        <p>No son reglas teóricas. Cada una viene de experiencias reales — algunas mías, otras de gente que conozco que perdió desde $500 hasta $200,000 por no seguir una de estas normas básicas. Vamos al grano.</p>
+        <p>No son reglas teóricas. Cada una responde a ataques y errores reales y documentados —phishing, SIM swapping, permisos maliciosos— que se repiten año tras año y siguen costando miles de millones. Vamos al grano.</p>
 
         <!-- Speed Read -->
         <div class="speed-read">
             <h3>⚠️ La cifra que debería preocuparte</h3>
             <p>En 2025 se robaron más de <strong>2.200 millones de dólares</strong> en criptomonedas mediante hacks, phishing y estafas. La mayoría de las víctimas no eran expertos — eran personas normales que cometieron <strong>errores evitables</strong>. La buena noticia: siguiendo las 10 reglas de este artículo reduces tu riesgo a prácticamente cero.</p>
-        </div>
             <ul>
                 <li>Tu <strong>seed phrase</strong> (12-24 palabras) es la llave maestra de tus fondos. Guárdala solo en papel o metal, nunca en digital, nunca la compartas.</li>
                 <li>El <strong>2FA con app</strong> (Google Authenticator, Authy) es obligatorio en todo exchange y servicio. Nunca uses SMS como segundo factor.</li>
@@ -121,7 +154,6 @@
                 <li><a href="#regla8">Diversifica el almacenamiento</a></li>
                 <li><a href="#regla9">Mantén todo actualizado</a></li>
                 <li><a href="#regla10">DYOR: Haz tu propia investigación</a></li>
-                <li><a href="#experiencia">Mi experiencia personal</a></li>
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
             </ol>
         </div>
@@ -276,9 +308,6 @@
         <p><strong>Estrategia de diversificación de custodia recomendada:</strong></p>
         <ul>
             <li><strong>60-70% en hardware wallet (cold storage).</strong> El grueso de tu portafolio. BTC, ETH y otras posiciones grandes que no necesitas mover.</li>
-<div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
-  <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Solo recomendamos plataformas que hemos probado personalmente. <a href="../sobre.html" style="color:var(--accent);">Más información →</a></p>
-</div>
             <li><strong>15-20% en exchanges regulados.</strong> Solo los fondos que necesitas líquidos para trading o venta rápida. En exchanges como Binance o OKX, con 2FA activado.</li>
             <li><strong>5-10% en hot wallet para DeFi.</strong> Para interactuar con dApps, probar protocolos nuevos o hacer staking.</li>
             <li><strong>5-10% en una segunda hardware wallet o multisig.</strong> Para los más precavidos. Una segunda hardware wallet de otra marca distinta elimina el riesgo de un fallo de firmware o vulnerabilidad específica de un fabricante.</li>
@@ -317,19 +346,6 @@
             <li><strong>Busca en X lo que dice la gente que no es del proyecto.</strong> Los hilos patrocinados por influencers que recibieron tokens gratis no cuentan como investigación.</li>
         </ul>
 
-        <!-- Mi Experiencia -->
-        <h2 id="experiencia">Mi Experiencia Personal</h2>
-        <div class="experiencia-block">
-            <h3>🗣️ Lo que he visto en primera persona</h3>
-            <p>Llevo en crypto desde 2020 y he visto suficientes desastres como para escribir este artículo con conocimiento de causa. No exagero cuando digo que prácticamente todas las personas que conozco en este espacio han tenido al menos un susto de seguridad.</p>
-
-            <p>Mi historia más cercana: en 2023, un amigo cercano — programador, persona técnica, no un novato — hizo clic en un enlace de Google que parecía ser el sitio oficial de Uniswap. Conectó MetaMask, firmó una transacción que parecía rutinaria y en menos de 60 segundos su wallet estaba vacía. Perdió $8,400 en ETH y tokens. El error: buscar "Uniswap" en Google en vez de usar su bookmark. Un descuido de 5 segundos, $8,400 perdidos para siempre.</p>
-
-            <p>También he visto a gente perder acceso a wallets por guardar la seed phrase en notas del iPhone. El teléfono se rompió, no tenían backup de iCloud, y la seed phrase desapareció con el dispositivo. Un caso especialmente doloroso fue alguien que tenía 2.3 BTC comprados en 2019 — a precio de hoy, más de $130,000 — y perdió el papel donde había anotado la seed phrase durante una mudanza. Ese dinero sigue ahí, en la blockchain, visible para siempre pero inaccesible.</p>
-
-            <p>Yo mismo he recibido al menos 20 intentos de estafa por mensaje privado: "soporte de MetaMask", "admin de Binance", "gestor de inversiones", "oportunidad exclusiva de preventa"... Los bloqueo y reporto sistemáticamente. La constancia en la seguridad es aburrida, pero es exactamente lo que te mantiene a salvo. Seguir estas 10 reglas al pie de la letra no es emocionante ni divertido, pero dormir tranquilo sabiendo que tus fondos están seguros... eso no tiene precio.</p>
-        </div>
-
         <!-- FAQ -->
         <section class="faq-section" id="faq">
             <h2>❓ Preguntas Frecuentes (FAQ)</h2>
@@ -345,13 +361,6 @@
                 <div class="faq-item__question">¿Google Authenticator o Authy? ¿Cuál es mejor?</div>
                 <div class="faq-item__answer">
                     <p>Ambos son buenos, pero yo recomiendo <strong>Authy</strong> para la mayoría de usuarios. La razón principal: Authy permite hacer backup encriptado en la nube. Si pierdes tu teléfono, puedes restaurar todos tus códigos 2FA en un dispositivo nuevo con tu contraseña maestra de Authy. Con Google Authenticator, si pierdes el teléfono sin tener los códigos de respaldo de cada servicio, puedes quedar bloqueado. Para máxima seguridad, considera una <strong>YubiKey</strong> (llave física), que es inmune a cualquier ataque remoto.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-item__question">¿Cuánto debería tener en cripto para justificar un hardware wallet?</div>
-                <div class="faq-item__answer">
-                    <p>Mi umbral personal es <strong>$1,000</strong>. Una Ledger Nano S Plus cuesta alrededor de $79 y un Trezor Safe 3 unos $79-99. Es menos del 10% de tu inversión y te da una seguridad enormemente superior. Si tienes más de $5,000 en crypto, no comprar una hardware wallet es, francamente, una negligencia. Si tienes menos de $200-300, una hot wallet con buenas prácticas de seguridad puede ser suficiente temporalmente mientras sigues acumulando.</p>
                 </div>
             </div>
 
@@ -381,19 +390,24 @@
         <h2 id="articulos-relacionados">📚 Artículos Relacionados</h2>
         <ul>
             <li><a href="/articulos/hot-wallet-vs-cold-wallet.html">Hot Wallet vs Cold Wallet: Guía Completa para Elegir</a> — Comparativa detallada de wallets frías y calientes.</li>
+            <li><a href="/articulos/crear-configurar-metamask.html">Cómo Crear y Configurar MetaMask</a> — Protege tu hot wallet desde el primer uso.</li>
+            <li><a href="/articulos/como-comprar-bitcoin.html">Cómo Comprar Bitcoin de Forma Segura</a> — Primeros pasos sin caer en trampas.</li>
             <li><a href="/articulos/como-usar-uniswap.html">Cómo Usar Uniswap de Forma Segura</a> — Aprende a hacer swaps sin caer en estafas.</li>
             <li><a href="/articulos/que-es-usdt.html">Qué es USDT y Cómo Usarlo</a> — Las stablecoins y cómo mantener valor estable.</li>
             <li><a href="/articulos/mejores-exchanges-espana.html">Mejores Exchanges de Criptomonedas en 2026</a> — Dónde comprar y vender crypto con seguridad.</li>
         </ul>
 
+        <p>📢 <em>Transparencia:</em> los enlaces de Binance y OKX de abajo son de afiliado (códigos BN522 y OK800). Si te registras con ellos, podemos recibir una comisión sin coste adicional para ti. Solo recomendamos plataformas que consideramos fiables. <a href="../sobre.html">Más información →</a></p>
+
         <!-- CTA -->
         <div class="cta-card">
-            <h2>🔐 Protege tus Criptos Hoy Mismo</h2>
+            <h2>Protege tus Criptos Hoy Mismo</h2>
             <p>La mejor cartera para asegurar tus fondos a largo plazo es una hardware wallet. Regístrate en Binance o OKX con nuestros enlaces y obtén un 20% de descuento en comisiones de por vida.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
             </div>
+<p>🌍 <em>Nota regional:</em> Binance dejó de operar en la Unión Europea por MiCA (julio 2026); si estás en la UE, usa OKX o alternativas reguladas como Coinbase o Kraken. En América Latina, Binance y OKX funcionan con normalidad.</p>
         </div>
     </main>
 
@@ -408,17 +422,6 @@
   <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — Explorador de bloques Ethereum</li>
 </ul>
 </div>
-<div class="internal-links" style="margin: 40px 0; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px;">
-<h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">📚 Artículos relacionados</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
-  <a href="/articulos/hot-wallet-vs-cold-wallet.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Hot Wallet vs Cold Wallet</a>
-  <a href="/articulos/crear-configurar-metamask.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Crear y configurar MetaMask</a>
-  <a href="/articulos/como-comprar-bitcoin.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Cómo comprar Bitcoin</a>
-  <a href="/articulos/como-usar-uniswap.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Cómo usar Uniswap</a>
-  <a href="/articulos/que-es-usdt.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Qué es USDT</a>
-</div>
-</div>
-
 <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
