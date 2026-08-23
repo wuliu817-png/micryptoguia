@@ -1,0 +1,54 @@
+# MiCryptoGuía
+
+> Guía completa de criptomonedas en español: Bitcoin, blockchain, DeFi, seguridad, exchanges y wallets. Tutoriales paso a paso para principiantes, intermedios y avanzados. Contenido educativo — no es asesoramiento financiero.
+
+## Páginas principales
+
+- [Inicio](https://micryptoguia.com/): Portada con acceso a todas las guías y tutoriales.
+- [Sobre nosotros](https://micryptoguia.com/sobre.html): Misión, equipo y metodología de MiCryptoGuía.
+- [Mapa del sitio](https://micryptoguia.com/sitemap.html): Índice completo de todas las guías.
+- [Política de privacidad](https://micryptoguia.com/privacidad.html): Cómo recopilamos y protegemos tu información.
+- [Términos y condiciones](https://micryptoguia.com/terminos.html): Condiciones de uso del sitio.
+
+## Conceptos básicos
+
+- [Qué es Bitcoin y Cómo Funciona](https://micryptoguia.com/articulos/que-es-bitcoin.html): Blockchain, minería, valor y cómo comprar BTC de forma segura.
+- [Qué es Blockchain](https://micryptoguia.com/articulos/blockchain-explicacion-sencilla.html): Explicación sencilla de bloques, descentralización y tipos de blockchain.
+- [Qué es Ethereum y Smart Contracts](https://micryptoguia.com/articulos/ethereum-smart-contracts.html): Por qué Ethereum es mucho más que una criptomoneda.
+- [Claves Privadas, Públicas y Direcciones](https://micryptoguia.com/articulos/claves-privadas-direcciones.html): Seed phrase, la analogía del buzón y por qué nunca compartir tu clave privada.
+- [Qué es USDT](https://micryptoguia.com/articulos/que-es-usdt.html): Stablecoins, paridad con el dólar y USDT vs USDC vs DAI.
+- [Qué son los NFTs](https://micryptoguia.com/articulos/que-es-nft.html): Cómo funcionan, por qué tienen valor y cómo comprar tu primer NFT.
+- [Qué son las Memecoins](https://micryptoguia.com/articulos/que-son-memecoins.html): DOGE, SHIB, PEPE y los riesgos antes de invertir.
+
+## Comprar, vender y operar
+
+- [Cómo Comprar Bitcoin por Primera Vez](https://micryptoguia.com/articulos/como-comprar-bitcoin.html): Elige exchange, verifica tu cuenta, deposita y compra BTC paso a paso.
+- [Cómo Vender Criptomonedas y Retirar a Banco](https://micryptoguia.com/articulos/como-vender-cripto-retirar-banco.html): Métodos, comisiones e impuestos al convertir cripto a euros.
+- [Cómo Enviar y Recibir Criptomonedas](https://micryptoguia.com/articulos/como-enviar-recibir-cripto.html): Selección de red, gas fees y errores comunes.
+- [Mejor Exchange de Criptomonedas 2026](https://micryptoguia.com/articulos/mejores-exchanges-espana.html): OKX, Binance, Kraken, Coinbase y Bit2Me comparados para España y Latam.
+- [Binance vs OKX](https://micryptoguia.com/articulos/binance-vs-okx.html): Comisiones, seguridad, KYC y cuál elegir según tus necesidades.
+- [Verificación KYC en Exchanges](https://micryptoguia.com/articulos/verificacion-kyc-exchanges.html): Documentos, proceso y errores que causan rechazo.
+
+## Seguridad
+
+- [10 Reglas de Seguridad Crypto](https://micryptoguia.com/articulos/seguridad-criptomonedas.html): Protege tu seed phrase, configura 2FA y evita estafas.
+- [Cómo Detectar Estafas y Airdrops Falsos](https://micryptoguia.com/articulos/como-detectar-estafas-crypto.html): Marco de 5 preguntas y los 6 tipos de estafa más comunes.
+- [Hot Wallet vs Cold Wallet](https://micryptoguia.com/articulos/hot-wallet-vs-cold-wallet.html): MetaMask, Trust Wallet, Ledger y Trezor comparados.
+- [Dónde Guardar tus Criptomonedas](https://micryptoguia.com/articulos/donde-guardar-criptomonedas.html): Exchange vs wallet vs hardware wallet según tu situación.
+- [Cómo Verificar Smart Contracts](https://micryptoguia.com/articulos/verificar-smart-contracts.html): Detecta honeypots y rug pulls en Etherscan antes de invertir.
+
+## Wallets y DeFi
+
+- [Crear y Configurar MetaMask](https://micryptoguia.com/articulos/crear-configurar-metamask.html): Instala la wallet, protege tu frase semilla y conecta dApps.
+- [Cómo Usar Uniswap](https://micryptoguia.com/articulos/como-usar-uniswap.html): Conectar MetaMask, intercambiar tokens, slippage y liquidez.
+- [Cómo Hacer Staking](https://micryptoguia.com/articulos/como-hacer-staking.html): Ingresos pasivos en Binance, OKX y Lido, con riesgos y rentabilidad.
+- [Yield Farming](https://micryptoguia.com/articulos/yield-farming.html): Aave, Compound, Curve y los riesgos del farming para principiantes.
+- [Puentes Cross-Chain](https://micryptoguia.com/articulos/puentes-cross-chain.html): Mueve fondos entre Ethereum, Arbitrum y Polygon con Stargate, Across y Wormhole.
+- [Solana para Principiantes](https://micryptoguia.com/articulos/solana-guia-principiantes.html): Phantom Wallet, staking y las DApps del ecosistema Solana.
+
+## Análisis e inversión
+
+- [Análisis Técnico Básico](https://micryptoguia.com/articulos/analisis-tecnico-basico.html): Velas, soportes, resistencias, RSI y medias móviles.
+- [Análisis On-Chain con Dune Analytics](https://micryptoguia.com/articulos/analisis-on-chain-dune.html): Dashboards sin SQL para investigar proyectos antes de invertir.
+- [Cartera Crypto Diversificada](https://micryptoguia.com/articulos/cartera-crypto-diversificada.html): Estrategia 60-30-10, DCA y rebalanceo con ejemplos prácticos.
+- [Impuestos Criptomonedas en España](https://micryptoguia.com/articulos/impuestos-criptomonedas-espana.html): Qué se declara, IRPF y cómo calcular ganancias.
