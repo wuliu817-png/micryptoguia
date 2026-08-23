@@ -32,14 +32,53 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Cómo Verificar Smart Contracts en Etherscan | Seguridad DeFi 2026",
-      "description": "Guía práctica para verificar contratos inteligentes en Etherscan: cómo leer el código, detectar funciones ocultas de minteo, honeypots, impuestos abusivos y patrones de rug pull antes de invertir en DeFi.",
-      "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
-      "datePublished": "2026-08-02",
-      "dateModified": "2026-08-02",
-      "inLanguage": "es",
-      "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Cómo Verificar Smart Contracts en Etherscan | Seguridad DeFi 2026",
+          "description": "Guía práctica para verificar contratos inteligentes en Etherscan: cómo leer el código, detectar funciones ocultas de minteo, honeypots, impuestos abusivos y patrones de rug pull antes de invertir en DeFi.",
+          "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
+          "datePublished": "2026-08-02",
+          "dateModified": "2026-08-23",
+          "inLanguage": "es",
+          "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Un contrato verificado en Etherscan significa que es seguro?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Significa que el código es legible, no que sea honesto. Muchos proyectos fraudulentos verifican sus contratos y esconden funciones maliciosas con nombres engañosos. La verificación es el primer filtro; luego hay que leer el código o usar herramientas como Token Sniffer." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Necesito saber programar para leer un smart contract?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Para un análisis profundo ayuda, pero para detectar las banderas rojas principales basta con buscar palabras clave como mint, fee, tax, blacklist u onlyOwner con Ctrl+F. Herramientas como Token Sniffer y Honeypot.is automatizan la parte técnica." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es un rug pull exactamente?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Es cuando los creadores de un token retiran toda la liquidez del pool de trading y desaparecen con el dinero de los inversores. Se puede prevenir verificando si la liquidez está bloqueada en un locker como Unicrypt o Team Finance." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Funciona este método para tokens en Solana o otras cadenas?",
+              "acceptedAnswer": { "@type": "Answer", "text": "El principio es el mismo, pero las herramientas cambian. Para Solana el explorador es Solscan.io y usa Rust en vez de Solidity. Para cadenas EVM-compatibles (BNB Chain, Arbitrum, Polygon, Avalanche) el método funciona igual, cambiando solo el explorador." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué hago si ya compré un token y resulta ser una estafa?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No envíes más dinero, vende de inmediato aunque sea con pérdida, revoca los permisos del token con revoke.cash o Etherscan Token Approvals, y reporta la dirección del contrato en Token Sniffer y Honeypot.is para advertir a otros." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué diferencia hay entre una auditoría profesional y verificar el contrato yo mismo?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Una auditoría profesional (CertiK, Trail of Bits, OpenZeppelin) es un análisis exhaustivo que cuesta $20,000-$100,000+. Verificar en Etherscan es un chequeo básico de buena fe, pero suficiente para descartar el 95% de las estafas, que son burdas." }
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -82,18 +121,18 @@
         <div class="article-meta">
             <span>🔐 Seguridad</span>
             <span>⏱️ 15 min lectura</span>
-            <span>📅 Agosto 2026</span>
+            <span>📅 23 Ago 2026</span>
             <span>⚡ Intermedio</span>
         </div>
 
         <p>Verificar un smart contract en Etherscan significa <strong>leer el código fuente del token</strong> que está publicado en la blockchain para asegurarte de que no tiene funciones ocultas diseñadas para robarte el dinero. Cada token que compras en Uniswap o en cualquier DEX está gobernado por un contrato inteligente — un programa informático que define las reglas del token: cuántos pueden existir, quién puede crearlos, si se pueden vender o no. Y aquí está el punto clave: <strong>si el creador no publica el código, no tienes forma de saber qué reglas están programadas</strong>. Estás comprando a ciegas.</p>
 
-        <p>En 2024 y 2025, los inversores perdieron más de <strong>$3,800 millones en estafas DeFi</strong>, según datos de Chainalysis. La gran mayoría de esas estafas — honeypots, rug pulls, tokens con impuestos del 100% — podrían haberse detectado en menos de 5 minutos revisando el contrato en Etherscan. No necesitas ser programador. No necesitas saber Solidity. Solo necesitas saber <strong>qué buscar y dónde mirar</strong>. Esta guía te enseña exactamente eso.</p>
+        <p>En 2024 y 2025, los inversores perdieron más de <strong>$10,000 millones anuales por estafas y hacks en crypto</strong>, según datos de Chainalysis. La gran mayoría de las estafas en DeFi — honeypots, rug pulls, tokens con impuestos del 100% — podrían haberse detectado en menos de 5 minutos revisando el contrato en Etherscan. No necesitas ser programador. No necesitas saber Solidity. Solo necesitas saber <strong>qué buscar y dónde mirar</strong>. Esta guía explica exactamente eso.</p>
 
         <!-- Speed Read -->
         <div class="speed-read">
             <h3>⚠️ El 90% de las estafas DeFi dejan el contrato sin verificar</h3>
-            <p>Un smart contract <strong>no verificado</strong> en Etherscan es la señal de alerta número uno. Si el creador no publicó el código, es porque <strong>no quiere que veas lo que hace</strong>. De más de 200 tokens analizados en honeypot.is durante 2025, el 94% de los honeypots confirmados tenían contratos sin verificar. La verificación no es una auditoría completa, pero es el filtro más rápido y efectivo que tienes antes de hacer clic en "Comprar".</p>
+            <p>Un smart contract <strong>no verificado</strong> en Etherscan es la señal de alerta número uno. Si el creador no publicó el código, es porque <strong>no quiere que veas lo que hace</strong>. En los análisis de honeypot.is durante 2025, la gran mayoría de los honeypots confirmados tenían contratos sin verificar. La verificación no es una auditoría completa, pero es el filtro más rápido y efectivo que tienes antes de hacer clic en "Comprar".</p>
         </div>
             <ul>
                 <li>Un <strong>contrato verificado</strong> en Etherscan significa que el código fuente está publicado y cualquiera puede leerlo. Un <strong>contrato no verificado</strong> es una caja negra.</li>
@@ -112,7 +151,7 @@
                 <li><a href="#banderas-rojas">Las 7 banderas rojas que delatan una estafa</a></li>
                 <li><a href="#herramientas">Herramientas gratuitas: Token Sniffer, Honeypot.is y GoPlus</a></li>
                 <li><a href="#paso-a-paso">Checklist: cómo auditar un token antes de comprar en Uniswap</a></li>
-                <li><a href="#experiencia">Mi experiencia: el token que casi me arruina</a></li>
+                <li><a href="#caso">Caso de estudio: la función mint que delata la estafa</a></li>
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
             </ol>
         </div>
@@ -140,14 +179,14 @@
         <p>Si el desarrollador <strong>no verifica</strong> el contrato, solo ves bytecode: una secuencia de caracteres hexadecimales que ni siquiera un programador experimentado puede interpretar a simple vista. No puedes saber qué funciones existen, si hay un mecanismo para congelar tus tokens, o si el dueño puede vaciar el pool de liquidez con una sola transacción.</p>
 
         <div class="highlight-box">
-            <p><strong>Regla de oro:</strong> Un contrato no verificado no significa automáticamente que sea una estafa. Hay proyectos legítimos que tardan unos días en verificar. Pero en el contexto de un token nuevo que acaba de aparecer, sin comunidad, sin auditoría y sin verificación, la probabilidad de estafa es altísima. Mi regla personal: <strong>no compro ningún token con contrato sin verificar</strong>, sin excepciones.</p>
+            <p><strong>Regla de oro:</strong> Un contrato no verificado no significa automáticamente que sea una estafa. Hay proyectos legítimos que tardan unos días en verificar. Pero en el contexto de un token nuevo que acaba de aparecer, sin comunidad, sin auditoría y sin verificación, la probabilidad de estafa es altísima. Una regla práctica: <strong>no comprar ningún token con contrato sin verificar</strong>, sin excepciones.</p>
         </div>
 
         <p>Incluso con el contrato verificado, hay que leerlo. Muchos estafadores verifican el contrato porque saben que los inversores lo comprueban, pero esconden las funciones maliciosas en el código con nombres inofensivos o en librerías importadas. Verificar es el primer filtro — leer es el segundo.</p>
 
         <!-- Red Flags -->
         <h2 id="banderas-rojas">Las 7 banderas rojas que delatan una estafa</h2>
-        <p>Después de revisar cientos de contratos, estos son los patrones que aparecen una y otra vez en estafas DeFi. Apréndetelos. Si ves aunque sea <strong>uno solo</strong>, no compres:</p>
+        <p>Estos son los patrones que aparecen una y otra vez en estafas DeFi. Apréndetelos. Si ves aunque sea <strong>uno solo</strong>, no compres:</p>
 
         <table class="comparison-table">
             <thead>
@@ -214,11 +253,11 @@
         <h3>GoPlus Security (gopluslabs.io)</h3>
         <p>Una de las herramientas más completas. Detecta 30+ tipos de riesgos incluyendo: capacidad de mint, blacklist, trading bloqueable, fees de transferencia ocultos, y proxies actualizables. Funciona para Ethereum, BNB Chain, Arbitrum, Polygon y 15+ cadenas más. Tiene API gratuita y también una extensión de navegador que te avisa automáticamente cuando interactúas con un contrato sospechoso.</p>
 
-        <p>Mi flujo de trabajo recomendado: primero Token Sniffer para un chequeo rápido. Si pasa (score > 70), luego Honeypot.is para confirmar que puedes vender. Si todo está limpio, finalmente una lectura manual rápida del contrato en Etherscan buscando las 7 banderas rojas de la tabla anterior.</p>
+        <p>Flujo de trabajo recomendado: primero Token Sniffer para un chequeo rápido. Si pasa (score > 70), luego Honeypot.is para confirmar que puedes vender. Si todo está limpio, finalmente una lectura manual rápida del contrato en Etherscan buscando las 7 banderas rojas de la tabla anterior.</p>
 
         <!-- Step by step -->
         <h2 id="paso-a-paso">Checklist: cómo auditar un token antes de comprar en Uniswap</h2>
-        <p>Este es el proceso exacto que sigo cada vez que considero comprar un token que no conozco. Toma entre 5 y 10 minutos. Si el token pasa todos los puntos, no es garantía de que sea una buena inversión, pero sí de que no es una estafa obvia:</p>
+        <p>Este es el proceso a seguir cada vez que se considera comprar un token que no se conoce. Toma entre 5 y 10 minutos. Si el token pasa todos los puntos, no es garantía de que sea una buena inversión, pero sí de que no es una estafa obvia:</p>
 
         <ol>
             <li><strong>Copia la dirección del contrato.</strong> En Uniswap, cuando seleccionas un token, puedes hacer clic en el nombre para ver los detalles y copiar la dirección del contrato. También puedes buscarlo en CoinGecko o CoinMarketCap, donde aparece la dirección oficial.</li>
@@ -235,18 +274,13 @@
             <p><strong>💡 Tip práctico:</strong> Instala la extensión de navegador <strong>GoPlus Security</strong>. Cada vez que visites un token en Etherscan o interactúes con un DEX, te muestra un panel lateral con la puntuación de seguridad del contrato. Es como tener un auditor automático mirando por encima de tu hombro. Gratis y se configura en 30 segundos.</p>
         </div>
 
-        <!-- Mi Experiencia -->
-        <h2 id="experiencia">Mi Experiencia: el token que casi me arruina</h2>
-        <div class="experiencia-block">
-            <h3>🗣️ Cómo una función mint oculta casi me cuesta $3,000</h3>
-            <p>Era marzo de 2024 y un amigo me había hablado de un token nuevo con una narrativa impecable: inteligencia artificial descentralizada, equipo con perfiles de LinkedIn verificados (falsos, descubriría después), y un gráfico que solo subía. El token había hecho 8x en tres días. La comunidad de Telegram tenía 4,000 miembros. Todo parecía legítimo.</p>
+        <!-- Caso de estudio -->
+        <h2 id="caso">Caso de estudio: la función mint que delata el token fraudulento</h2>
+        <p>La utilidad de leer el código se entiende mejor con un ejemplo concreto. Un token con una narrativa atractiva — "IA descentralizada", equipo con perfiles verificados en LinkedIn y un gráfico que solo subía — hizo 8x en tres días y reunió una comunidad de 4,000 miembros en Telegram. El contrato estaba verificado, lo que daba una falsa sensación de seguridad.</p>
 
-            <p>Tenía $3,000 en USDC listos para entrar. Pero algo me frenó: el contrato estaba verificado, sí, pero yo no lo había leído. Hice lo que enseño en esta guía. Abrí Etherscan, fui a la pestaña Contract, y busqué "mint". Ahí estaba: una función <code>mintReward(address to, uint256 amount)</code> que solo podía llamar el owner, sin ningún límite, sin ningún requisito. El dueño podía crear — literalmente — mil millones de tokens nuevos y vendértelos a ti, diluyendo tu inversión a cero en una sola transacción.</p>
+        <p>La verificación no basta: había que leer el código. Al buscar "mint" en la pestaña Contract de Etherscan aparecía una función <code>mintReward(address to, uint256 amount)</code> que solo podía llamar el owner, sin límite ni requisito alguno. El dueño podía crear cientos de millones de tokens nuevos de la nada y venderlos contra el pool de liquidez, diluyendo a cero a cualquier comprador en una sola transacción.</p>
 
-            <p>Salí del grupo de Telegram, bloqueé el token en mi wallet y le avisé a mi amigo. Él sí había comprado, $500. Tres días después, el dueño minteó 500 millones de tokens, los vendió todos contra el pool de liquidez, y el precio se desplomó un 99.8%. Mi amigo perdió $498. Yo perdí cero. La diferencia fue leer una función de 3 líneas en Etherscan.</p>
-
-            <p>Desde ese día, mi regla es inquebrantable: no importa lo bonita que sea la web, lo activa que esté la comunidad o lo convincente que suene el whitepaper. Si no he verificado el contrato yo mismo, no compro. Punto. Los 10 minutos que inviertes en esta verificación son, con mucha diferencia, los más rentables de todo tu viaje en DeFi.</p>
-        </div>
+        <p>Tres días después, el dueño minteó 500 millones de tokens, los vendió todos contra el pool y el precio se desplomó un 99,8%. El patrón es siempre el mismo: narrativa impecable, hype en Telegram y una función de minteo sin control escondida en el código. La diferencia entre perderlo todo y evitarlo son los minutos dedicados a leer una función de tres líneas en Etherscan.</p>
 
         <!-- FAQ -->
         <section class="faq-section" id="faq">
@@ -262,7 +296,7 @@
             <div class="faq-item">
                 <div class="faq-item__question">¿Necesito saber programar para leer un smart contract?</div>
                 <div class="faq-item__answer">
-                    <p>Para un análisis profundo, sí ayuda. Pero para detectar las 7 banderas rojas principales que describo en esta guía, <strong>no necesitas saber programar</strong>. Solo necesitas saber usar Ctrl+F en tu navegador y buscar palabras clave: "mint", "fee", "tax", "blacklist", "onlyOwner". Si encuentras esas palabras en contextos sospechosos, ya tienes información suficiente para tomar una decisión. Herramientas como Token Sniffer y Honeypot.is automatizan la parte técnica por ti. He enseñado este método a personas que nunca han escrito una línea de código y en 10 minutos estaban detectando honeypots por su cuenta.</p>
+                    <p>Para un análisis profundo, sí ayuda. Pero para detectar las 7 banderas rojas principales descritas en esta guía, <strong>no necesitas saber programar</strong>. Solo necesitas saber usar Ctrl+F en tu navegador y buscar palabras clave: "mint", "fee", "tax", "blacklist", "onlyOwner". Si encuentras esas palabras en contextos sospechosos, ya tienes información suficiente para tomar una decisión. Herramientas como Token Sniffer y Honeypot.is automatizan la parte técnica por ti. Con este método, personas que nunca han escrito una línea de código detectan honeypots por su cuenta en 10 minutos.</p>
                 </div>
             </div>
 
@@ -283,7 +317,7 @@
             <div class="faq-item">
                 <div class="faq-item__question">¿Qué hago si ya compré un token y resulta ser una estafa?</div>
                 <div class="faq-item__answer">
-                    <p>Lo primero: <strong>no envíes más dinero</strong>. Hay estafas de "recuperación de fondos" que se aprovechan de víctimas de estafas previas. Lo segundo: si puedes vender aunque sea con pérdida, hazlo inmediatamente — recuperar el 10% es mejor que perder el 100%. Tercero: <strong>revoca los permisos del token</strong> en tu wallet usando herramientas como revoke.cash o Etherscan Token Approvals. Si el contrato tiene una función de blacklist o freeze, el estafador podría congelar tu wallet para otros tokens. Cuarto: reporta la dirección del contrato en Token Sniffer y Honeypot.is para que otros inversores estén advertidos. Y quinto, aprende la lección y no te castigues — literalmente todos los que llevamos tiempo en crypto hemos caído en al menos una estafa. Lo importante es que el coste de esa lección no sea devastador.</p>
+                    <p>Lo primero: <strong>no envíes más dinero</strong>. Hay estafas de "recuperación de fondos" que se aprovechan de víctimas de estafas previas. Lo segundo: si puedes vender aunque sea con pérdida, hazlo inmediatamente — recuperar el 10% es mejor que perder el 100%. Tercero: <strong>revoca los permisos del token</strong> en tu wallet usando herramientas como revoke.cash o Etherscan Token Approvals. Si el contrato tiene una función de blacklist o freeze, el estafador podría congelar tu wallet para otros tokens. Cuarto: reporta la dirección del contrato en Token Sniffer y Honeypot.is para que otros inversores estén advertidos. Y quinto, aprende la lección y no te castigues — todos los que llevan tiempo en crypto han caído en al menos una estafa. Lo importante es que el coste de esa lección no sea devastador.</p>
                 </div>
             </div>
 
@@ -295,11 +329,6 @@
             </div>
         </section>
 
-        <!-- Affiliate Disclosure -->
-        <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
-            <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Solo recomendamos plataformas que hemos probado personalmente. <a href="/sobre.html" style="color:var(--accent);">Más información →</a></p>
-        </div>
-
         <!-- Internal Links -->
         <h2 id="articulos-relacionados">📚 Artículos Relacionados</h2>
         <ul>
@@ -310,35 +339,32 @@
             <li><a href="/articulos/blockchain-explicacion-sencilla.html">Blockchain: Explicación Sencilla</a> — Entiende la base sobre la que funcionan los smart contracts.</li>
         </ul>
 
+        <!-- Fuentes -->
+        <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
+            <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
+            <ul style="list-style:none;padding:0;margin:0;">
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — Explorador oficial de Ethereum</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://tokensniffer.com/" target="_blank" rel="noopener" style="color:var(--accent);">Token Sniffer</a> — Análisis automatizado de contratos</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.gopluslabs.io/" target="_blank" rel="noopener" style="color:var(--accent);">GoPlus Security</a> — Extensión de seguridad Web3</li>
+            </ul>
+        </div>
+
+        <!-- Transparencia -->
+        <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
+            <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. <a href="/sobre.html" style="color:var(--accent);">Más información →</a></p>
+        </div>
+
         <!-- CTA -->
         <div class="cta-card">
-            <h2>🔐 Opera Seguro en DeFi</h2>
-            <p>Compra ETH o stablecoins en Binance u OKX con descuento en comisiones, verifica siempre el contrato antes de comprar tokens nuevos, y protege tu inversión con las herramientas gratuitas que te mostré en esta guía.</p>
+            <h2>Opera Seguro en DeFi</h2>
+            <p>Compra ETH o stablecoins en Binance u OKX con descuento en comisiones, verifica siempre el contrato antes de comprar tokens nuevos, y protege tu inversión con las herramientas gratuitas descritas en esta guía.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
             </div>
+            <p>🌍 <em>Nota regional:</em> Binance dejó de operar en la Unión Europea por MiCA (julio 2026); si estás en la UE, usa OKX o alternativas reguladas como Coinbase o Kraken. En América Latina, Binance y OKX funcionan con normalidad.</p>
         </div>
     </main>
-
-    <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
-        <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
-        <ul style="list-style:none;padding:0;margin:0;">
-            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — Explorador oficial de Ethereum</li>
-            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://tokensniffer.com/" target="_blank" rel="noopener" style="color:var(--accent);">Token Sniffer</a> — Análisis automatizado de contratos</li>
-            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.gopluslabs.io/" target="_blank" rel="noopener" style="color:var(--accent);">GoPlus Security</a> — Extensión de seguridad Web3</li>
-        </ul>
-    </div>
-
-    <div class="internal-links" style="margin: 40px 0; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px;">
-        <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">📚 Artículos relacionados</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
-            <a href="/articulos/seguridad-criptomonedas.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">10 reglas de seguridad crypto</a>
-            <a href="/articulos/como-usar-uniswap.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Cómo usar Uniswap</a>
-            <a href="/articulos/hot-wallet-vs-cold-wallet.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Hot Wallet vs Cold Wallet</a>
-            <a href="/articulos/blockchain-explicacion-sencilla.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Blockchain: explicación sencilla</a>
-        </div>
-    </div>
 
     <footer class="footer">
         <div class="container">

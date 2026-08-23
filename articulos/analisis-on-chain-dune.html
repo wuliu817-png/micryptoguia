@@ -32,14 +32,53 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Análisis On-Chain con Dune Analytics | Guía para Inversores Crypto 2026",
-      "description": "Guía práctica para usar Dune Analytics sin escribir SQL: dashboards comunitarios, métricas clave como direcciones activas, TVL y whales, y cómo combinar Dune con CoinGecko y DefiLlama para investigar proyectos crypto.",
-      "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
-      "datePublished": "2026-08-02",
-      "dateModified": "2026-08-02",
-      "inLanguage": "es",
-      "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Análisis On-Chain con Dune Analytics | Guía para Inversores Crypto 2026",
+          "description": "Guía práctica para usar Dune Analytics sin escribir SQL: dashboards comunitarios, métricas clave como direcciones activas, TVL y whales, y cómo combinar Dune con CoinGecko y DefiLlama para investigar proyectos crypto.",
+          "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
+          "datePublished": "2026-08-02",
+          "dateModified": "2026-08-23",
+          "inLanguage": "es",
+          "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Realmente necesito Dune si ya uso CoinGecko y DefiLlama?",
+              "acceptedAnswer": { "@type": "Answer", "text": "CoinGecko y DefiLlama dan una vista general; Dune da la capa más granular, como actividad de whales y distribución de holders. Para inversiones pequeñas en proyectos consolidados, CoinGecko + DefiLlama puede bastar. Para inversiones serias o proyectos nuevos, Dune es imprescindible." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Vale la pena aprender SQL para usar Dune?",
+              "acceptedAnswer": { "@type": "Answer", "text": "El 90% de los casos de uso se cubren con dashboards comunitarios sin escribir código. SQL solo es necesario para análisis muy específicos; con 2-3 semanas de práctica puedes escribir consultas útiles. Empieza con dashboards ajenos y aprende SQL solo si te quedas corto." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo sé si un dashboard de Dune es fiable?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Mira cuántas estrellas tiene, quién lo creó (analistas conocidos son más fiables), si se actualiza regularmente y si las métricas tienen sentido común. Un dashboard abandonado o con datos incoherentes no es fiable." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿El análisis on-chain funciona para Bitcoin?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí, pero con herramientas diferentes. Dune se especializa en blockchains con smart contracts. Para Bitcoin, las herramientas de referencia son Glassnode, CryptoQuant y Coin Metrics, centradas en UTXOs, hashrate y flujos de exchanges." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Con qué frecuencia debo revisar los datos on-chain?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Para inversores a largo plazo, una revisión mensual o trimestral basta; buscan tendencias, no ruido diario. Para traders activos en DeFi, una revisión semanal es razonable. No conviene obsesionarse con datos diarios para decisiones a largo plazo." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo usar datos on-chain para detectar proyectos antes de que exploten?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Un protocolo con TVL creciente, direcciones activas al alza, alta retención y precio aún sin reflejar ese crecimiento es una posible oportunidad. El análisis on-chain permite ver la adopción antes que el precio." }
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -82,13 +121,13 @@
         <div class="article-meta">
             <span>📊 Análisis</span>
             <span>⏱️ 15 min lectura</span>
-            <span>📅 Agosto 2026</span>
+            <span>📅 23 Ago 2026</span>
             <span>⚡ Intermedio</span>
         </div>
 
         <p>El análisis on-chain consiste en <strong>leer los datos públicos de la blockchain</strong> para tomar decisiones de inversión basadas en hechos, no en corazonadas, tweets de influencers o gráficos de velas. Cada transacción, cada wallet, cada contrato inteligente deja un rastro permanente y verificable en la blockchain. Aprender a leer esos datos te da una ventaja informativa brutal sobre el inversor promedio que solo mira el precio y el volumen en CoinGecko.</p>
 
-        <p>Y la mejor noticia: no necesitas ser científico de datos ni saber programar. <strong>Dune Analytics</strong> — la plataforma de análisis on-chain más potente del ecosistema — tiene miles de dashboards comunitarios gratuitos que convierten datos brutos de la blockchain en gráficos, tablas y métricas perfectamente legibles. Solo necesitas saber qué buscar, dónde encontrarlo y cómo interpretarlo. En esta guía te enseño las tres cosas.</p>
+        <p>Y la mejor noticia: no necesitas ser científico de datos ni saber programar. <strong>Dune Analytics</strong> — la plataforma de análisis on-chain más potente del ecosistema — tiene miles de dashboards comunitarios gratuitos que convierten datos brutos de la blockchain en gráficos, tablas y métricas perfectamente legibles. Solo necesitas saber qué buscar, dónde encontrarlo y cómo interpretarlo. En esta guía se explican las tres cosas.</p>
 
         <!-- Speed Read -->
         <div class="speed-read">
@@ -112,7 +151,7 @@
                 <li><a href="#metricas-clave">Las 6 métricas on-chain que todo inversor debe vigilar</a></li>
                 <li><a href="#combo">El combo ganador: CoinGecko + DefiLlama + Dune</a></li>
                 <li><a href="#investigar">Cómo investigar un proyecto antes de invertir usando datos on-chain</a></li>
-                <li><a href="#experiencia">Mi experiencia: cómo los datos on-chain me salvaron de un protocolo moribundo</a></li>
+                <li><a href="#caso">Caso de estudio: detectar un protocolo moribundo</a></li>
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
             </ol>
         </div>
@@ -133,7 +172,7 @@
 
         <!-- Dune Analytics -->
         <h2 id="dune">Dune Analytics: qué es y cómo usar dashboards sin escribir SQL</h2>
-        <p>Dune Analytics es una plataforma que toma datos crudos de la blockchain — transacciones, eventos de smart contracts, transferencias de tokens — los organiza en bases de datos SQL, y permite a cualquiera crear consultas y dashboards visuales. Fue fundada en 2018 en Noruega, y en 2026 es la herramienta de análisis on-chain más utilizada del ecosistema crypto, con más de 700,000 dashboards públicos creados por la comunidad.</p>
+        <p>Dune Analytics es una plataforma que toma datos crudos de la blockchain — transacciones, eventos de smart contracts, transferencias de tokens — los organiza en bases de datos SQL, y permite a cualquiera crear consultas y dashboards visuales. Fue fundada en 2018 en Noruega, y en 2026 es la herramienta de análisis on-chain más utilizada del ecosistema crypto, con cientos de miles de dashboards públicos y consultas guardadas creados por la comunidad.</p>
 
         <p>La plataforma tiene dos niveles de uso:</p>
 
@@ -216,7 +255,7 @@
 
         <p><strong>Dune Analytics</strong> te da la capa más granular: comportamiento de usuarios individuales, flujos de dinero entre wallets, cohortes de retención, actividad de whales. Es donde descubres las verdades incómodas que no aparecen en las métricas agregadas.</p>
 
-        <p>El flujo de trabajo que recomiendo: empieza en CoinGecko para identificar proyectos que te interesen por sus fundamentales de mercado. Luego pasa a DefiLlama para verificar que el TVL y los ingresos respaldan la narrativa. Finalmente, sumérgete en Dune para confirmar que hay usuarios reales usando el protocolo de forma orgánica y que los insiders no están descargando sus bolsas.</p>
+        <p>El flujo de trabajo recomendado: empieza en CoinGecko para identificar proyectos que te interesen por sus fundamentales de mercado. Luego pasa a DefiLlama para verificar que el TVL y los ingresos respaldan la narrativa. Finalmente, sumérgete en Dune para confirmar que hay usuarios reales usando el protocolo de forma orgánica y que los insiders no están descargando sus bolsas.</p>
 
         <!-- How to research -->
         <h2 id="investigar">Cómo investigar un proyecto antes de invertir usando datos on-chain</h2>
@@ -234,18 +273,13 @@
             <p><strong>🔐 Regla de oro del inversor on-chain:</strong> Nunca inviertas basándote en una sola métrica. Busca <strong>confluencia</strong>: al menos tres indicadores distintos contando la misma historia. Si CoinGecko dice que el precio sube, DefiLlama dice que el TVL sube, y Dune dice que las direcciones activas suben, tienes una tesis sólida. Si solo el precio sube pero las otras dos métricas bajan, estás mirando una trampa de hype.</p>
         </div>
 
-        <!-- Mi Experiencia -->
-        <h2 id="experiencia">Mi experiencia: cómo los datos on-chain me salvaron de un protocolo moribundo</h2>
-        <div class="experiencia-block">
-            <h3>🗣️ El protocolo que todo el mundo recomendaba y los datos on-chain desmintieron</h3>
-            <p>A principios de 2025, un protocolo DeFi de yield farming estaba en boca de todos. Ofrecía APYs del 40-60% en stablecoins — una locura comparado con el 5-10% de Aave o Curve. Los influencers lo promocionaban sin parar. El token de gobernanza había hecho 4x en tres meses. La comunidad en Discord tenía 50,000 miembros. Yo estaba listo para meter $5,000.</p>
+        <!-- Caso de estudio -->
+        <h2 id="caso">Caso de estudio: detectar un protocolo moribundo antes de que colapse</h2>
+        <p>El valor del análisis on-chain se entiende mejor con un ejemplo real de cómo se desmonta una tesis de hype. A principios de 2025, un protocolo DeFi de yield farming prometía APYs del 40-60% en stablecoins, muy por encima del 5-10% que ofrecían Aave o Curve. El token de gobernanza hizo 4x en tres meses y la comunidad en Discord superó los 50,000 miembros.</p>
 
-            <p>Pero antes de hacerlo, apliqué el checklist de esta guía. Abrí DefiLlama: TVL en descenso desde hacía seis semanas, a pesar de que el precio del token seguía subiendo. Raro. Abrí Dune: las direcciones activas diarias habían caído un 70% desde el pico de hype. La retención a 30 días era de apenas el 8% — es decir, de cada 100 nuevos usuarios, 92 abandonaban en el primer mes. Lo peor: un dashboard de Dune mostraba que el top 5 de holders (wallets del equipo y early investors) habían vendido más de $12 millones en tokens durante esas mismas seis semanas.</p>
+        <p>El checklist de esta guía habría contado una historia muy distinta. En DefiLlama, el TVL llevaba seis semanas en descenso mientras el precio seguía subiendo. En Dune, las direcciones activas diarias habían caído un 70% desde el pico y la retención a 30 días era de apenas el 8%: de cada 100 nuevos usuarios, 92 abandonaban en el primer mes. Un dashboard de holders revelaba además que el top 5 (wallets del equipo e early investors) había vendido más de $12 millones en tokens en esas mismas seis semanas.</p>
 
-            <p>La historia era cristalina: el equipo y los insiders estaban vendiendo sus tokens al ritmo que el hype atraía nuevos compradores. El protocolo no generaba suficientes ingresos para sostener los APYs que promocionaban — estaban subsidiando los yields con emisión inflacionaria de su token. Un esquema clásico de Ponzi tokenómico. No invertí.</p>
-
-            <p>Tres meses después, el protocolo colapsó. Los APYs insostenibles vaciaron el tesoro. El precio del token se desplomó un 95%. Los usuarios que habían depositado fondos en los vaults de yield sufrieron pérdidas masivas. La comunidad pasó de 50,000 miembros a un canal de Discord fantasma. Yo perdí exactamente cero dólares. La diferencia entre mi resultado y el de las víctimas no fue suerte. Fue dedicar 20 minutos a leer datos on-chain antes de invertir.</p>
-        </div>
+        <p>La lectura era clara: el equipo y los insiders vendían sus tokens al ritmo que el hype atraía nuevos compradores, y los APYs se sostenían con emisión inflacionaria del token, no con ingresos reales del protocolo — un esquema clásico de Ponzi tokenómico. Tres meses después, el protocolo colapsó y el token se desplomó un 95%. Quien dedicó 20 minutos a leer los datos on-chain evitó el desastre; quien compró por FOMO, no.</p>
 
         <!-- FAQ -->
         <section class="faq-section" id="faq">
@@ -261,7 +295,7 @@
             <div class="faq-item">
                 <div class="faq-item__question">¿Vale la pena aprender SQL para usar Dune?</div>
                 <div class="faq-item__answer">
-                    <p>Depende de cuánto tiempo quieras dedicarle y de la profundidad de análisis que necesites. El 90% de los casos de uso — investigar un token antes de comprarlo, seguir la actividad de un protocolo, monitorear whales — se cubren perfectamente con los dashboards comunitarios existentes. No necesitas escribir ni una línea de código. Ahora bien, si quieres hacer análisis muy específicos (por ejemplo, "muéstrame todas las wallets que compraron este token en las primeras 24 horas y aún lo mantienen"), ahí sí necesitarás SQL. SQL es un lenguaje relativamente fácil de aprender — con 2-3 semanas de práctica puedes escribir consultas útiles. Dune tiene una sección de documentación excelente y un canal de Discord donde la comunidad ayuda con dudas de SQL. Mi recomendación: empieza con dashboards ajenos. Si después de unos meses te quedas corto, aprende SQL. Pero no es un requisito para empezar.</p>
+                    <p>Depende de cuánto tiempo quieras dedicarle y de la profundidad de análisis que necesites. El 90% de los casos de uso — investigar un token antes de comprarlo, seguir la actividad de un protocolo, monitorear whales — se cubren perfectamente con los dashboards comunitarios existentes. No necesitas escribir ni una línea de código. Ahora bien, si quieres hacer análisis muy específicos (por ejemplo, "muéstrame todas las wallets que compraron este token en las primeras 24 horas y aún lo mantienen"), ahí sí necesitarás SQL. SQL es un lenguaje relativamente fácil de aprender — con 2-3 semanas de práctica puedes escribir consultas útiles. Dune tiene una sección de documentación excelente y un canal de Discord donde la comunidad ayuda con dudas de SQL. Recomendación: empieza con dashboards ajenos. Si después de unos meses te quedas corto, aprende SQL. Pero no es un requisito para empezar.</p>
                 </div>
             </div>
 
@@ -294,11 +328,6 @@
             </div>
         </section>
 
-        <!-- Affiliate Disclosure -->
-        <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
-            <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Solo recomendamos plataformas que hemos probado personalmente. <a href="/sobre.html" style="color:var(--accent);">Más información →</a></p>
-        </div>
-
         <!-- Internal Links -->
         <h2 id="articulos-relacionados">📚 Artículos Relacionados</h2>
         <ul>
@@ -309,35 +338,32 @@
             <li><a href="/articulos/verificar-smart-contracts.html">Verificar Smart Contracts en Etherscan</a> — Complementa tu análisis on-chain verificando que el código del token no esconde trampas.</li>
         </ul>
 
+        <!-- Fuentes -->
+        <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
+            <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
+            <ul style="list-style:none;padding:0;margin:0;">
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://dune.com/" target="_blank" rel="noopener" style="color:var(--accent);">Dune Analytics</a> — Plataforma de análisis on-chain</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://defillama.com/" target="_blank" rel="noopener" style="color:var(--accent);">DefiLlama</a> — Métricas DeFi, TVL y fees</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.coingecko.com/" target="_blank" rel="noopener" style="color:var(--accent);">CoinGecko</a> — Datos de mercado y precios</li>
+            </ul>
+        </div>
+
+        <!-- Transparencia -->
+        <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
+            <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. <a href="/sobre.html" style="color:var(--accent);">Más información →</a></p>
+        </div>
+
         <!-- CTA -->
         <div class="cta-card">
-            <h2>📊 Invierte con Datos, No con Emociones</h2>
+            <h2>Invierte con Datos, No con Emociones</h2>
             <p>Abre Dune Analytics, explora dashboards comunitarios del proyecto que te interesa y cruza los datos con CoinGecko y DefiLlama. Descubrirás que la mayoría de "oportunidades imperdibles" en crypto no pasan ni el primer filtro on-chain. Y eso es exactamente lo que quieres.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
             </div>
+            <p>🌍 <em>Nota regional:</em> Binance dejó de operar en la Unión Europea por MiCA (julio 2026); si estás en la UE, usa OKX o alternativas reguladas como Coinbase o Kraken. En América Latina, Binance y OKX funcionan con normalidad.</p>
         </div>
     </main>
-
-    <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
-        <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
-        <ul style="list-style:none;padding:0;margin:0;">
-            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://dune.com/" target="_blank" rel="noopener" style="color:var(--accent);">Dune Analytics</a> — Plataforma de análisis on-chain</li>
-            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://defillama.com/" target="_blank" rel="noopener" style="color:var(--accent);">DefiLlama</a> — Métricas DeFi, TVL y fees</li>
-            <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.coingecko.com/" target="_blank" rel="noopener" style="color:var(--accent);">CoinGecko</a> — Datos de mercado y precios</li>
-        </ul>
-    </div>
-
-    <div class="internal-links" style="margin: 40px 0; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px;">
-        <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">📚 Artículos relacionados</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
-            <a href="/articulos/como-hacer-staking.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Cómo hacer staking</a>
-            <a href="/articulos/verificar-smart-contracts.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Verificar smart contracts</a>
-            <a href="/articulos/seguridad-criptomonedas.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">10 reglas de seguridad crypto</a>
-            <a href="/articulos/blockchain-explicacion-sencilla.html" style="display:block;padding:14px 16px;background:var(--bg-surface);border-radius:var(--radius-md);color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem;transition:all var(--transition-fast);" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='var(--bg-surface)'">Blockchain: explicación sencilla</a>
-        </div>
-    </div>
 
     <footer class="footer">
         <div class="container">
