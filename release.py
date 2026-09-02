@@ -60,18 +60,34 @@ def git_lastmod(relpath):
 
 
 def url_for(relpath):
-    return f"{SITE}/" if relpath == "index.html" else f"{SITE}/{relpath}"
+    if relpath == "index.html":
+        return f"{SITE}/"
+    # 目录式文章：articulos/<slug>/index.html -> 干净 URL articulos/<slug>/
+    if relpath.endswith("/index.html"):
+        return f"{SITE}/{relpath[: -len('index.html')]}"
+    return f"{SITE}/{relpath}"
 
 
 def collect_pages():
-    """返回 [(relpath, changefreq, priority)]，顺序稳定。"""
+    """返回 [(relpath, changefreq, priority)]，顺序稳定。
+
+    兼容两种文章形态：
+      - 旧式顶层文件  articulos/<slug>.html
+      - 新式目录结构  articulos/<slug>/index.html（干净 URL，无 .html）
+    """
     pages = []
     for name in ["index.html", "sobre.html", "privacidad.html", "terminos.html", "sitemap.html"]:
         cf, pr = TOP_PAGES[name]
         pages.append((name, cf, pr))
-    for name in sorted(os.listdir("articulos")):
+    articles = []
+    for name in os.listdir("articulos"):
+        full = os.path.join("articulos", name)
         if name.endswith(".html"):
-            pages.append((f"articulos/{name}", "monthly", "0.8"))
+            articles.append(f"articulos/{name}")
+        elif os.path.isdir(full) and os.path.isfile(os.path.join(full, "index.html")):
+            articles.append(f"articulos/{name}/index.html")
+    for relpath in sorted(articles):
+        pages.append((relpath, "monthly", "0.8"))
     return pages
 
 
