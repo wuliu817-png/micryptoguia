@@ -9,6 +9,8 @@
 - [Mapa del sitio](https://micryptoguia.com/sitemap.html): Índice completo de todas las guías.
 - [Política de privacidad](https://micryptoguia.com/privacidad.html): Cómo recopilamos y protegemos tu información.
 - [Términos y condiciones](https://micryptoguia.com/terminos.html): Condiciones de uso del sitio.
+- [Política editorial](https://micryptoguia.com/politica-editorial.html): Cómo creamos, verificamos y actualizamos el contenido.
+- [Política de correcciones](https://micryptoguia.com/politica-de-correcciones.html): Cómo reportar un error y cómo corregimos el contenido.
 
 ## Conceptos básicos
 
