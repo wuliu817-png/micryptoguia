@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enviar USDT por la red equivocada no suele ser una pérdida total: si el destino es tu wallet casi siempre se recupera, y si es un exchange depende de su política. Cómo localizarlo y qué hacer.">
-    <meta name="keywords" content="USDT red equivocada, recuperar USDT red incorrecta, USDT ERC20 TRC20, USDT no aparece wallet, TxID, etherscan, tronscan, bscscan">
+    <meta name="description" content="Envié USDT por la red equivocada: aprende a identificar tu error, cuándo es recuperable (wallet propia vs exchange) y cómo localizar los fondos con el explorador.">
+    <meta name="keywords" content="USDT red equivocada, recuperar USDT red incorrecta, USDT BEP20 ERC20, USDT no aparece wallet, deposit recovery, TxID, etherscan, tronscan, bscscan">
     <meta name="author" content="MiCryptoGuía">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#080b16">
     <link rel="canonical" href="https://micryptoguia.com/articulos/usdt-red-equivocada/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Envié USDT por la red equivocada: ¿se puede recuperar? — MiCryptoGuía">
-    <meta property="og:description" content="Si el destino es tu propia wallet, casi siempre puedes recuperarlo añadiendo la red correcta. Si es un exchange, depende de su política. Te contamos los dos casos paso a paso.">
+    <meta property="og:title" content="¿Qué hacer si envié USDT por la red equivocada? Guía de recuperación (2026) — MiCryptoGuía">
+    <meta property="og:description" content="Identifica tu error, comprueba si es recuperable según el caso (wallet propia o exchange) y localiza los fondos con el explorador.">
     <meta property="og:url" content="https://micryptoguia.com/articulos/usdt-red-equivocada/">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es">
@@ -28,14 +28,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
 
-    <title>Envié USDT por la red equivocada: ¿se puede recuperar?</title>
+    <title>¿Qué hacer si envié USDT por la red equivocada? Guía de recuperación (2026)</title>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Envié USDT por la red equivocada: ¿se puede recuperar?",
-      "description": "Qué hacer si enviaste USDT por una red distinta a la esperada: recuperación si es tu wallet o un exchange, y cómo localizar los fondos con el explorador.",
+      "headline": "¿Qué hacer si envié USDT por la red equivocada? Guía de recuperación (2026)",
+      "description": "Identifica qué error cometiste, cuándo es recuperable el USDT enviado por la red equivocada (wallet propia o exchange) y cómo localizarlo con el explorador.",
       "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
       "datePublished": "2026-09-04",
       "dateModified": "2026-09-04",
@@ -48,9 +48,9 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Puedo recuperar USDT enviado por la red equivocada a un exchange como Binance?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de si ese exchange soporta la red en la que enviaste el USDT. Si la soporta, su equipo suele poder recuperarlo de forma manual, a veces con una comisión. Si no la soporta, las opciones son muy limitadas. En ambos casos contacta con soporte aportando el TxID, la red, el importe y las direcciones." } },
-        { "@type": "Question", "name": "¿Cuánto cobra un exchange por recuperar un depósito en la red equivocada?", "acceptedAnswer": { "@type": "Answer", "text": "No hay una cifra fija: varía según la plataforma y el caso. Algunos exchanges lo hacen sin coste, otros cobran una comisión por el trabajo manual de recuperación. Pregúntalo directamente al soporte antes de confirmar la recuperación." } },
-        { "@type": "Question", "name": "¿Cuánto tarda la recuperación del USDT?", "acceptedAnswer": { "@type": "Answer", "text": "Si el destino es tu propia wallet, es inmediato: añade la red correcta e importa el token y el saldo aparece al momento. Si fue a un exchange, depende de su equipo y puede tardar desde unos días hasta varias semanas." } }
+        { "@type": "Question", "name": "¿Puede un exchange recuperar USDT enviado por la red equivocada?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de si el exchange soporta a la vez el activo, la red y el contrato del token que usaste. Si esa combinación de depósito es compatible, su equipo suele poder revisarla, a veces con una comisión. Si no lo es, la recuperación no está garantizada. Contacta con soporte aportando el TxID." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta recuperar un depósito por una red incorrecta?", "acceptedAnswer": { "@type": "Answer", "text": "No hay una cifra fija: algunas plataformas lo hacen sin coste, otras cobran una comisión por la revisión manual. Pregúntalo directamente al soporte antes de confirmar la recuperación." } },
+        { "@type": "Question", "name": "¿Cuánto tarda la recuperación?", "acceptedAnswer": { "@type": "Answer", "text": "Si el destino es tu propia wallet y controlas la dirección en la red donde terminó el USDT, es inmediato: cambia o añade la red y el saldo aparece. Si fue a un exchange, depende de su equipo y puede tardar de días a varias semanas." } }
       ]
     }
     </script>
@@ -87,55 +87,154 @@
         <nav class="article-breadcrumb" aria-label="Breadcrumb">
             <a href="../../">Inicio</a> &raquo;
             <a href="../../#guias">Guías</a> &raquo;
-            <span>Envié USDT por la red equivocada</span>
+            <span>USDT por la red equivocada</span>
         </nav>
 
-        <h1>Envié USDT por la red equivocada: ¿se puede recuperar?</h1>
+        <h1>¿Qué hacer si envié USDT por la red equivocada? Guía de recuperación (2026)</h1>
         <div class="article-meta">
             <span>💸 Transferencias</span>
-            <span>⏱️ 8 min lectura</span>
+            <span>⏱️ 9 min lectura</span>
             <span>📅 Actualizado: septiembre 2026</span>
             <span>🌱 Principiante</span>
         </div>
 
-        <p>Enviar USDT por la red equivocada da un susto enorme, pero en la mayoría de los casos el dinero <strong>no se ha perdido</strong>. USDT se emite sobre varias blockchains a la vez —Tron, Ethereum, BNB Chain…—, y si elegiste una red distinta a la que esperaba el destino, el saldo puede quedar «invisible» aunque siga estando en la cadena.</p>
+        <p>Enviar USDT por la red equivocada no significa automáticamente que los fondos se hayan perdido. En algunos casos pueden recuperarse, especialmente si la dirección de destino pertenece a una wallet cuya <strong>clave privada controlas tú</strong>. Si el destino es un exchange, la recuperación dependerá de la red utilizada, la dirección de depósito y la política de la plataforma.</p>
 
-        <p>El resultado depende de dos cosas: <strong>a quién se lo enviaste</strong> (¿tu propia wallet o un exchange?) y <strong>si el destino admite la red que usaste</strong>. Aquí verás los dos casos, cómo localizar los fondos con el explorador y qué información preparar si tienes que acudir al soporte.</p>
+        <p>Antes de hacer nada, conviene entender qué error cometiste exactamente, porque no todos los «me equivoqué de red» son iguales. Aquí verás cómo identificar tu caso, cuándo se puede recuperar y qué herramientas oficiales tiene cada plataforma.</p>
 
         <div class="highlight-box">
             <p style="margin:0 0 10px 0;font-weight:700;color:var(--text-primary);">En 30 segundos</p>
             <ul style="margin:0;padding-left:18px;color:var(--text-secondary);">
-                <li>Si lo enviaste a <strong>tu propia wallet</strong>, casi siempre puedes recuperarlo añadiendo la red correcta.</li>
-                <li>Si lo enviaste a un <strong>exchange</strong>, depende de si admite esa red: contacta con soporte con el TxID.</li>
-                <li>Guarda el <strong>TxID</strong> antes de hacer nada más: es la única forma de rastrear el envío.</li>
-                <li>No envíes una segunda transacción «para arreglarlo»: no anula la primera y solo suma comisiones.</li>
+                <li><strong>Wallet propia:</strong> puede ser recuperable si controlas la dirección en la red donde terminó el USDT.</li>
+                <li><strong>Exchange:</strong> no está garantizado; comprueba si admite esa combinación de activo y red.</li>
+                <li><strong>TxID:</strong> guárdalo y comprueba primero la transacción en el explorador.</li>
+                <li><strong>No vuelvas a enviar:</strong> una segunda transferencia no corrige ni cancela la primera.</li>
             </ul>
         </div>
 
         <p style="margin: 20px 0 0 0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces de esta página son de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto no cambia las conclusiones del artículo. <a href="../../sobre.html" style="color:var(--accent);">Más información →</a></p>
 
         <h2>Primero, no hagas nada más</h2>
-        <p>El impulso es enviar otra vez por la red «correcta» para arreglarlo. No lo hagas: una segunda transacción no anula la primera, solo te cuesta más comisiones.</p>
-        <p>Lo primero es guardar el <strong>TxID</strong> (también llamado «hash» o transaction hash), el identificador único del envío. Lo encontrarás en el historial de retiros de la plataforma o wallet desde la que enviaste. Sin él, ni tú ni el soporte podréis localizar los fondos.</p>
+        <p>El impulso es enviar otra vez por la red «correcta» para arreglarlo. No lo hagas: una segunda transferencia no corrige ni cancela la primera, solo suma comisiones.</p>
+        <p>Lo primero es guardar el <strong>TxID</strong> (también llamado «hash»), el identificador único del envío. Lo encontrarás en el historial de retiros de la plataforma o wallet desde la que enviaste. Sin él, ni tú ni el soporte podréis localizar los fondos.</p>
+
+        <h2>Antes de intentar recuperarlo: identifica exactamente qué error cometiste</h2>
+        <p>«Red equivocada» cubre en realidad varios problemas distintos, y cada uno se resuelve de una forma. Esta tabla te ayuda a situarte antes de actuar.</p>
+        <div class="comparison-table" style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Lo que ves</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Qué suele significar</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Siguiente paso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Explorer «Success» pero la wallet no muestra saldo</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">El saldo está en otra red o el token no está visible</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Comprueba la red y el contrato del token</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">El exchange no muestra el depósito</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">La red o el contrato del token no están soportados</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Usa la recuperación de depósitos si existe, o contacta soporte</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">El TxID sigue «Pending»</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">No es un error de red</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Espera o revisa la congestión de la red</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">El TxID aparece «Failed»</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">La transferencia no llegó a completarse</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Comprueba el saldo de la wallet de origen</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">La dirección estaba mal escrita</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Dirección errónea, no red errónea</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Revisa quién controla esa dirección</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Faltó el MEMO/Tag</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Problema de MEMO, no de red</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Contacta con el exchange</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Enviaste ERC-20 como BEP-20 a tu dirección 0x…</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Error de red entre redes EVM</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Cambia a la red correspondiente en tu wallet</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">El saldo se ve pero no puedes moverlo</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Falta el token nativo para pagar el gas</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Prepara ETH, BNB o TRX según la red</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <h2>Por qué pasó: USDT no vive en una sola red</h2>
         <p><a href="/articulos/que-es-usdt.html">USDT</a> no es una blockchain, es un token que se emite sobre varias redes a la vez. El mismo USDT existe como TRC-20 en Tron, ERC-20 en Ethereum, BEP-20 en BNB Chain, entre otras. La red que elijas al enviar determina en qué cadena queda registrado el saldo.</p>
-        <p>Las redes no se hablan entre sí. Si enviaste por Tron a una dirección de Ethereum (o al revés), la transacción puede confirmarse sin problema; lo que falla es que estás mirando en la cadena equivocada y por eso no lo ves.</p>
+        <p>El caso típico de «red equivocada» es este: elegiste <strong>BEP-20</strong> al retirar USDT cuando el destino esperaba <strong>ERC-20</strong> (o al revés). La transacción se confirma, pero el saldo queda en BNB Chain en lugar de en Ethereum, y en el destino no aparece.</p>
         <div class="warning-box">
             <p class="warning-box__title">⚠️ La regla de oro</p>
-            <p>La red que eliges al enviar debe coincidir exactamente con la red de la dirección de destino. Si una dice TRC-20 y la otra ERC-20, no confirmes: el envío aterrizará en una cadena distinta a la que espera el receptor.</p>
+            <p>La red que eliges al enviar debe coincidir exactamente con la red de la dirección de destino. Si el destino espera ERC-20 y tú envías por BEP-20, no coinciden: no confirmes.</p>
         </div>
 
-        <h2>Caso 1: lo enviaste a tu propia wallet (casi siempre recuperable)</h2>
-        <p>Si la dirección de destino es tuya —tu wallet de MetaMask o Trust Wallet, por ejemplo—, la buena noticia es que los fondos <strong>no han desaparecido</strong>. Están en tu misma dirección, pero en la otra cadena. Tu wallet no los muestra porque no tiene esa red configurada.</p>
-        <p>Para verlos de nuevo, añade a tu wallet la red que usaste. En <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> se hace en «Ajustes → Redes → Añadir red», con los datos de la red (nombre, URL del RPC, chain ID). Puedes obtenerlos de fuentes como Chainlist o de la documentación oficial de cada cadena.</p>
-        <p>Después importa el token USDT de esa red (pegando la dirección de su contrato) y el saldo aparecerá. Un detalle que suele bloquear a los principiantes: para mover ese USDT de vuelta necesitarás una pequeña cantidad de la criptomoneda nativa de esa cadena para pagar el gas —ETH si es ERC-20, TRX si es TRC-20, BNB si es BEP-20—.</p>
-        <p>Si no quieres configurar redes a mano, otra vía es importar tu frase semilla en una wallet que ya soporte esa red, siempre que confíes en la aplicación. Recuerda que tu frase semilla da acceso total a los fondos: no la introduzcas en sitios dudosos.</p>
+        <h2>Caso 1: lo enviaste a tu propia wallet</h2>
+        <p>Si la dirección de destino es tuya, la recuperación es posible cuando <strong>controlas la dirección en la red donde terminó el USDT</strong>. No es automática: depende del tipo de redes implicadas.</p>
+        <div class="comparison-table" style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Error</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Dificultad de recuperación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">ERC-20 → BEP-20 en tu propia wallet EVM</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Más fácil</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">BEP-20 → ERC-20 en tu propia wallet EVM</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Más fácil</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">TRC-20, Solana u otro sistema distinto</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Requiere confirmar el control de la dirección</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Enviado a un exchange por la red equivocada</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Depende de la plataforma</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Enviado a una dirección personal errónea</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Normalmente no recuperable por ti</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Enviado a la dirección del contrato</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Muy difícil o imposible</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>En redes compatibles entre sí, como Ethereum y BNB Chain (ambas EVM y con direcciones 0x…), la solución suele ser sencilla: cambia a la red correspondiente en tu wallet o añade esa red, y el USDT aparecerá. Como comparten el mismo formato de dirección, el saldo sigue asociado a tu misma cuenta.</p>
+        <p>No siempre hay que configurar un RPC a mano. Wallets actuales como <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> incorporan soporte para más redes —incluido TRON—, por lo que muchas veces basta con seleccionar la red desde el menú. Si tu red no aparece, puedes añadirla con los datos de la red (URL del RPC, chain ID) desde fuentes como <a href="https://chainlist.org/" target="_blank" rel="noopener">Chainlist</a> o la documentación oficial de la cadena.</p>
+        <p>No importes tu frase semilla en otra aplicación solo porque el saldo no aparece. Antes comprueba el TxID en el explorador y confirma que de verdad necesitas otra wallet. La frase semilla permite controlar todos los activos de la cuenta y nunca debe introducirse en una web, un formulario de soporte ni una herramienta de «recuperación».</p>
+        <p>Un detalle que suele bloquear a los principiantes: para mover ese USDT de vuelta necesitarás una pequeña cantidad de la criptomoneda nativa de esa cadena para pagar el gas —ETH si es ERC-20, BNB si es BEP-20, TRX si es TRC-20—.</p>
 
-        <h2>Caso 2: lo enviaste a un exchange (depende de su política)</h2>
-        <p>Si el destino era un exchange (Binance, OKX u otro), la recuperación ya no depende de ti, sino de si esa plataforma <strong>soporta la red en la que enviaste el USDT</strong>.</p>
-        <p>Si la soporta, lo habitual es que su equipo pueda recuperar el depósito de forma manual. No es inmediato: suele tardar de días a semanas y muchas veces cobran una comisión por ese trabajo. Si no la soporta, las opciones son muy limitadas y el dinero puede quedar bloqueado.</p>
-        <p>En ambos casos el siguiente paso es el mismo: abrir un ticket de soporte. No escribas solo «mi dinero no llega». Aporta de una vez el <strong>TxID, la red utilizada, el importe, la dirección de origen y de destino, y la fecha y hora</strong> del envío.</p>
+        <h2>Caso 2: lo enviaste a un exchange</h2>
+        <p>Si la dirección pertenece a Binance, OKX u otro exchange, no intentes importar ninguna clave ni «recuperar» los fondos por tu cuenta: las claves de esa dirección las controla la plataforma.</p>
+        <p>Comprueba primero si el exchange admite actualmente:</p>
+        <ol>
+            <li>el <strong>activo</strong> que enviaste;</li>
+            <li>la <strong>red</strong> utilizada;</li>
+            <li>el <strong>contrato concreto</strong> de USDT en esa red.</li>
+        </ol>
+        <p>Que un exchange soporte USDT y también soporte una determinada blockchain no garantiza que esa combinación de depósito sea compatible.</p>
+        <p>Si el depósito no se acredita, utiliza la herramienta de recuperación de depósitos de la plataforma, si existe, o contacta con soporte. Prepara el <strong>TxID, la red, la cantidad, la dirección de origen, la dirección de destino y la fecha</strong> de la operación. La recuperación puede requerir una revisión manual, tener un coste o no ser posible en determinados casos.</p>
         <p>Si no estás seguro de que el problema sea la red y no otra cosa (estado pendiente, falta de MEMO…), repasa primero las <a href="/articulos/usdt-no-llega-causas-soluciones/">causas más comunes por las que un USDT no llega</a>.</p>
 
         <h2>Cómo confirmar dónde está el dinero con el explorador</h2>
@@ -152,7 +251,7 @@
         <p>Conviene ser claros: hay escenarios donde la recuperación es muy difícil o imposible, y no podemos prometer que siempre se pueda recuperar.</p>
         <ul>
             <li>Si lo enviaste a la <strong>dirección del contrato</strong> del token en lugar de a tu dirección, el USDT queda asociado al contrato y no hay forma práctica de recuperarlo.</li>
-            <li>Si el <strong>exchange no admite la red</strong> que usaste, la plataforma puede no tener los medios técnicos para recuperarlo.</li>
+            <li>Si el <strong>exchange no admite</strong> esa combinación de activo, red y contrato, la plataforma puede no tener los medios técnicos para recuperarlo.</li>
             <li>Si el error no fue de red sino de <strong>moneda</strong> (enviaste una criptomoneda distinta a una dirección que no la admite), el caso cambia y depende de cada plataforma.</li>
         </ul>
         <p>Por eso, con importes grandes, la regla es no enviar todo de una vez: <a href="/articulos/como-enviar-recibir-cripto.html">prueba primero con una cantidad pequeña</a> y comprueba que llega.</p>
@@ -170,23 +269,23 @@
             <h2>Preguntas frecuentes</h2>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Puedo recuperar USDT enviado por la red equivocada a un exchange como Binance?</div>
+                <div class="faq-item__question">¿Puede un exchange recuperar USDT enviado por la red equivocada?</div>
                 <div class="faq-item__answer">
-                    <p>Depende de si ese exchange soporta la red en la que enviaste el USDT. Si la soporta, su equipo suele poder recuperarlo de forma manual, a veces con una comisión. Si no la soporta, las opciones son muy limitadas. En ambos casos contacta con soporte aportando el TxID, la red, el importe y las direcciones.</p>
+                    <p>Depende de si el exchange soporta a la vez el activo, la red y el contrato del token que usaste. Si esa combinación de depósito es compatible, su equipo suele poder revisarla, a veces con una comisión. Si no lo es, la recuperación no está garantizada. Contacta con soporte aportando el TxID.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Cuánto cobra un exchange por recuperar un depósito en la red equivocada?</div>
+                <div class="faq-item__question">¿Cuánto cuesta recuperar un depósito por una red incorrecta?</div>
                 <div class="faq-item__answer">
-                    <p>No hay una cifra fija: varía según la plataforma y el caso. Algunos exchanges lo hacen sin coste, otros cobran una comisión por el trabajo manual de recuperación. Pregúntalo directamente al soporte antes de confirmar la recuperación.</p>
+                    <p>No hay una cifra fija: algunas plataformas lo hacen sin coste, otras cobran una comisión por la revisión manual. Pregúntalo directamente al soporte antes de confirmar la recuperación.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Cuánto tarda la recuperación del USDT?</div>
+                <div class="faq-item__question">¿Cuánto tarda la recuperación?</div>
                 <div class="faq-item__answer">
-                    <p>Si el destino es tu propia wallet, es inmediato: añade la red correcta e importa el token y el saldo aparece al momento. Si fue a un exchange, depende de su equipo y puede tardar desde unos días hasta varias semanas.</p>
+                    <p>Si el destino es tu propia wallet y controlas la dirección en la red donde terminó el USDT, es inmediato: cambia o añade la red y el saldo aparece. Si fue a un exchange, depende de su equipo y puede tardar de días a varias semanas.</p>
                 </div>
             </div>
         </section>
@@ -206,11 +305,13 @@
         <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
             <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
             <ul style="list-style:none;padding:0;margin:0;">
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.binance.com/en/academy/articles/how-to-recover-crypto-transferred-to-the-wrong-network-on-binance" target="_blank" rel="noopener" style="color:var(--accent);">Binance Academy — How to Recover Crypto Transferred to the Wrong Network</a></li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.okx.com/help/what-should-i-do-if-i-mistakenly-withdraw-crypto-via-the-wrong-network" target="_blank" rel="noopener" style="color:var(--accent);">OKX — Retirar cripto por la red equivocada</a></li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.okx.com/help/what-should-i-do-if-i-deposit-to-the-wrong-address" target="_blank" rel="noopener" style="color:var(--accent);">OKX — Depositar a la dirección equivocada</a></li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://support.metamask.io/configure/networks/how-to-add-a-custom-network-rpc/" target="_blank" rel="noopener" style="color:var(--accent);">MetaMask Help Center — Cómo añadir una red</a></li>
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — explorador de Ethereum (ERC-20)</li>
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://tronscan.org/" target="_blank" rel="noopener" style="color:var(--accent);">TronScan</a> — explorador de Tron (TRC-20)</li>
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://bscscan.com/" target="_blank" rel="noopener" style="color:var(--accent);">BscScan</a> — explorador de BNB Chain (BEP-20)</li>
-                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://chainlist.org/" target="_blank" rel="noopener" style="color:var(--accent);">Chainlist</a> — datos de red (RPC, chain ID) para añadir una red a tu wallet</li>
-                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://support.metamask.io/" target="_blank" rel="noopener" style="color:var(--accent);">MetaMask Support</a> — cómo añadir una red y un token en MetaMask</li>
             </ul>
         </div>
 
