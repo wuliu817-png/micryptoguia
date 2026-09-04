@@ -28,6 +28,7 @@
 - [Cómo Vender Criptomonedas y Retirar a Banco](https://micryptoguia.com/articulos/como-vender-cripto-retirar-banco.html): Métodos, comisiones e impuestos al convertir cripto a euros.
 - [Cómo Enviar y Recibir Criptomonedas](https://micryptoguia.com/articulos/como-enviar-recibir-cripto.html): Selección de red, gas fees y errores comunes.
 - [Mi transferencia de USDT no llega](https://micryptoguia.com/articulos/usdt-no-llega-causas-soluciones/): Causas (pendiente, red, MEMO, dirección) y cómo comprobarla en el explorador.
+- [Envié USDT por la red equivocada](https://micryptoguia.com/articulos/usdt-red-equivocada/): Qué hacer si elegiste una red distinta y cómo recuperarlo (tu wallet o un exchange).
 - [Mejor Exchange de Criptomonedas 2026](https://micryptoguia.com/articulos/mejores-exchanges-espana.html): OKX, Binance, Kraken, Coinbase y Bit2Me comparados para España y Latam.
 - [Binance vs OKX](https://micryptoguia.com/articulos/binance-vs-okx.html): Comisiones, seguridad, KYC y cuál elegir según tus necesidades.
 - [Verificación KYC en Exchanges](https://micryptoguia.com/articulos/verificacion-kyc-exchanges.html): Documentos, proceso y errores que causan rechazo.
