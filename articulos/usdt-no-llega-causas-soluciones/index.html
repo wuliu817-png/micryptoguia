@@ -38,7 +38,7 @@
       "description": "Las 5 causas más comunes por las que una transferencia de USDT no llega (pendiente, red incorrecta, falta de MEMO, dirección errónea) y cómo comprobarla en el explorador.",
       "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
       "datePublished": "2026-09-02",
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "es",
       "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
     }
@@ -117,6 +117,29 @@
 
         <p style="margin: 20px 0 0 0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces de esta página son de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto no cambia las conclusiones del artículo. <a href="../../sobre.html" style="color:var(--accent);">Más información →</a></p>
 
+        <h2>Antes de nada: ¿de qué problema se trata?</h2>
+        <p>«No me llega el USDT» puede significar cosas distintas, y no todas se resuelven en esta página. Identifica tu caso primero:</p>
+        <div style="overflow-x:auto;margin:20px 0;">
+            <table style="width:100%;border-collapse:collapse;border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Tu situación</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Qué hacer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">No llega y no sabes por qué: sigue <strong>«pendiente»</strong>, dice <strong>«confirmada»</strong> sin acreditarse, falta <strong>MEMO/Tag</strong>, dudas de la <strong>dirección</strong> o no tienes <strong>TxID</strong>.</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Sigue leyendo esta guía: cubre esas cinco causas.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Ya sabes que elegiste <strong>una red distinta</strong> a la esperada (por ejemplo, enviaste por TRC-20 y el destino es ERC-20).</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Es otro problema. Ve a la <a href="/articulos/usdt-red-equivocada/">guía de recuperación por red equivocada</a>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <h2>Primero: comprueba estas 4 cosas</h2>
         <p>Antes de saltar a las causas, revisa estos cuatro puntos en orden. Resuelven la mayoría de los casos en menos de un minuto:</p>
         <ol>
@@ -139,6 +162,7 @@
             <p>La red que eliges al enviar debe coincidir exactamente con la red de la dirección de destino. Antes de confirmar, comprueba que ambas dicen «TRC-20» o ambas «ERC-20». Si no coinciden, no confirmes.</p>
         </div>
         <p>Si ya lo enviaste por la red equivocada, no todo está perdido. Si la dirección de destino es tuya, normalmente basta con añadir la red correcta en tu wallet (o importar la wallet en una app que soporte esa red) para ver los fondos. Si fue a un exchange, contacta con su soporte: muchos lo recuperan, aunque pueden tardar y cobrar una comisión.</p>
+        <p>Este error tiene una casuística propia (redes EVM, direcciones de contrato, casos irrecuperables). La tratamos a fondo en la <a href="/articulos/usdt-red-equivocada/">guía para recuperar USDT enviado por la red equivocada</a>.</p>
 
         <h2>Causa 3: la plataforma exige más confirmaciones</h2>
         <p>Que el explorador diga «confirmada» no siempre significa que el saldo esté disponible. Los exchanges y algunas wallets exigen un <strong>número mínimo de confirmaciones</strong> antes de acreditar el depósito, como protección contra reorganizaciones de la cadena o dobles gastos.</p>
@@ -227,6 +251,7 @@
         <h2>Artículos relacionados</h2>
         <ul>
             <li><a href="/articulos/que-es-usdt.html">Qué es USDT y Para Qué Usarlo</a> — entiende en qué redes vive y cómo elegir la correcta.</li>
+            <li><a href="/articulos/usdt-red-equivocada/">Envié USDT por la red equivocada</a> — si ya confirmaste que el problema fue la red, esta es tu guía.</li>
             <li><a href="/articulos/como-enviar-recibir-cripto.html">Cómo Enviar y Recibir Criptomonedas Sin Errores</a> — la guía completa para no equivocarte al transferir.</li>
             <li><a href="/articulos/puentes-cross-chain.html">Puentes Cross-Chain</a> — qué son los bridges y cuándo se usan de verdad.</li>
             <li><a href="/articulos/crear-configurar-metamask.html">Cómo Configurar MetaMask</a> — añade la red correcta para ver tus tokens.</li>
