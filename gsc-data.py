@@ -1,88 +1,53 @@
 #!/usr/bin/env python3
-"""micryptoguia.com GSC 数据拉取脚本"""
-import json, time, urllib.request, urllib.parse, urllib.error
+"""micryptoguia.com GSC 数据拉取脚本（对齐 criptotradey 已验证方案）"""
+import os, json, warnings
+warnings.filterwarnings("ignore")
+os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7890"
+os.environ["https_proxy"] = "http://127.0.0.1:7890"
+import requests
+from google.oauth2 import service_account
+from google.auth.transport.requests import Request
 from datetime import datetime, timedelta
 
-# --- 配置 ---
-KEY_FILE = '/Users/yangwenlin/Downloads/clean-skill-503811-c4-0131c897d24a.json'
-SITE = 'https://micryptoguia.com/'
-DAYS = 28  # 拉取最近多少天
+KEY = "/Users/yangwenlin/Downloads/clean-skill-503811-c4-38eadbb86283.json"
+SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
+creds = service_account.Credentials.from_service_account_file(KEY, scopes=SCOPES)
+creds.refresh(Request())
+H = {"Authorization": f"Bearer {creds.token}"}
+SITE = "https%3A%2F%2Fmicryptoguia.com%2F"  # URL 编码的 https://micryptoguia.com/
 
-# --- 获取 token ---
-import jwt
-with open(KEY_FILE) as f:
-    key = json.load(f)
-
-now = int(time.time())
-payload = {
-    'iss': key['client_email'],
-    'scope': 'https://www.googleapis.com/auth/webmasters',
-    'aud': key['token_uri'],
-    'exp': now + 3600,
-    'iat': now,
-}
-token = jwt.encode(payload, key['private_key'], algorithm='RS256')
-data = urllib.parse.urlencode({
-    'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-    'assertion': token,
-}).encode()
-req = urllib.request.Request(key['token_uri'], data=data)
-resp = urllib.request.urlopen(req, timeout=10)
-access_token = json.loads(resp.read())['access_token']
-
-# --- 搜索分析 ---
 end = datetime.now().strftime('%Y-%m-%d')
-start = (datetime.now() - timedelta(days=DAYS)).strftime('%Y-%m-%d')
+start = (datetime.now() - timedelta(days=28)).strftime('%Y-%m-%d')
 
 print(f'📊 micryptoguia.com 搜索数据 ({start} ~ {end})')
 print('=' * 70)
 
-# 按查询词
-body = json.dumps({
-    'startDate': start, 'endDate': end,
-    'dimensions': ['query'],
-    'rowLimit': 25,
-}).encode()
-req = urllib.request.Request(
-    f'https://www.googleapis.com/webmasters/v3/sites/{urllib.parse.quote(SITE)}/searchAnalytics/query',
-    data=body, method='POST'
-)
-req.add_header('Authorization', f'Bearer {access_token}')
-req.add_header('Content-Type', 'application/json')
 
-try:
-    resp = urllib.request.urlopen(req, timeout=15)
-    result = json.loads(resp.read())
-    rows = result.get('rows', [])
-    if rows:
-        print(f'\n🔤 热门查询词：')
-        for r in rows:
-            print(f"  {r['keys'][0]:<45} 点击:{r.get('clicks',0):<5} 展示:{r.get('impressions',0):<7} 排名:{r.get('position',0):.1f}")
-    else:
-        print('\n暂无数据')
-except urllib.error.HTTPError as e:
-    print(f'错误: {e.code} - {e.read().decode()}')
+def query(dimensions, row_limit=25, label=""):
+    body = {"startDate": start, "endDate": end, "dimensions": dimensions, "rowLimit": row_limit}
+    r = requests.post(
+        f"https://searchconsole.googleapis.com/webmasters/v3/sites/{SITE}/searchAnalytics/query",
+        headers=H, json=body, timeout=20)
+    if r.status_code != 200:
+        print(f'❌ {label} 请求失败 {r.status_code}: {r.text[:300]}')
+        return []
+    return r.json().get("rows", [])
 
-# 按国家
-body2 = json.dumps({
-    'startDate': start, 'endDate': end,
-    'dimensions': ['country'],
-    'rowLimit': 25,
-}).encode()
-req2 = urllib.request.Request(
-    f'https://www.googleapis.com/webmasters/v3/sites/{urllib.parse.quote(SITE)}/searchAnalytics/query',
-    data=body2, method='POST'
-)
-req2.add_header('Authorization', f'Bearer {access_token}')
-req2.add_header('Content-Type', 'application/json')
 
-try:
-    resp2 = urllib.request.urlopen(req2, timeout=15)
-    result2 = json.loads(resp2.read())
-    rows2 = result2.get('rows', [])
-    if rows2:
-        print(f'\n🌍 按国家/地区：')
-        for r in rows2:
-            print(f"  {r['keys'][0]:<20} 点击:{r.get('clicks',0):<5} 展示:{r.get('impressions',0):<7} 排名:{r.get('position',0):.1f}")
-except urllib.error.HTTPError as e:
-    print(f'错误: {e.code} - {e.read().decode()}')
+# 1) 热门查询词
+rows = query(["query"], 25, "query")
+print('\n🔤 热门查询词：')
+for r in rows:
+    print(f"  {r['keys'][0]:<45} 点击:{r.get('clicks',0):<5} 展示:{r.get('impressions',0):<7} 排名:{r.get('position',0):.1f}")
+
+# 2) 按国家
+rows = query(["country"], 25, "country")
+print('\n🌍 按国家/地区：')
+for r in rows:
+    print(f"  {r['keys'][0]:<20} 点击:{r.get('clicks',0):<5} 展示:{r.get('impressions',0):<7} 排名:{r.get('position',0):.1f}")
+
+# 3) 按页面
+rows = query(["page"], 40, "page")
+print('\n📄 按页面（点击排序）：')
+for r in sorted(rows, key=lambda x: -x.get("clicks", 0))[:20]:
+    print(f"  {r.get('clicks',0):>3}点击 {r.get('impressions',0):>5}展示 {r.get('position',0):5.1f}位  {r['keys'][0]}")

@@ -158,7 +158,7 @@
 
         <!-- What is a bridge -->
         <h2 id="que-es-puente">Qué es un puente cross-chain y por qué existen</h2>
-        <p>Imagina que cada blockchain es un país con su propia moneda. Ethereum es Estados Unidos (USD), Arbitrum es Canadá (CAD) y Polygon es México (MXN). Puedes tener dólares en Estados Unidos, pero no puedes gastarlos directamente en una tienda de Canadá. Necesitas cambiar dólares por dólares canadienses. Un puente cross-chain hace exactamente eso: <strong>te permite "cambiar" tus tokens de una blockchain por su equivalente en otra</strong>.</p>
+        <p>Imagina que cada <a href="/articulos/blockchain-explicacion-sencilla.html">blockchain</a> es un país con su propia moneda. Ethereum es Estados Unidos (USD), Arbitrum es Canadá (CAD) y Polygon es México (MXN). Puedes tener dólares en Estados Unidos, pero no puedes gastarlos directamente en una tienda de Canadá. Necesitas cambiar dólares por dólares canadienses. Un puente cross-chain hace exactamente eso: <strong>te permite "cambiar" tus tokens de una blockchain por su equivalente en otra</strong>.</p>
 
         <p>Técnicamente, el mecanismo más común funciona así: depositas 1 ETH en el contrato del puente en Ethereum. El puente bloquea ese ETH y emite 1 ETH "wrapped" o sintético en Arbitrum. Ese ETH en Arbitrum está respaldado 1:1 por el ETH que bloqueaste en Ethereum. Cuando quieras volver, quemas (destruyes) el ETH sintético en Arbitrum y el puente libera tu ETH original en Ethereum. Es un sistema de <strong>lock-and-mint</strong> (bloquear y emitir) o su inverso, <strong>burn-and-release</strong> (quemar y liberar).</p>
 
@@ -229,10 +229,10 @@
 
         <!-- Tutorial -->
         <h2 id="tutorial-bridge">Tutorial paso a paso: mover ETH de Ethereum a Arbitrum</h2>
-        <p>Este es el caso más común para cualquiera que esté empezando en DeFi: tienes ETH en la red principal de Ethereum y quieres moverlo a Arbitrum para operar con comisiones más baratas en GMX, Uniswap o Aave. Vamos a hacerlo con Stargate:</p>
+        <p>Este es el caso más común para cualquiera que esté empezando en DeFi: tienes ETH en la red principal de Ethereum y quieres moverlo a Arbitrum para operar con comisiones más baratas en GMX, <a href="/articulos/como-usar-uniswap.html">Uniswap</a> o Aave. Vamos a hacerlo con Stargate:</p>
 
         <ol>
-            <li><strong>Prepara tu wallet:</strong> Asegúrate de tener MetaMask instalada y configurada con fondos. Necesitas ETH en Ethereum mainnet para pagar el gas del bridge, más los tokens que quieras transferir. Conecta tu wallet a <strong>stargate.finance</strong> — verifica siempre que estás en la URL oficial. Los sitios falsos de puentes son una estafa recurrente.</li>
+            <li><strong>Prepara tu wallet:</strong> Asegúrate de tener <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> instalada y configurada con fondos. Necesitas ETH en Ethereum mainnet para pagar el gas del bridge, más los tokens que quieras transferir. Conecta tu wallet a <strong>stargate.finance</strong> — verifica siempre que estás en la URL oficial. Los sitios falsos de puentes son una estafa recurrente.</li>
             <li><strong>Selecciona las cadenas:</strong> En el panel de "Transfer", selecciona <strong>Ethereum</strong> como cadena de origen (From) y <strong>Arbitrum</strong> como cadena de destino (To). Stargate detecta automáticamente la red a la que está conectada tu wallet.</li>
             <li><strong>Elige el token y el monto:</strong> Selecciona ETH como el token a transferir. Ingresa la cantidad. La interfaz te mostrará cuántos ETH recibirás en Arbitrum después de todas las comisiones. Revisa este número cuidadosamente — es lo que realmente llegará a tu wallet.</li>
             <li><strong>Revisa los detalles:</strong> Stargate te muestra un desglose de costos: gas fee en la cadena de origen (Ethereum, típicamente $5-15), comisión del protocolo (0.06% del monto para la mayoría de transfers), y gas estimado en destino. El costo total para un bridge de $1,000 en ETH suele rondar los $8-15.</li>
