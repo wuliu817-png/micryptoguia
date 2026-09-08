@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Binance no te deja retirar? Te explicamos las causas más comunes (verificación pendiente, dirección nueva, saldo en Earn, límites, revisión de seguridad) y qué hacer paso a paso.">
+    <meta name="keywords" content="binance no me deja retirar, binance retiro bloqueado, binance no puedo retirar, retiro binance suspendido, whitelist binance, verificación binance">
+    <meta name="author" content="MiCryptoGuía">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#080b16">
+    <link rel="canonical" href="https://micryptoguia.com/articulos/binance-no-deja-retirar/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Binance no me deja retirar: causas y qué revisar paso a paso — MiCryptoGuía">
+    <meta property="og:description" content="Causas más comunes de un retiro bloqueado en Binance y qué revisar en cada caso, de la verificación a la revisión de seguridad.">
+    <meta property="og:url" content="https://micryptoguia.com/articulos/binance-no-deja-retirar/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es">
+    <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://micryptoguia.com/img/og-image.svg">
+
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>Binance no me deja retirar: causas y qué revisar paso a paso</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Binance no me deja retirar: causas y qué revisar paso a paso",
+      "description": "Causas más comunes de un retiro bloqueado en Binance y qué revisar en cada caso, de la verificación pendiente a la revisión de seguridad.",
+      "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
+      "datePublished": "2026-09-08",
+      "dateModified": "2026-09-08",
+      "inLanguage": "es",
+      "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuánto tarda en levantarse el bloqueo de retiros en Binance?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la causa. Los bloqueos automáticos por seguridad (cambio de contraseña, 2FA o dispositivo) suelen durar entre 24 y 48 horas. Si falta completar la verificación, se levanta en cuanto la terminas. Una revisión de riesgo o cumplimiento no tiene un plazo fijo: depende del caso y de los documentos que debas aportar." } },
+        { "@type": "Question", "name": "¿Puedo retirar a una dirección nueva de inmediato?", "acceptedAnswer": { "@type": "Answer", "text": "Si tienes activada la lista blanca de retiros, una dirección nueva pasa por un periodo de espera antes de poder usarse, normalmente de 24 horas y a veces de 48 o 72 según la configuración. Sin lista blanca, la dirección nueva suele poder usarse de inmediato, pero pierdes esa capa de seguridad." } },
+        { "@type": "Question", "name": "¿Binance puede congelar mi cuenta sin avisar?", "acceptedAnswer": { "@type": "Answer", "text": "En la mayoría de los casos Binance envía una notificación o un correo indicando el motivo y la acción necesaria. Si notas un bloqueo sin haber recibido nada, revisa primero las notificaciones y el correo asociado a la cuenta, y después contacta con el soporte oficial." } },
+        { "@type": "Question", "name": "¿Perderé mis fondos si no puedo retirar?", "acceptedAnswer": { "@type": "Answer", "text": "No poder retirar no significa que los fondos se hayan perdido. La mayoría de las restricciones son temporales y el saldo sigue en la cuenta. Solo en casos poco frecuentes, como un embargo judicial o una revisión de fondos ilícitos, la situación es distinta y debes tratarla con el soporte oficial." } }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">₿</span>
+                <span>Mi<span class="logo-accent">Crypto</span>Guía</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="/#fundamentos" class="nav-link">Fundamentos</a></li>
+                <li><a href="/#guias" class="nav-link">Guías</a></li>
+                <li><a href="/#exchanges" class="nav-link active">Exchanges</a></li>
+                <li><a href="/#wallets" class="nav-link">Wallets</a></li>
+                <li><a href="/#defi" class="nav-link">DeFi</a></li>
+                <li><a href="/#seguridad" class="nav-link">Seguridad</a></li>
+                <li><a href="/#glosario" class="nav-link">Glosario</a></li>
+                <li><a href="/#herramientas" class="nav-link">Herramientas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+            <a href="../../">Inicio</a> &raquo;
+            <a href="../../#exchanges">Exchanges</a> &raquo;
+            <span>Binance no me deja retirar</span>
+        </nav>
+
+        <h1>Binance no me deja retirar: causas y qué revisar paso a paso</h1>
+        <div class="article-meta">
+            <span>💸 Retiros</span>
+            <span>⏱️ 8 min lectura</span>
+            <span>📅 Actualizado: septiembre 2026</span>
+            <span>🌱 Principiante</span>
+        </div>
+
+        <p>Que Binance no te deje retirar no significa que tu cuenta esté bloqueada ni que los fondos estén en riesgo. La mayoría de las restricciones tienen una causa concreta —una verificación pendiente, una dirección nueva en periodo de espera, saldo apartado en Earn, un límite diario o una revisión de seguridad— y una forma directa de resolverla.</p>
+
+        <p>Aquí verás cómo identificar qué tipo de bloqueo tienes, qué revisar en cada caso y cuándo conviene contactar con el soporte. Lo importante es no entrar en pánico ni dar tus datos a nadie que prometa «desbloquear» tu cuenta por fuera de Binance.</p>
+
+        <div class="highlight-box">
+            <p style="margin:0 0 10px 0;font-weight:700;color:var(--text-primary);">En 30 segundos</p>
+            <ul style="margin:0;padding-left:18px;color:var(--text-secondary);">
+                <li><strong>No suele ser grave:</strong> no poder retirar casi nunca significa cuenta bloqueada ni fondos perdidos.</li>
+                <li><strong>La causa más común:</strong> verificación pendiente, dirección nueva en periodo de espera, saldo en Earn u órdenes abiertas, o un límite.</li>
+                <li><strong>Lee el mensaje exacto:</strong> el error y las notificaciones casi siempre indican el motivo y qué hacer.</li>
+                <li><strong>Si hay cuenta atrás, espera;</strong> si piden documentos, envíalos; si no ves motivo, contacta el soporte oficial.</li>
+            </ul>
+        </div>
+
+        <p style="margin: 20px 0 0 0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces de esta página son de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto no cambia las conclusiones del artículo. <a href="../../sobre.html" style="color:var(--accent);">Más información →</a></p>
+
+        <h2>Antes de nada: identifica qué tipo de bloqueo ves</h2>
+        <p>«No me deja retirar» cubre situaciones muy distintas, y cada una se resuelve de una forma. Empieza por situarte en una de estas tres:</p>
+        <div style="overflow-x:auto;margin:20px 0;">
+            <table style="width:100%;border-collapse:collapse;border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Lo que ves</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Causa probable</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Empieza por</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">El botón de retirar está en gris, o la operación se rechaza con un mensaje</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Verificación incompleta, saldo en Earn u órdenes, dirección en espera, límite</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Motivos 1 a 4</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">El retiro queda «procesando» y no avanza</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Mantenimiento de red o espera de confirmación</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Motivo 5</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Aparece un aviso de «cuenta restringida», un periodo de espera o te piden documentos</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Revisión de seguridad o de cumplimiento</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Motivos 6 y 7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Motivo 1: verificación de identidad pendiente o caducada</h2>
+        <p>Si tu <a href="/articulos/verificacion-kyc-exchanges.html">verificación de identidad (KYC)</a> está pendiente, incompleta o caducó, Binance puede limitar o bloquear los retiros hasta que la completes. Es la primera cosa que debes descartar.</p>
+        <p>Entra al apartado de verificación de identidad de tu cuenta y comprueba el estado. Si te pide renovar un documento o repetir la verificación facial, hazlo: en cuanto se apruebe, el retiro suele quedar habilitado de nuevo.</p>
+
+        <h2>Motivo 2: dirección de retiro nueva (lista blanca y periodo de espera)</h2>
+        <p>Si tienes activada la <strong>lista blanca de retiros</strong>, toda dirección nueva pasa por un periodo de espera antes de poder usarse. Según la configuración, ese periodo suele ser de <strong>24 horas</strong>, aunque puede ser de 48 o 72 horas según el ajuste que hayas elegido.</p>
+        <p>También ocurre al revés: si acabas de modificar la lista blanca o de desactivarla, los retiros pueden quedar suspendidos temporalmente por ese mismo motivo. En ambos casos no es un fallo: es la capa de seguridad funcionando, y se resuelve solo al terminar el periodo.</p>
+        <div class="warning-box">
+            <p class="warning-box__title">⚠️ No lo confundas con un bloqueo</p>
+            <p>Si la dirección aparece pero el retiro no sale, mira si hay una cuenta atrás o un aviso de espera. Eso no es una cuenta bloqueada: es el periodo de seguridad de la lista blanca.</p>
+        </div>
+
+        <h2>Motivo 3: saldo apartado en Earn, staking u órdenes abiertas</h2>
+        <p>Un motivo muy común que parece un error es este: ves tu saldo, pero al intentar retirar te dice que no hay fondos suficientes. Suele pasar porque parte de tu USDT está en <strong>Earn</strong> (el producto de ahorro flexible), en una <strong>orden de compra o venta abierta</strong>, o en <strong>staking</strong>. Ese saldo no está disponible para retirar hasta que lo muevas de vuelta a la cartera spot.</p>
+        <p>Comprueba tu cartera de Earn y tus órdenes abiertas, y canjea o cancela lo que necesites antes de volver a intentarlo. Si no estás seguro de cómo funcionan estos productos, repasa <a href="/articulos/como-hacer-staking.html">cómo funciona el staking y el Earn</a>.</p>
+
+        <h2>Motivo 4: límite diario de retiro</h2>
+        <p>Cada cuenta tiene un límite de retiro que depende del nivel de verificación. Si intentas retirar más de lo permitido, la operación se rechaza. El límite concreto aparece en tu propia cuenta, en el apartado de retiros o de verificación: no hay una cifra fija igual para todos.</p>
+        <p>Si necesitas retirar más, suele bastar con completar un nivel de verificación superior. Comprueba qué nivel tienes y qué te falta para subirlo.</p>
+
+        <h2>Motivo 5: la red o el activo está en mantenimiento</h2>
+        <p>A veces Binance pausa temporalmente los retiros de una red o un activo concreto por mantenimiento o por congestión. Si te aparece un aviso de mantenimiento o suspensión, normalmente es temporal y se indica la fecha estimada de reanudación.</p>
+        <p>Una opción si tienes prisa es retirar por otra red compatible con el destino, pero solo si el destino la admite: elige la red que coincide con el destino, no la más barata. Si no estás seguro, revisa <a href="/articulos/usdt-no-llega-causas-soluciones/">qué puede fallar al enviar USDT</a> antes de improvisar.</p>
+
+        <h2>Motivo 6: bloqueo temporal por seguridad</h2>
+        <p>Cambiar la contraseña, restablecer el 2FA, entrar desde un dispositivo nuevo o modificar el correo suele activar una suspensión temporal de retiros por seguridad, normalmente de <strong>24 a 48 horas</strong>. Es una medida automática y, en general, no se puede levantar antes: hay que esperar a que termine el periodo.</p>
+        <p>Por eso conviene no cambiar credenciales justo antes de necesitar retirar. Para entender qué configuraciones reducen el riesgo de bloqueos, revisa las <a href="/articulos/seguridad-criptomonedas.html">reglas básicas de seguridad</a>.</p>
+
+        <h2>Motivo 7: revisión de riesgo o requisitos de cumplimiento</h2>
+        <p>Si hiciste un depósito o retiro inusual, o si el equipo de cumplimiento necesita revisar el origen de tus fondos, la cuenta puede entrar en una revisión y los retiros quedan congelados hasta que aportes lo que te pidan: comprobante de fondos, extractos, o una declaración del origen.</p>
+        <p>En la Unión Europea, los exchanges están sujetos a requisitos de prevención de blanqueo y a la normativa MiCA, lo que puede traducirse en más comprobaciones sobre el origen de los fondos antes de permitir ciertas operaciones. Antes de abrir una cuenta, conviene verificar en el registro oficial (CNMV o ESMA) la situación actual de la plataforma en tu país. En América Latina, MiCA no aplica y Binance y OKX operan con normalidad.</p>
+        <div class="warning-box">
+            <p class="warning-box__title">⚠️ Solo canales oficiales</p>
+            <p>Cualquier persona o web que te prometa «desbloquear» o «acelerar» un retiro a cambio de datos, claves o un pago es una estafa. La única vía es el soporte oficial de Binance.</p>
+        </div>
+
+        <h2>Cómo saber exactamente qué pasa</h2>
+        <p>En lugar de probar cosas al azar, sigue este orden:</p>
+        <ol>
+            <li><strong>Lee el mensaje de error exacto.</strong> El texto del botón o del aviso casi siempre nombra el motivo.</li>
+            <li><strong>Revisa las notificaciones y el correo.</strong> Binance suele enviar un aviso con la causa y la acción necesaria.</li>
+            <li><strong>Comprueba el estado de verificación</strong> de la cuenta.</li>
+            <li><strong>Revisa Earn, órdenes abiertas, lista blanca y límites.</strong></li>
+            <li>Si hay una <strong>cuenta atrás</strong>, espera a que termine. Si piden <strong>documentos</strong>, envíalos. Si no ves ningún motivo, pasa al siguiente punto.</li>
+        </ol>
+
+        <h2>Cuándo y cómo contactar con el soporte</h2>
+        <p>Si descartaste los motivos anteriores y el retiro sigue bloqueado, contacta con el soporte oficial desde la propia app o web (nunca por Telegram o enlaces que te pasen por mensaje). Prepara esta información para agilizar:</p>
+        <ul>
+            <li>El <strong>correo asociado</strong> a la cuenta.</li>
+            <li>Una <strong>captura del error</strong> o del aviso que ves.</li>
+            <li>Qué intentabas retirar: <strong>activo, red y cantidad</strong>.</li>
+            <li>Si hay una <strong>cuenta atrás</strong> o un aviso de revisión.</li>
+        </ul>
+        <p>Cuanto más exacto sea el mensaje que reportes, más rápido podrán indicarte de qué equipo depende la restricción y qué falta para resolverla.</p>
+
+        <h2>Qué hacer si sigue bloqueado</h2>
+        <p>Si el bloqueo viene de una revisión de cumplimiento, puede existir un flujo de apelación dentro del propio apartado de retiros. Aporta lo que te pidan y espera la respuesta: estos casos no tienen un plazo fijo y dependen de cada revisión.</p>
+        <p>Si el bloqueo es por seguridad y solo muestra una cuenta atrás, no hay forma de saltárselo: espera. Y recuerda la regla de oro del punto anterior: nadie por fuera de Binance puede acelerarlo, y quien te lo prometa quiere tus fondos.</p>
+
+        <h2>Checklist para evitar bloqueos la próxima vez</h2>
+        <ol>
+            <li><strong>Completa la verificación</strong> antes de necesitar retirar.</li>
+            <li><strong>No cambies contraseña ni 2FA</strong> justo antes de un retiro.</li>
+            <li><strong>Ten el saldo en la cartera spot</strong>, no apartado en Earn ni en órdenes.</li>
+            <li><strong>Añade las direcciones a la lista blanca con antelación</strong> y deja pasar el periodo de espera.</li>
+            <li><strong>Revisa el límite y la red</strong> antes de confirmar.</li>
+            <li>Para montos grandes, <a href="/articulos/como-enviar-recibir-cripto.html">prueba primero con una cantidad pequeña</a>.</li>
+        </ol>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <h2>Preguntas frecuentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Cuánto tarda en levantarse el bloqueo de retiros en Binance?</div>
+                <div class="faq-item__answer">
+                    <p>Depende de la causa. Los bloqueos automáticos por seguridad (cambio de contraseña, 2FA o dispositivo) suelen durar entre 24 y 48 horas. Si falta completar la verificación, se levanta en cuanto la terminas. Una revisión de riesgo o cumplimiento no tiene un plazo fijo: depende del caso y de los documentos que debas aportar.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Puedo retirar a una dirección nueva de inmediato?</div>
+                <div class="faq-item__answer">
+                    <p>Si tienes activada la lista blanca de retiros, una dirección nueva pasa por un periodo de espera antes de poder usarse, normalmente de 24 horas y a veces de 48 o 72 según la configuración. Sin lista blanca, la dirección nueva suele poder usarse de inmediato, pero pierdes esa capa de seguridad.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Binance puede congelar mi cuenta sin avisar?</div>
+                <div class="faq-item__answer">
+                    <p>En la mayoría de los casos Binance envía una notificación o un correo indicando el motivo y la acción necesaria. Si notas un bloqueo sin haber recibido nada, revisa primero las notificaciones y el correo asociado a la cuenta, y después contacta con el soporte oficial.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Perderé mis fondos si no puedo retirar?</div>
+                <div class="faq-item__answer">
+                    <p>No poder retirar no significa que los fondos se hayan perdido. La mayoría de las restricciones son temporales y el saldo sigue en la cuenta. Solo en casos poco frecuentes, como un embargo judicial o una revisión de fondos ilícitos, la situación es distinta y debes tratarla con el soporte oficial.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <h2>Artículos relacionados</h2>
+        <ul>
+            <li><a href="/articulos/verificacion-kyc-exchanges.html">Verificación KYC en Exchanges</a> — cómo completarla y por qué la piden.</li>
+            <li><a href="/articulos/como-vender-cripto-retirar-banco.html">Cómo Vender Cripto y Retirar al Banco</a> — el proceso normal de retiro, para cuando ya esté habilitado.</li>
+            <li><a href="/articulos/usdt-no-llega-causas-soluciones/">Mi transferencia de USDT no llega: causas y soluciones</a> — si el retiro ya salió pero no aparece en el destino.</li>
+            <li><a href="/articulos/como-enviar-recibir-cripto.html">Cómo Enviar y Recibir Criptomonedas</a> — para no equivocarte al transferir.</li>
+            <li><a href="/articulos/seguridad-criptomonedas.html">10 Reglas de Seguridad Crypto</a> — evita bloqueos y estafas antes de operar.</li>
+            <li><a href="/articulos/como-hacer-staking.html">Cómo Funciona el Staking y el Earn</a> — por qué parte de tu saldo puede estar apartado.</li>
+        </ul>
+
+        <!-- Sources -->
+        <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
+            <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
+            <ul style="list-style:none;padding:0;margin:0;">
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.binance.com/es-MX/support/faq/detail/1d08944f103b4fc78d3519913b600086" target="_blank" rel="noopener" style="color:var(--accent);">Binance — Cómo gestionar los ajustes de retiros</a></li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.binance.com/en-AE/support/faq/detail/360038583951" target="_blank" rel="noopener" style="color:var(--accent);">Binance — How to Reactivate the Withdrawal Function</a></li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.binance.com/en/support/faq/detail/f36339596002454a9eb2a2228b2695f7" target="_blank" rel="noopener" style="color:var(--accent);">Binance — Why Do I Need to Complete Identity Verification</a></li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.binance.com/en/support" target="_blank" rel="noopener" style="color:var(--accent);">Binance Support — Centro de ayuda oficial</a></li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-card">
+            <h2>Regístrate con comisiones reducidas</h2>
+            <p>Usa un código de referido y obtén un 20% de descuento en comisiones de trading de por vida. Recuerda la región: <strong>OKX</strong> opera con licencia MiCA en la UE y también en Latinoamérica; <strong>Binance</strong> es la opción más líquida en Latinoamérica.</p>
+            <div class="cta-buttons">
+                <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
+                <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
+            </div>
+            <p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 MiCryptoGuía. Todos los derechos reservados. Contenido educativo — no es asesoramiento financiero. &nbsp;|&nbsp; <a href="/politica-editorial.html">Política editorial</a> &nbsp;|&nbsp; <a href="/politica-de-correcciones.html">Correcciones</a> &nbsp;|&nbsp; <a href="/privacidad.html">Privacidad</a> &nbsp;|&nbsp; <a href="/terminos.html">Términos</a> &nbsp;|&nbsp; <a href="/sitemap.html">Mapa del Sitio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            var theme = localStorage.getItem('micryptoguia-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.getElementById('themeToggle').addEventListener('click', function(){
+                var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+                localStorage.setItem('micryptoguia-theme', t);
+            });
+            document.querySelectorAll('.faq-item__question').forEach(function(q){
+                q.addEventListener('click', function(){
+                    this.parentElement.classList.toggle('open');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
