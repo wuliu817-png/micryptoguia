@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yield farming crypto explicado para principiantes: qué es, cómo funciona, mejores plataformas (Aave, Compound, Curve), riesgos y cómo empezar a ganar en 2026.">
-    <meta name="keywords" content="yield farming, yield farming crypto, qué es yield farming, DeFi principiantes, liquidity pools, impermanent loss, Aave, Compound, Curve, APY vs APR">
+    <meta name="description" content="Qué es el yield farming y en qué se diferencia del lending, el staking y la provisión de liquidez. De dónde sale el rendimiento y por qué el APY no es ganancia neta.">
+    <meta name="keywords" content="yield farming, yield farming crypto, qué es yield farming, DeFi, lending vs staking, liquidity pools, impermanent loss, Aave, Compound, Curve, APY vs APR">
     <meta name="author" content="MiCryptoGuía">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#080b16">
     <link rel="canonical" href="https://micryptoguia.com/articulos/yield-farming.html">
 
-    <meta property="og:title" content="Yield Farming Crypto | Guía Completa para Principiantes 2026 — MiCryptoGuía">
-    <meta property="og:description" content="Aprende qué es el yield farming, cómo funcionan los liquidity pools, los riesgos reales y cómo empezar en plataformas como Aave, Compound y Curve.">
+    <meta property="og:title" content="Yield Farming en Criptomonedas: Qué Es y en Qué se Diferencia del Lending, Staking y LP — MiCryptoGuía">
+    <meta property="og:description" content="Qué es el yield farming y en qué se diferencia del lending, el staking y la provisión de liquidez. De dónde sale el rendimiento y por qué el APY no es ganancia neta.">
     <meta property="og:url" content="https://micryptoguia.com/articulos/yield-farming.html">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es">
@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Yield Farming Crypto | Guía Completa para Principiantes 2026</title>
+    <title>Yield Farming en Criptomonedas: Qué Es, Cómo Funciona y Riesgos (2026)</title>
 
     <script type="application/ld+json">
     {
@@ -36,11 +36,11 @@
         {
           "@type": "Article",
           "@id": "https://micryptoguia.com/articulos/yield-farming.html#article",
-          "headline": "Yield Farming Crypto | Guía Completa para Principiantes 2026",
-          "description": "Aprende qué es el yield farming, cómo funcionan los liquidity pools, los riesgos reales y cómo empezar en plataformas como Aave, Compound y Curve.",
+          "headline": "Yield Farming en Criptomonedas: Qué Es y en Qué se Diferencia del Lending, Staking y LP",
+          "description": "Qué es el yield farming y en qué se diferencia del lending, el staking y la provisión de liquidez. De dónde sale el rendimiento y por qué el APY no es ganancia neta.",
           "inLanguage": "es",
           "datePublished": "2026-08-02",
-          "dateModified": "2026-08-23",
+          "dateModified": "2026-09-08",
           "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "publisher": { "@id": "https://micryptoguia.com/#organization" },
           "isPartOf": { "@id": "https://micryptoguia.com/#website" },
@@ -59,12 +59,12 @@
           "@type": "FAQPage",
           "@id": "https://micryptoguia.com/articulos/yield-farming.html#faq",
           "mainEntity": [
-            { "@type": "Question", "name": "¿Qué es yield farming en criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "El yield farming (agricultura de rendimiento) es una estrategia DeFi donde depositas criptomonedas en protocolos descentralizados para generar rendimientos. Funcionas como un 'banco descentralizado': prestas tus fondos a un liquidity pool y recibes intereses más tokens de gobernanza como recompensa. Es una de las formas más populares de generar ingresos pasivos en el ecosistema cripto." } },
-            { "@type": "Question", "name": "¿Cuál es la diferencia entre APY y APR?", "acceptedAnswer": { "@type": "Answer", "text": "APR (Tasa de Porcentaje Anual) es el interés simple que ganas sin contar el interés compuesto. APY (Rendimiento Porcentual Anual) incluye el efecto del interés compuesto —las ganancias que generan nuevas ganancias—. En yield farming, el APY casi siempre es mayor que el APR porque los protocolos asumen que reinviertes tus ganancias. Un 50% APR puede convertirse en un 65% APY si capitalizas diariamente." } },
-            { "@type": "Question", "name": "¿Qué es el impermanent loss?", "acceptedAnswer": { "@type": "Answer", "text": "La pérdida impermanente (impermanent loss) ocurre cuando depositas tokens en un liquidity pool y el precio relativo entre ellos cambia. Si uno de los tokens sube o baja mucho respecto al otro, el valor de tu posición en el pool puede ser menor que si simplemente hubieras mantenido los tokens en tu wallet. Se llama 'impermanente' porque la pérdida solo se materializa si retiras los fondos mientras existe la diferencia de precio; si los precios vuelven a su nivel original, la pérdida desaparece." } },
-            { "@type": "Question", "name": "¿Es seguro el yield farming?", "acceptedAnswer": { "@type": "Answer", "text": "El yield farming conlleva riesgos significativos: riesgo de smart contract (errores en el código que permiten hackeos), impermanent loss, rug pulls (estafas donde los desarrolladores huyen con los fondos), riesgo de plataforma y riesgo de volatilidad del activo subyacente. En plataformas consolidadas como Aave y Compound, el riesgo de smart contract es menor porque han sido auditadas exhaustivamente. Nunca inviertas más de lo que estés dispuesto a perder." } },
-            { "@type": "Question", "name": "¿Cuánto dinero necesito para hacer yield farming?", "acceptedAnswer": { "@type": "Answer", "text": "Técnicamente puedes empezar con cantidades muy pequeñas (10-50 USD), pero las comisiones de gas en Ethereum pueden comerse tus ganancias si inviertes poco. Con 500-1.000 USD en redes como Arbitrum, Polygon o Solana (donde las comisiones son mucho más bajas) puedes obtener resultados razonables. En Ethereum mainnet, necesitas al menos 2.000-5.000 USD para que las comisiones no devoren tus rendimientos." } },
-            { "@type": "Question", "name": "¿Qué plataforma es mejor para empezar en yield farming?", "acceptedAnswer": { "@type": "Answer", "text": "Para principiantes, la opción más recomendable es Aave por su simplicidad y seguridad. Solo depositas un activo y empiezas a ganar intereses, sin necesidad de crear pares de liquidez. Luego puedes explorar Curve para stablecoins (bajo riesgo de impermanent loss) y Uniswap para pares más avanzados. Empieza siempre con pequeñas cantidades hasta que entiendas bien el funcionamiento de cada plataforma." } }
+            { "@type": "Question", "name": "¿Qué es yield farming en criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "El yield farming suele referirse a estrategias DeFi que buscan rendimiento moviendo capital entre pools, incentivos o protocolos. Es más una estrategia que una mecánica única: combina lending, provisión de liquidez y emisión de tokens. No todo lending ni todo staking debe llamarse automáticamente yield farming." } },
+            { "@type": "Question", "name": "¿Cuál es la diferencia entre APY y APR?", "acceptedAnswer": { "@type": "Answer", "text": "El APR es el interés simple, sin contar la reinversión. El APY incorpora una hipótesis de reinversión; el APR no. El valor mostrado no garantiza que obtengas ese rendimiento neto, porque depende de las comisiones, el precio del reward token y otros factores." } },
+            { "@type": "Question", "name": "¿Qué es el impermanent loss?", "acceptedAnswer": { "@type": "Answer", "text": "Es la diferencia entre mantener los activos dentro de una posición de liquidez y simplemente holdearlos, cuando cambia el precio relativo entre ellos. Se llama impermanente porque la diferencia puede reducirse si los precios vuelven a acercarse, pero la pérdida económica relativa existe mientras la posición está desbalanceada." } },
+            { "@type": "Question", "name": "¿Es seguro el yield farming?", "acceptedAnswer": { "@type": "Answer", "text": "Conlleva riesgos significativos: smart contract, impermanent loss, depeg de stablecoins y riesgo de protocolo. Los protocolos con mayor trayectoria y auditorías ofrecen más información para evaluar el riesgo, pero no eliminan la posibilidad de fallos." } },
+            { "@type": "Question", "name": "¿Cuánto dinero necesito para hacer yield farming?", "acceptedAnswer": { "@type": "Answer", "text": "No existe un monto mínimo económico universal. Compara el coste de entrada, salida y gas con el importe que vas a depositar. En redes con comisiones altas, un depósito pequeño puede quedar anulado por las comisiones." } },
+            { "@type": "Question", "name": "¿Qué plataforma es mejor para empezar en yield farming?", "acceptedAnswer": { "@type": "Answer", "text": "Aave utiliza un modelo de lending de un solo activo, mientras que Curve y Uniswap implican estructuras de pool distintas. Qué resulta más fácil depende de qué mecánica quieras aprender, no de un ranking de plataformas." } }
           ]
         }
       ]
@@ -129,286 +129,273 @@
                 <div class="article-meta">
                     <span>🌾 DeFi</span>
                     <span>⚡ Intermedio</span>
-                    <span>⏱️ 10 min lectura</span>
-                    <span>📅 23 Ago 2026</span>
+                    <span>⏱️ 11 min lectura</span>
+                    <span>📅 8 Sep 2026</span>
                 </div>
-                <h1 class="article-title"><span class="gradient-text">Yield Farming</span> en Criptomonedas: Guía Completa para Principiantes</h1>
-                <p class="article-subtitle">Descubre cómo funciona la agricultura de rendimiento en DeFi, cuánto puedes ganar, los riesgos reales (incluido el impermanent loss) y las mejores plataformas para empezar en 2026.</p>
+                <h1 class="article-title"><span class="gradient-text">Yield Farming</span>: Qué Es y en Qué se Diferencia del Lending, Staking y LP</h1>
+                <p class="article-subtitle">Qué es realmente el yield farming, en qué se diferencia del lending, el staking y la provisión de liquidez, de dónde sale el rendimiento y por qué el APY no se debe leer como ganancia neta.</p>
             </header>
 
             <div class="article-content">
-                <p><strong>El yield farming —o agricultura de rendimiento— es una estrategia DeFi donde depositas criptomonedas en protocolos descentralizados para generar rendimientos pasivos.</strong> Funcionas como un banco descentralizado: prestas tus fondos a liquidity pools que otros usuarios utilizan para hacer swaps o pedir préstamos, y a cambio recibes intereses y, a menudo, tokens de gobernanza adicionales como recompensa. <strong>En esta guía encontrarás qué es, cómo funcionan los liquidity pools, las mejores plataformas para empezar y los riesgos que nadie te cuenta.</strong></p>
+                <p><strong>El yield farming suele referirse a estrategias DeFi que buscan rendimiento moviendo capital entre pools, incentivos o protocolos.</strong> No todo lending en Aave ni todo staking debe llamarse automáticamente yield farming. En esta guía verás qué significa realmente el término, en qué se diferencia de otras formas de generar rendimiento y de dónde sale ese APY que aparece en pantalla.</p>
 
             </div>
 
             <div class="speed-read">
-                <h3>⚠️ El dato que debería hacerte reflexionar</h3>
-                <p>En 2022, el protocolo DeFi Wormhole fue hackeado por <strong>326 millones de dólares</strong>. En 2023, Euler Finance perdió 197 millones en otro exploit. No son casos aislados: en 2022-2024, los hackeos en DeFi superaron los <strong>5.000 millones de dólares acumulados</strong>. El yield farming puede ser muy rentable, pero también es una de las actividades más arriesgadas del ecosistema cripto. Esta guía te enseña a navegar esas aguas con los ojos abiertos, no con los ojos vendados.</p>
+                <h3>⚠️ Antes de empezar</h3>
+                <p>DeFi ha sufrido exploits importantes en distintos años: una auditoría o una marca conocida <strong>no elimina el riesgo técnico</strong>. El yield farming tampoco es una sola cosa: combina lending, provisión de liquidez y emisión de tokens. Entender de dónde sale el rendimiento es el primer paso antes de depositar fondos.</p>
             </div>
 
             <nav class="toc" aria-label="Tabla de contenidos">
                 <h3>📑 Tabla de Contenidos</h3>
                 <ol>
-                    <li><a href="#que-es">¿Qué es el yield farming y cómo funciona?</a></li>
-                    <li><a href="#liquidity-pools">Liquidity Pools: el motor del yield farming</a></li>
-                    <li><a href="#apy-vs-apr">APY vs APR: entiende lo que realmente ganas</a></li>
-                    <li><a href="#plataformas">Las mejores plataformas: Aave, Compound y Curve</a></li>
-                    <li><a href="#paso-a-paso">Cómo hacer yield farming paso a paso en Aave</a></li>
-                    <li><a href="#riesgos">Riesgos reales: impermanent loss, smart contracts y más</a></li>
-                    <li><a href="#decision">Cómo decidir si el yield farming es para ti</a></li>
+                    <li><a href="#que-es">Qué significa realmente yield farming</a></li>
+                    <li><a href="#diferencias">Yield farming vs staking, lending y LP</a></li>
+                    <li><a href="#de-donde-sale">De dónde sale el rendimiento</a></li>
+                    <li><a href="#apy-vs-apr">APR vs APY: por qué el APY no es ganancia neta</a></li>
+                    <li><a href="#lending">Lending: ejemplo con Aave</a></li>
+                    <li><a href="#lp">Provisión de liquidez: ejemplo con Uniswap y Curve</a></li>
+                    <li><a href="#impermanent-loss">Impermanent loss explicado</a></li>
+                    <li><a href="#reward-tokens">Reward tokens y emisiones</a></li>
+                    <li><a href="#riesgos">Riesgos reales</a></li>
+                    <li><a href="#antes-de-depositar">Qué revisar antes de depositar</a></li>
+                    <li><a href="#salir">Cómo salir de una posición</a></li>
                     <li><a href="#faq">Preguntas Frecuentes</a></li>
                 </ol>
             </nav>
 
             <div class="article-content">
-                <h2 id="que-es">1. ¿Qué es el yield farming y cómo funciona?</h2>
-                <p>El yield farming es, en esencia, <strong>obtener rendimiento de tu dinero en lugar de tenerlo parado.</strong> En las finanzas tradicionales, depositas dinero en un banco y el banco te da un 0,5% anual mientras ellos ganan mucho más prestando tu dinero a otros. En DeFi, tú eliminas al intermediario y te conviertes en el banco.</p>
+                <h2 id="que-es">1. Qué significa realmente yield farming</h2>
+                <p>El término "yield farming" (agricultura de rendimiento) nació alrededor de 2020 para describir a usuarios que <strong>movían su capital de un protocolo a otro según dónde había mejores incentivos</strong>, "cosechando" rendimiento donde aparecía. No es una mecánica única, sino una estrategia que combina varias fuentes de rendimiento.</p>
 
-                <p>El proceso básico es:</p>
-                <ol>
-                    <li><strong>Depositas criptomonedas</strong> en un protocolo DeFi (como Aave, Compound o Curve).</li>
-                    <li><strong>El protocolo agrupa tus fondos</strong> con los de otros usuarios en un "liquidity pool".</li>
-                    <li><strong>Otros usuarios usan esos fondos</strong> para hacer swaps, pedir préstamos o realizar otras operaciones, pagando comisiones por ello.</li>
-                    <li><strong>Tú recibes una parte de esas comisiones</strong>, más a menudo tokens de gobernanza del protocolo como incentivo adicional.</li>
-                    <li><strong>Puedes retirar tus fondos</strong> más las ganancias cuando quieras (en la mayoría de protocolos).</li>
-                </ol>
+                <p>El problema es que el término se usa de forma laxa. Mucha gente llama "yield farming" a cualquier forma de generar rendimiento en DeFi, y eso crea confusión. A efectos prácticos conviene separar las mecánicas básicas antes de hablar de la estrategia que las combina.</p>
 
-                <p>Lo revolucionario del yield farming es que <strong>todo ocurre sin bancos, sin papeleo y sin necesidad de permiso de nadie.</strong> Solo necesitas una wallet como MetaMask y fondos en criptomonedas. Pero esa libertad también implica responsabilidad: no hay un servicio de atención al cliente al que llamar si algo sale mal.</p>
-
-                <div class="warning-box">
-                    <h4>⚠️ Esto NO es un consejo de inversión</h4>
-                    <p>Nada en este artículo constituye asesoramiento financiero. El yield farming conlleva riesgos significativos, incluida la pérdida total de tu capital. Los APYs mostrados son históricos y no garantizan rendimientos futuros. Invierte solo lo que estés dispuesto a perder.</p>
-                </div>
-
-                <h2 id="liquidity-pools">2. Liquidity Pools: el motor del yield farming</h2>
-                <p>Un liquidity pool (fondo de liquidez) es un contrato inteligente que contiene reservas de dos o más tokens. Estos pools son la columna vertebral de los exchanges descentralizados (DEX) como Uniswap y de los protocolos de préstamo como Aave.</p>
-
-                <p>Imagina un gran recipiente con dos compartimentos: uno contiene ETH y el otro contiene USDC. Cualquiera puede depositar una cantidad equivalente de ambos tokens (por ejemplo, 1.000 USD en ETH y 1.000 USDC) y convertirse en "proveedor de liquidez" (LP). A cambio, recibe tokens LP que representan su participación en el pool. Cuando otros usuarios hacen swaps entre ETH y USDC, pagan una pequeña comisión (típicamente 0,3%) que se reparte proporcionalmente entre todos los proveedores de liquidez.</p>
-
-                <p><strong>¿Por qué alguien añadiría liquidez en lugar de simplemente holdear?</strong> Porque añadiendo liquidez ganas comisiones por trading además de la posible apreciación del activo. Si el pool tiene mucho volumen de trading, las comisiones pueden ser sustanciales.</p>
+                <h2 id="diferencias">2. Yield farming vs staking, lending y LP</h2>
+                <p>Esta es la distinción más importante de toda la guía. Son cuatro cosas distintas que suelen mezclarse:</p>
 
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th>Tipo de Pool</th>
-                            <th>Cómo funciona</th>
-                            <th>Riesgo</th>
+                            <th>Mecánica</th>
+                            <th>Qué haces</th>
+                            <th>De dónde sale el rendimiento</th>
                             <th>Ejemplo</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Lending Pool</strong></td>
-                            <td>Depositas un solo activo, otros lo toman prestado pagando interés</td>
-                            <td>Bajo-Medio</td>
+                            <td><strong>Lending</strong></td>
+                            <td>Depositas un activo que otros toman prestado</td>
+                            <td>Intereses pagados por prestatarios</td>
                             <td>Aave, Compound</td>
                         </tr>
                         <tr>
-                            <td><strong>Stablecoin Pool</strong></td>
-                            <td>Depositas stablecoins (USDC, USDT, DAI) en un pool</td>
-                            <td>Bajo</td>
-                            <td>Curve</td>
+                            <td><strong>Liquidity providing (LP)</strong></td>
+                            <td>Depositas activos en un pool para swaps</td>
+                            <td>Comisiones de trading + posibles incentivos</td>
+                            <td>Uniswap, Curve</td>
                         </tr>
                         <tr>
-                            <td><strong>Par Estándar (50/50)</strong></td>
-                            <td>Depositas valor equivalente de dos tokens volátiles</td>
-                            <td>Alto (impermanent loss)</td>
-                            <td>Uniswap ETH/USDC</td>
+                            <td><strong>Staking</strong></td>
+                            <td>Bloqueas activos para la seguridad de una red PoS</td>
+                            <td>Recompensas de validación</td>
+                            <td>Redes PoS / liquid staking</td>
                         </tr>
                         <tr>
-                            <td><strong>Par Concentrado</strong></td>
-                            <td>Provees liquidez en un rango de precios específico</td>
-                            <td>Muy Alto</td>
-                            <td>Uniswap V3</td>
+                            <td><strong>Yield farming</strong></td>
+                            <td>Combinas y mueves capital entre las anteriores</td>
+                            <td>Suma de las fuentes anteriores, a menudo con emisión de tokens</td>
+                            <td>Estrategias con Aave + LP + incentivos</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h2 id="apy-vs-apr">3. APY vs APR: entiende lo que realmente ganas</h2>
-                <p>Esta es una de las confusiones más comunes y una de las formas más fáciles de dejarse engañar por números inflados.</p>
+                <p>En otras palabras: el <strong>yield farming es una estrategia, no una mecánica</strong>. Combina lending, provisión de liquidez y, con frecuencia, la recolección de tokens de incentivo, y añade el elemento de mover capital entre protocolos según dónde esté el mejor rendimiento del momento.</p>
 
-                <ul>
-                    <li><strong>APR (Annual Percentage Rate — Tasa de Porcentaje Anual):</strong> Es el interés simple que ganas, sin contar la reinversión de ganancias. Si depositas 1.000 USDC a un 12% APR, al cabo de un año tienes 1.120 USDC. Punto.</li>
-                    <li><strong>APY (Annual Percentage Yield — Rendimiento Porcentual Anual):</strong> Incluye el efecto del interés compuesto. Si esos mismos 1.000 USDC generan interés que se reinvierte diariamente, el APY será superior al 12% (concretamente, un 12,68% APY si la capitalización es diaria).</li>
-                </ul>
-
-                <p><strong>El truco sucio de muchos protocolos:</strong> Muestran APYs astronómicos (200%, 500%, 10.000%) que asumen que reinviertes tus ganancias manualmente varias veces al día. En la práctica, con las comisiones de gas, ese APY real es mucho menor. Y casi nunca es sostenible: las tasas altísimas suelen durar días o semanas, no un año entero.</p>
-
-                <div class="highlight-box">
-                    <h4>💡 Regla práctica: desconfía de APYs superiores al 20%</h4>
-                    <p>Las plataformas consolidadas como Aave y Compound ofrecen rendimientos del 2-10% en stablecoins y del 3-8% en ETH. Si ves un APY de 100% o más, casi siempre es un protocolo nuevo intentando atraer liquidez con emisión inflacionaria de su token nativo. El APY es alto, pero el token que recibes como recompensa puede valer cero en unos meses. ¿Prefieres un 5% seguro o un 500% que puede desaparecer mañana?</p>
-                </div>
-
-                <h2 id="plataformas">4. Las mejores plataformas: Aave, Compound y Curve</h2>
-
-                <h3>Aave: el estándar de los lending pools</h3>
-                <p>Aave es el protocolo de préstamos descentralizados más utilizado del ecosistema. Su funcionamiento es sencillo: depositas un activo (ETH, USDC, DAI, etc.) y automáticamente empiezas a recibir intereses pagados por los usuarios que toman prestado ese activo. No necesitas crear pares ni preocuparte por el impermanent loss porque solo depositas un token.</p>
-                <p><strong>Ideal para principiantes.</strong> Disponible en Ethereum, Arbitrum, Polygon, Optimism y Avalanche.</p>
-
-                <h3>Compound: el pionero de los lending pools</h3>
-                <p>Compound fue uno de los primeros protocolos DeFi y sigue siendo una opción sólida. Similar a Aave: depositas activos, ganas interés. La principal diferencia es la interfaz y los activos soportados. Compound suele ofrecer tasas ligeramente diferentes a Aave, por lo que vale la pena comparar antes de depositar.</p>
-
-                <h3>Curve: el rey de las stablecoins</h3>
-                <p>Curve Finance está especializado en pools de stablecoins (USDC, USDT, DAI, FRAX) y activos con precios similares (stETH/ETH). La ventaja de Curve es que el impermanent loss es prácticamente inexistente porque los activos del pool mantienen una paridad entre sí. Los rendimientos son más bajos que en otros protocolos, pero también más predecibles y seguros.</p>
+                <h2 id="de-donde-sale">3. De dónde sale el rendimiento</h2>
+                <p>Antes de fijarte en el número del APY, conviene preguntar de dónde sale. Las fuentes más comunes son estas:</p>
 
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th>Plataforma</th>
-                            <th>Tipo</th>
-                            <th>Rendimiento Típico (Stablecoins)</th>
-                            <th>Dificultad</th>
-                            <th>Mejor Para</th>
+                            <th>Fuente</th>
+                            <th>Ejemplo</th>
+                            <th>Qué debes revisar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Aave</strong></td>
-                            <td>Lending</td>
-                            <td>2-8% APY</td>
-                            <td>Baja</td>
-                            <td>Empezar en DeFi sin complicaciones</td>
+                            <td><strong>Interés de préstamos</strong></td>
+                            <td>Aave</td>
+                            <td>Utilización del mercado</td>
                         </tr>
                         <tr>
-                            <td><strong>Compound</strong></td>
-                            <td>Lending</td>
-                            <td>2-7% APY</td>
-                            <td>Baja</td>
-                            <td>Alternativa a Aave con diferentes tasas</td>
+                            <td><strong>Fees de trading</strong></td>
+                            <td>Uniswap</td>
+                            <td>Volumen y liquidez</td>
                         </tr>
                         <tr>
-                            <td><strong>Curve</strong></td>
-                            <td>Stablecoin Pool</td>
-                            <td>3-15% APY</td>
-                            <td>Media</td>
-                            <td>Rendimiento estable con mínimo riesgo</td>
+                            <td><strong>Emisión de tokens</strong></td>
+                            <td>Incentivos</td>
+                            <td>Inflación y precio del reward token</td>
                         </tr>
                         <tr>
-                            <td><strong>Uniswap V3</strong></td>
-                            <td>LP Concentrada</td>
-                            <td>10-50%+ APY</td>
-                            <td>Alta</td>
-                            <td>Usuarios avanzados que gestionan rangos</td>
+                            <td><strong>Incentivos temporales</strong></td>
+                            <td>Campañas</td>
+                            <td>Duración y condiciones</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h2 id="paso-a-paso">5. Cómo hacer yield farming paso a paso en Aave</h2>
-                <p>Este es el proceso exacto para hacer yield farming en Aave, la plataforma más amigable para principiantes.</p>
+                <p>Un APY alto no significa automáticamente fraude, pero <strong>obliga a revisar de dónde sale el rendimiento, en qué token se paga y cuánto tiempo puede mantenerse</strong>. Un rendimiento financiado por la emisión de un token nuevo no se comporta igual que un interés pagado por prestatarios reales.</p>
 
+                <h2 id="apy-vs-apr">4. APR vs APY: por qué el APY no es ganancia neta</h2>
+                <ul>
+                    <li><strong>APR (Annual Percentage Rate):</strong> es el interés simple, sin contar la reinversión de ganancias.</li>
+                    <li><strong>APY (Annual Percentage Yield):</strong> incorpora una hipótesis de reinversión; el APR no.</li>
+                </ul>
+
+                <p>La clave es que <strong>el valor mostrado no garantiza que obtengas ese rendimiento neto</strong>. El resultado real depende de varios factores: el precio del reward token si te pagan en un token, las comisiones de red, el gas y, en posiciones de liquidez concentrada, el rango en el que mantengas la posición.</p>
+
+                <p>Algunos protocolos muestran APYs muy altos que dependen de incentivos temporales o de una reinversión frecuente. Ese número describe un escenario ideal que rara vez coincide con el resultado que ves al retirar.</p>
+
+                <h2 id="lending">5. Lending: ejemplo con Aave</h2>
+                <p>Si quieres usar el concepto amplio de yield farming, puedes entender el lending como <strong>una de sus fuentes de rendimiento, pero técnicamente es lending</strong>, no yield farming. El modelo de Aave o Compound es simple: depositas un activo y otros usuarios lo toman prestado pagando un interés.</p>
+
+                <p>Su flujo de supply puede resultar más sencillo de entender que una posición LP, porque <strong>depositas un solo activo</strong> y no necesitas gestionar un par.</p>
+
+                <p>El proceso básico en Aave:</p>
                 <ol>
-                    <li><strong>Consigue una wallet:</strong> Instala <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> y configura la extensión del navegador. Guarda tu seed phrase en papel, nunca en digital.</li>
-                    <li><strong>Compra criptomonedas:</strong> En Binance o OKX, compra USDC (stablecoin ideal para empezar) y ETH para pagar comisiones de gas. Transfiere ambos a tu wallet de MetaMask.</li>
-                    <li><strong>Conéctate a una red L2:</strong> Para evitar comisiones altas de Ethereum, usa Arbitrum o Polygon. Añade la red a MetaMask desde Chainlist.org. Transfiere tus fondos a la L2 usando el bridge oficial de Arbitrum o directamente desde Binance/OKX (ambos soportan retiros directos a Arbitrum y Polygon).</li>
-                    <li><strong>Entra en Aave:</strong> Ve a app.aave.com, conecta tu wallet y selecciona la red que estás usando (Arbitrum o Polygon).</li>
-                    <li><strong>Deposita:</strong> Haz clic en USDC y luego en "Supply". Introduce la cantidad que quieres depositar. Confirma la transacción en MetaMask. Desde ese momento, empiezas a recibir intereses automáticamente.</li>
-                    <li><strong>Monitoriza:</strong> Puedes ver tus ganancias acumuladas en tiempo real desde el dashboard de Aave. Para retirar, haz clic en "Withdraw" e introduce la cantidad.</li>
+                    <li><strong>Consigue una wallet.</strong> Instala <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> desde su web oficial y guarda tu frase de recuperación en papel, fuera de internet.</li>
+                    <li><strong>Elige un activo que ya entiendas</strong> y que esté disponible en el mercado de Aave que vas a usar. Necesitarás también el token nativo de la red para pagar comisiones.</li>
+                    <li><strong>Selecciona la red.</strong> Las L2 suelen tener costes inferiores a Ethereum mainnet, pero también tienen una arquitectura y unos riesgos distintos. Revisa en qué red está disponible el mercado que te interesa.</li>
+                    <li><strong>Conecta tu wallet</strong> a la app oficial de Aave.</li>
+                    <li><strong>Deposita (supply)</strong> la cantidad que quieras y confirma la transacción. A partir de ahí, el interés se acumula de forma continua.</li>
+                    <li><strong>Monitoriza y retira</strong> desde el panel cuando lo necesites.</li>
                 </ol>
 
-                <p>Este proceso completo, desde crear la wallet hasta ver tus primeros intereses, puede llevar entre 30 minutos y 2 horas dependiendo de tu familiaridad con las herramientas. Tómalo con calma la primera vez. Los errores por prisa son los más caros.</p>
+                <p>Las tasas cambian continuamente y pueden variar por red, activo y utilización del mercado. El APY que ves hoy no es una promesa para mañana.</p>
 
-                <h2 id="riesgos">6. Riesgos reales: impermanent loss, smart contracts y más</h2>
+                <h2 id="lp">6. Provisión de liquidez: ejemplo con Uniswap y Curve</h2>
+                <p>Aquí hay otra confusión frecuente: <strong>un pool de swaps no es lo mismo que un mercado de lending</strong>.</p>
 
-                <h3>Impermanent Loss (Pérdida Impermanente)</h3>
-                <p>Este es el riesgo más malentendido del yield farming. Ocurre cuando depositas dos tokens en un liquidity pool y el precio relativo entre ellos cambia significativamente.</p>
+                <ul>
+                    <li><strong>Pool de liquidez para swaps (Uniswap, Curve):</strong> un contrato que mantiene reservas de tokens para que otros usuarios hagan intercambios. Al depositar, recibes una <strong>posición o token que representa tu participación, según el protocolo</strong>, y ganas una parte de las comisiones.</li>
+                    <li><strong>Mercado de lending (Aave, Compound):</strong> una estructura distinta, donde depositas un activo y otros lo toman prestado pagando interés.</li>
+                </ul>
 
-                <p><strong>Ejemplo con números reales:</strong></p>
+                <p>En cuanto a las comisiones, <strong>cada pool tiene su propia estructura de comisiones</strong>: no existe una tarifa única que aplique a todos. Y sobre los pools de stablecoins, conviene no asumir que son "sin riesgo": en pools de activos con precios muy próximos, la divergencia puede ser menor, pero no desaparecen otros riesgos, incluido el depeg.</p>
+
+                <h2 id="impermanent-loss">7. Impermanent loss explicado</h2>
+                <p>El impermanent loss (pérdida impermanente) aparece cuando depositas dos activos en un pool y el precio relativo entre ellos cambia. El valor de tu posición puede quedar por debajo del valor que tendrías si simplemente hubieras mantenido los tokens en tu wallet.</p>
+
+                <p><strong>Ejemplo con números:</strong></p>
                 <ul>
                     <li>Depositas 1 ETH (valorado en 2.000 USDC) y 2.000 USDC en un pool ETH/USDC. Tu posición total vale 4.000 USD.</li>
                     <li>Un mes después, ETH sube a 4.000 USDC (un 100% de aumento).</li>
-                    <li>Debido a cómo funcionan los pools de liquidez automatizados (fórmula x*y=k), el pool ha rebalanceado automáticamente tu posición: ahora tienes 0,707 ETH y 2.828 USDC, con un valor total de 5.656 USD.</li>
-                    <li>Si simplemente hubieras holdeado tu 1 ETH + 2.000 USDC, tendrías 6.000 USD.</li>
-                    <li><strong>Has perdido 344 USD</strong> por impermanent loss respecto a holdear, a pesar de que tu posición total subió.</li>
+                    <li>El pool ha rebalanceado tu posición automáticamente: ahora tienes 0,707 ETH y 2.828 USDC, con un valor total de 5.656 USD.</li>
+                    <li>Si hubieras holdeado tu 1 ETH + 2.000 USDC, tendrías 6.000 USD.</li>
+                    <li>La diferencia —unos 344 USD— es la pérdida impermanente, a pesar de que tu posición total subió.</li>
                 </ul>
 
-                <p>Cuanto más se separan los precios de los dos tokens, mayor es la pérdida impermanente. Con una diferencia del 500%, la pérdida puede superar el 25%.</p>
+                <p>Este ejemplo usa un AMM 50/50 clásico. En posiciones concentradas o en diseños distintos, el resultado puede cambiar. La idea central se mantiene: <strong>cuanto más divergen los precios, mayor puede ser la diferencia frente a simplemente mantener los activos</strong>.</p>
 
-                <h3>Riesgo de Smart Contract</h3>
-                <p>Cada protocolo DeFi es un contrato inteligente escrito por humanos. Los errores de código existen y cuando se explotan, los fondos de los usuarios desaparecen. Plataformas como Aave y Curve han sido auditadas por las mejores empresas de seguridad (Trail of Bits, OpenZeppelin, Certik), pero ninguna auditoría garantiza el 100% de seguridad.</p>
+                <h2 id="reward-tokens">8. Reward tokens y emisiones</h2>
+                <p>Muchos protocolos añaden al rendimiento base un pago extra en su propio token (el "reward token"). Esa parte del APY funciona de forma muy distinta al interés o a las comisiones de trading:</p>
+                <ul>
+                    <li><strong>El token se emite de forma nueva</strong>, lo que puede diluir su valor si la emisión es alta.</li>
+                    <li><strong>El APY depende del precio del token</strong>: si el reward token baja de precio, el rendimiento real baja con él.</li>
+                    <li><strong>Suele ser temporal.</strong> Las campañas de incentivos tienen una duración y unas condiciones, y el APY que muestran puede desaparecer cuando termine la campaña.</li>
+                </ul>
 
-                <h3>Rug Pulls y Estafas</h3>
-                <p>En protocolos nuevos y no verificados, los desarrolladores pueden insertar "backdoors" (puertas traseras) en el código para robar los fondos depositados. Esto es especialmente común en forks anónimos de protocolos conocidos que ofrecen APYs estratosféricos. Si el equipo es anónimo y el APY supera el 100%, asume que es una estafa hasta que demuestres lo contrario.</p>
+                <p>Por eso, cuando un APY parece muy alto, lo primero es comprobar qué parte viene de emisión de tokens y qué parte de intereses o comisiones reales.</p>
+
+                <h2 id="riesgos">9. Riesgos reales</h2>
+                <p>En lugar de asignar etiquetas de "bajo" o "alto riesgo" a cada estrategia, es más útil mirar cuál es el riesgo principal de cada una:</p>
 
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th>Riesgo</th>
-                            <th>Probabilidad</th>
-                            <th>Impacto</th>
-                            <th>Cómo Mitigarlo</th>
+                            <th>Estrategia</th>
+                            <th>Riesgo principal</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Impermanent Loss</strong></td>
-                            <td>Alta (en pares volátiles)</td>
-                            <td>Medio</td>
-                            <td>Usa stablecoin pools o lending simple</td>
+                            <td><strong>Lending</strong></td>
+                            <td>Riesgo de protocolo, liquidez y activo</td>
                         </tr>
                         <tr>
-                            <td><strong>Smart Contract Hack</strong></td>
-                            <td>Baja (en protocolos auditados)</td>
-                            <td>Catastrófico</td>
-                            <td>Solo usa protocolos con múltiples auditorías</td>
+                            <td><strong>Stablecoin pool</strong></td>
+                            <td>Depeg, smart contract, liquidez</td>
                         </tr>
                         <tr>
-                            <td><strong>Rug Pull</strong></td>
-                            <td>Alta (en protocolos nuevos)</td>
-                            <td>Catastrófico</td>
-                            <td>Invierte solo en protocolos consolidados</td>
+                            <td><strong>LP volátil</strong></td>
+                            <td>Divergencia de precio / impermanent loss</td>
                         </tr>
                         <tr>
-                            <td><strong>Volatilidad del Activo</strong></td>
-                            <td>Alta</td>
-                            <td>Medio-Alto</td>
-                            <td>Usa stablecoins si no quieres exposición a volatilidad</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Comisiones de Gas</strong></td>
-                            <td>Alta (en Ethereum)</td>
-                            <td>Bajo-Medio</td>
-                            <td>Usa L2s como Arbitrum o Polygon</td>
+                            <td><strong>Concentrated liquidity</strong></td>
+                            <td>Gestión de rango + impermanent loss + protocolo</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h2 id="decision">7. Cómo decidir si el yield farming es para ti</h2>
-                <p>El yield farming no es una actividad universal. Antes de poner fondos en un protocolo DeFi, conviene responder tres preguntas con honestidad:</p>
+                <h3>Riesgo de smart contract</h3>
+                <p>Cada protocolo DeFi es un contrato inteligente escrito por personas, y los errores de código existen. Protocolos con mayor trayectoria y auditorías ofrecen más información para evaluar el riesgo, pero <strong>no eliminan la posibilidad de fallos</strong>.</p>
 
+                <h3>Rug pulls y protocolos nuevos</h3>
+                <p>Equipo no verificable, permisos administrativos amplios y APYs extremos son señales que justifican una revisión adicional, <strong>pero ninguna de ellas por sí sola demuestra fraude</strong>. Conviene evaluar el conjunto antes de depositar.</p>
+
+                <h3>Sobre las stablecoins</h3>
+                <p>Las stablecoins reducen la exposición a la volatilidad de mercado frente a activos como ETH, <strong>pero añaden riesgo de paridad, emisor y protocolo</strong>. No son equivalentes a dinero sin riesgo.</p>
+
+                <h2 id="antes-de-depositar">10. Qué revisar antes de depositar</h2>
                 <ul>
-                    <li><strong>¿Entiendes exactamente dónde está tu dinero y cómo genera rendimiento?</strong> Si no puedes explicar de dónde sale el APY (comisiones de trading, intereses de préstamos, emisión de tokens), no inviertas todavía.</li>
-                    <li><strong>¿Puedes asumir perder el 100% de esa posición?</strong> Un bug en un smart contract, un rug pull o un colapso de precio pueden llevarse todo. El yield farming debería limitarse a una fracción pequeña de una cartera que, en su mayor parte, esté en activos más seguros.</li>
-                    <li><strong>¿Has calculado las comisiones y el impermanent loss?</strong> Un APY atractivo puede quedar anulado por las comisiones de gas en Ethereum mainnet o por la pérdida impermanente en pares volátiles.</li>
+                    <li><strong>¿De dónde sale el rendimiento?</strong> Interés, comisiones de trading o emisión de tokens no son lo mismo.</li>
+                    <li><strong>¿En qué token te pagan?</strong> Si es un reward token, su precio afecta directamente tu rendimiento real.</li>
+                    <li><strong>¿Cómo sales de la posición?</strong> Revisa si hay períodos de espera, cooldown o liquidez limitada.</li>
+                    <li><strong>¿Cuánto te dolería perder esa posición?</strong> Antes de usar DeFi, piensa cuánto daño te causaría perder esos fondos y evita utilizar dinero necesario para gastos esenciales.</li>
                 </ul>
 
-                <p>Una regla que evita la mayoría de los errores: <strong>empieza con lending simple (Aave o Compound) en una L2 con stablecoins</strong>, donde solo depositas un activo, no hay impermanent loss y las comisiones son mínimas. Una vez domines esa mecánica y entiendas el impermanent loss con números reales, plantéate dar el salto a liquidity pools, y solo con una cantidad que puedas permitirte perder.</p>
+                <p>Si estás aprendiendo, empieza por comprender <strong>una sola mecánica</strong> —por ejemplo lending o LP— antes de combinar varias estrategias.</p>
 
-                <h2 id="faq">8. Preguntas Frecuentes</h2>
+                <h2 id="salir">11. Cómo salir de una posición</h2>
+                <p>Una de las preguntas que menos se hace la gente es cómo se sale. <strong>La salida depende del protocolo y del producto.</strong> Algunos permiten retirar en cualquier momento; otros tienen períodos de espera, liquidez limitada o condiciones específicas.</p>
+
+                <ul>
+                    <li><strong>Lending:</strong> normalmente puedes retirar siempre que haya liquidez disponible en el mercado.</li>
+                    <li><strong>LP:</strong> retiras tu posición (y sus comisiones acumuladas) cuando lo decidas, pero el valor que retiras depende del precio de los activos en ese momento.</li>
+                    <li><strong>Incentivos:</strong> algunos rewards pueden tener un período de bloqueo o vesting antes de poder moverlos.</li>
+                </ul>
+
+                <p>Antes de depositar, revisa en la documentación del protocolo cómo se retira y qué condiciones aplican.</p>
+
+                <h2 id="faq">12. Preguntas Frecuentes</h2>
 
                 <div class="faq-section">
                     <div class="faq-item">
                         <h3>¿Qué es yield farming en criptomonedas?</h3>
-                        <p>El yield farming (agricultura de rendimiento) es una estrategia DeFi donde depositas criptomonedas en protocolos descentralizados para generar rendimientos. Funcionas como un "banco descentralizado": prestas tus fondos a un liquidity pool y recibes intereses más tokens de gobernanza como recompensa. Es una de las formas más populares de generar ingresos pasivos en el ecosistema cripto.</p>
+                        <p>El yield farming suele referirse a estrategias DeFi que buscan rendimiento moviendo capital entre pools, incentivos o protocolos. Es más una estrategia que una mecánica única: combina lending, provisión de liquidez y emisión de tokens. No todo lending ni todo staking debe llamarse automáticamente yield farming.</p>
                     </div>
                     <div class="faq-item">
                         <h3>¿Cuál es la diferencia entre APY y APR?</h3>
-                        <p>APR (Annual Percentage Rate) es el interés simple que ganas sin contar el interés compuesto. APY (Annual Percentage Yield) incluye el efecto del interés compuesto —las ganancias que generan nuevas ganancias—. En yield farming, el APY casi siempre es mayor que el APR porque los protocolos asumen que reinviertes tus ganancias. Un 50% APR puede convertirse en un 65% APY si capitalizas diariamente.</p>
+                        <p>El APR es el interés simple, sin contar la reinversión. El APY incorpora una hipótesis de reinversión; el APR no. El valor mostrado no garantiza que obtengas ese rendimiento neto, porque depende de las comisiones, el precio del reward token y otros factores.</p>
                     </div>
                     <div class="faq-item">
                         <h3>¿Qué es el impermanent loss?</h3>
-                        <p>La pérdida impermanente ocurre cuando depositas tokens en un liquidity pool y el precio relativo entre ellos cambia. Si uno de los tokens sube o baja mucho respecto al otro, el valor de tu posición en el pool puede ser menor que si simplemente hubieras mantenido los tokens en tu wallet. Se llama "impermanente" porque la pérdida solo se materializa si retiras los fondos mientras existe la diferencia de precio; si los precios vuelven a su nivel original, la pérdida desaparece.</p>
+                        <p>Es la diferencia entre mantener los activos dentro de una posición de liquidez y simplemente holdearlos, cuando cambia el precio relativo entre ellos. Se llama impermanente porque la diferencia puede reducirse si los precios vuelven a acercarse, pero la pérdida económica relativa existe mientras la posición está desbalanceada.</p>
                     </div>
                     <div class="faq-item">
                         <h3>¿Es seguro el yield farming?</h3>
-                        <p>El yield farming conlleva riesgos significativos: riesgo de smart contract (errores en el código que permiten hackeos), impermanent loss, rug pulls, riesgo de plataforma y volatilidad del activo subyacente. En plataformas consolidadas como Aave y Compound, el riesgo es menor porque han sido auditadas exhaustivamente. Nunca inviertas más de lo que estés dispuesto a perder y diversifica entre varios protocolos.</p>
+                        <p>Conlleva riesgos significativos: smart contract, impermanent loss, depeg de stablecoins y riesgo de protocolo. Los protocolos con mayor trayectoria y auditorías ofrecen más información para evaluar el riesgo, pero no eliminan la posibilidad de fallos.</p>
                     </div>
                     <div class="faq-item">
                         <h3>¿Cuánto dinero necesito para hacer yield farming?</h3>
-                        <p>Técnicamente puedes empezar con cantidades pequeñas (10-50 USD), pero las comisiones de gas en Ethereum mainnet pueden devorar tus ganancias si inviertes poco. Con 500-1.000 USD en redes L2 como Arbitrum, Polygon o Solana (donde las comisiones son mucho más bajas) puedes obtener resultados razonables. En Ethereum mainnet, necesitas al menos 2.000-5.000 USD para que las comisiones no devoren tus rendimientos.</p>
+                        <p>No existe un monto mínimo económico universal. Compara el coste de entrada, salida y gas con el importe que vas a depositar. En redes con comisiones altas, un depósito pequeño puede quedar anulado por las comisiones.</p>
                     </div>
                     <div class="faq-item">
                         <h3>¿Qué plataforma es mejor para empezar en yield farming?</h3>
-                        <p>Para principiantes, la opción más recomendable es Aave por su simplicidad y seguridad. Solo depositas un activo y empiezas a ganar intereses, sin necesidad de crear pares de liquidez. Luego puedes explorar Curve para stablecoins (bajo riesgo de impermanent loss) y Uniswap para pares más avanzados. Empieza siempre con pequeñas cantidades hasta que entiendas bien el funcionamiento de cada plataforma.</p>
+                        <p>Aave utiliza un modelo de lending de un solo activo, mientras que Curve y Uniswap implican estructuras de pool distintas. Qué resulta más fácil depende de qué mecánica quieras aprender, no de un ranking de plataformas.</p>
                     </div>
                 </div>
 
@@ -418,9 +405,9 @@
 
                 <div class="internal-links">
                     <h3>📚 Artículos Relacionados</h3>
-                    <a href="/articulos/como-usar-uniswap.html">Cómo Usar Uniswap: Guía Completa para Principiantes</a>
-                    <a href="/articulos/como-hacer-staking.html">Cómo Hacer Staking de Criptomonedas | Guía para Generar Ingresos 2026</a>
-                    <a href="/articulos/crear-configurar-metamask.html">Cómo Crear y Configurar MetaMask | Guía Paso a Paso 2026</a>
+                    <a href="/articulos/como-usar-uniswap.html">Cómo Usar Uniswap: Guía para Intercambiar Tokens DeFi (2026)</a>
+                    <a href="/articulos/como-hacer-staking.html">Cómo Funciona el Staking de Criptomonedas: Recompensas, Riesgos y Opciones</a>
+                    <a href="/articulos/crear-configurar-metamask.html">Cómo Crear y Configurar MetaMask en 2026: Wallet, Redes y Seguridad</a>
                     <a href="/articulos/hot-wallet-vs-cold-wallet.html">Hot Wallet vs Cold Wallet: ¿Cuál Elegir?</a>
                     <a href="/articulos/seguridad-criptomonedas.html">Seguridad en Criptomonedas: Protege tus Activos Digitales</a>
                     <a href="/articulos/blockchain-explicacion-sencilla.html">Blockchain Explicación Sencilla: Cómo Funciona</a>
@@ -433,16 +420,16 @@
                     <a href="https://ethereum.org/en/defi/" target="_blank" rel="nofollow noopener" style="background:transparent;padding:8px 0;font-weight:400;">Ethereum.org — Introducción oficial a DeFi</a>
                 </div>
 
-                <p style="margin-top:32px;"><strong>El yield farming es una herramienta poderosa, pero como toda herramienta financiera, requiere conocimiento y prudencia.</strong> Empieza en Aave con stablecoins en una L2 para minimizar riesgos. Familiarízate con la mecánica, entiende bien el impermanent loss antes de entrar en pares de liquidez, y nunca —nunca— pongas en riesgo más dinero del que puedas permitirte perder. La libertad de las finanzas descentralizadas viene sin red de seguridad: la educación es tu única protección real.</p>
+                <p style="margin-top:32px;"><strong>Antes de depositar fondos, identifica primero qué tipo de estrategia estás usando, de dónde sale el rendimiento y cómo puedes salir de la posición.</strong> Si no puedes explicar esas tres cosas, todavía te falta información antes de confirmar. El yield farming no es una sola cosa, y entender esa diferencia es lo que te separa de entrar a ciegas.</p>
 
                 <div class="cta-card">
-                    <h2>¿Listo para empezar tu primer yield farming?</h2>
-                    <p>Compra tus primeras criptomonedas en Binance u OKX con descuento en comisiones y conéctalas a DeFi para empezar a generar rendimientos.</p>
+                    <h2>Si necesitas fondos para interactuar con DeFi</h2>
+                    <p>Para depositar en un protocolo DeFi necesitas criptomonedas en tu propia wallet. Si aún no las tienes, puedes comprarlas en un exchange y enviarlas a tu wallet.</p>
                     <div class="cta-buttons">
                         <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
                         <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
                     </div>
-<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la entidad que presta el servicio. Revisa qué servicios están habilitados para tu cuenta y tu ubicación.</p>
                 </div>
 
             </div>
