@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guía de puentes cross-chain: mueve fondos entre Ethereum, Arbitrum y Polygon con Stargate, Across y Wormhole. Paso a paso, costos y riesgos.">
-    <meta name="keywords" content="puentes cross-chain, bridge crypto, mover fondos entre blockchains, Stargate, Across, Wormhole, Orbiter, bridge Ethereum Arbitrum, puentes blockchain">
+    <meta name="description" content="Qué es un bridge cross-chain, cómo funcionan sus distintos modelos (lock-and-mint, liquidez, intents, canónicos) y qué revisar antes de usarlos.">
+    <meta name="keywords" content="puentes cross-chain, bridge crypto, mover fondos entre blockchains, Stargate, Across, Wormhole, bridge Ethereum Arbitrum, puentes blockchain">
     <meta name="author" content="MiCryptoGuía">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#080b16">
     <link rel="canonical" href="https://micryptoguia.com/articulos/puentes-cross-chain.html">
 
-    <meta property="og:title" content="Puentes Cross-Chain Crypto | Cómo Mover Fondos Entre Blockchains — MiCryptoGuía">
-    <meta property="og:description" content="Aprende a usar puentes cross-chain para mover fondos entre Ethereum, Arbitrum, Polygon y otras blockchains. Guía paso a paso con Stargate, Across y Wormhole, comparativa de costos y riesgos.">
+    <meta property="og:title" content="Puentes cross-chain: cómo funcionan, riesgos y qué revisar antes de usarlos — MiCryptoGuía">
+    <meta property="og:description" content="Qué es un bridge cross-chain, cómo funcionan sus distintos modelos (lock-and-mint, liquidez, intents, canónicos) y qué revisar antes de usarlos.">
     <meta property="og:url" content="https://micryptoguia.com/articulos/puentes-cross-chain.html">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es">
@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Puentes Cross-Chain Crypto | Cómo Mover Fondos Entre Blockchains</title>
+    <title>Puentes cross-chain: cómo funcionan, riesgos y qué revisar antes de usarlos — MiCryptoGuía</title>
 
     <script type="application/ld+json">
     {
@@ -35,11 +35,11 @@
       "@graph": [
         {
           "@type": "Article",
-          "headline": "Puentes Cross-Chain Crypto | Cómo Mover Fondos Entre Blockchains",
-          "description": "Guía práctica para mover criptomonedas entre blockchains usando puentes cross-chain: Stargate, Across, Wormhole y Orbiter. Incluye tutorial paso a paso de Ethereum a Arbitrum, comparativa de costos y consejos de seguridad.",
+          "headline": "Puentes cross-chain: cómo funcionan, riesgos y qué revisar antes de usarlos",
+          "description": "Qué es un bridge cross-chain, cómo funcionan sus distintos modelos (lock-and-mint, liquidez, intents, canónicos) y qué revisar antes de usarlos.",
           "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "datePublished": "2026-08-02",
-          "dateModified": "2026-09-05",
+          "dateModified": "2026-09-08",
           "inLanguage": "es",
           "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
         },
@@ -49,32 +49,32 @@
             {
               "@type": "Question",
               "name": "¿Cuál es la diferencia entre un puente y enviar tokens a un exchange y retirarlos en otra red?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Con un puente, tus fondos nunca pasan por una entidad centralizada y custodias tus llaves en todo momento. La ruta del exchange implica ceder la custodia, pasar por verificaciones KYC y esperar más. El puente suele ser más rápido y privado; el exchange puede ser marginalmente más barato si ya tienes cuenta verificada." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Ambos mueven fondos entre redes, pero con mecanismos distintos. Con un bridge, la operación es on-chain y no pasa por la custodia de un exchange, aunque sí dependes temporalmente del contrato o mecanismo del bridge. La ruta del exchange implica ceder la custodia y pasar por sus procesos. El bridge no ofrece anonimato: origen, destino y ruta suelen ser visibles y analizables públicamente." }
             },
             {
               "@type": "Question",
-              "name": "¿Por qué el puente nativo de Arbitrum tarda 7 días para volver a Ethereum?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Arbitrum es un optimistic rollup con un período de desafío de 7 días durante el cual cualquiera puede presentar una prueba de fraude. Ese mecanismo es lo que lo hace seguro, pero para retirar a Ethereum significa esperar una semana. Los puentes de liquidez de terceros usan pools pre-financiados para entregarte los fondos de inmediato a cambio de una pequeña comisión." }
+              "name": "¿Por qué el puente nativo de Arbitrum tarda alrededor de una semana para volver a Ethereum?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Arbitrum es un optimistic rollup. Las salidas canónicas pueden estar sujetas a un período de desafío antes de finalizar en Ethereum, tradicionalmente de alrededor de una semana. Durante ese tiempo cualquiera puede presentar una prueba de fraude. Los bridges de terceros con liquidez pueden entregarte el activo en destino de forma más rápida, con su propio modelo y riesgo." }
             },
             {
               "@type": "Question",
-              "name": "¿Necesito ETH en la cadena de destino para usar los fondos que bridgeé?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Necesitas ETH en la cadena de destino para pagar el gas de cualquier transacción futura; sin él, tus tokens quedan atrapados. Muchos puentes modernos ofrecen gas on destination o permiten bridgear ETH y stablecoins en la misma transacción." }
+              "name": "¿Necesito el token de gas en la cadena de destino?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Para mover después el activo en destino, normalmente necesitarás el token de gas de esa red (por ejemplo, ETH en una L2 de Ethereum), salvo que la app ofrezca patrocinio o gas en destino. Antes de confirmar, revisa qué recibes y si podrás operar con ello." }
             },
             {
               "@type": "Question",
               "name": "¿Qué hago si mi bridge se queda atascado y los fondos no llegan?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No repitas la transacción. Verifica su estado en el explorador de bloques; si está confirmada en origen, abre un ticket de soporte en el Discord o Telegram oficial con el hash. La mayoría de las transacciones atascadas se resuelven solas cuando baja la congestión. Ignora a cualquiera que te ofrezca ayuda por mensaje privado: es una estafa." }
+              "acceptedAnswer": { "@type": "Answer", "text": "No repitas la transacción. Verifica su estado en el explorador de bloques. Si está confirmada en origen, ve primero al sitio oficial del bridge y abre el canal de soporte enlazado desde allí. No confíes en mensajes privados que ofrezcan ayuda: suelen ser estafas." }
             },
             {
               "@type": "Question",
               "name": "¿Puedo hacer bridge de NFTs?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sí, aunque es menos común. Wormhole y LayerZero tienen soporte para NFTs. El problema es que la versión wrapped puede no ser reconocida por los marketplaces de la cadena de destino. Para la mayoría de casos, es más sencillo vender el NFT en su cadena original y comprar otro en la cadena de destino." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí, pero es más complejo. La representación en destino puede no ser tratada como la misma colección por los marketplaces, y hay consideraciones de licencia y regalías. Revisa si el marketplace y la colección reconocen la versión bridgeada antes de intentarlo." }
             },
             {
               "@type": "Question",
-              "name": "¿Qué puente recomiendas para alguien que nunca ha hecho un bridge?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Orbiter Finance es el más amigable para principiantes: interfaz de 4 campos, transfers en 30-60 segundos y tarifas fijas. Haz tu primer bridge con Orbiter y un monto pequeño de Ethereum a Arbitrum; luego explora Stargate para transfers grandes y Across para velocidad extrema." }
+              "name": "¿Qué reviso antes de usar un bridge por primera vez?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Confirma el asset de origen y el que recibirás exactamente, la red de destino, la cantidad final, el desglose de comisiones, el gas de destino y la ruta. Si es una ruta nueva para ti, una transferencia pequeña de prueba puede reducir errores operativos." }
             }
           ]
         }
@@ -117,28 +117,27 @@
                 <span>Puentes Cross-Chain</span>
             </nav>
 
-        <h1>Puentes Cross-Chain: Cómo Mover Fondos Entre Blockchains de Forma Segura (Guía 2026)</h1>
+        <h1>Puentes cross-chain: cómo funcionan, riesgos y qué revisar antes de usarlos</h1>
         <div class="article-meta">
             <span>🌉 Infraestructura</span>
-            <span>⏱️ 14 min lectura</span>
-            <span>📅 23 Ago 2026</span>
+            <span>⏱️ 13 min lectura</span>
+            <span>📅 8 Sep 2026</span>
             <span>⚡ Intermedio</span>
         </div>
 
-        <p>Un puente cross-chain (o blockchain bridge) es un protocolo que te permite <strong>transferir criptomonedas de una blockchain a otra</strong> sin pasar por un exchange centralizado. Si tienes ETH en la red principal de Ethereum y quieres usarlo en Arbitrum para pagar comisiones más baratas, o si tienes USDC en Polygon y necesitas moverlo a Optimism para entrar en un protocolo DeFi, necesitas un puente. Sin ellos, cada blockchain sería una isla aislada.</p>
+        <p>Un bridge cross-chain (o blockchain bridge) es un protocolo que permite <strong>mover valor o mensajes entre redes distintas</strong>. Las blockchains no comparten estado de forma nativa, por lo que mover activos entre ellas requiere algún mecanismo de interoperabilidad. El mecanismo concreto depende del protocolo: algunos bloquean un activo y emiten una representación en destino; otros utilizan pools de liquidez, relayers, market makers o los mecanismos nativos de una L2.</p>
 
-        <p>En 2026, con más de 50 blockchains activas y cientos de protocolos DeFi repartidos entre ellas, los puentes se han convertido en una pieza esencial de infraestructura. Manejan más de <strong>$10,000 millones en volumen mensual</strong> y son utilizados por millones de usuarios cada día. Pero también son uno de los puntos más vulnerables del ecosistema: los hackeos de puentes han resultado en pérdidas de más de <strong>$2,500 millones</strong> desde 2022. En esta guía se explica cómo funcionan, cuáles usar, cómo hacer un bridge paso a paso y — crucialmente — cómo no convertirse en la próxima víctima.</p>
+        <p>Los bridges se han convertido en una pieza importante de la infraestructura DeFi. También han sido escenario de algunos de los mayores exploits del ecosistema. En esta guía se explica cómo funcionan los distintos modelos, qué riesgo introduce cada uno y qué revisar antes de usar uno.</p>
 
         <!-- Speed Read -->
         <div class="speed-read">
-            <h3>🔁 Vas a mover tus fondos de una cadena a otra sin vender ni retirar a tu banco</h3>
-            <p>Un puente cross-chain bloquea tus tokens en la cadena de origen y emite un <strong>equivalente sintético</strong> en la cadena de destino. Cuando quieras volver, el proceso se invierte: quemas los tokens sintéticos y el puente libera tus tokens originales. Todo ocurre <strong>on-chain, sin intermediarios y en minutos</strong>. Es como cambiar una moneda por otra, pero entre blockchains.</p>
-        </div>
+            <h3>💡 En pocas palabras</h3>
+            <p>No todos los bridges hacen lo mismo. Algunos bloquean un activo en origen y emiten una representación en destino; otros usan pools de liquidez, relayers, market makers o los mecanismos nativos de una L2. Antes de firmar, conviene saber qué activo exacto recibirás y qué riesgo introduce el mecanismo.</p>
             <ul>
-                <li>Los puentes cross-chain resuelven el problema de la <strong>interoperabilidad</strong>: cada blockchain es un sistema independiente y los tokens no pueden "saltar" de una a otra por sí solos.</li>
-                <li>Los cuatro puentes más usados en 2026 son <strong>Stargate, Across, Wormhole y Orbiter</strong>. Cada uno tiene fortalezas distintas en costo, velocidad y seguridad.</li>
-                <li>Bridging de Ethereum a Arbitrum cuesta entre <strong>$1 y $8</strong> y tarda entre <strong>2 y 15 minutos</strong>, dependiendo del puente que uses y la congestión de la red.</li>
-                <li>El riesgo principal no es técnico sino de seguridad: los puentes son objetivos prioritarios para hackers. <strong>Usa siempre puentes establecidos con alto TVL</strong> y verifica que estás en la URL oficial.</li>
+                <li>Las blockchains no comparten estado de forma nativa: mover activos entre ellas requiere un mecanismo de interoperabilidad.</li>
+                <li>Existen varios modelos: lock-and-mint, puentes de liquidez, intents/relayers, canónicos de L2 y de mensajería.</li>
+                <li>Las comisiones y tiempos cambian según ruta, activo, liquidez y protocolo. Revisa siempre la estimación que muestra la interfaz.</li>
+                <li>Los riesgos incluyen smart contracts, validadores, liquidez, relayers y el activo envuelto que recibes en destino.</li>
             </ul>
         </div>
 
@@ -146,184 +145,271 @@
         <div class="toc" id="indice">
             <div class="toc__title">📋 Tabla de Contenidos</div>
             <ol>
-                <li><a href="#que-es-puente">Qué es un puente cross-chain y por qué existen</a></li>
-                <li><a href="#puentes-populares">Los 4 puentes más usados en 2026: Stargate, Across, Wormhole y Orbiter</a></li>
-                <li><a href="#tutorial-bridge">Tutorial paso a paso: mover ETH de Ethereum a Arbitrum</a></li>
-                <li><a href="#costos">Comparativa de costos: puentes vs exchanges centralizados</a></li>
-                <li><a href="#riesgos">Riesgos de los puentes y cómo minimizarlos</a></li>
-                <li><a href="#elegir-puente">Cómo elegir puente según la ruta</a></li>
+                <li><a href="#que-es-puente">Qué es un bridge cross-chain y por qué existen</a></li>
+                <li><a href="#modelos">No todos los bridges hacen lo mismo</a></li>
+                <li><a href="#ejemplos">Ejemplos de protocolos cross-chain</a></li>
+                <li><a href="#tutorial">Ejemplo: cómo leer un bridge antes de confirmar</a></li>
+                <li><a href="#costos">Comparar bridges y exchanges</a></li>
+                <li><a href="#riesgos">Riesgos y cómo se clasifican</a></li>
+                <li><a href="#elegir">Cómo comparar dos bridges para la misma ruta</a></li>
+                <li><a href="#antes-de-firmar">Antes de firmar: confirma estas cosas</a></li>
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
             </ol>
         </div>
 
         <!-- What is a bridge -->
-        <h2 id="que-es-puente">Qué es un puente cross-chain y por qué existen</h2>
-        <p>Imagina que cada <a href="/articulos/blockchain-explicacion-sencilla.html">blockchain</a> es un país con su propia moneda. Ethereum es Estados Unidos (USD), Arbitrum es Canadá (CAD) y Polygon es México (MXN). Puedes tener dólares en Estados Unidos, pero no puedes gastarlos directamente en una tienda de Canadá. Necesitas cambiar dólares por dólares canadienses. Un puente cross-chain hace exactamente eso: <strong>te permite "cambiar" tus tokens de una blockchain por su equivalente en otra</strong>.</p>
+        <h2 id="que-es-puente">Qué es un bridge cross-chain y por qué existen</h2>
+        <p>Puedes pensar en cada <a href="/articulos/blockchain-explicacion-sencilla.html">blockchain</a> como un sistema con su propio libro contable. Un activo en Ethereum y un activo en Arbitrum no son lo mismo por defecto, aunque representen económicamente la misma idea. Más que "cambiar de moneda", un bridge traslada la <strong>representación o disponibilidad</strong> de un activo entre sistemas que no comparten el mismo libro contable.</p>
 
-        <p>Técnicamente, el mecanismo más común funciona así: depositas 1 ETH en el contrato del puente en Ethereum. El puente bloquea ese ETH y emite 1 ETH "wrapped" o sintético en Arbitrum. Ese ETH en Arbitrum está respaldado 1:1 por el ETH que bloqueaste en Ethereum. Cuando quieras volver, quemas (destruyes) el ETH sintético en Arbitrum y el puente libera tu ETH original en Ethereum. Es un sistema de <strong>lock-and-mint</strong> (bloquear y emitir) o su inverso, <strong>burn-and-release</strong> (quemar y liberar).</p>
+        <p>Técnicamente, los mecanismos varían. En algunos bridges, un token ERC-20 queda bloqueado en origen y se emite una representación en destino. En otros, el activo que recibes proviene de liquidez ya existente. No todos funcionan igual, y es importante no asumir que todos son "bloquear y emitir".</p>
 
-        <p>Existen tres razones principales por las que querrías usar un puente en vez de simplemente vender en un exchange y recomprar en otra red:</p>
+        <p>Existen varias razones por las que un usuario puede necesitar un bridge:</p>
 
         <ul>
-            <li><strong>Costos de gas más bajos:</strong> Hacer un swap en Ethereum mainnet puede costar entre $10 y $50 de gas. En Arbitrum, el mismo swap cuesta $0.10-0.30. Basta con hacer bridge de tus fondos una vez y operar con comisiones mínimas todo el tiempo que quieras en la L2.</li>
-            <li><strong>Acceso a protocolos exclusivos:</strong> Algunos de los mejores protocolos DeFi solo existen en ciertas cadenas. GMX está principalmente en Arbitrum. Aave tiene mejores tasas en Polygon. Si quieres usar estos protocolos, necesitas bridge.</li>
-            <li><strong>Oportunidades de arbitraje:</strong> El mismo token puede tener precios ligeramente distintos en diferentes cadenas. Los puentes permiten a los traders explotar estas diferencias, lo que a su vez ayuda a mantener los precios alineados entre redes.</li>
+            <li><strong>Comisiones más bajas:</strong> Operar en una L2 suele implicar comisiones más bajas que en la red principal.</li>
+            <li><strong>Acceso a aplicaciones o mercados concretos:</strong> Algunas aplicaciones o mercados existen en redes concretas, por lo que un usuario puede necesitar mover activos para acceder a ellas.</li>
+            <li><strong>Gestión de fondos entre redes:</strong> Tener liquidez en varias redes puede requerir mover activos entre ellas.</li>
         </ul>
 
-        <!-- Popular bridges -->
-        <h2 id="puentes-populares">Los 4 puentes más usados en 2026</h2>
-        <p>No todos los puentes son iguales. Estos son los cuatro que dominan el ecosistema actual, cada uno con su enfoque particular:</p>
+        <!-- Models -->
+        <h2 id="modelos">No Todos los Bridges Hacen lo Mismo</h2>
+        <p>Este es el punto más importante de toda la guía. Distintos bridges usan mecanismos distintos, y cada uno introduce un tipo de riesgo diferente:</p>
 
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Puente</th>
-                    <th>Tipo</th>
-                    <th>Cadenas soportadas</th>
-                    <th>Velocidad</th>
-                    <th>Costo aprox.</th>
-                    <th>Ideal para</th>
+                    <th>Modelo</th>
+                    <th>Qué ocurre</th>
+                    <th>Riesgo principal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Lock &amp; mint</strong></td>
+                    <td>Activo bloqueado en origen + representación en destino</td>
+                    <td>Custodia / contrato del bridge</td>
+                </tr>
+                <tr>
+                    <td><strong>Liquidity bridge</strong></td>
+                    <td>Recibes liquidez existente en destino</td>
+                    <td>Liquidez + relayer / protocolo</td>
+                </tr>
+                <tr>
+                    <td><strong>Intent-based</strong></td>
+                    <td>Un solver ejecuta la ruta</td>
+                    <td>Solver / settlement</td>
+                </tr>
+                <tr>
+                    <td><strong>Canonical L2 bridge</strong></td>
+                    <td>Usa el mecanismo nativo de la L2</td>
+                    <td>Tiempo de salida + riesgo del rollup</td>
+                </tr>
+                <tr>
+                    <td><strong>Messaging bridge</strong></td>
+                    <td>Transmite mensajes entre cadenas</td>
+                    <td>Capa de validación / mensajería</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Examples -->
+        <h2 id="ejemplos">Ejemplos de Protocolos Cross-Chain</h2>
+        <p>En lugar de hablar de "los mejores puentes", conviene entender cómo se diferencian. Estos protocolos usan modelos aproximados distintos, y lo que debes revisar en cada uno también cambia:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Protocolo</th>
+                    <th>Modelo aproximado</th>
+                    <th>Qué debes revisar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><strong>Stargate</strong></td>
-                    <td>Liquidez unificada</td>
-                    <td>Ethereum, Arbitrum, Optimism, Polygon, BNB Chain, Avalanche, Base, Linea, Scroll, Mantle</td>
-                    <td>1-3 min</td>
-                    <td>0.06% + gas</td>
-                    <td>Montos grandes y stablecoins</td>
+                    <td>Basado en liquidez</td>
+                    <td>Redes, activos, slippage, fees</td>
                 </tr>
                 <tr>
                     <td><strong>Across</strong></td>
-                    <td>Intención (relayer)</td>
-                    <td>Ethereum, Arbitrum, Optimism, Polygon, Base, Linea, zkSync</td>
-                    <td>30-90 seg</td>
-                    <td>Variable, competitivo</td>
-                    <td>Velocidad y transfers urgentes</td>
+                    <td>Intent / relayer</td>
+                    <td>Modelo de solver/relayer, ruta, output</td>
                 </tr>
                 <tr>
                     <td><strong>Wormhole</strong></td>
-                    <td>Mensajería genérica</td>
-                    <td>Ethereum, Solana, Arbitrum, Optimism, Polygon, BNB Chain, Avalanche, Base, Sui, Aptos + 20 más</td>
-                    <td>1-5 min</td>
-                    <td>Gas + 0.01-0.1%</td>
-                    <td>Ecosistemas diversos (Solana, Sui)</td>
+                    <td>Mensajería / interoperabilidad</td>
+                    <td>Representación del token, activo en destino</td>
                 </tr>
                 <tr>
                     <td><strong>Orbiter</strong></td>
-                    <td>Liquidez de market makers</td>
-                    <td>Ethereum, Arbitrum, Optimism, Polygon, BNB Chain, zkSync, StarkNet, Base, Linea, Scroll + 15 más</td>
-                    <td>30-60 seg</td>
-                    <td>Tarifa fija baja</td>
-                    <td>Montos pequeños (<$5,000) y transfers rápidos</td>
+                    <td>Liquidez / market maker</td>
+                    <td>Rutas, activo recibido, límites</td>
                 </tr>
             </tbody>
         </table>
 
-        <p><strong>Stargate</strong> es la recomendación principal para la mayoría de usuarios. Construido sobre LayerZero, Stargate utiliza pools de liquidez unificados que permiten transfers directos entre cadenas sin tokens intermediarios. Su modelo de liquidez compartida lo hace especialmente eficiente para stablecoins y montos grandes. Sin embargo, para transfers pequeños y urgentes, <strong>Across</strong> suele ser más rápido gracias a su sistema de relayers que adelantan los fondos en la cadena de destino mientras la transacción se confirma en origen. <strong>Orbiter</strong> tiene la interfaz más simple de todas y es ideal para principiantes.</p>
-
-        <div class="highlight-box">
-            <p><strong>💡 Regla práctica:</strong> Para mover stablecoins entre L2s, usa <strong>Stargate</strong> — mejores tasas y liquidez profunda. Para mover ETH de Ethereum a una L2, <strong>Across</strong> u <strong>Orbiter</strong> suelen ser más rápidos. Si necesitas conectar con Solana, Sui o Aptos, <strong>Wormhole</strong> es prácticamente la única opción establecida.</p>
-        </div>
+        <p>Estos son ejemplos para ilustrar las diferencias de arquitectura, no una clasificación de "mejor" o "peor". La lista de redes soportadas y los activos disponibles cambian con el tiempo; verifica siempre en la interfaz actual del protocolo.</p>
 
         <!-- Tutorial -->
-        <h2 id="tutorial-bridge">Tutorial paso a paso: mover ETH de Ethereum a Arbitrum</h2>
-        <p>Este es el caso más común para cualquiera que esté empezando en DeFi: tienes ETH en la red principal de Ethereum y quieres moverlo a Arbitrum para operar con comisiones más baratas en GMX, <a href="/articulos/como-usar-uniswap.html">Uniswap</a> o Aave. Vamos a hacerlo con Stargate:</p>
+        <h2 id="tutorial">Ejemplo: Cómo Leer un Bridge Antes de Confirmar</h2>
+        <p>Más útil que memorizar un puente concreto es aprender a leer cualquier interfaz de bridge. Imagina que quieres mover un activo de Ethereum a Arbitrum; sea cual sea el protocolo, revisa estos campos antes de firmar:</p>
 
         <ol>
-            <li><strong>Prepara tu wallet:</strong> Asegúrate de tener <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> instalada y configurada con fondos. Necesitas ETH en Ethereum mainnet para pagar el gas del bridge, más los tokens que quieras transferir. Conecta tu wallet a <strong>stargate.finance</strong> — verifica siempre que estás en la URL oficial. Los sitios falsos de puentes son una estafa recurrente.</li>
-            <li><strong>Selecciona las cadenas:</strong> En el panel de "Transfer", selecciona <strong>Ethereum</strong> como cadena de origen (From) y <strong>Arbitrum</strong> como cadena de destino (To). Stargate detecta automáticamente la red a la que está conectada tu wallet.</li>
-            <li><strong>Elige el token y el monto:</strong> Selecciona ETH como el token a transferir. Ingresa la cantidad. La interfaz te mostrará cuántos ETH recibirás en Arbitrum después de todas las comisiones. Revisa este número cuidadosamente — es lo que realmente llegará a tu wallet.</li>
-            <li><strong>Revisa los detalles:</strong> Stargate te muestra un desglose de costos: gas fee en la cadena de origen (Ethereum, típicamente $5-15), comisión del protocolo (0.06% del monto para la mayoría de transfers), y gas estimado en destino. El costo total para un bridge de $1,000 en ETH suele rondar los $8-15.</li>
-            <li><strong>Confirma la transacción:</strong> Haz clic en "Transfer" y confirma en MetaMask. La transacción aparecerá como pendiente. En Ethereum, esto puede tardar entre 30 segundos y 3 minutos en confirmarse, dependiendo del precio del gas.</li>
-            <li><strong>Espera la llegada a Arbitrum:</strong> Una vez confirmada la transacción en Ethereum, Stargate procesa el bridge. En 1-3 minutos, los ETH aparecerán en tu wallet en la red de Arbitrum. Cambia la red en MetaMask a Arbitrum para ver tu saldo actualizado. Si no ves los tokens, agrega el token manualmente usando la dirección del contrato que Stargate te muestra.</li>
+            <li><strong>Cadena de origen (From).</strong> ¿De qué red envías?</li>
+            <li><strong>Cadena de destino (To).</strong> ¿A qué red llega?</li>
+            <li><strong>Activo que envías.</strong> ¿Qué token exacto estás moviendo?</li>
+            <li><strong>Activo que recibes.</strong> ¿Es el token nativo o una representación envuelta (wrapped)?</li>
+            <li><strong>Cantidad final.</strong> ¿Cuánto recibirás después de comisiones y slippage?</li>
+            <li><strong>Desglose de comisiones.</strong> ¿Qué parte es gas de origen, comisión de protocolo o slippage?</li>
+            <li><strong>Ruta y mecanismo.</strong> ¿Usa bridge nativo, pool de liquidez, relayer o token envuelto?</li>
+            <li><strong>Gas de destino.</strong> ¿Recibirás suficiente para poder mover el activo después?</li>
+            <li><strong>Aprobación.</strong> Si transfieres un token ERC-20, puede ser necesaria una aprobación previa; si usas el activo nativo de la red, el flujo puede ser diferente.</li>
+            <li><strong>URL y contrato.</strong> ¿Estás en el sitio oficial del protocolo?</li>
         </ol>
 
         <div class="warning-box">
-            <p class="warning-box__title">⚠️ El error más común con principiantes</p>
-            <p>Si es la primera vez que interactúas con Stargate, necesitarás dos transacciones en MetaMask: primero una <strong>aprobación (approve)</strong> para que el contrato pueda gastar tu ETH, y luego la <strong>transferencia</strong> en sí. Esto significa dos gas fees en Ethereum. Mucha gente se asusta al ver la primera transacción y piensa que ya hizo el bridge. No has terminado hasta que confirmes la segunda transacción. Además, en Ethereum mainnet los gas fees pueden ser elevados en horas pico — consulta <strong>etherscan.io/gastracker</strong> antes de empezar. Si el gas está por encima de 60 gwei, espera a que baje o el costo del bridge puede superar los $40.</p>
+            <p class="warning-box__title">⚠️ No asumas que todos los flujos son iguales</p>
+            <p>El activo nativo de una red (como ETH en Ethereum) normalmente no requiere una aprobación ERC-20, mientras que un token sí puede requerirla. El número de transacciones necesarias puede variar según el token y el bridge. Revisa el coste estimado antes de confirmar, en lugar de asumir un importe fijo.</p>
         </div>
 
         <!-- Costs -->
-        <h2 id="costos">Comparativa de costos: puentes vs exchanges centralizados</h2>
-        <p>Existe un camino alternativo que muchos principiantes no consideran: en vez de usar un puente, puedes enviar tus tokens a un exchange centralizado como Binance u OKX, y luego retirarlos directamente a la red de destino. ¿Cuál ruta es más barata? Hagamos números:</p>
+        <h2 id="costos">Comparar Bridges y Exchanges</h2>
+        <p>Existe un camino alternativo: enviar tus tokens a un exchange centralizado y retirarlos directamente a la red de destino. En lugar de comparar precios que cambian cada día, conviene comparar la lógica de cada ruta:</p>
 
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Método</th>
-                    <th>ETH Mainnet → Arbitrum (1 ETH, ~$2,300)</th>
-                    <th>Tiempo total</th>
-                    <th>Complejidad</th>
+                    <th>Ruta</th>
+                    <th>Ventaja</th>
+                    <th>Riesgo / coste a revisar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Stargate Bridge</strong></td>
-                    <td>$8-15 (gas L1 + 0.06% fee)</td>
-                    <td>3-15 min</td>
-                    <td>Media (2 transacciones)</td>
+                    <td><strong>Bridge</strong></td>
+                    <td>Autocustodia durante el flujo</td>
+                    <td>Smart contract, liquidez, fees</td>
                 </tr>
                 <tr>
-                    <td><strong>Orbiter Bridge</strong></td>
-                    <td>$3-8 (tarifa fija + gas L1)</td>
-                    <td>1-5 min</td>
-                    <td>Baja</td>
+                    <td><strong>Exchange</strong></td>
+                    <td>Puede simplificar el cambio de red</td>
+                    <td>Custodia, KYC, retiro, disponibilidad</td>
                 </tr>
                 <tr>
-                    <td><strong>Binance: depositar + retirar</strong></td>
-                    <td>$5-10 (gas L1 para depositar) + $0.50-2 (retiro a Arbitrum)</td>
-                    <td>20-60 min</td>
-                    <td>Media (KYC, esperas)</td>
+                    <td><strong>Canonical bridge</strong></td>
+                    <td>Integración nativa con la L2</td>
+                    <td>Salida lenta en algunos casos</td>
                 </tr>
                 <tr>
-                    <td><strong>OKX: depositar + retirar</strong></td>
-                    <td>$5-10 (gas L1 para depositar) + $0.30-1.50 (retiro a Arbitrum)</td>
-                    <td>20-60 min</td>
-                    <td>Media (KYC, esperas)</td>
+                    <td><strong>Intent / liquidity bridge</strong></td>
+                    <td>Ejecución rápida</td>
+                    <td>Riesgo de relayer / solver / liquidez</td>
                 </tr>
             </tbody>
         </table>
 
-        <p>El puente directo (Stargate u Orbiter) suele ser la opción más rápida y mantiene el control total de tus fondos en todo momento. La ruta del exchange puede ser marginalmente más barata en algunos casos, pero pierdes tiempo en verificaciones, posibles retenciones de seguridad, y tienes que confiar en el exchange durante el proceso. Recomendación: para montos rutinarios (menos de $5,000), usa Orbiter por simplicidad. Para montos más grandes, Stargate por su liquidez profunda y seguridad. La ruta del exchange solo vale la pena si ya ibas a depositar o retirar fondos de todas formas.</p>
+        <p>La ruta que elijas depende de tu situación: si ya ibas a usar un exchange, puede ser lo más simple; si quieres mantener la autocustodia durante todo el flujo, un bridge on-chain tiene sentido. Ninguna opción es "la mejor" en abstracto.</p>
 
         <!-- Risks -->
-        <h2 id="riesgos">Riesgos de los puentes y cómo minimizarlos</h2>
-        <p>Los puentes cross-chain son, estadísticamente, la infraestructura más atacada en crypto. Algunos de los hackeos más grandes de la historia han sido a puentes:</p>
+        <h2 id="riesgos">Riesgos y Cómo se Clasifican</h2>
+        <p>Los bridges han sufrido algunos de los mayores exploits de DeFi. Los fallos no ocurren todos en el mismo lugar: pueden estar en smart contracts, validadores, firmas, relayers, configuración o lógica de verificación.</p>
 
-        <ul>
-            <li><strong>Ronin Bridge (marzo 2022):</strong> $624 millones robados. El puente del juego Axie Infinity fue comprometido a través de claves privadas de validadores.</li>
-            <li><strong>Wormhole (febrero 2022):</strong> $326 millones. Un exploit en la verificación de firmas permitió mintear ETH envuelto sin respaldo.</li>
-            <li><strong>Nomad (agosto 2022):</strong> $190 millones. Un bug en la lógica de verificación permitió a cualquiera retirar fondos que no les pertenecían.</li>
-        </ul>
+        <p>Estos casos históricos muestran cómo fallaron, más que cuánto se perdió:</p>
 
-        <p>Estos hackeos comparten un patrón: todos ocurrieron en el <strong>contrato del puente</strong>, no en las wallets de los usuarios. Cuando un puente es hackeado, los fondos depositados en sus contratos desaparecen. Los usuarios individuales no pueden hacer nada para prevenirlo — es un riesgo sistémico.</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Caso</th>
+                    <th>Año</th>
+                    <th>Qué falló</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ronin</strong></td>
+                    <td>2022</td>
+                    <td>Compromiso de claves / validadores</td>
+                </tr>
+                <tr>
+                    <td><strong>Wormhole</strong></td>
+                    <td>2022</td>
+                    <td>Bug de verificación de firmas</td>
+                </tr>
+                <tr>
+                    <td><strong>Nomad</strong></td>
+                    <td>2022</td>
+                    <td>Fallo de verificación de mensajes / configuración</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <p>Dicho esto, hay medidas concretas que puedes tomar para minimizar tu exposición:</p>
+        <p>El usuario no puede eliminar el riesgo de exploit a nivel de protocolo, pero puede reducir el tiempo de exposición y el tamaño de la operación. Estas son las comprobaciones útiles:</p>
 
         <ol>
-            <li><strong>Usa puentes con alto TVL (Total Value Locked).</strong> Stargate tiene más de $300 millones en TVL. Un puente con $50,000 bloqueados es mucho más arriesgado: menos auditado, menos ojos revisando el código, menos incentivo para los hackers por el botín pequeño, pero también menos protección.</li>
-            <li><strong>Verifica que el puente ha sido auditado.</strong> Busca auditorías de firmas reconocidas: Trail of Bits, OpenZeppelin, CertiK, Quantstamp. Stargate, Across y Wormhole tienen múltiples auditorías públicas.</li>
-            <li><strong>No dejes fondos bloqueados en puentes durante días.</strong> Haz el bridge y retira tus fondos de los contratos del puente lo antes posible. Cuanto menos tiempo estén tus fondos expuestos al contrato del puente, menor es tu ventana de riesgo.</li>
-            <li><strong>Empieza con un monto de prueba pequeño.</strong> La primera vez que uses un puente nuevo, envía $50-100 primero. Verifica que todo funciona: el monto llega, la red de destino lo reconoce, puedes usar los fondos. Solo entonces mueve el resto.</li>
-            <li><strong>Usa puentes nativos cuando sea posible.</strong> Arbitrum, Optimism y Polygon tienen sus propios puentes oficiales. Suelen ser más lentos (el puente nativo de Arbitrum tarda 7 días en liberar fondos de vuelta a Ethereum) pero son los más seguros porque usan la seguridad de la propia L2. Para transfers urgentes, los puentes de terceros como Stargate o Across son la alternativa práctica.</li>
+            <li><strong>Entiende el modelo y el riesgo.</strong> Un bridge de liquidez y un bridge canónico no exponen tus fondos de la misma manera.</li>
+            <li><strong>Revisa auditorías y controles en conjunto.</strong> Auditorías, bug bounty, arquitectura, historial de incidentes y controles administrativos. Una auditoría no es una garantía de seguridad.</li>
+            <li><strong>No confundas TVL con seguridad.</strong> TVL puede indicar uso y liquidez, pero no demuestra que un bridge sea seguro.</li>
+            <li><strong>Conoce qué activo exacto tienes en destino.</strong> Evita mantener posiciones o representaciones bridgeadas que no entiendes.</li>
+            <li><strong>Si es una ruta nueva para ti, haz una prueba pequeña.</strong> Una transferencia pequeña de prueba puede reducir errores operativos antes de mover más.</li>
         </ol>
 
-        <!-- Cómo elegir puente según la ruta -->
-        <h2 id="elegir-puente">Cómo elegir puente según la ruta</h2>
-        <p>No hay un puente que gane en todas las situaciones; la mejor elección depende de la ruta concreta y de la urgencia. Una referencia práctica para las rutas más habituales:</p>
+        <!-- Cómo elegir -->
+        <h2 id="elegir">Cómo Comparar Dos Bridges para la Misma Ruta</h2>
+        <p>Para la misma ruta (por ejemplo, Ethereum → Arbitrum) pueden existir varios bridges. En lugar de buscar "cuál es el más rápido", compara estos puntos entre los dos:</p>
 
         <ul>
-            <li><strong>De L1 a L2 (Ethereum → Arbitrum/Optimism):</strong> <strong>Orbiter</strong> o <strong>Across</strong> — se completan en 30-90 segundos, con interfaz mínima y tarifas predecibles.</li>
-            <li><strong>Entre L2s (Arbitrum → Optimism, Base → Arbitrum):</strong> <strong>Stargate</strong> es imbatible por su liquidez unificada y sus tasas bajas en stablecoins.</li>
-            <li><strong>De L2 a L1 con urgencia:</strong> <strong>Across</strong> es el más rápido, porque su sistema de relayers adelanta los fondos en destino.</li>
-            <li><strong>Hacia Solana, Sui o Aptos:</strong> <strong>Wormhole</strong> es prácticamente la única opción establecida con cobertura amplia.</li>
+            <li><strong>Activo recibido:</strong> ¿recibes el mismo token o una versión envuelta?</li>
+            <li><strong>Ruta:</strong> ¿usa bridge nativo, pool, relayer o token envuelto?</li>
+            <li><strong>Modelo del protocolo:</strong> ¿qué riesgo introduce cada mecanismo?</li>
+            <li><strong>Comisión:</strong> ¿qué parte es gas, protocolo y slippage?</li>
+            <li><strong>Tiempo estimado:</strong> según muestra la interfaz en ese momento.</li>
+            <li><strong>Gas de destino:</strong> ¿podrás operar con lo que recibes?</li>
+            <li><strong>Liquidez:</strong> ¿hay suficiente para el tamaño de tu operación?</li>
+            <li><strong>Contrato y riesgo administrativo:</strong> ¿cómo está gestionado?</li>
+            <li><strong>Dominio oficial:</strong> ¿estás en el sitio correcto?</li>
+            <li><strong>Flujo de soporte:</strong> ¿a dónde irías si algo sale mal?</li>
         </ul>
 
-        <div class="highlight-box">
-            <p><strong>🔐 Regla de oro:</strong> nunca hagas bridge de un monto grande la primera vez que uses un puente nuevo. Envía primero $50-100, verifica que los fondos llegan y que puedes usarlos en la cadena de destino, y solo entonces mueve el resto. Los puentes nativos (Arbitrum, Optimism) son los más seguros pero también los más lentos — el de Arbitrum impone hasta 7 días para volver a Ethereum —, así que para transfers urgentes los puentes de liquidez de terceros son la alternativa práctica.</p>
-        </div>
+        <!-- Antes de firmar -->
+        <h2 id="antes-de-firmar">Antes de Firmar: Confirma Estas Cosas</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Qué mirar</th>
+                    <th>Pregunta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Asset origen</strong></td>
+                    <td>¿Qué estoy enviando?</td>
+                </tr>
+                <tr>
+                    <td><strong>Asset destino</strong></td>
+                    <td>¿Qué recibiré exactamente?</td>
+                </tr>
+                <tr>
+                    <td><strong>Red destino</strong></td>
+                    <td>¿Mi wallet / app la soporta?</td>
+                </tr>
+                <tr>
+                    <td><strong>Cantidad recibida</strong></td>
+                    <td>¿Cuál es el output final?</td>
+                </tr>
+                <tr>
+                    <td><strong>Fee</strong></td>
+                    <td>¿Qué parte es gas / protocolo / slippage?</td>
+                </tr>
+                <tr>
+                    <td><strong>Gas destino</strong></td>
+                    <td>¿Podré moverlo después?</td>
+                </tr>
+                <tr>
+                    <td><strong>Route</strong></td>
+                    <td>¿Usa bridge nativo, pool, relayer o token wrapped?</td>
+                </tr>
+            </tbody>
+        </table>
 
         <!-- FAQ -->
         <section class="faq-section" id="faq">
@@ -332,42 +418,42 @@
             <div class="faq-item">
                 <div class="faq-item__question">¿Cuál es la diferencia entre un puente y enviar tokens a un exchange y retirarlos en otra red?</div>
                 <div class="faq-item__answer">
-                    <p>Ambos métodos logran el mismo resultado práctico: tus fondos terminan en otra blockchain. La diferencia está en <strong>custodia, velocidad, costo y privacidad</strong>. Con un puente, tus fondos nunca pasan por una entidad centralizada — todo es on-chain y custodias tus propias llaves en todo momento. Con la ruta del exchange, depositas tus fondos en Binance/OKX (ellos los custodian), confías en que procesen el retiro correctamente, y potencialmente pasas por verificaciones KYC o retenciones de seguridad. El puente suele ser más rápido (minutos vs potencialmente horas) y más privado. El exchange puede ser más barato en algunos casos si ya tienes cuenta verificada y el exchange soporta retiros directos a L2.</p>
+                    <p>Ambos mueven fondos entre redes, pero con mecanismos distintos. Con un bridge, la operación es on-chain y no pasa por la custodia de un exchange, aunque sí dependes temporalmente del contrato o mecanismo del bridge. La ruta del exchange implica ceder la custodia y pasar por sus procesos. El bridge no ofrece anonimato: origen, destino y ruta suelen ser visibles y analizables públicamente.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Por qué el puente nativo de Arbitrum tarda 7 días para volver a Ethereum?</div>
+                <div class="faq-item__question">¿Por qué el puente nativo de Arbitrum tarda alrededor de una semana para volver a Ethereum?</div>
                 <div class="faq-item__answer">
-                    <p>Arbitrum es un <strong>optimistic rollup</strong>. Esto significa que asume que todas las transacciones en la L2 son válidas por defecto, pero incluye un <strong>período de desafío de 7 días</strong>. Durante esos 7 días, cualquiera puede presentar una prueba de fraude si detecta una transacción inválida. Este mecanismo es lo que hace seguros a los optimistic rollups — no necesitan validar cada transacción, solo necesitan poder demostrar que alguien hizo trampa. Pero para el usuario que quiere retirar fondos de vuelta a Ethereum, significa esperar una semana. Los puentes de liquidez de terceros (Stargate, Across, Orbiter) resuelven esto usando pools de liquidez pre-financiados: te entregan los fondos inmediatamente en destino y ellos asumen el riesgo del período de espera, a cambio de una pequeña comisión.</p>
+                    <p>Arbitrum es un <strong>optimistic rollup</strong>. Las salidas canónicas pueden estar sujetas a un período de desafío antes de finalizar en Ethereum, tradicionalmente de alrededor de una semana. Durante ese tiempo cualquiera puede presentar una prueba de fraude. Los bridges de terceros con liquidez pueden entregarte el activo en destino de forma más rápida, con su propio modelo y riesgo.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Necesito ETH en la cadena de destino para usar los fondos que bridgeé?</div>
+                <div class="faq-item__question">¿Necesito el token de gas en la cadena de destino?</div>
                 <div class="faq-item__answer">
-                    <p><strong>Sí, absolutamente.</strong> Este es uno de los errores más frustrantes para principiantes. Si bridgeas USDC de Ethereum a Arbitrum, necesitas tener ETH en Arbitrum para pagar el gas de cualquier transacción futura (swaps, depósitos en protocolos, etc.). Sin ETH en la cadena de destino, tus tokens están atrapados: no puedes moverlos. La buena noticia es que muchos puentes modernos como Stargate y Across te permiten hacer bridge de ETH y stablecoins en la misma transacción, o incluso ofrecen <strong>gas on destination</strong>: una pequeña cantidad de ETH que se te entrega automáticamente en la cadena de destino para que puedas hacer tus primeras transacciones.</p>
+                    <p>Para mover después el activo en destino, normalmente necesitarás el token de gas de esa red (por ejemplo, ETH en una L2 de Ethereum), salvo que la app ofrezca patrocinio o gas en destino. Antes de confirmar, revisa qué recibes y si podrás operar con ello.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Qué hago si mi bridge se queda atascado y los fondos no llegan?</div>
                 <div class="faq-item__answer">
-                    <p>Lo primero: <strong>no hagas la misma transacción otra vez</strong>. Duplicar la transacción puede resultar en que pierdas fondos dos veces. Lo segundo: verifica el estado de tu transacción en el explorador de bloques de la cadena de origen (Etherscan, Arbiscan, etc.). Si la transacción está confirmada en origen, el problema está en el puente. Tercero: ve al Discord o Telegram oficial del puente y abre un ticket de soporte con el hash de tu transacción. Los puentes establecidos (Stargate, Across, Wormhole) tienen equipos de soporte que resuelven estos casos, típicamente en menos de 24 horas. La gran mayoría de las transacciones "atascadas" se resuelven solas cuando la congestión de red disminuye. Solo en casos muy raros se requiere intervención manual. Y por supuesto: ignora a cualquiera que te envíe un mensaje privado ofreciendo "ayuda". Los estafadores se hacen pasar por soporte técnico para robarte las claves.</p>
+                    <p>No repitas la transacción. Verifica su estado en el explorador de bloques. Si está confirmada en origen, ve primero al sitio oficial del bridge y abre el canal de soporte enlazado desde allí. No confíes en mensajes privados que ofrezcan ayuda: suelen ser estafas.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Puedo hacer bridge de NFTs?</div>
                 <div class="faq-item__answer">
-                    <p>Sí, aunque es menos común y las opciones son más limitadas. Wormhole y LayerZero tienen soporte para NFTs, pero no todos los puentes lo ofrecen. Hacer bridge de un NFT implica bloquear el NFT original en la cadena de origen y emitir una versión "wrapped" en la cadena de destino. El problema es que esa versión wrapped puede no ser reconocida por los marketplaces de la cadena de destino — OpenSea en Polygon no necesariamente lista un NFT que fue bridgeado desde Ethereum. Antes de bridgear un NFT, verifica que el marketplace y los compradores en la cadena de destino van a reconocer y aceptar la versión bridgeada. Para la mayoría de casos prácticos, es más sencillo vender el NFT en su cadena original y comprar otro en la cadena de destino.</p>
+                    <p>Sí, pero es más complejo. La representación en destino puede no ser tratada como la misma colección por los marketplaces, y hay consideraciones de licencia y regalías. Revisa si el marketplace y la colección reconocen la versión bridgeada antes de intentarlo.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Qué puente recomiendas para alguien que nunca ha hecho un bridge?</div>
+                <div class="faq-item__question">¿Qué reviso antes de usar un bridge por primera vez?</div>
                 <div class="faq-item__answer">
-                    <p><strong>Orbiter Finance</strong> es, sin duda, el puente más amigable para principiantes. La interfaz tiene literalmente 4 campos: cadena de origen, cadena de destino, token y cantidad. Sin configuraciones avanzadas, sin curvas de liquidez que entender, sin opciones que puedan confundirte. Las transfers se completan en 30-60 segundos y las tarifas son fijas y predecibles. Orbiter soporta más de 20 cadenas y los tokens principales (ETH, USDC, USDT, DAI). Recomendación: haz tu primer bridge con Orbiter, un monto pequeño ($50-100), de Ethereum a Arbitrum. Una vez que te sientas cómodo, explora Stargate para transfers más grandes y Across para velocidad extrema.</p>
+                    <p>Confirma el asset de origen y el que recibirás exactamente, la red de destino, la cantidad final, el desglose de comisiones, el gas de destino y la ruta. Si es una ruta nueva para ti, una transferencia pequeña de prueba puede reducir errores operativos.</p>
                 </div>
             </div>
         </section>
@@ -378,7 +464,7 @@
             <li><a href="/articulos/blockchain-explicacion-sencilla.html">Blockchain: Explicación Sencilla</a> — Entiende cómo funcionan las cadenas antes de conectarlas entre sí.</li>
             <li><a href="/articulos/como-usar-uniswap.html">Cómo Usar Uniswap</a> — Una vez que hagas bridge a una L2, querrás tradear con comisiones bajas.</li>
             <li><a href="/articulos/crear-configurar-metamask.html">Crear y Configurar MetaMask</a> — Añade redes L2 a tu wallet para recibir los fondos del bridge.</li>
-            <li><a href="/articulos/seguridad-criptomonedas.html">10 Reglas de Seguridad Crypto</a> — Protégete de sitios falsos de puentes y estafas phishing.</li>
+            <li><a href="/articulos/seguridad-criptomonedas.html">Seguridad en criptomonedas</a> — Protégete de sitios falsos de puentes y estafas phishing.</li>
             <li><a href="/articulos/binance-vs-okx.html">Binance vs OKX</a> — Si prefieres la ruta del exchange centralizado para mover fondos entre redes.</li>
         </ul>
 
@@ -386,7 +472,7 @@
         <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
             <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
             <ul style="list-style:none;padding:0;margin:0;">
-                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://stargate.finance/" target="_blank" rel="noopener" style="color:var(--accent);">Stargate Finance</a> — Puente cross-chain con liquidez unificada</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://ethereum.org/bridges/" target="_blank" rel="noopener" style="color:var(--accent);">Ethereum.org — Bridges</a> — Explicación de los tipos de puentes</li>
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://defillama.com/protocols/Bridge" target="_blank" rel="noopener" style="color:var(--accent);">DefiLlama Bridges</a> — Comparativa de TVL y volumen de puentes</li>
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://docs.arbitrum.io/" target="_blank" rel="noopener" style="color:var(--accent);">Arbitrum Docs</a> — Documentación oficial del puente nativo de Arbitrum</li>
             </ul>
@@ -394,18 +480,18 @@
 
         <!-- Transparencia -->
         <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
-            <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. <a href="/sobre.html" style="color:var(--accent);">Más información →</a></p>
+            <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto no cambia cómo evaluamos una plataforma. <a href="/sobre.html" style="color:var(--accent);">Más información →</a></p>
         </div>
 
         <!-- CTA -->
         <div class="cta-card">
-            <h2>Mueve tus Fondos y Opera más Barato</h2>
-            <p>Compra ETH o stablecoins en Binance u OKX, haz bridge a la L2 que prefieras, y opera en DeFi con comisiones 50-100 veces más baratas que en Ethereum mainnet. Las herramientas están maduras — solo necesitas el conocimiento para usarlas.</p>
+            <h2>¿Listo para mover activos entre redes con criterio?</h2>
+            <p>Si más adelante necesitas una cuenta en un exchange para conseguir cripto, puedes registrarte en Binance u OKX con los códigos de MiCryptoGuía para obtener un descuento en comisiones.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
             </div>
-            <p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+            <p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la entidad que presta el servicio. Revisa qué servicios están habilitados para tu cuenta y tu ubicación.</p>
         </div>
     </main>
 
