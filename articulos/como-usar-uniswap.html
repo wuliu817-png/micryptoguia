@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guía completa para usar Uniswap: conectar MetaMask, intercambiar tokens, configurar slippage, añadir liquidez y evitar errores comunes.">
-    <meta name="keywords" content="Uniswap, cómo usar Uniswap, DEX, DeFi, swap tokens, MetaMask, AMM, liquidity pool, gas fees, slippage, Ethereum, intercambiar tokens">
+    <meta name="description" content="Cómo usar Uniswap en 2026: conectar una wallet, hacer swaps de forma segura y entender slippage, price impact, aprobaciones y las versiones del protocolo (V2, V3, V4 y UniswapX).">
+    <meta name="keywords" content="Uniswap, cómo usar Uniswap, DEX, DeFi, swap tokens, MetaMask, AMM, liquidity pool, gas fees, slippage, Ethereum, intercambiar tokens, UniswapX">
     <meta name="author" content="MiCryptoGuía">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#080b16">
     <link rel="canonical" href="https://micryptoguia.com/articulos/como-usar-uniswap.html">
 
-    <meta property="og:title" content="Cómo Usar Uniswap | Guía para Intercambiar Tokens DeFi 2026 — MiCryptoGuía">
-    <meta property="og:description" content="Aprende a usar Uniswap paso a paso: conecta tu wallet, haz swaps, entiende el slippage, añade liquidez y evita estafas. La guía más completa en español.">
+    <meta property="og:title" content="Cómo Usar Uniswap: Guía para Intercambiar Tokens DeFi (2026) — MiCryptoGuía">
+    <meta property="og:description" content="Conecta tu wallet, haz swaps y entiende slippage, price impact y aprobaciones. Uniswap en 2026: V2, V3, V4 y UniswapX explicados de forma sencilla.">
     <meta property="og:url" content="https://micryptoguia.com/articulos/como-usar-uniswap.html">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es">
@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Cómo Usar Uniswap | Guía para Intercambiar Tokens DeFi 2026</title>
+    <title>Cómo Usar Uniswap: Guía para Intercambiar Tokens DeFi (2026)</title>
 
     <script type="application/ld+json">
     {
@@ -35,23 +35,23 @@
       "@graph": [
         {
           "@type": "Article",
-          "headline": "Cómo Usar Uniswap | Guía para Intercambiar Tokens DeFi 2026",
-          "description": "Guía paso a paso para usar Uniswap: conectar MetaMask, hacer swaps, configurar slippage, añadir liquidez y gestionar riesgos como impermanent loss y estafas.",
+          "headline": "Cómo Usar Uniswap: Guía para Intercambiar Tokens DeFi (2026)",
+          "description": "Conecta tu wallet, haz swaps y entiende slippage, price impact y aprobaciones. Uniswap en 2026: V2, V3, V4 y UniswapX explicados de forma sencilla.",
           "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "datePublished": "2026-08-02",
-          "dateModified": "2026-08-23",
+          "dateModified": "2026-09-08",
           "inLanguage": "es",
           "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "¿Necesito hacer KYC para usar Uniswap?", "acceptedAnswer": { "@type": "Answer", "text": "No. Uniswap es un protocolo descentralizado: no hay registro, verificación de identidad ni límites. Solo necesitas una wallet Web3 como MetaMask y fondos. Toda la responsabilidad de seguridad recae en ti." } },
-            { "@type": "Question", "name": "¿Por qué mi transacción falló pero perdí el gas fee igual?", "acceptedAnswer": { "@type": "Answer", "text": "El gas fee se cobra por el intento de ejecución, no por el éxito. Si el slippage era demasiado bajo y el precio se movió, el validador ya gastó recursos computacionales. Configura un slippage ligeramente más alto en momentos de alta volatilidad." } },
-            { "@type": "Question", "name": "¿Uniswap V2 o V3? ¿Cuál debo usar?", "acceptedAnswer": { "@type": "Answer", "text": "Uniswap V3 es la versión actual y la que debes usar por defecto: ofrece liquidez concentrada, múltiples niveles de comisiones y mejor experiencia. La interfaz te redirige automáticamente a la mejor ruta entre V2 y V3." } },
-            { "@type": "Question", "name": "¿Puedo usar Uniswap en el móvil?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Accede a app.uniswap.org desde el navegador de tu teléfono y conecta MetaMask Mobile (que incluye navegador integrado) o usa la app de Uniswap. La experiencia móvil está adaptada para pantallas táctiles." } },
-            { "@type": "Question", "name": "¿Qué es el token UNI y para qué sirve?", "acceptedAnswer": { "@type": "Answer", "text": "UNI es el token de gobernanza de Uniswap. Con UNI puedes votar sobre cambios en el protocolo. No da derecho a una parte de las comisiones, pero es uno de los tokens DeFi más valiosos por su papel en la gobernanza del DEX más grande." } },
-            { "@type": "Question", "name": "¿Cuánto dinero necesito para empezar en Uniswap?", "acceptedAnswer": { "@type": "Answer", "text": "No hay mínimo técnico, pero en Ethereum mainnet las gas fees hacen que convenga un mínimo de 200-300 USD por operación. En capas 2 como Arbitrum, Optimism o Base el gas cuesta centavos y puedes hacer swaps de 20 USD sin problemas." } }
+            { "@type": "Question", "name": "¿Necesito hacer KYC para usar Uniswap?", "acceptedAnswer": { "@type": "Answer", "text": "El protocolo de Uniswap es descentralizado y no exige registro ni verificación de identidad. No funciona con depósitos y retiros como un exchange custodial: los activos permanecen en tu wallet hasta que firmas una operación. Por eso mismo, la responsabilidad de seguridad recae en ti." } },
+            { "@type": "Question", "name": "¿Por qué mi transacción falló pero perdí el gas fee igual?", "acceptedAnswer": { "@type": "Answer", "text": "La comisión de red se cobra por el intento de ejecución, no por el éxito. Una transacción puede fallar por varias razones: la ruta, la liquidez, la aprobación previa, un cambio brusco de precio o la configuración de la red. Antes de reintentar, revisa el mensaje de error y qué se ajustó entre un intento y otro." } },
+            { "@type": "Question", "name": "¿Uniswap V2 o V3? ¿Cuál debo usar?", "acceptedAnswer": { "@type": "Answer", "text": "Uniswap ya no se reduce a V2 o V3. La interfaz puede enrutar una operación entre distintas versiones y fuentes de liquidez según la red y el swap. Para un usuario normal, normalmente no hace falta elegir manualmente una versión del protocolo." } },
+            { "@type": "Question", "name": "¿Puedo usar Uniswap en el móvil?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Puedes usar la app oficial de Uniswap o una wallet compatible en el móvil. Verifica siempre que la app y el dominio sean los oficiales antes de conectar la wallet." } },
+            { "@type": "Question", "name": "¿Qué es el token UNI y para qué sirve?", "acceptedAnswer": { "@type": "Answer", "text": "UNI es el token de gobernanza del protocolo Uniswap. Quienes lo tienen pueden participar en decisiones sobre el protocolo. No da derecho a una parte de las comisiones." } },
+            { "@type": "Question", "name": "¿Cuánto dinero necesito para empezar en Uniswap?", "acceptedAnswer": { "@type": "Answer", "text": "No existe un monto mínimo económico universal. Antes de hacer un swap, compara la comisión total con el importe que vas a intercambiar. Si el coste representa una parte demasiado grande de la operación, considera otra red compatible o espera." } }
           ]
         }
       ]
@@ -82,40 +82,42 @@
                     <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
                     <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                 </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <main class="article-page">
-            <nav class="article-breadcrumb" aria-label="Breadcrumb">
-                <a href="../">Inicio</a> &raquo;
-                <a href="../#defi">DeFi</a> &raquo;
-                <span>Cómo Usar Uniswap</span>
-            </nav>
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+            <a href="../">Inicio</a> &raquo;
+            <a href="../#defi">DeFi</a> &raquo;
+            <span>Cómo Usar Uniswap</span>
+        </nav>
 
-        <h1>Cómo Usar Uniswap: Guía Completa para Intercambiar Tokens en DeFi (2026)</h1>
+        <h1>Cómo Usar Uniswap: Guía para Intercambiar Tokens DeFi (2026)</h1>
         <div class="article-meta">
             <span>🔄 DeFi</span>
-            <span>⏱️ 16 min lectura</span>
-            <span>📅 23 Ago 2026</span>
+            <span>⏱️ 12 min lectura</span>
+            <span>📅 8 Sep 2026</span>
             <span>⚡ Intermedio</span>
         </div>
 
-        <p>Uniswap es un <strong>exchange descentralizado (DEX)</strong> que te permite intercambiar tokens directamente desde tu wallet, sin crear una cuenta, sin pasar por verificación KYC y sin que una empresa centralizada custodie tus fondos en ningún momento. Construido sobre Ethereum, Uniswap maneja más de <strong>$3-5 mil millones en volumen diario de trading</strong> y es, por mucha diferencia, el DEX más grande del ecosistema DeFi desde su lanzamiento en 2018.</p>
+        <p>Uniswap es un <strong>exchange descentralizado (DEX)</strong> que te permite intercambiar tokens directamente desde tu wallet, sin crear cuenta, sin pasar por verificación KYC y sin que una empresa centralizada custodie tus fondos. Nació en Ethereum, pero hoy funciona en múltiples redes: la red que uses determina qué activos puedes intercambiar y qué token necesitas para pagar las comisiones.</p>
 
-        <p>A diferencia de exchanges centralizados como Binance o Coinbase — donde depositas tus fondos, el exchange los custodia y los empareja con órdenes de compra y venta en un libro de órdenes — Uniswap funciona con un modelo radicalmente distinto llamado <strong>Automated Market Maker (AMM)</strong>. Aquí no hay libro de órdenes: los precios los determina una fórmula matemática y la liquidez la aportan los propios usuarios. En esta guía encontrarás todo lo que necesitas saber para usar Uniswap de forma segura y eficiente en 2026.</p>
+        <p>Uniswap se mantiene entre los protocolos de intercambio descentralizado con mayor volumen y liquidez del mercado. A diferencia de un exchange centralizado como Binance o Coinbase — donde depositas fondos, el exchange los custodia y empareja órdenes en un libro — Uniswap usa un modelo llamado <strong>Automated Market Maker (AMM)</strong>, donde el precio lo determina una fórmula y la liquidez la aportan los propios usuarios.</p>
 
         <!-- Speed Read -->
         <div class="speed-read">
             <h3>🔁 ¿Qué vas a hacer exactamente?</h3>
-            <p>Vas a conectar MetaMask a Uniswap, intercambiar ETH por cualquier token de la red Ethereum <strong>sin crear cuenta, sin KYC y sin intermediarios</strong>. Todo ocurre directamente entre tu wallet y un smart contract. En menos de 10 minutos habrás completado tu primer swap descentralizado.</p>
-        </div>
             <ul>
-                <li>Uniswap es un <strong>DEX (exchange descentralizado)</strong> en Ethereum. No necesitas registrarte, solo conectar tu wallet como MetaMask.</li>
-                <li>Funciona con un modelo <strong>AMM (Automated Market Maker)</strong>: los precios los determina una fórmula matemática, no un libro de órdenes.</li>
-                <li>Para hacer un swap, necesitas <strong>ETH en tu wallet para pagar el gas</strong> (las comisiones de la red Ethereum), más los tokens que quieras intercambiar.</li>
-                <li>Los principales riesgos son <strong>slippage, ataques MEV/front-running, gas fees altos en horas pico y tokens fraudulentos</strong>.</li>
-                <li>Además de hacer swaps, puedes <strong>ganar comisiones aportando liquidez</strong> a los pools — pero conlleva el riesgo de impermanent loss.</li>
+                <li>Conectar una wallet compatible a la interfaz oficial de Uniswap.</li>
+                <li>Elegir los dos activos, revisar la ruta y confirmar el swap desde tu wallet.</li>
+                <li>El flujo básico consiste en <strong>conectar la wallet, elegir los activos, revisar la ruta y confirmar la operación</strong>.</li>
+                <li>Antes de firmar conviene revisar el token, la red, el precio, el impacto de precio, la comisión y la aprobación.</li>
             </ul>
         </div>
 
@@ -123,199 +125,207 @@
         <div class="toc" id="indice">
             <div class="toc__title">📋 Tabla de Contenidos</div>
             <ol>
-                <li><a href="#que-es-uniswap">Qué es Uniswap y cómo funciona un AMM</a></li>
-                <li><a href="#antes-de-empezar">Antes de empezar: lo que necesitas</a></li>
-                <li><a href="#conectar-wallet">Paso 1: Conectar tu wallet (MetaMask)</a></li>
-                <li><a href="#hacer-swap">Paso 2: Hacer tu primer swap</a></li>
-                <li><a href="#slippage-gas">Slippage y gas fees: los dos costos ocultos</a></li>
-                <li><a href="#liquidez">Cómo añadir liquidez y ganar comisiones</a></li>
-                <li><a href="#riesgos">Riesgos y cómo evitarlos</a></li>
-                <li><a href="#checklist">Checklist antes de operar</a></li>
+                <li><a href="#que-es-uniswap">Qué es Uniswap hoy</a></li>
+                <li><a href="#dex-vs-cex">DEX vs exchange centralizado</a></li>
+                <li><a href="#antes-de-empezar">Qué necesitas antes de hacer un swap</a></li>
+                <li><a href="#conectar-wallet">Cómo conectar una wallet sin caer en un sitio falso</a></li>
+                <li><a href="#hacer-swap">Cómo hacer un swap paso a paso</a></li>
+                <li><a href="#antes-de-firmar">Qué revisar antes de firmar</a></li>
+                <li><a href="#slippage-price-impact">Qué son slippage y price impact</a></li>
+                <li><a href="#versiones">V2, V3, V4 y UniswapX: qué necesita saber un usuario</a></li>
+                <li><a href="#riesgos">Riesgos reales</a></li>
+                <li><a href="#swap-falla">Qué hacer si el swap falla</a></li>
+                <li><a href="#liquidez">Liquidez: qué es y por qué es un tema aparte</a></li>
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
             </ol>
         </div>
 
-        <!-- What is Uniswap -->
-        <h2 id="que-es-uniswap">Qué es Uniswap y cómo funciona un AMM</h2>
-        <p>Para entender Uniswap, olvida todo lo que sabes sobre exchanges tradicionales. En lugar de un libro de órdenes donde compradores y vendedores se ponen de acuerdo en un precio, Uniswap utiliza <strong>pools de liquidez</strong> y una fórmula matemática para determinar los precios automáticamente.</p>
+        <!-- 1. What is Uniswap today -->
+        <h2 id="que-es-uniswap">1. Qué es Uniswap hoy</h2>
+        <p>Uniswap es un protocolo de intercambio que funciona sobre blockchains. Cuando haces un swap, no envías tus tokens a una cuenta de la empresa: la operación se ejecuta mediante contratos y liquidez on-chain, sin depositar previamente los tokens en una cuenta custodial del exchange.</p>
 
-        <p>El corazón de Uniswap es la fórmula <strong>x * y = k</strong>, donde:</p>
+        <p>Aunque nació en Ethereum, hoy la interfaz oficial soporta múltiples redes, entre ellas Ethereum, Arbitrum, Base, BNB Chain, Polygon, Optimism y Unichain, y el soporte sigue ampliándose. Esto cambia lo que necesitas saber para operar: el token que pagas de comisión, por ejemplo, depende de la red que estés usando.</p>
+
+        <!-- 2. DEX vs CEX -->
+        <h2 id="dex-vs-cex">2. DEX vs exchange centralizado</h2>
+        <p>En un exchange centralizado, tus fondos quedan bajo custodia de la plataforma y las operaciones se emparejan en un libro de órdenes. En un DEX como Uniswap, los fondos permanecen en tu wallet y el intercambio se hace contra pools de liquidez.</p>
+
+        <h3>Cómo funciona un AMM: el ejemplo clásico de x × y = k</h3>
+        <p>La fórmula <strong>x × y = k</strong> es la forma más sencilla de entender el AMM clásico de Uniswap V2:</p>
         <ul>
-            <li><strong>x</strong> es la cantidad del Token A en el pool de liquidez</li>
-            <li><strong>y</strong> es la cantidad del Token B en el pool</li>
-            <li><strong>k</strong> es una constante que debe mantenerse siempre igual</li>
+            <li><strong>x</strong> es la cantidad del token A en el pool.</li>
+            <li><strong>y</strong> es la cantidad del token B en el pool.</li>
+            <li><strong>k</strong> es una constante que el pool intenta mantener.</li>
         </ul>
 
-        <p>Imagina un pool de ETH y USDC que contiene 10 ETH y 23,000 USDC (k = 10 * 23,000 = 230,000). Si quieres comprar 1 ETH, el pool debe mantener k constante. Retiras 1 ETH, así que ahora quedan 9 ETH. Para que k siga siendo 230,000, el pool debe tener 230,000 / 9 = 25,555 USDC. Es decir, tienes que depositar 25,555 - 23,000 = <strong>2,555 USDC</strong>. Ese es el precio que pagas por 1 ETH.</p>
+        <p>Imagina un pool con 10 ETH y 23.000 USDC (k = 230.000). Si retiras 1 ETH, quedan 9 ETH, y para mantener k constante el pool debe pasar a tener 230.000 / 9 ≈ 25.555 USDC. Esa diferencia (2.555 USDC) es lo que pagas por 1 ETH. El precio se ajusta automáticamente según la oferta y la demanda, sin necesidad de que haya un vendedor concreto en el otro lado.</p>
 
-        <p>Lo fascinante es que este sistema no necesita que "alguien" esté vendiendo ETH en ese momento. El pool siempre tiene liquidez porque los <strong>liquidity providers (LPs)</strong> — personas como tú — depositan pares de tokens en el pool a cambio de una parte de las comisiones de trading. La fórmula matemática ajusta los precios automáticamente según la oferta y la demanda, sin intervención humana.</p>
+        <p>Las versiones más recientes de Uniswap añaden mecanismos más complejos, así que esta fórmula sirve para entender la idea básica, no para describir todos los pools actuales.</p>
 
-        <!-- Before you start -->
-        <h2 id="antes-de-empezar">Antes de empezar: lo que necesitas</h2>
-        <p>Para usar Uniswap necesitas tres cosas básicas:</p>
-
+        <!-- 3. Before you start -->
+        <h2 id="antes-de-empezar">3. Qué necesitas antes de hacer un swap</h2>
         <ul>
-            <li><strong>1. Una wallet Web3:</strong> La más común es <strong>MetaMask</strong> (extensión de navegador o app móvil). También funcionan Trust Wallet, Coinbase Wallet, Rainbow o Rabby. MetaMask es la más probada y la opción más recomendable para principiantes en DeFi. Descárgala solo desde <strong>metamask.io</strong> — nunca desde un anuncio de Google o un enlace que te manden por privado.</li>
-            <li><strong>2. ETH en tu wallet para pagar el gas:</strong> Cada transacción en Uniswap — ya sea un swap, añadir liquidez o retirarla — requiere pagar una comisión a la red Ethereum (gas fee) en ETH. Sin ETH en tu wallet, no puedes hacer nada. Como regla general, ten al menos <strong>$50-100 en ETH</strong> para cubrir varias transacciones.</li>
-            <li><strong>3. Los tokens que quieras intercambiar:</strong> Si quieres comprar tokens con USDT, necesitas tener USDT en tu wallet. Si quieres vender ETH por USDC, necesitas tener ETH. Los tokens deben estar en la misma red — Uniswap opera en Ethereum mainnet y en varias capas 2 (Arbitrum, Optimism, Polygon, Base).</li>
+            <li><strong>Una wallet Web3:</strong> puedes usar una wallet compatible como MetaMask, Rabby, Coinbase Wallet o Uniswap Wallet. Elige una que soporte la red que vas a utilizar y cuyo sistema de recuperación entiendas. Descárgala solo desde su web oficial, nunca desde un anuncio ni un enlace privado.</li>
+            <li><strong>El token para pagar las comisiones de la red:</strong> en una transacción on-chain normalmente necesitas el token usado para pagar las comisiones de esa red. Por ejemplo, ETH en Ethereum, Arbitrum o Base; BNB en BNB Smart Chain; AVAX en Avalanche.</li>
+            <li><strong>Los tokens que quieras intercambiar:</strong> deben estar en la misma red en la que vas a operar.</li>
         </ul>
 
         <div class="highlight-box highlight-box--blue">
-            <p><strong>Tip de ahorro:</strong> Si vas a hacer swaps por montos pequeños (menos de $500), considera usar Uniswap en una <strong>capa 2 (L2)</strong> como Arbitrum, Optimism o Base. Las comisiones de gas en L2 son entre 10 y 50 veces más baratas que en Ethereum mainnet. La interfaz de Uniswap te permite cambiar de red en la esquina superior derecha. Solo asegúrate de tener ETH en la red correspondiente para pagar el gas.</p>
+            <p><strong>Consejo de coste:</strong> antes del swap, revisa la estimación de comisión que muestra la wallet y deja un pequeño margen del token utilizado para pagar la red. Si la comisión representa una parte importante del importe que vas a intercambiar, compara otras redes compatibles antes de confirmar.</p>
         </div>
 
-        <!-- Step 1: Connect wallet -->
-        <h2 id="conectar-wallet">Paso 1: Conectar tu wallet a Uniswap</h2>
+        <!-- 4. Connect wallet -->
+        <h2 id="conectar-wallet">4. Cómo conectar una wallet sin caer en un sitio falso</h2>
+        <p>Abre la app oficial de Uniswap y conecta tu wallet. El nombre y la posición exacta de los botones pueden cambiar con las actualizaciones, así que conviene centrarse en la lógica y no en los píxeles:</p>
         <ol>
-            <li><strong>Abre uniswap.org:</strong> Verifica que estás en la URL correcta: <strong>https://uniswap.org</strong>. La interfaz de trading está en <strong>https://app.uniswap.org</strong>. Como se explica en la guía de <a href="/articulos/seguridad-criptomonedas.html">seguridad crypto</a>, guarda este enlace en tus bookmarks y úsalo siempre. Los clones falsos abundan.</li>
-            <li><strong>Haz clic en "Launch App"</strong> (Lanzar App) para ir a la interfaz de trading. Verás la pantalla de swap con dos campos: "You pay" (Tú pagas) en la parte superior y "You receive" (Tú recibes) en la inferior.</li>
-            <li><strong>Haz clic en "Connect Wallet"</strong> (Conectar Wallet) en la esquina superior derecha. Selecciona MetaMask (u otra wallet) de la lista. MetaMask te pedirá confirmar la conexión. Haz clic en "Next" y luego en "Connect".</li>
-            <li><strong>Verifica que estás en la red correcta.</strong> En la esquina superior derecha de la app verás la red seleccionada (Ethereum, Arbitrum, Optimism, Polygon, Base, etc.). Asegúrate de que coincide con la red donde tienes tus fondos en MetaMask. Si no coincide, cambia la red en MetaMask y Uniswap se sincronizará automáticamente.</li>
+            <li><strong>Verifica el dominio.</strong> La interfaz oficial está en <strong>app.uniswap.org</strong>. Guarda el enlace en marcadores y úsalo siempre. Los clones falsos abundan y pueden intentar drenar tu wallet al conectarla.</li>
+            <li><strong>Conecta la wallet.</strong> Elige tu wallet de la lista y confirma la conexión desde la propia wallet.</li>
+            <li><strong>Comprueba la red seleccionada.</strong> Asegúrate de que coincide con la red donde tienes tus fondos. Si no coincide, cambia de red en la wallet o en la interfaz antes de operar.</li>
         </ol>
 
-        <p>Eso es todo. No hay formularios que rellenar, no hay selfies que subir, no hay verificaciones. Tu wallet está conectada y ya puedes operar. La dirección de tu wallet aparece ahora en la esquina superior derecha (algo como 0x1234...abcd).</p>
+        <p>No hay formularios, selfies ni verificaciones. Tu dirección aparece conectada y ya puedes operar.</p>
 
-        <!-- Step 2: Make a swap -->
-        <h2 id="hacer-swap">Paso 2: Hacer tu primer swap</h2>
-        <p>Vamos al caso práctico más común: intercambiar USDT por ETH. Asumiendo que ya tienes USDT en tu wallet y ETH para pagar el gas, estos son los pasos:</p>
-
+        <!-- 5. Make a swap -->
+        <h2 id="hacer-swap">5. Cómo hacer un swap paso a paso</h2>
+        <p>El flujo es el mismo para cualquier par. Vamos a tomarlo con un ejemplo común: intercambiar USDT por ETH.</p>
         <ol>
-            <li><strong>Selecciona el token que pagas:</strong> En el campo superior "You pay", haz clic en el token por defecto y busca "USDT" en la lista. Si es la primera vez que usas USDT en Uniswap, tendrás que hacer clic en "Import token" para añadirlo a tu lista. Esto es normal y seguro — los tokens principales como USDT, USDC, DAI y WBTC son completamente legítimos.</li>
-            <li><strong>Ingresa la cantidad:</strong> Escribe cuánto USDT quieres gastar, por ejemplo 500. Verás que automáticamente se calcula cuánto ETH recibirás en el campo inferior.</li>
-            <li><strong>Selecciona el token que recibes:</strong> En el campo inferior, selecciona ETH (o el token que quieras recibir).</li>
-            <li><strong>Revisa los detalles de la transacción:</strong> Debajo de los campos de swap, Uniswap te muestra información crucial que muchos principiantes ignoran:
-                <ul>
-                    <li><strong>Rate (Tasa de cambio):</strong> Cuánto vale 1 USDT en ETH según el precio actual del pool.</li>
-                    <li><strong>Price Impact (Impacto en el precio):</strong> Qué tanto afecta tu transacción al precio del pool. Si es menor al 0.5%, todo normal. Si ves algo como 5% o más, estás moviendo demasiado volumen para ese pool — el precio que pagarás será peor de lo esperado.</li>
-                    <li><strong>Network Fee (Comisión de red):</strong> El gas fee estimado en ETH y su equivalente en dólares. En Ethereum mainnet, puede oscilar entre $3 y $50 dependiendo de la congestión. En L2 como Arbitrum, típicamente entre $0.10 y $0.50.</li>
-                </ul>
-            </li>
-            <li><strong>Haz clic en "Swap"</strong> y luego en "Confirm Swap". MetaMask se abrirá mostrando la transacción. Revisa los detalles y haz clic en "Confirm".</li>
-            <li><strong>Espera la confirmación:</strong> Dependiendo de la congestión de la red, la transacción puede tardar desde 15 segundos hasta varios minutos. Verás el estado en la app de Uniswap y en MetaMask. Una vez confirmada, los ETH aparecerán en tu wallet.</li>
+            <li><strong>Elige el activo que entregas.</strong> Selecciona el token que vas a gastar (por ejemplo, USDT).</li>
+            <li><strong>Elige el activo que recibes.</strong> Selecciona el token de salida (por ejemplo, ETH).</li>
+            <li><strong>Introduce la cantidad.</strong> La interfaz calcula una estimación de cuánto recibirás.</li>
+            <li><strong>Revisa los detalles</strong> (los vemos en la sección siguiente): precio, impacto de precio, comisión y aprobación.</li>
+            <li><strong>Confirma el swap.</strong> La wallet te pedirá firmar o confirmar la transacción. El estado aparecerá en la interfaz y en tu wallet hasta que se confirme en la red.</li>
         </ol>
+
+        <!-- 6. What to review before signing -->
+        <h2 id="antes-de-firmar">6. Qué revisar antes de firmar</h2>
+        <p>Antes de confirmar cualquier operación, conviene revisar estos seis puntos. Son la diferencia entre un swap esperado y uno que te cuesta de más:</p>
+
+        <ul>
+            <li><strong>Token:</strong> no confíes solo en el nombre o símbolo. Verifica la dirección del contrato y la red desde una fuente oficial (CoinGecko, CoinMarketCap o el propio proyecto).</li>
+            <li><strong>Red:</strong> confirma que estás en la red correcta y que el token que entregas está en esa red.</li>
+            <li><strong>Precio:</strong> compara la tasa con lo que esperas antes de aceptarla.</li>
+            <li><strong>Impacto de precio:</strong> cuanto mayor sea, peor puede ser la ejecución respecto al precio esperado.</li>
+            <li><strong>Comisión:</strong> revisa el coste total, no solo la tasa del swap.</li>
+            <li><strong>Aprobación:</strong> revisa qué contrato recibe el permiso y qué token puede gastar.</li>
+        </ul>
+
+        <p>Sobre la aprobación: según el token y la ruta, la wallet puede pedir una autorización antes del swap. No asumas que todas las firmas de autorización son iguales, ni que una vez aprobado "ya no hay que hacer nada": revisa qué contrato recibe el permiso, qué token puede gastar y si la autorización tiene límite. Si no reconoces el contrato, no firmes. Para más señales de alerta, revisa nuestra guía de <a href="/articulos/como-detectar-estafas-crypto.html">cómo detectar estafas crypto</a>.</p>
 
         <div class="warning-box">
-            <p class="warning-box__title">⚠️ Atención: Primera vez con un token</p>
-            <p>Si es la primera vez que intercambias USDT en Uniswap, necesitarás hacer <strong>dos transacciones</strong>: primero un "Approve" (aprobar que Uniswap pueda gastar tu USDT, con un costo de gas) y luego el "Swap" propiamente dicho (otro costo de gas). Esto solo ocurre la primera vez para cada token. En swaps posteriores con el mismo token, solo pagarás el gas del swap. Tenlo en cuenta para no alarmarte cuando veas que necesitas dos confirmaciones.</p>
+            <p class="warning-box__title">⚠️ Cuidado al importar un token</p>
+            <p>Si el token que buscas no aparece en la lista y te piden importarlo o pegar la dirección manualmente, es una señal para verificar con calma. Los estafadores crean tokens con el mismo nombre o símbolo que proyectos legítimos (USDT falso, USDC falso, WBTC falso). Verifica el contrato y la red desde una fuente oficial antes de continuar.</p>
         </div>
 
-        <!-- Slippage and Gas -->
-        <h2 id="slippage-gas">Slippage y gas fees: los dos costos ocultos que todo principiante debe entender</h2>
+        <!-- 7. Slippage and price impact -->
+        <h2 id="slippage-price-impact">7. Qué son slippage y price impact</h2>
+
+        <h3>Price impact (impacto de precio)</h3>
+        <p>El price impact mide cuánto mueve tu operación el precio del pool. Si la liquidez es baja o el importe es grande en relación al pool, el precio de ejecución se aleja del precio que ves en pantalla. Cuanto mayor sea el impacto de precio, peor puede ser la ejecución respecto al precio esperado. Si aparece un valor inusualmente alto, revisa la liquidez, el token y el importe antes de continuar.</p>
 
         <h3>Slippage (deslizamiento)</h3>
-        <p>El slippage es la diferencia entre el precio que ves en pantalla y el precio al que realmente se ejecuta tu transacción. En DeFi, los precios cambian constantemente. Entre que tú haces clic en "Swap" y tu transacción se confirma en la blockchain (pueden pasar 15-120 segundos), alguien más puede haber hecho un swap antes que tú, cambiando ligeramente el precio del pool.</p>
+        <p>El slippage es la diferencia entre el precio que ves y el precio al que se ejecuta la transacción, porque el precio puede moverse entre que confirmas y que la operación se incluye en un bloque.</p>
 
-        <p>La <strong>tolerancia de slippage</strong> define cuánta variación de precio aceptas. Si configuras 0.5% de slippage y el precio se mueve más del 0.5%, la transacción fallará (y <strong>perderás el gas fee de todas formas</strong>).</p>
+        <p>No existe un slippage adecuado para todos los swaps. Depende de la liquidez, la volatilidad, el tamaño de la operación y la ruta utilizada. Si la interfaz ajusta automáticamente la tolerancia, revisa el valor antes de confirmar en lugar de aumentar el límite solo para conseguir que la transacción pase.</p>
 
-        <p><strong>Configuración recomendada:</strong></p>
-        <ul>
-            <li><strong>0.1-0.3%:</strong> Para pares de alta liquidez como ETH/USDC, ETH/USDT, WBTC/ETH. La transacción casi siempre se ejecuta al precio esperado.</li>
-            <li><strong>0.5-1%:</strong> Para tokens de liquidez media. Mayor margen para absorber fluctuaciones.</li>
-            <li><strong>2-5%:</strong> Solo para tokens de muy baja liquidez o memecoins. Con slippage alto, estás aceptando que podrías pagar hasta un 5% más de lo que ves en pantalla.</li>
-        </ul>
+        <p><strong>Importante:</strong> no aumentes la tolerancia de slippage a ciegas solo porque una transacción falló. Un slippage alto significa aceptar un precio peor, y la causa del fallo puede ser otra.</p>
 
-        <p>Para cambiar la tolerancia de slippage, haz clic en el icono de engranaje (⚙️) en la esquina superior derecha de la sección de swap y ajusta el valor en "Slippage Tolerance".</p>
+        <h3>Comisiones de red (gas)</h3>
+        <p>El gas cambia con la demanda de la red. Revisa la estimación justo antes de confirmar y compara otras redes compatibles si el coste es demasiado alto. Las L2 suelen ofrecer costes inferiores a Ethereum mainnet, aunque la diferencia cambia con la congestión y la red.</p>
 
-        <h3>Gas fees (comisiones de red)</h3>
-        <p>El gas es el combustible de Ethereum. Cada transacción — swap, approve, añadir liquidez, retirar — consume una cantidad de gas que se paga en ETH a los validadores de la red. El precio del gas varía enormemente según la congestión:</p>
+        <!-- 8. Versions -->
+        <h2 id="versiones">8. V2, V3, V4 y UniswapX: qué necesita saber un usuario</h2>
+        <p>Uniswap ya no se reduce a V2 o V3. La interfaz puede enrutar una operación entre distintas versiones y fuentes de liquidez según la red y el swap. Para un usuario normal, normalmente no hace falta elegir manualmente una versión del protocolo.</p>
 
         <ul>
-            <li><strong>Madrugada o fines de semana:</strong> 5-15 gwei (gas barato). Un swap puede costar $3-8.</li>
-            <li><strong>Horas pico (tarde en EE.UU., lanzamientos de NFTs, mercados volátiles):</strong> 50-200+ gwei. Un swap puede costar $30-80 o más.</li>
+            <li><strong>V2:</strong> el AMM clásico, con la fórmula x × y = k y liquidez distribuida de forma uniforme. Todavía se usa para algunos pares o integraciones.</li>
+            <li><strong>V3:</strong> introduce <strong>liquidez concentrada</strong>: los proveedores pueden concentrar su liquidez en un rango de precios, lo que cambia cómo se comporta el pool.</li>
+            <li><strong>V4:</strong> añade <strong>hooks</strong> y más flexibilidad en la configuración de pools y niveles de comisión.</li>
+            <li><strong>UniswapX:</strong> un protocolo basado en subastas que puede agregar distintas fuentes de liquidez para buscar una mejor ejecución.</li>
         </ul>
 
-        <p>Puedes consultar los precios de gas en tiempo real en <strong>etherscan.io/gastracker</strong> antes de hacer transacciones grandes. Una regla práctica: si el gas está por encima de 40 gwei, conviene postergar transacciones no urgentes para la noche o el fin de semana. Si es urgente, usa una capa 2 como Arbitrum donde cuesta centavos.</p>
-
-        <!-- Adding Liquidity -->
-        <h2 id="liquidez">Cómo añadir liquidez y ganar comisiones</h2>
-        <p>Además de hacer swaps, Uniswap te permite convertirte en <strong>proveedor de liquidez (LP)</strong>. Depositas un par de tokens de igual valor (por ejemplo, $1,000 en ETH y $1,000 en USDC) en un pool y, a cambio, recibes una parte proporcional de las comisiones de trading (0.05% a 1% por swap, dependiendo del pool).</p>
-
-        <p><strong>Cómo añadir liquidez paso a paso:</strong></p>
-        <ol>
-            <li>En la app de Uniswap, ve a la pestaña <strong>"Pool"</strong> en el menú superior.</li>
-            <li>Haz clic en <strong>"New Position"</strong> (Nueva Posición).</li>
-            <li>Selecciona los dos tokens que quieres depositar. El par más común para empezar es ETH/USDC o USDC/USDT.</li>
-            <li>Elige el <strong>rango de precios</strong> (esto es exclusivo de Uniswap V3). A diferencia de V2 donde la liquidez se distribuye uniformemente, en V3 puedes concentrar tu liquidez en un rango específico de precios. Si ETH está a $2,300, puedes elegir poner liquidez en el rango $1,800 - $2,800. Mientras el precio se mantenga en ese rango, tus fondos están activos y generan comisiones. Si el precio sale de tu rango, dejas de ganar comisiones y tus fondos se convierten automáticamente a uno de los dos tokens.</li>
-            <li>Ingresa la cantidad que quieres depositar y haz clic en "Preview".</li>
-            <li>Revisa los detalles y confirma la transacción en MetaMask.</li>
-        </ol>
-
-        <div class="warning-box">
-            <p class="warning-box__title">⚠️ Impermanent Loss: El Riesgo del LP</p>
-            <p>Cuando depositas liquidez en Uniswap, tus tokens cambian de proporción según evoluciona el precio. Si uno de los tokens sube mucho respecto al otro, terminarás con más del token que bajó y menos del que subió. La pérdida es "impermanente" porque si los precios vuelven al punto inicial, la proporción se restablece. Pero si retiras tus fondos mientras hay divergencia de precios, la pérdida se vuelve permanente. En pares de stablecoins (USDT/USDC) el impermanent loss es prácticamente cero. En pares volátiles (ETH/memecoin), puede ser muy significativo. <strong>Nunca deposites en un pool de liquidez más dinero del que estarías dispuesto a perder.</strong></p>
+        <div class="highlight-box">
+            <p><strong>¿Siempre estás operando contra un pool de Uniswap?</strong> No necesariamente. La interfaz puede buscar rutas entre distintas versiones del protocolo y, en algunas redes, usar UniswapX para encontrar liquidez y ejecución. Por eso el usuario normalmente no necesita elegir manualmente entre V2, V3 y V4.</p>
         </div>
 
-        <!-- Risks -->
-        <h2 id="riesgos">Riesgos y cómo evitarlos</h2>
-        <p>Uniswap es una herramienta poderosa, pero como todo en DeFi, no está exenta de riesgos. Estos son los principales y cómo te proteges de cada uno:</p>
+        <!-- 9. Risks -->
+        <h2 id="riesgos">9. Riesgos reales</h2>
+        <p>Uniswap es una herramienta útil, pero como todo en DeFi no está exenta de riesgos. Los principales:</p>
 
-        <p><strong>1. Scam tokens (tokens fraudulentos):</strong> Cualquiera puede crear un token y añadir liquidez en Uniswap. Muchos estafadores crean tokens con nombres idénticos o muy parecidos a proyectos legítimos (ej. "UNI" real vs "UNI.v2" falso). Siempre verifica la dirección del contrato del token que estás comprando. Puedes buscar el token oficial en CoinGecko o CoinMarketCap y copiar la dirección del contrato desde allí, o verificar que el token tiene miles de holders y un volumen de trading consistente en lugar de 10 holders y actividad sospechosa.</p>
+        <p><strong>1. Tokens fraudulentos:</strong> cualquiera puede crear un token y añadirle liquidez. Muchos estafadores usan nombres o símbolos idénticos a proyectos legítimos. Verifica siempre la dirección del contrato desde una fuente oficial antes de comprar.</p>
 
-        <p><strong>2. Front-running y ataques MEV:</strong> Cuando envías una transacción al mempool (la sala de espera de transacciones pendientes), bots especializados pueden ver tu operación, copiarla y ejecutarla antes que tú pagando un gas más alto. Esto se llama <strong>front-running</strong> y puede resultar en que pagues un precio peor. Para protegerte, usa la función de "slippage tolerance baja" y, si operas montos grandes, considera servicios como Flashbots Protect que envían tu transacción de forma privada, evitando el mempool público.</p>
+        <p><strong>2. MEV y ejecución:</strong> cuando envías una transacción, bots pueden observar las operaciones pendientes e intentar ejecutar antes que tú. La ruta utilizada por la interfaz puede incluir mecanismos de protección, así que no necesitas elegir manualmente un "servicio anti-MEV" para cada operación; revisa la ruta y la información que muestra Uniswap antes de confirmar.</p>
 
-        <p><strong>3. Smart contract risk (riesgo del contrato):</strong> Uniswap es uno de los protocolos más auditados y batallados de DeFi. Los contratos de Uniswap V3 han sido auditados por múltiples firmas y han manejado cientos de miles de millones en volumen sin un hackeo exitoso. Sin embargo, ningún smart contract es 100% inmune a bugs. El riesgo es bajo, pero no cero.</p>
+        <p><strong>3. Riesgo de smart contract:</strong> Uniswap es un protocolo ampliamente utilizado y auditado, pero el uso de smart contracts nunca elimina por completo el riesgo técnico.</p>
 
-        <p><strong>4. Errores de usuario:</strong> Este es, de lejos, el riesgo más común. Enviar tokens a la dirección equivocada, elegir la red incorrecta, firmar una transacción maliciosa por error, o caer en un sitio falso que imita a Uniswap. La solución es disciplina: verifica cada detalle antes de firmar, usa bookmarks para la URL real y nunca conectes tu wallet principal a un sitio que no hayas investigado.</p>
+        <p><strong>4. Errores de usuario:</strong> es el riesgo más común. Enviar tokens a una dirección equivocada, elegir la red incorrecta, firmar una autorización maliciosa o caer en un sitio falso. La mejor defensa es revisar cada detalle antes de firmar y usar marcadores para la URL oficial.</p>
 
-        <!-- Checklist -->
-        <h2 id="checklist">Checklist: 7 reglas antes de operar en Uniswap</h2>
-        <p>Después de entender la mecánica, estas reglas evitan la mayoría de errores que cometen los principiantes (y que suelen salir caros):</p>
+        <p><strong>5. Riesgos de las capas 2:</strong> las L2 pueden reducir costes, pero tienen una arquitectura y riesgos distintos a Ethereum mainnet (puentes, suposiciones sobre el sequencer, gobernanza). No son automáticamente "igual de seguras" que mainnet.</p>
 
+        <!-- 10. Swap fails -->
+        <h2 id="swap-falla">10. Qué hacer si el swap falla</h2>
+        <p>Una transacción puede fallar por varias razones, y subir la tolerancia de slippage no es la respuesta universal:</p>
         <ul>
-            <li><strong>Empieza con un monto pequeño</strong> ($20-50) que no duela perder. Familiarízate con el flujo, el gas, el slippage y las confirmaciones de MetaMask antes de escalar.</li>
-            <li><strong>Usa una capa 2 para montos pequeños y medianos.</strong> En Arbitrum, Optimism o Base el gas cuesta centavos y la seguridad es la misma que la de Ethereum mainnet.</li>
-            <li><strong>Mantén siempre ETH de reserva en tu wallet</strong> para pagar el gas. Quedarse sin gas en un momento crítico puede impedirte cerrar una posición.</li>
-            <li><strong>Verifica dos veces la dirección del contrato</strong> del token que vas a comprar, copiándola de CoinGecko o CoinMarketCap, no del nombre que aparece en la lista de Uniswap.</li>
-            <li><strong>Añade liquidez solo en pares de alta capitalización</strong> (ETH/USDC, WBTC/ETH) o en pares de stablecoins, donde el impermanent loss es insignificante.</li>
-            <li><strong>Revisa el gas y el slippage antes de confirmar.</strong> Si el gas está alto, posterga operaciones no urgentes para la noche o el fin de semana.</li>
-            <li><strong>Usa bookmarks para la URL real</strong> (app.uniswap.org) y nunca conectes tu wallet principal a un sitio que no hayas verificado.</li>
+            <li><strong>Liquidez insuficiente</strong> en el pool o en la ruta elegida.</li>
+            <li><strong>Precio que se movió</strong> más allá de la tolerancia configurada.</li>
+            <li><strong>Aprobación pendiente o incorrecta</strong> del token que estás entregando.</li>
+            <li><strong>Red incorrecta</strong> o token en la red equivocada.</li>
+            <li><strong>Comisión insuficiente</strong> para cubrir la red.</li>
+            <li><strong>Un token con restricciones</strong> en su contrato (impuesto por transferencia, listas de bloqueo, etc.).</li>
         </ul>
 
-        <p>La práctica con montos pequeños es la mejor inversión educativa que puedes hacer en DeFi: te cuesta una fracción de lo que puede costar un error cometido por prisa con fondos grandes.</p>
+        <p>Si falla, revisa el mensaje de error y comprueba qué cambió entre un intento y otro. Si el precio se movió, reintentar con un margen distinto puede tener sentido; si el problema es la red o el token, no lo resolverás subiendo el slippage.</p>
+
+        <!-- 11. Liquidity -->
+        <h2 id="liquidez">11. Liquidez: qué es y por qué es un tema aparte</h2>
+        <p>Además de hacer swaps, puedes aportar liquidez a los pools. Pero proporcionar liquidez no es lo mismo que hacer un swap: puedes ganar una parte de las comisiones, pero asumes riesgos adicionales como cambios en la composición de la posición, quedar fuera de rango y exposición a smart contracts.</p>
+
+        <p>Si quieres aportar liquidez, lo primero es entender <strong>impermanent loss</strong>: cuando depositas dos tokens y uno sube mucho respecto al otro, terminas con más del que bajó y menos del que subió. Si retiras mientras hay divergencia, la pérdida se materializa. En pares de activos que mantienen precios muy cercanos, la divergencia puede ser menor, pero no desaparecen otros riesgos, incluido un posible depeg.</p>
+
+        <p>El staking y la liquidez son operaciones distintas a un simple swap. Si te interesa el rendimiento, repasa nuestra guía de <a href="/articulos/como-hacer-staking.html">cómo funciona el staking</a>.</p>
 
         <!-- FAQ -->
         <section class="faq-section" id="faq">
-            <h2>❓ Preguntas Frecuentes</h2>
+            <h2>12. Preguntas Frecuentes</h2>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Necesito hacer KYC para usar Uniswap?</div>
                 <div class="faq-item__answer">
-                    <p><strong>No.</strong> Uniswap es un protocolo descentralizado. No hay registro, no hay verificación de identidad, no hay límites de depósito o retiro. Solo necesitas una wallet Web3 como MetaMask y fondos en ella. Esta es una de las grandes ventajas de DeFi frente a los exchanges centralizados, pero también implica que <strong>toda la responsabilidad de seguridad recae en ti</strong>. Si pierdes el acceso a tu wallet o te estafan, no hay servicio de atención al cliente al que recurrir.</p>
+                    <p>El protocolo de Uniswap es descentralizado y no exige registro ni verificación de identidad. No funciona con depósitos y retiros como un exchange custodial: los activos permanecen en tu wallet hasta que firmas una operación. Por eso mismo, la responsabilidad de seguridad recae en ti.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Por qué mi transacción falló pero perdí el gas fee igual?</div>
                 <div class="faq-item__answer">
-                    <p>Esta es una de las experiencias más frustrantes para los principiantes, pero tiene explicación. Cuando envías una transacción a Ethereum, los validadores hacen el trabajo computacional de intentar ejecutarla. Si la transacción falla (por ejemplo, porque el slippage era demasiado bajo y el precio se movió), el validador ya gastó recursos computacionales en el intento. El gas fee te lo cobran por el <strong>intento de ejecución</strong>, no por el éxito. Para minimizar este riesgo: configura un slippage ligeramente más alto para transacciones en momentos de alta volatilidad, y nunca uses 0.1% de slippage si el mercado se está moviendo rápido. Si ves que tus transacciones fallan repetidamente, sube el slippage a 0.5% o 1% temporalmente.</p>
+                    <p>La comisión de red se cobra por el intento de ejecución, no por el éxito. Una transacción puede fallar por varias razones: la ruta, la liquidez, la aprobación previa, un cambio brusco de precio o la configuración de la red. Antes de reintentar, revisa el mensaje de error y qué se ajustó entre un intento y otro.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Uniswap V2 o V3? ¿Cuál debo usar?</div>
                 <div class="faq-item__answer">
-                    <p><strong>Uniswap V3</strong> es la versión actual y la que debes usar por defecto. Ofrece liquidez concentrada (hasta 4000x más eficiencia de capital que V2), múltiples niveles de comisiones (0.01%, 0.05%, 0.30%, 1%) y mejor experiencia de usuario. V2 sigue existiendo y es útil para ciertos tokens de baja liquidez o integraciones que aún no han migrado, pero para el usuario normal en 2026, V3 es la opción correcta. La interfaz de Uniswap te redirige automáticamente a la mejor ruta entre V2 y V3 — no tienes que preocuparte por elegir manualmente.</p>
+                    <p>Uniswap ya no se reduce a V2 o V3. La interfaz puede enrutar una operación entre distintas versiones y fuentes de liquidez según la red y el swap. Para un usuario normal, normalmente no hace falta elegir manualmente una versión del protocolo.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Puedo usar Uniswap en el móvil?</div>
                 <div class="faq-item__answer">
-                    <p>Sí. Puedes acceder a <strong>app.uniswap.org</strong> desde el navegador de tu teléfono y conectar MetaMask Mobile (que incluye un navegador integrado) o usar la app de Uniswap directamente. La experiencia móvil es muy buena — la interfaz está adaptada para pantallas táctiles. Para la mejor experiencia, conviene usar MetaMask en el móvil: abre MetaMask, toca el icono del navegador en la app, ve a app.uniswap.org, y conecta tu wallet. Todo fluye de forma muy natural.</p>
+                    <p>Sí. Puedes usar la app oficial de Uniswap o una wallet compatible en el móvil. Verifica siempre que la app y el dominio sean los oficiales antes de conectar la wallet.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Qué es el token UNI y para qué sirve?</div>
                 <div class="faq-item__answer">
-                    <p>UNI es el <strong>token de gobernanza</strong> de Uniswap. Si tienes UNI, puedes votar sobre cambios en el protocolo — como nuevas estructuras de comisiones, actualizaciones de contratos o uso del tesoro comunitario (que tiene miles de millones en UNI). UNI no te da derecho a una parte de las comisiones, pero es uno de los tokens DeFi más valiosos por su papel en la gobernanza del DEX más grande del mundo. Puedes comprar UNI en la propia Uniswap y también en exchanges centralizados como Binance y OKX.</p>
+                    <p>UNI es el token de gobernanza del protocolo Uniswap. Quienes lo tienen pueden participar en decisiones sobre el protocolo. No da derecho a una parte de las comisiones.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-item__question">¿Cuánto dinero necesito para empezar en Uniswap?</div>
                 <div class="faq-item__answer">
-                    <p>Técnicamente, no hay mínimo. Pero si operas en Ethereum mainnet, las gas fees pueden hacer que los montos pequeños no tengan sentido económico. Si quieres hacer un swap de $50 pero el gas cuesta $15, estás pagando un 30% de comisión efectiva — una locura. En Ethereum mainnet, conviene un <strong>mínimo de $200-300 por operación</strong> para que los fees no te coman vivo. Si tienes montos más pequeños, usa Arbitrum, Optimism o Base, donde el gas cuesta centavos y puedes hacer swaps de $20 sin problemas. En estas L2, la barrera de entrada es prácticamente cero.</p>
+                    <p>No existe un monto mínimo económico universal. Antes de hacer un swap, compara la comisión total con el importe que vas a intercambiar. Si el coste representa una parte demasiado grande de la operación, considera otra red compatible o espera.</p>
                 </div>
             </div>
         </section>
@@ -323,39 +333,38 @@
         <!-- Internal Links -->
         <h2 id="articulos-relacionados">📚 Artículos Relacionados</h2>
         <ul>
-            <li><a href="/articulos/seguridad-criptomonedas.html">10 Reglas de Seguridad Crypto</a> — Aprende a proteger tu wallet y tus fondos antes de usar DeFi.</li>
-            <li><a href="/articulos/que-es-usdt.html">Qué es USDT y Cómo Usarlo</a> — Las stablecoins que más se usan en los pools de Uniswap.</li>
-            <li><a href="/articulos/hot-wallet-vs-cold-wallet.html">Hot Wallet vs Cold Wallet</a> — Qué wallet usar para conectarte a Uniswap de forma segura.</li>
-            <li><a href="/articulos/mejores-exchanges-espana.html">Mejores Exchanges de Criptomonedas</a> — Para comprar los tokens que luego tradearás en Uniswap.</li>
-            <li><a href="/articulos/yield-farming.html">Yield Farming</a> — Más allá del swap: staking, lending y farming en DeFi.</li>
+            <li><a href="/articulos/como-detectar-estafas-crypto.html">Cómo Detectar Estafas Crypto</a> — Señales de alerta antes de firmar o conectar tu wallet.</li>
+            <li><a href="/articulos/como-hacer-staking.html">Cómo Funciona el Staking</a> — Diferencia entre staking, Earn y lending.</li>
+            <li><a href="/articulos/seguridad-criptomonedas.html">Seguridad en Criptomonedas</a> — Protege tu wallet antes de usar DeFi.</li>
+            <li><a href="/articulos/que-es-usdt.html">Qué es USDT</a> — Las stablecoins que más se usan en los pools de Uniswap.</li>
+            <li><a href="/articulos/hot-wallet-vs-cold-wallet.html">Hot Wallet vs Cold Wallet</a> — Qué wallet usar para conectarte a Uniswap.</li>
         </ul>
 
-<div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
-<p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
-<ul style="list-style:none;padding:0;margin:0;">
-  <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://docs.uniswap.org/" target="_blank" rel="noopener" style="color:var(--accent);">Uniswap Docs</a> — Documentación oficial</li>
-  <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://defillama.com/protocol/uniswap" target="_blank" rel="noopener" style="color:var(--accent);">DefiLlama Uniswap</a> — Métricas DeFi</li>
-  <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — Rastreador de transacciones</li>
-</ul>
-</div>
+        <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
+            <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
+            <ul style="list-style:none;padding:0;margin:0;">
+              <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://support.uniswap.org/hc/en-us/articles/40074184880525-Networks-on-Uniswap" target="_blank" rel="noopener" style="color:var(--accent);">Redes soportadas en Uniswap</a> — Uniswap Labs</li>
+              <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://support.uniswap.org/hc/en-us/articles/17515415311501-What-is-UniswapX" target="_blank" rel="noopener" style="color:var(--accent);">Qué es UniswapX</a> — Uniswap Labs</li>
+              <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://developers.uniswap.org/docs/protocols/overview" target="_blank" rel="noopener" style="color:var(--accent);">Uniswap Protocols Overview</a> — Documentación para desarrolladores</li>
+              <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://defillama.com/protocol/uniswap" target="_blank" rel="noopener" style="color:var(--accent);">DefiLlama Uniswap</a> — Métricas DeFi</li>
+            </ul>
+        </div>
 
-<div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
-  <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto no cambia las conclusiones del artículo. <a href="../sobre.html" style="color:var(--accent);">Más información →</a></p>
-</div>
+        <div class="highlight-box" style="margin: 24px 0; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 20px;">
+          <p style="margin:0;font-size:0.82rem;color:var(--text-muted);line-height:1.5;"><strong>📢 Transparencia:</strong> Algunos enlaces en este artículo son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto no cambia las conclusiones del artículo. <a href="../sobre.html" style="color:var(--accent);">Más información →</a></p>
+        </div>
 
         <!-- CTA -->
         <div class="cta-card">
-            <h2>Empieza en DeFi con las Mejores Herramientas</h2>
-            <p>Compra ETH o stablecoins en Binance u OKX con descuento en comisiones, luego conéctalos a Uniswap para hacer swaps descentralizados. Dos mundos que se complementan perfectamente.</p>
+            <h2>Si necesitas fondos antes de operar en DeFi</h2>
+            <p>Uniswap no vende cripto por moneda local: para empezar necesitas tokens ya en tu wallet. Si aún no los tienes, puedes comprarlos en un exchange y luego enviarlos a tu wallet. Algunos enlaces son de afiliado: si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
             </div>
-<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+            <p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la entidad que presta el servicio. Revisa qué servicios están habilitados para tu cuenta y tu ubicación.</p>
         </div>
     </main>
-
-    
 
 <footer class="footer">
         <div class="container">
