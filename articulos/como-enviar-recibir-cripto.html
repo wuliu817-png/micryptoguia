@@ -64,7 +64,7 @@
           "description": "Aprende cómo enviar y recibir criptomonedas sin errores. Guía paso a paso con selección de red, gas fees, verificación de direcciones y errores comunes.",
           "inLanguage": "es",
           "datePublished": "2026-08-02",
-          "dateModified": "2026-09-05",
+          "dateModified": "2026-09-08",
           "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "publisher": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://micryptoguia.com/articulos/como-enviar-recibir-cripto.html" }
@@ -73,12 +73,12 @@
           "@type": "FAQPage",
           "@id": "https://micryptoguia.com/articulos/como-enviar-recibir-cripto.html#faq",
           "mainEntity": [
-            { "@type": "Question", "name": "¿Qué es una dirección de criptomonedas y cómo funciona?", "acceptedAnswer": { "@type": "Answer", "text": "Una dirección crypto es como un número de cuenta: una cadena alfanumérica única que identifica tu 'cuenta' en la blockchain. Compartes tu dirección para que otros te envíen fondos. Por ejemplo, una dirección de Ethereum es '0x...' y una de Bitcoin empieza por '1', '3' o 'bc1'. Puedes compartir tu dirección sin riesgo, pero nunca compartas tu clave privada o seed phrase." } },
-            { "@type": "Question", "name": "¿Qué red debo elegir al enviar criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "La red que elijas depende de dónde esté el destinatario y qué criptomoneda envíes. LA REGLA DE ORO: el emisor y el receptor deben usar la MISMA red. Si envías USDT por Ethereum y el receptor lo espera por Tron (TRC-20), los fondos pueden perderse. Recomendación para principiantes: Ethereum (ERC-20) es la más universal, Tron (TRC-20) es más barata, y BSC (BEP-20) es un buen equilibrio. Siempre confirma con el destinatario qué red acepta." } },
-            { "@type": "Question", "name": "¿Cuánto tarda una transacción de criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la blockchain: Bitcoin tarda entre 10 y 60 minutos (según la congestión), Ethereum entre 15 segundos y 5 minutos, Solana 2-5 segundos, Tron 1-3 minutos, Polygon 2-5 segundos, y BSC 5-15 segundos. Las transacciones no son instantáneas porque necesitan ser confirmadas por la red. Los exchanges a menudo requieren un número mínimo de confirmaciones antes de acreditar el depósito." } },
-            { "@type": "Question", "name": "¿Qué pasa si envío criptomonedas a una dirección equivocada?", "acceptedAnswer": { "@type": "Answer", "text": "Lamentablemente, si envías criptomonedas a una dirección equivocada, la transacción es IRREVERSIBLE. No hay un banco que pueda revertirla ni un servicio de atención al cliente que pueda ayudarte. Si la dirección es válida pero pertenece a otra persona, depende de su buena voluntad devolvértelo. Si la dirección es inválida (formato incorrecto), la mayoría de wallets rechazarán la transacción antes de enviarla. Por eso es CRÍTICO verificar todos los caracteres de la dirección." } },
-            { "@type": "Question", "name": "¿Necesito hacer una transacción de prueba primero?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, absolutamente. Especialmente la primera vez que envías a una nueva dirección o usas una red nueva. Envía una cantidad mínima (5-10 de tu moneda local), verifica que llega correctamente, y luego envía el resto. El coste extra en gas de hacer dos transacciones en lugar de una es insignificante comparado con el riesgo de perder el monto completo por un error en la dirección o red." } },
-            { "@type": "Question", "name": "¿Por qué las comisiones varían tanto entre blockchains?", "acceptedAnswer": { "@type": "Answer", "text": "Las comisiones dependen de dos factores: el diseño de la blockchain y la congestión actual. Ethereum procesa ~15 transacciones por segundo y cuando hay mucha demanda, el precio del gas sube (subasta). Solana procesa miles de transacciones por segundo con una arquitectura diferente, por lo que las comisiones son de fracciones de centavo. Bitcoin tiene comisiones altas por su modelo de seguridad Proof of Work. Las redes más baratas (Tron, BSC, Polygon, Solana) sacrifican cierto grado de descentralización para ofrecer mayor velocidad y menor coste." } }
+            { "@type": "Question", "name": "¿Qué es una dirección de criptomonedas y cómo funciona?", "acceptedAnswer": { "@type": "Answer", "text": "Una dirección crypto es como un número de cuenta: una cadena alfanumérica única que identifica tu 'cuenta' en la blockchain. Compartes tu dirección para que otros te envíen fondos. Por ejemplo, una dirección de Ethereum es '0x...' y una de Bitcoin empieza por '1', '3' o 'bc1'. Compartir una dirección no permite por sí solo mover tus fondos, pero sí puede exponer información sobre saldos y actividad on-chain. Lo que nunca debes compartir es tu clave privada o seed phrase." } },
+            { "@type": "Question", "name": "¿Qué red debo elegir al enviar criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "El emisor y el receptor deben usar la MISMA red. No elijas la red solo por coste o velocidad: usa una red que el destinatario admita explícitamente. Si varias son compatibles, compara comisión, tiempo estimado y riesgo operativo antes de decidir. Siempre confirma con el destinatario qué red acepta." } },
+            { "@type": "Question", "name": "¿Cuánto tarda una transacción de criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "El tiempo depende de la red, la congestión y del número de confirmaciones que exija el receptor. Usa el TxID para seguir la operación en el explorador correspondiente. Como referencia, no como garantía: Bitcoin suele tardar más (varias confirmaciones), mientras redes como Solana o Polygon suelen confirmarse en segundos." } },
+            { "@type": "Question", "name": "¿Qué pasa si envío criptomonedas a una dirección equivocada?", "acceptedAnswer": { "@type": "Answer", "text": "Una transacción confirmada en la blockchain normalmente no puede revertirse. Si la dirección pertenece a otra persona, la recuperación depende de su buena voluntad. Si el destinatario es un exchange o servicio custodial, en algunos casos el soporte puede ayudar a recuperar depósitos mal enviados, pero no está garantizado. Si la dirección es inválida, la mayoría de wallets rechazarán la transacción antes de enviarla." } },
+            { "@type": "Question", "name": "¿Necesito hacer una transacción de prueba primero?", "acceptedAnswer": { "@type": "Answer", "text": "Es una práctica prudente cuando envías por primera vez a una dirección o red nueva, especialmente si el importe es importante. Envía primero una cantidad pequeña que supere el mínimo de retiro, verifica que llega, y luego envía el resto." } },
+            { "@type": "Question", "name": "¿Por qué las comisiones varían tanto entre blockchains?", "acceptedAnswer": { "@type": "Answer", "text": "Las comisiones dependen del diseño de la red y de la congestión actual. Ethereum, por ejemplo, usa un mecanismo de subasta donde el precio del gas sube cuando hay mucha demanda. Cada red tiene un diseño y un modelo de seguridad distintos, así que no conviene compararlas solo por comisión o velocidad." } }
           ]
         }
       ]
@@ -103,20 +103,20 @@
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📘 Guías</span>
 
         <h1>Cómo Enviar y Recibir Criptomonedas: Guía Paso a Paso Sin Errores</h1>
-        <p class="article-meta">Actualizado el 5 de septiembre, 2026 &nbsp;|&nbsp; Tiempo de lectura: ~12 min &nbsp;|&nbsp; Por MiCryptoGuía</p>
+        <p class="article-meta">Actualizado el 8 de septiembre, 2026 &nbsp;|&nbsp; Tiempo de lectura: ~12 min &nbsp;|&nbsp; Por MiCryptoGuía</p>
 
-        <p><strong>Para enviar criptomonedas necesitas: la dirección del destinatario, seleccionar la red correcta, elegir la comisión de gas y confirmar. Para recibir, solo tienes que compartir tu dirección o código QR.</strong> Parece simple — y en esencia lo es — pero los errores más comunes (red equivocada, dirección mal copiada, gas insuficiente) pueden hacerte perder tus fondos de forma irreversible.</p>
+        <p><strong>Para enviar criptomonedas necesitas: la dirección del destinatario, seleccionar la red correcta, elegir la comisión de gas y confirmar. Para recibir, solo tienes que compartir tu dirección o código QR.</strong> Parece simple — y en esencia lo es — pero conviene revisar cada dato antes de confirmar. Los errores más delicados son usar una dirección o una red incorrecta. Otros, como no tener suficiente token nativo para pagar la comisión, normalmente impiden que la transacción se complete.</p>
 
-        <p>Esta guía te lleva de la mano por todo el proceso, desde copiar una dirección hasta entender por qué la selección de red es lo más crítico. Vamos a asegurarnos de que tu primera transacción salga perfecta.</p>
+        <p>Esta guía te lleva por todo el proceso, desde copiar una dirección hasta entender por qué la selección de red es tan importante. Vamos a asegurarnos de que entiendas cada paso antes de confirmar.</p>
 
         <div class="speed-read">
             <h3>✅ Checklist Pre-Envío</h3>
-            <p style="color:var(--text-secondary);font-size:.9rem;line-height:1.6;margin:0 0 12px 0;">Antes de cada envío, verifica estos 5 puntos. Mentalízate: este checklist te ahorrará dinero y disgustos.</p>
+            <p style="color:var(--text-secondary);font-size:.9rem;line-height:1.6;margin:0 0 12px 0;">Antes de cada envío, verifica estos puntos. Un repaso con calma te ahorra dinero y disgustos.</p>
             <ul style="margin-bottom:0;">
-                <li><strong>La dirección es correcta:</strong> Verifica los primeros 6 y los últimos 6 caracteres. No confíes solo en copiar/pegar — existe malware que modifica direcciones en el portapapeles.</li>
-                <li><strong>La red coincide:</strong> El emisor y el receptor deben usar la misma red (ERC-20, TRC-20, BEP-20, etc.). Si no coinciden, fondos perdidos.</li>
+                <li><strong>La dirección es correcta:</strong> Revisa los primeros y últimos caracteres, pero no te quedes solo ahí: existe malware que modifica direcciones en el portapapeles, y también ataques que generan direcciones con extremos parecidos. Si el importe es importante, usa la libreta de direcciones, un QR o una transferencia de prueba cuando sea posible.</li>
+                <li><strong>La red coincide:</strong> El emisor y el receptor deben usar la misma red (ERC-20, TRC-20, BEP-20, etc.). Si la red no coincide con la que admite el destino, los fondos pueden no aparecer y la recuperación puede ser difícil o incluso imposible.</li>
                 <li><strong>El token es el correcto:</strong> ¿Estás enviando USDT, USDC, ETH, BTC? Cada uno tiene su contrato. Verifica el símbolo.</li>
-                <li><strong>Haz una transacción de prueba:</strong> Primero envía una cantidad mínima (5-10 USD). Cuando confirmes que llegó, envía el resto.</li>
+                <li><strong>Haz una transferencia de prueba:</strong> Cuando el importe sea importante para ti, considera hacer primero una transferencia pequeña que supere el mínimo de retiro y cuya comisión tenga sentido. Cuando confirmes que llegó, envía el resto.</li>
                 <li><strong>Tienes suficiente para el gas:</strong> Necesitas ETH para pagar gas en Ethereum, BNB en BSC, TRX en Tron, POL en Polygon. Sin el token nativo, no puedes enviar.</li>
             </ul>
         </div>
@@ -126,11 +126,12 @@
             <ol>
                 <li><a href="#recibir">Cómo recibir criptomonedas</a></li>
                 <li><a href="#enviar">Cómo enviar criptomonedas paso a paso</a></li>
-                <li><a href="#seleccion-red">Selección de red: lo MÁS importante</a></li>
+                <li><a href="#seleccion-red">Selección de red: el error que conviene evitar</a></li>
                 <li><a href="#gas-fees">Gas fees explicadas de forma práctica</a></li>
                 <li><a href="#interfaces">Cómo se ve en Binance y MetaMask</a></li>
+                <li><a href="#que-pedir">Qué dato pedir al destinatario antes de enviar</a></li>
                 <li><a href="#errores-comunes">Tabla de errores comunes y cómo evitarlos</a></li>
-                <li><a href="#regla-practica">La regla que evita los errores</a></li>
+                <li><a href="#algo-salio-mal">Si algo salió mal</a></li>
                 <li><a href="#faq">Preguntas Frecuentes (FAQ)</a></li>
             </ol>
         </div>
@@ -142,7 +143,7 @@
         <h3>En un exchange (Binance, OKX)</h3>
         <ol>
             <li><strong>Inicia sesión</strong> en tu cuenta de Binance o OKX.</li>
-            <li>Ve a <strong>Billetera</strong> (Wallet) > <strong>Depositar</strong> (Deposit).</li>
+            <li>Ve a la sección de <strong>depósito</strong> (suele llamarse "Depositar" o "Deposit").</li>
             <li>Selecciona la <strong>criptomoneda</strong> que quieres recibir (por ejemplo, USDT).</li>
             <li><strong>Elige la red.</strong> El exchange te mostrará las redes disponibles (ERC-20, TRC-20, BEP-20, etc.). Elige la que tu emisor vaya a usar.</li>
             <li>Verás tu <strong>dirección de depósito</strong> (una cadena alfanumérica) y un <strong>código QR</strong>.</li>
@@ -150,7 +151,7 @@
         </ol>
 
         <div class="highlight-box">
-            <p><strong>💡 Importante:</strong> Algunos exchanges añaden un MEMO o TAG para ciertas criptomonedas (XRP, XLM, EOS, ATOM). Si el exchange te pide un memo además de la dirección, ASEGÚRATE de compartir ambos. Si el emisor no incluye el memo, los fondos pueden perderse o quedarse bloqueados.</p>
+            <p><strong>💡 Importante:</strong> Algunos exchanges añaden un MEMO o TAG para ciertas criptomonedas (XRP, XLM, EOS, ATOM). Si el exchange te pide un memo además de la dirección, comparte ambos. Si el emisor no incluye el memo, los fondos pueden quedarse bloqueados.</p>
         </div>
 
         <h3>En una wallet (MetaMask, Trust Wallet)</h3>
@@ -162,93 +163,86 @@
         </ol>
 
         <div class="warning-box">
-            <p><strong>⚠️ Ojo con esto:</strong> Cada blockchain tiene su propia dirección. No puedes recibir Bitcoin en una dirección de Ethereum, ni USDT de Ethereum en una dirección de Tron. La dirección que compartas debe corresponder a la criptomoneda y red que el emisor va a usar. Si compartes una dirección de Ethereum para recibir Bitcoin, el emisor no podrá enviarte nada (la transacción será rechazada).</p>
+            <p><strong>⚠️ Ojo con esto:</strong> Cada red tiene sus propias reglas de direcciones y activos. Algunas redes compatibles pueden mostrar la misma dirección, pero eso no significa que el depósito sea compatible automáticamente. Para BTC nativo necesitas una dirección y una red compatibles con Bitcoin. No uses una dirección de otra red salvo que el servicio receptor indique expresamente que ese depósito es compatible.</p>
         </div>
 
         <h2 id="enviar">Cómo enviar criptomonedas paso a paso</h2>
 
-        <p>Enviar es donde la mayoría de la gente comete errores. Sigue estos pasos al pie de la letra:</p>
+        <p>Enviar es donde la mayoría de la gente comete errores. Sigue estos pasos con calma:</p>
 
         <h3>Paso 1: Consigue la dirección del destinatario</h3>
         <p>Pídele a la persona (o exchange) que te va a recibir los fondos que te comparta su <strong>dirección de depósito</strong> y la <strong>red</strong> que debes usar. Ejemplo: "Envíame USDT por la red TRC-20 (Tron) a esta dirección: TXabc123...".</p>
 
         <h3>Paso 2: Copia la dirección (y verifica)</h3>
-        <p>Copia la dirección del destinatario. Pero <strong>no te limites a copiar y pegar sin verificar</strong>. Existe malware específico (clipboard hijackers) que detecta direcciones crypto en el portapapeles y las reemplaza por la dirección del atacante. Siempre verifica manualmente al menos los <strong>primeros 6 y últimos 6 caracteres</strong> de la dirección pegada contra la original.</p>
+        <p>Copia la dirección del destinatario. Pero <strong>no te limites a copiar y pegar sin verificar</strong>. Existe malware específico (clipboard hijackers) que detecta direcciones crypto en el portapapeles y las reemplaza por la dirección del atacante. Revisar los primeros y últimos caracteres ayuda, pero no es suficiente por sí solo: también hay ataques que generan direcciones con extremos parecidos a la legítima. Si el importe es importante, usa la libreta de direcciones de tu wallet, un código QR o una transferencia de prueba.</p>
 
         <h3>Paso 3: Pega la dirección en "Enviar"</h3>
-        <p>En tu wallet o exchange, ve a <strong>Enviar</strong> (Send), selecciona la criptomoneda y pega la dirección. La mayoría de wallets detectan automáticamente si la dirección tiene un formato válido. Si ves un error de "dirección inválida", no intentes forzarlo: probablemente estás usando la red equivocada.</p>
+        <p>En tu wallet o exchange, ve a <strong>Enviar</strong> (Send), selecciona la criptomoneda y pega la dirección. La mayoría de wallets detectan si la dirección tiene un formato válido. Si aparece "dirección inválida", no fuerces el envío: revisa el formato, la red, el activo y vuelve a copiar la dirección desde la fuente original.</p>
 
         <h3>Paso 4: Selecciona la red correcta</h3>
         <p>Este es <strong>el paso más crítico</strong>. Debes seleccionar exactamente la misma red que el destinatario te ha indicado. Tanto el emisor como el receptor deben estar en la misma red. Si el destinatario te pidió USDT por TRC-20, debes seleccionar "Tron (TRC-20)" en el menú de red. Más detalles en la sección siguiente.</p>
 
         <h3>Paso 5: Introduce la cantidad</h3>
-        <p>Escribe la cantidad que quieres enviar. La interfaz te mostrará automáticamente cuánto recibirá el destinatario (descontando comisiones) y el coste estimado del gas. Si ves que la comisión es muy alta para una cantidad pequeña, quizás quieras reconsiderar o usar una red más barata.</p>
+        <p>Escribe la cantidad que quieres enviar. La interfaz te mostrará cuánto recibirá el destinatario (descontando comisiones) y el coste estimado del gas. Si la comisión te parece alta para una cantidad pequeña, quizás quieras reconsiderar el método.</p>
 
         <h3>Paso 6: Revisa TODO y confirma</h3>
-        <p>Antes de pulsar Confirmar, revisa por última vez: la dirección (primeros y últimos caracteres), la red seleccionada, la cantidad y la comisión. Si todo está bien, confirma. Dependiendo de tu wallet, puede pedirte autenticación adicional (contraseña, 2FA, verificación biométrica).</p>
+        <p>Antes de pulsar Confirmar, revisa por última vez: la dirección, la red seleccionada, la cantidad y la comisión. Si todo está bien, confirma. Dependiendo de tu wallet, puede pedirte autenticación adicional (contraseña, 2FA, verificación biométrica).</p>
 
-        <h2 id="seleccion-red">Selección de red: el detalle que más fondos destruye</h2>
+        <h2 id="seleccion-red">Selección de red: el error que conviene evitar</h2>
 
         <p>El error más caro y más común en crypto es <strong>enviar tokens por la red equivocada</strong>. Imagina esto: quieres enviar 500 USDT a un amigo. Él te da su dirección de USDT en la red Tron (TRC-20). Pero tú, sin fijarte, seleccionas Ethereum (ERC-20) en el desplegable de red y envías.</p>
 
-        <p><strong>Resultado: tus 500 USDT han salido de tu wallet a través de Ethereum, pero la dirección de tu amigo está en Tron.</strong> Los fondos no aparecen en su cuenta. En muchos casos, esos fondos son <strong>irrecuperables</strong> a menos que el destinatario tenga acceso a la misma dirección en ambas redes (algo que solo ocurre con wallets auto-custodiadas como MetaMask, y aun así necesitas configuración adicional).</p>
+        <p><strong>Resultado: tus 500 USDT salen de tu wallet a través de Ethereum, pero la dirección de tu amigo está en Tron.</strong> Los fondos no aparecen en su cuenta. En wallets de autocustodia, a veces es posible recuperar activos si controlas la misma clave en la red donde realmente se enviaron. En un exchange o servicio custodial, la recuperación depende del soporte y de si esa red es compatible.</p>
 
         <div class="warning-box">
-            <p><strong>⚠️ REGLA DE ORO:</strong> La red del emisor y la red del receptor deben ser idénticas. USDT en Ethereum (ERC-20) NO es lo mismo que USDT en Tron (TRC-20) ni que USDT en BSC (BEP-20). Son versiones del mismo token en blockchains diferentes. Como si enviaras una moneda a una cuenta en otra moneda: el banco no te los va a convertir automágicamente.</p>
+            <p><strong>⚠️ REGLA DE ORO:</strong> La red del emisor y la red del receptor deben ser idénticas. USDT en Ethereum (ERC-20) NO es lo mismo que USDT en Tron (TRC-20) ni que USDT en BSC (BEP-20). Son versiones del mismo token en blockchains diferentes, como si enviaras dinero a una cuenta en otra divisa: la conversión no ocurre sola.</p>
         </div>
 
         <table class="comparison-table">
             <thead>
                 <tr>
                     <th>Red</th>
-                    <th>Nombre técnico</th>
-                    <th>Comisión típica</th>
-                    <th>Tiempo</th>
-                    <th>¿Para qué usarla?</th>
+                    <th>Formato común</th>
+                    <th>Token para comisiones</th>
+                    <th>Qué revisar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><strong>Ethereum</strong></td>
                     <td>ERC-20</td>
-                    <td>2-30 USD</td>
-                    <td>15 seg - 5 min</td>
-                    <td>dApps DeFi, seguridad máxima</td>
+                    <td>ETH</td>
+                    <td>Gas actual (puede ser alto)</td>
                 </tr>
                 <tr>
                     <td><strong>Tron</strong></td>
                     <td>TRC-20</td>
-                    <td>1-2 USD</td>
-                    <td>1-3 min</td>
-                    <td>Transferencias USDT baratas</td>
+                    <td>TRX</td>
+                    <td>Energy/Bandwidth y comisión mostrada</td>
                 </tr>
                 <tr>
-                    <td><strong>BSC</strong></td>
+                    <td><strong>BNB Smart Chain</strong></td>
                     <td>BEP-20</td>
-                    <td>0.05-0.50 USD</td>
-                    <td>5-15 seg</td>
-                    <td>Uso general, barato y rápido</td>
+                    <td>BNB</td>
+                    <td>Comisión estimada</td>
                 </tr>
                 <tr>
                     <td><strong>Polygon</strong></td>
-                    <td>POS</td>
-                    <td>0.01-0.10 USD</td>
-                    <td>2-5 seg</td>
-                    <td>DeFi económico</td>
+                    <td>L2 de Ethereum</td>
+                    <td>POL</td>
+                    <td>Token nativo y red correcta</td>
                 </tr>
                 <tr>
                     <td><strong>Solana</strong></td>
+                    <td>SPL</td>
                     <td>SOL</td>
-                    <td>0.0001-0.001 USD</td>
-                    <td>1-3 seg</td>
-                    <td>Velocidad y coste mínimo</td>
+                    <td>Comisión mostrada</td>
                 </tr>
                 <tr>
                     <td><strong>Arbitrum</strong></td>
-                    <td>ARB</td>
-                    <td>0.01-0.30 USD</td>
-                    <td>2-5 seg</td>
-                    <td>DeFi con seguridad Ethereum</td>
+                    <td>L2 de Ethereum</td>
+                    <td>ETH</td>
+                    <td>Coste actual (suele ser menor que Ethereum L1)</td>
                 </tr>
             </tbody>
         </table>
@@ -259,7 +253,7 @@
 
         <ul>
             <li><strong>Ethereum:</strong> pagas gas en ETH</li>
-            <li><strong>BSC (Binance Smart Chain):</strong> pagas gas en BNB</li>
+            <li><strong>BNB Smart Chain (BSC):</strong> pagas gas en BNB</li>
             <li><strong>Polygon:</strong> pagas gas en POL</li>
             <li><strong>Tron:</strong> pagas gas en TRX</li>
             <li><strong>Solana:</strong> pagas gas en SOL</li>
@@ -269,32 +263,72 @@
         <p>Esto significa que <strong>para enviar USDT por la red Tron, necesitas tener TRX en tu wallet además de los USDT</strong>. Si solo tienes USDT pero no tienes TRX, la transacción no se puede enviar. Es un error de principiante muy común: tener el token que quieres enviar pero no tener el token nativo para pagar el gas.</p>
 
         <div class="highlight-box">
-            <p><strong>⚡ Consejo práctico:</strong> Siempre mantén una pequeña cantidad del token nativo en cada wallet (5-10 USD en ETH, 20-50 TRX, 0.01 BNB). Es tu "fondo de gasolina" para no quedarte tirado cuando necesites hacer una transacción urgente.</p>
+            <p><strong>⚡ Consejo práctico:</strong> Si usas una wallet de autocustodia, mantén suficiente token nativo para cubrir al menos una transacción futura. La cantidad necesaria cambia con la red y la congestión.</p>
         </div>
 
         <h2 id="interfaces">Cómo se ve en Binance y MetaMask</h2>
 
+        <p>El nombre exacto de los botones puede cambiar con las actualizaciones, pero la pantalla de retiro suele pedir siempre los mismos cuatro datos: <strong>activo, dirección, red y cantidad</strong>.</p>
+
         <h3>Interfaz de retirada en Binance</h3>
-        <p>Cuando haces clic en <strong>Billetera > Retirar</strong> en Binance, verás una pantalla con estos campos:</p>
         <ol>
             <li><strong>Seleccionar criptomoneda:</strong> Elige la moneda a enviar (USDT, ETH, BTC, etc.).</li>
-            <li><strong>Dirección del destinatario:</strong> Un campo de texto donde pegas la dirección. Binance valida automáticamente el formato.</li>
-            <li><strong>Red:</strong> Un menú desplegable con todas las redes disponibles para esa criptomoneda. CRÍTICO: elegir la correcta.</li>
-            <li><strong>Cantidad:</strong> El monto a enviar. Binance te muestra "Recibirá" (lo que llega descontando comisiones de red) y la comisión estimada.</li>
-            <li><strong>Verificación 2FA:</strong> Binance te pedirá el código de autenticación de Google Authenticator o SMS, más confirmación por email.</li>
+            <li><strong>Dirección del destinatario:</strong> Un campo de texto donde pegas la dirección. Binance valida el formato automáticamente.</li>
+            <li><strong>Red:</strong> Un menú desplegable con las redes disponibles para esa criptomoneda. Es el punto crítico: elegir la correcta.</li>
+            <li><strong>Cantidad:</strong> El monto a enviar. La pantalla muestra cuánto recibirá el destinatario (descontando comisiones) y la comisión estimada.</li>
+            <li><strong>Verificación:</strong> Antes de confirmar, la plataforma te pedirá el segundo factor que tengas configurado (app autenticadora, SMS u otro).</li>
         </ol>
 
         <h3>Interfaz de envío en MetaMask</h3>
-        <p>En MetaMask, el proceso es aún más simple:</p>
         <ol>
             <li>Haz clic en <strong>Enviar</strong>.</li>
             <li>Pega la dirección del destinatario.</li>
             <li>Selecciona el token (ETH, USDT, etc.) e introduce la cantidad.</li>
-            <li>MetaMask te muestra el <strong>gas estimado</strong>. Puedes elegir entre Bajo (lento y barato), Medio (equilibrado) o Alto (rápido y caro).</li>
+            <li>MetaMask muestra una <strong>estimación de comisión</strong> y, según la red y la versión de la app, puede ofrecer opciones para ajustar prioridad o coste.</li>
             <li>Confirma. MetaMask te pedirá tu contraseña.</li>
         </ol>
 
-        <p>En ambos casos, verás un <strong>Transaction ID (TxID o hash de transacción)</strong> después de confirmar. Puedes copiarlo y pegarlo en un explorador de bloques (Etherscan, Tronscan, BscScan) para seguir el estado de tu transacción en tiempo real.</p>
+        <p>En ambos casos, verás un <strong>Transaction ID (TxID o hash de transacción)</strong> después de confirmar. Si ya existe un TxID, significa que la operación fue enviada a la red. A partir de ahí, el explorador de bloques (Etherscan, Tronscan, BscScan) te ayuda a distinguir entre "pendiente", "confirmada" o "fallida".</p>
+
+        <h2 id="que-pedir">Qué dato pedir al destinatario antes de enviar</h2>
+        <p>Antes de mover nada, confirma con el destinatario estos datos. Para un usuario de América Latina que envía por primera vez, esta lista resuelve la mayoría de los errores:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Dato</th>
+                    <th>Ejemplo</th>
+                    <th>¿Es obligatorio?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Activo</strong></td>
+                    <td>USDT</td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Red</strong></td>
+                    <td>Tron / Ethereum / BNB Smart Chain</td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Dirección</strong></td>
+                    <td>TX... / 0x...</td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Memo/Tag</strong></td>
+                    <td>123456</td>
+                    <td>Solo cuando el receptor lo indique</td>
+                </tr>
+                <tr>
+                    <td><strong>Mínimo de depósito</strong></td>
+                    <td>Depende del exchange</td>
+                    <td>Conviene comprobarlo</td>
+                </tr>
+            </tbody>
+        </table>
 
         <h2 id="errores-comunes">Tabla de errores comunes y cómo evitarlos</h2>
 
@@ -309,33 +343,33 @@
             <tbody>
                 <tr>
                     <td><strong>Red equivocada</strong></td>
-                    <td>Fondos perdidos o bloqueados</td>
-                    <td>Confirma SIEMPRE la red con el destinatario. Lee el desplegable antes de confirmar.</td>
+                    <td>Los fondos pueden no aparecer y ser difíciles de recuperar</td>
+                    <td>Confirma siempre la red con el destinatario. Lee el desplegable antes de confirmar.</td>
                 </tr>
                 <tr>
                     <td><strong>Dirección mal copiada</strong></td>
                     <td>Envías a una dirección desconocida</td>
-                    <td>Verifica primeros 6 y últimos 6 caracteres. Usa el QR si está disponible.</td>
+                    <td>Verifica la dirección después de pegarla. Usa QR o libreta de direcciones si es posible.</td>
                 </tr>
                 <tr>
                     <td><strong>Olvidar el MEMO/TAG</strong></td>
                     <td>Fondos bloqueados en exchanges</td>
-                    <td>Lee SIEMPRE si el exchange pide memo. Si lo pide, inclúyelo sí o sí.</td>
+                    <td>Lee siempre si el exchange pide memo. Si lo pide, inclúyelo.</td>
                 </tr>
                 <tr>
                     <td><strong>Gas insuficiente</strong></td>
-                    <td>Transacción atascada o rechazada</td>
-                    <td>Mantén siempre 5-10 USD del token nativo en cada wallet para gas.</td>
+                    <td>Puede impedir el envío, provocar un fallo o requerir ajustar la comisión</td>
+                    <td>Mantén suficiente token nativo para cubrir la comisión de la red.</td>
                 </tr>
                 <tr>
                     <td><strong>Clipboard hijacker</strong></td>
                     <td>Dirección reemplazada por malware</td>
-                    <td>Verifica manualmente la dirección pegada. Usa un antivirus actualizado.</td>
+                    <td>Verifica la dirección después de pegarla y evita copiar direcciones desde fuentes no confiables.</td>
                 </tr>
                 <tr>
                     <td><strong>Enviar todo sin prueba</strong></td>
                     <td>Posible pérdida total</td>
-                    <td>Primero envía 5-10 USD. Cuando confirmes que llegó, envía el resto.</td>
+                    <td>Para un importe importante, envía primero una cantidad pequeña y confirma que llega.</td>
                 </tr>
                 <tr>
                     <td><strong>Confundir tokens con nombres similares</strong></td>
@@ -345,40 +379,71 @@
             </tbody>
         </table>
 
-        <h2 id="regla-practica">La regla que evita la mayoría de errores</h2>
-        <p>Si solo vas a recordar una cosa de esta guía, que sea esta: <strong>antes de mover una cantidad grande, envía una transacción de prueba con 5-10 USD y confirma que llega bien</strong>. Es la práctica estándar entre usuarios experimentados, y el coste extra en gas es insignificante frente al riesgo de perderlo todo por una red equivocada o una dirección mal copiada.</p>
+        <h2 id="algo-salio-mal">Si algo salió mal</h2>
+        <p>El TxID es tu mejor herramienta para entender qué pasó. Úsalo en el explorador de la red correspondiente:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Situación</th>
+                    <th>Qué significa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>No hay TxID</strong></td>
+                    <td>Probablemente aún no se envió la transacción</td>
+                </tr>
+                <tr>
+                    <td><strong>TxID pendiente</strong></td>
+                    <td>Espera y revisa el explorador</td>
+                </tr>
+                <tr>
+                    <td><strong>TxID confirmado</strong></td>
+                    <td>La red ya procesó la operación</td>
+                </tr>
+                <tr>
+                    <td><strong>Confirmado pero no aparece</strong></td>
+                    <td>Revisa red, memo y soporte del receptor</td>
+                </tr>
+                <tr>
+                    <td><strong>Dirección incorrecta</strong></td>
+                    <td>La recuperación puede ser muy difícil</td>
+                </tr>
+            </tbody>
+        </table>
 
         <div class="faq-section">
             <h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
 
             <div class="faq-item">
                 <h3>¿Qué es una dirección de criptomonedas y cómo funciona?</h3>
-                <p>Una dirección crypto es un identificador alfanumérico único en la blockchain, similar a un número de cuenta. Compartes tu dirección para recibir fondos. Ejemplos: direcciones de Ethereum empiezan por "0x", Bitcoin por "1", "3" o "bc1". Puedes compartir tu dirección públicamente sin riesgo de que te roben fondos (para eso necesitarían tu clave privada). Lo que NO debes compartir nunca es tu clave privada o seed phrase. Si quieres entender la diferencia, lee nuestro artículo sobre <a href="/articulos/claves-privadas-direcciones.html">claves privadas, públicas y direcciones</a>.</p>
+                <p>Una dirección crypto es un identificador alfanumérico único en la blockchain, similar a un número de cuenta. Compartes tu dirección para recibir fondos. Ejemplos: direcciones de Ethereum empiezan por "0x", Bitcoin por "1", "3" o "bc1". Compartir una dirección no permite por sí solo mover tus fondos, pero sí puede exponer información sobre saldos y actividad on-chain. Lo que no debes compartir nunca es tu clave privada o seed phrase. Si quieres entender la diferencia, lee nuestro artículo sobre <a href="/articulos/claves-privadas-direcciones.html">claves privadas, públicas y direcciones</a>.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Qué red debo elegir al enviar criptomonedas?</h3>
-                <p>La red que elijas debe coincidir exactamente con la que espera el destinatario. Si él te dice "USDT por TRC-20", debes seleccionar "Tron (TRC-20)". Para transferencias rápidas y baratas, Tron (TRC-20) y BSC (BEP-20) son buenas opciones. Para interactuar con DeFi en Ethereum, usa Arbitrum o Polygon (capa 2). Para máxima seguridad, Ethereum (ERC-20). Cuando compres en Binance o OKX, verás todas las redes disponibles al retirar.</p>
+                <p>La red que elijas debe coincidir exactamente con la que espera el destinatario. Si él te dice "USDT por TRC-20", debes seleccionar "Tron (TRC-20)". No elijas la red solo por coste o velocidad: usa una red que el destinatario admita explícitamente. Si varias son compatibles, compara comisión, tiempo estimado y riesgo operativo antes de decidir.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Cuánto tarda una transacción de criptomonedas?</h3>
-                <p>Varía por blockchain. Bitcoin: 10-60 minutos. Ethereum: 15 segundos a 5 minutos. Solana: 2-5 segundos. Tron: 1-3 minutos. BSC: 5-15 segundos. Polygon: 2-5 segundos. Los exchanges suelen requerir un número mínimo de confirmaciones antes de acreditar el depósito (por ejemplo, Binance requiere 12 confirmaciones para Ethereum, lo que tarda unos 3 minutos). Puedes seguir el estado de tu transacción en exploradores como Etherscan o BscScan usando el TxID.</p>
+                <p>El tiempo depende de la red, la congestión y del número de confirmaciones que exija el receptor. Usa el TxID para seguir la operación en el explorador correspondiente. Como referencia, no como garantía: Bitcoin suele tardar más (varias confirmaciones), mientras redes como Solana o Polygon suelen confirmarse en segundos.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Qué pasa si envío criptomonedas a una dirección equivocada?</h3>
-                <p>Si la dirección es técnicamente válida (formato correcto) pero pertenece a otra persona o no tienes su clave privada, la transacción es IRREVERSIBLE. No hay banco, exchange ni desarrollador que pueda deshacerla. La blockchain es inmutable por diseño. La única posibilidad de recuperación es contactar con el dueño de esa dirección (si es identificable) y pedirle que te devuelva los fondos voluntariamente. Si la dirección es inválida, la mayoría de wallets rechazarán la transacción antes de enviarla.</p>
+                <p>Una transacción confirmada en la blockchain normalmente no puede revertirse. Si la dirección pertenece a otra persona, la recuperación depende de su buena voluntad. Si el destinatario es un exchange o servicio custodial, en algunos casos el soporte puede ayudar a recuperar depósitos mal enviados, pero no está garantizado. Si la dirección es inválida, la mayoría de wallets rechazarán la transacción antes de enviarla.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Necesito hacer una transacción de prueba primero?</h3>
-                <p>Sí, altamente recomendado. Especialmente la primera vez que envías a una nueva dirección, una nueva red, o a un exchange nuevo. Envía 5-10 USD primero. Cuando veas que llegó correctamente, envía el resto. El coste adicional en gas es mínimo comparado con el riesgo de perderlo todo por un error. Esta práctica es estándar entre usuarios experimentados de crypto. Si estás empezando, consulta nuestros <a href="/articulos/seguridad-criptomonedas.html">10 mandamientos de seguridad crypto</a>.</p>
+                <p>Es una práctica prudente cuando envías por primera vez a una dirección o red nueva, especialmente si el importe es importante. Envía primero una cantidad pequeña que supere el mínimo de retiro, verifica que llega correctamente, y luego envía el resto. Si estás empezando, consulta nuestros <a href="/articulos/seguridad-criptomonedas.html">10 mandamientos de seguridad crypto</a>.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Por qué varían tanto las comisiones entre redes?</h3>
-                <p>Las comisiones dependen del diseño de la blockchain y su nivel de congestión. Ethereum procesa ~15 transacciones por segundo, por lo que en horas punta el precio del gas sube (mecanismo de subasta). Solana procesa miles de transacciones por segundo con costes ínfimos. Bitcoin tiene comisiones elevadas debido a su modelo Proof of Work y espacio limitado por bloque. Las redes con comisiones más baratas (Tron, BSC, Solana) sacrifican algún grado de descentralización para ofrecer mayor velocidad. Cada red tiene su equilibrio entre seguridad, descentralización y escalabilidad.</p>
+                <p>Las comisiones dependen del diseño de la red y de la congestión actual. Ethereum, por ejemplo, usa un mecanismo de subasta donde el precio del gas sube cuando hay mucha demanda. Cada red tiene un diseño y un modelo de seguridad distintos, así que no conviene compararlas solo por comisión o velocidad.</p>
             </div>
         </div>
 
@@ -401,20 +466,20 @@
             </ul>
         </div>
 
-        <h2 id="conclusion">Conclusión: Enviar crypto no es difícil, pero no admite errores</h2>
-        <p>Enviar y recibir criptomonedas es técnicamente sencillo: copias una dirección, eliges una red, introduces una cantidad y confirmas. Lo que lo hace intimidante para los principiantes es saber que un solo error — especialmente la red equivocada — puede ser irreversible.</p>
+        <h2 id="conclusion">Conclusión: enviar cripto no es difícil, pero conviene revisar antes de confirmar</h2>
+        <p>Enviar y recibir criptomonedas es técnicamente sencillo: copias una dirección, eliges una red, introduces una cantidad y confirmas. Lo que lo hace intimidante para los principiantes es saber que un error — especialmente la red equivocada o una dirección mal copiada — puede ser muy difícil de revertir.</p>
 
-        <p>Pero con los hábitos correctos (verificar dirección, confirmar red, transacción de prueba y calma), es perfectamente seguro. Millones de personas envían criptomonedas cada día sin problemas. Tú puedes ser una de ellas. La clave está en la atención al detalle y en nunca operar con prisas.</p>
+        <p>Enviar cripto no requiere conocimientos avanzados, pero sí revisar con calma los datos antes de confirmar. Dirección, red, token y memo — si aplica — son los puntos que más conviene comprobar. Si ya enviaste y tienes un TxID, usa el explorador para verificar qué ocurrió antes de repetir la operación.</p>
 
         <p>📢 <em>Transparencia:</em> Algunos enlaces son de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti. <a href="../sobre.html">Más información →</a></p>
         <div class="cta-card">
             <h2>¿Listo para hacer tu primera transacción?</h2>
-            <p>Si aún no tienes cuenta en un exchange, puedes registrarte en Binance u OKX con los códigos de MiCryptoGuía para obtener un descuento en comisiones, útil para tus primeras transferencias.</p>
+            <p>Si aún no tienes cuenta en un exchange, puedes comparar Binance u OKX y abrir tu cuenta desde estos enlaces. Algunos enlaces son de afiliado: si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
-<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la entidad que presta el servicio. Revisa qué servicios están habilitados para tu cuenta y tu ubicación.</p>
         </div>
 
     </main>
