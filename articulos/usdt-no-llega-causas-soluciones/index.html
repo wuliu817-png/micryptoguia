@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tu transferencia de USDT no llega: las 5 causas más comunes (pendiente, red incorrecta, MEMO, dirección) y cómo comprobarla en el explorador.">
+    <meta name="description" content="Tu transferencia de USDT no llega: las principales causas (pendiente, red incorrecta, confirmaciones, dirección, MEMO) y cómo comprobarla en el explorador.">
     <meta name="keywords" content="transferencia USDT no llega, USDT pendiente, USDT red incorrecta, USDT no aparece, TxID, tronscan, etherscan, bscscan">
     <meta name="author" content="MiCryptoGuía">
     <meta name="robots" content="index, follow">
@@ -12,7 +12,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Mi transferencia de USDT no llega: causas y soluciones — MiCryptoGuía">
-    <meta property="og:description" content="No entres en pánico: en la mayoría de los casos tu USDT no se ha perdido. Las 5 causas más comunes y cómo comprobarlo en TronScan, Etherscan o BscScan.">
+    <meta property="og:description" content="Tu USDT no aparece en el destino: cómo comprobar si está pendiente, si hubo un problema de red, dirección o MEMO, y qué revisar en el explorador.">
     <meta property="og:url" content="https://micryptoguia.com/articulos/usdt-no-llega-causas-soluciones/">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es">
@@ -35,10 +35,10 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "Mi transferencia de USDT no llega: causas y soluciones",
-      "description": "Las 5 causas más comunes por las que una transferencia de USDT no llega (pendiente, red incorrecta, falta de MEMO, dirección errónea) y cómo comprobarla en el explorador.",
+      "description": "Las principales causas por las que una transferencia de USDT no llega (pendiente, red incorrecta, confirmaciones, falta de MEMO, dirección errónea) y cómo comprobarla en el explorador.",
       "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
       "datePublished": "2026-09-02",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-08",
       "inLanguage": "es",
       "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
     }
@@ -48,11 +48,12 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Cuánto tarda en llegar una transferencia de USDT?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la red. TRC-20 (Tron) suele confirmarse en segundos y acreditarse en minutos; ERC-20 (Ethereum) necesita más bloques y puede tardar de varios minutos a más de una hora si la red está congestionada o la plataforma exige muchas confirmaciones. El explorador te dice si ya está confirmada on-chain." } },
-        { "@type": "Question", "name": "¿Puedo recuperar USDT enviado por la red equivocada?", "acceptedAnswer": { "@type": "Answer", "text": "En muchos casos sí, pero depende de a quién se lo enviaste. Si la dirección es tuya (tu wallet) y soporta la red que usaste, solo tienes que añadir esa red o importar la wallet con la misma clave. Si fue a un exchange, contacta con su soporte con el TxID: suelen poder recuperarlo, a veces con una comisión." } },
-        { "@type": "Question", "name": "¿Qué significa 'pendiente' en el explorador?", "acceptedAnswer": { "@type": "Answer", "text": "Que la transacción aún no se ha incluido en un bloque confirmado. Puede estar esperando confirmaciones, o tener una comisión de gas baja que la retrasa en redes como Ethereum. No significa que el dinero se haya perdido." } },
-        { "@type": "Question", "name": "¿Perdí mi USDT si escribí mal la dirección?", "acceptedAnswer": { "@type": "Answer", "text": "Depende. Si la dirección era inválida, la mayoría de wallets y exchanges rechazan el envío antes de emitirlo. Si era una dirección válida pero de otra persona, los fondos salieron y la recuperación depende de la colaboración de esa dirección o del soporte de la plataforma. Por eso conviene probar primero con una cantidad pequeña." } },
-        { "@type": "Question", "name": "¿Qué hago si no me dieron el TxID?", "acceptedAnswer": { "@type": "Answer", "text": "Revisa el historial de retiros/envíos de la plataforma desde la que enviaste: el TxID (o 'hash') aparece ahí una vez emitida la transacción. Si el envío fue rechazado antes de emitirse, no habrá TxID y los fondos no salieron de tu cuenta." } }
+        { "@type": "Question", "name": "¿Qué hago si el TxID dice Success pero el USDT no aparece?", "acceptedAnswer": { "@type": "Answer", "text": "Comprueba la red, el contrato del token y las confirmaciones que exige el destino. Si el destino es un exchange, puede que aún no haya acreditado el depósito internamente. Si controlas la wallet de destino, revisa si soporta esa red o si falta añadir el token." } },
+        { "@type": "Question", "name": "¿Cuánto tiempo debo esperar antes de contactar con soporte?", "acceptedAnswer": { "@type": "Answer", "text": "Espera hasta superar el tiempo estimado que muestra la plataforma o el número de confirmaciones requerido por esa red. No hay un margen único: depende de la red y de la plataforma." } },
+        { "@type": "Question", "name": "¿Qué pasa si envié USDT por la red equivocada?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de quién controla la dirección de destino. Si es tu wallet y soporta esa red, puede que solo tengas que cambiar de red para ver el saldo. Si fue a un exchange, contacta con soporte. Lo tratamos a fondo en la guía de recuperación por red equivocada." } },
+        { "@type": "Question", "name": "¿Puedo recuperar USDT enviado sin MEMO/Tag?", "acceptedAnswer": { "@type": "Answer", "text": "Contacta con el soporte de la plataforma y aporta el TxID, el importe y la fecha. El soporte puede intentar identificar el depósito y, si existe un proceso de recuperación, indicarte los siguientes pasos." } },
+        { "@type": "Question", "name": "¿Qué significa Pending, Success y Failed?", "acceptedAnswer": { "@type": "Answer", "text": "Pending: la red aún no la confirma. Success o Confirmed: la transacción se ejecutó en esa red. Failed: no se completó on-chain, aunque pudo consumirse una comisión." } },
+        { "@type": "Question", "name": "¿Debo volver a enviar USDT si la primera transferencia no llega?", "acceptedAnswer": { "@type": "Answer", "text": "No. Una segunda transferencia no cancela ni corrige la primera y solo suma comisiones. Comprueba primero el TxID y el estado en el explorador antes de enviar nada más." } }
       ]
     }
     </script>
@@ -100,18 +101,18 @@
             <span>🌱 Principiante</span>
         </div>
 
-        <p>Si acabas de enviar USDT y no aparece en el destino, respira: en la gran mayoría de los casos el dinero <strong>no se ha perdido</strong>. Casi siempre la transferencia está aún <strong>pendiente de confirmación</strong>, se envió por una <strong>red distinta</strong> a la que esperaba el destino, o falta un <strong>MEMO/Tag</strong>.</p>
+        <p>Si acabas de enviar USDT y todavía no aparece en el destino, eso <strong>no significa automáticamente que se haya perdido</strong>. Primero hay que distinguir si la operación sigue <strong>pendiente</strong>, si el destino exige más <strong>confirmaciones</strong> o si hubo un problema de <strong>red, dirección o MEMO/Tag</strong>.</p>
 
-        <p>El primer paso no es contactar con soporte, sino localizar el <strong>TxID</strong> (el identificador único de la transacción) y comprobarlo en el explorador de la red que usaste. Si el explorador dice «confirmada» pero no la ves en tu wallet, el problema suele ser de red o de un token que no has añadido, y tiene solución.</p>
+        <p>El primer paso no es contactar con soporte, sino localizar el <strong>TxID</strong> (el identificador único de la transacción) y comprobarlo en el explorador de la red que usaste. Si el explorador dice «confirmada» pero no la ves, puede deberse a la red, al contrato del token o simplemente a que la wallet no lo muestra. Si el destino es un exchange, también puede faltar la acreditación interna.</p>
 
         <div class="highlight-box">
             <p style="margin:0 0 10px 0;font-weight:700;color:var(--text-primary);">En 30 segundos</p>
             <ul style="margin:0;padding-left:18px;color:var(--text-secondary);">
-                <li>Si sigue <strong>«pendiente»</strong>, espera: cada red necesita un número distinto de confirmaciones antes de acreditarse.</li>
+                <li>Si sigue <strong>«pendiente»</strong>, no vuelvas a enviar: revisa el estado y si la wallet o plataforma permite acelerar o cancelar.</li>
                 <li>Verifica que la <strong>red del envío</strong> y la <strong>red del destino</strong> coinciden (TRC-20 ≠ ERC-20 ≠ BEP-20).</li>
                 <li>Localiza el <strong>TxID</strong> y ábrelo en TronScan, Etherscan o BscScan según la red.</li>
                 <li>Si el destino exigía <strong>MEMO/Tag</strong> y no lo pusiste, contacta con su soporte con el TxID.</li>
-                <li>Nunca envíes el importe completo sin antes probar con una <strong>cantidad pequeña</strong>.</li>
+                <li>Si es la primera vez con esa combinación de activo, red y destino, una transferencia pequeña de <strong>prueba</strong> reduce el riesgo.</li>
             </ul>
         </div>
 
@@ -141,60 +142,102 @@
         </div>
 
         <h2>Primero: comprueba estas 4 cosas</h2>
-        <p>Antes de saltar a las causas, revisa estos cuatro puntos en orden. Resuelven la mayoría de los casos en menos de un minuto:</p>
+        <p>Antes de saltar a las causas, revisa estos cuatro puntos en orden. Estas comprobaciones suelen ayudarte a identificar rápidamente dónde está el problema:</p>
         <ol>
             <li><strong>El estado de la transacción.</strong> ¿Dice «pendiente», «procesando» o «completada»? Mucha gente confunde «emitida» con «recibida».</li>
             <li><strong>La red.</strong> ¿Qué red elegiste al enviar (Tron/TRC-20, Ethereum/ERC-20, BNB Chain/BEP-20…)? ¿Es la misma que espera el destino?</li>
-            <li><strong>El TxID.</strong> ¿La plataforma te dio un identificador de transacción? Sin él no puedes comprobar nada en el explorador.</li>
+            <li><strong>El TxID.</strong> ¿La plataforma te dio un identificador de transacción? Si todavía no lo tienes, búscalo primero en el historial de retiros o envíos.</li>
             <li><strong>El MEMO/Tag.</strong> Si el destino (sobre todo exchanges) lo exigía, ¿lo rellenaste?</li>
         </ol>
 
+        <h2>El atajo: mira el estado y decide el siguiente paso</h2>
+        <p>Si no quieres leer todas las causas, empieza por el estado que ves en el explorador o en la plataforma:</p>
+        <div style="overflow-x:auto;margin:20px 0;">
+            <table style="width:100%;border-collapse:collapse;border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Estado que ves</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Qué significa</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Qué hacer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Sin TxID</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Puede que aún no se haya emitido on-chain</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Revisa el historial de retiros</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Pending</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">La red aún no la confirma</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Espera o revisa opciones (acelerar/cancelar)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Success + no saldo</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Blockchain OK; falta revisar el destino</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Red, token, confirmaciones, MEMO</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Failed</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">No se completó on-chain</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Revisa saldo/gas</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Exchange «Completed» pero sin TxID</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Puede seguir en procesamiento interno</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Revisa soporte/historial</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <h2>Causa 1: la transacción sigue pendiente</h2>
         <p>Una transacción de criptomonedas no es instantánea como un pago con tarjeta. Cuando envías USDT, la transacción entra en una cola y debe ser incluida en un bloque y confirmada por la red. Hasta que eso ocurre, aparece como «pendiente».</p>
-        <p>El tiempo depende de la red y de la congestión de cada momento. <a href="/articulos/que-es-usdt.html">USDT</a> vive en varias blockchains, y cada una se comporta distinto: en Tron (TRC-20) suele confirmarse en segundos; en Ethereum (ERC-20) cada bloque tarda unos 12-15 segundos y, si pagaste una comisión de gas baja, tu transacción puede quedar esperando turno durante bastante tiempo. En BNB Chain (BEP-20) es rápida, de pocos segundos.</p>
-        <p>Si el explorador dice «pendiente», la solución es esperar. Si en Ethereum lleva mucho tiempo por una comisión baja, algunas wallets permiten «acelerar» la transacción pagando más gas, pero en la mayoría de los casos lo más simple es esperar a que se confirme o se descarte.</p>
+        <p>El tiempo depende de la red, de la congestión de cada momento y del número de confirmaciones que exija el destino. <a href="/articulos/que-es-usdt.html">USDT</a> vive en varias blockchains, y cada una se comporta distinto: en redes rápidas puede confirmarse en segundos, mientras que otras son más lentas y, si pagas una comisión baja, tu transacción puede quedar esperando turno durante bastante tiempo.</p>
+        <p>Si el explorador dice «pendiente», no vuelvas a enviar. Revisa primero si la wallet o plataforma permite acelerar, reemplazar o cancelar la operación en esa red. Si enviaste desde una wallet de autocustodia en una red donde puedes elegir la comisión, una tarifa demasiado baja puede retrasar la inclusión.</p>
 
         <h2>Causa 2: elegiste una red diferente</h2>
-        <p>Este es el error más común y el que más sustos da. <strong>USDT no es una blockchain</strong>: es un token que se emite sobre varias redes a la vez. Un USDT en Tron (TRC-20) y un USDT en Ethereum (ERC-20) valen lo mismo, pero viven en cadenas separadas que no se hablan entre sí.</p>
-        <p>Si enviaste por TRC-20 a una dirección de Ethereum (o al revés), la transacción puede salir y confirmarse, pero el USDT no aparecerá en la wallet de destino porque esa wallet está mirando la cadena equivocada.</p>
+        <p>Este es uno de los errores más habituales y el que más sustos da. <strong>USDT no es una blockchain</strong>: es un token que se emite sobre varias redes a la vez. Tether emite USDT en varias redes: aunque comparten el mismo nombre y la referencia al dólar, cada versión vive en una blockchain distinta que no se habla con las demás.</p>
+        <p>El caso más típico es entre redes EVM, como enviar por <strong>BEP-20</strong> a una dirección que esperaba <strong>ERC-20</strong> (o al revés): la transacción se confirma, pero el USDT no aparece en la wallet de destino porque esa wallet está mirando la cadena equivocada.</p>
         <div class="warning-box">
-            <p class="warning-box__title">⚠️ La regla que evita el 90% de los sustos</p>
+            <p class="warning-box__title">⚠️ La comprobación más importante antes de enviar</p>
             <p>La red que eliges al enviar debe coincidir exactamente con la red de la dirección de destino. Antes de confirmar, comprueba que ambas dicen «TRC-20» o ambas «ERC-20». Si no coinciden, no confirmes.</p>
         </div>
-        <p>Si ya lo enviaste por la red equivocada, no todo está perdido. Si la dirección de destino es tuya, normalmente basta con añadir la red correcta en tu wallet (o importar la wallet en una app que soporte esa red) para ver los fondos. Si fue a un exchange, contacta con su soporte: muchos lo recuperan, aunque pueden tardar y cobrar una comisión.</p>
+        <p>Si ya lo enviaste por la red equivocada, no todo está perdido. Si controlas la misma cuenta en la red donde terminó el token, puede ser posible acceder a los fondos cambiando de red o mostrando el activo correcto; no ocurre igual entre todas las blockchains. No importes tu seed phrase en otra aplicación solo para intentar recuperar el saldo: comprueba primero el TxID y la compatibilidad de la red. Si fue a un exchange, algunos ofrecen herramientas o procesos de recuperación para ciertos casos, pero no está garantizado.</p>
         <p>Este error tiene una casuística propia (redes EVM, direcciones de contrato, casos irrecuperables). La tratamos a fondo en la <a href="/articulos/usdt-red-equivocada/">guía para recuperar USDT enviado por la red equivocada</a>.</p>
 
         <h2>Causa 3: la plataforma exige más confirmaciones</h2>
-        <p>Que el explorador diga «confirmada» no siempre significa que el saldo esté disponible. Los exchanges y algunas wallets exigen un <strong>número mínimo de confirmaciones</strong> antes de acreditar el depósito, como protección contra reorganizaciones de la cadena o dobles gastos.</p>
-        <p>Por eso puedes ver la transacción como exitosa en el explorador y, aun así, que tu saldo tarde unos minutos (o más) en aparecer. Cada plataforma fija sus propios requisitos, y en redes con bloques más lentos, como Ethereum, este paso suma tiempo extra. Es la causa más habitual de «confirmada pero no llega».</p>
+        <p>Que el explorador diga «confirmada» no siempre significa que el saldo esté disponible. Los exchanges y otros servicios pueden exigir un <strong>número distinto de confirmaciones</strong> antes de acreditar el depósito, como protección contra reorganizaciones de la cadena o dobles gastos.</p>
+        <p>Por eso puedes ver la transacción como exitosa en el explorador y, aun así, que tu saldo tarde en aparecer. Cada plataforma fija sus propios requisitos, y en redes con bloques más lentos este paso suma tiempo extra. Es una causa frecuente de la situación «confirmada pero todavía no acreditada».</p>
 
         <h2>Causa 4: la dirección es incorrecta</h2>
         <p>Copiar mal una dirección suele acabar de dos formas. Si el resultado no es una dirección válida (por ejemplo, le falta un carácter o tiene uno de más), la mayoría de wallets y exchanges <strong>rechazan el envío antes de emitirlo</strong> y tus fondos no salen.</p>
-        <p>El problema grave es cuando copias una dirección <em>válida</em> pero que no es la tuya: la transacción sale, se confirma y el USDT llega a esa dirección. En ese caso la recuperación depende de si puedes identificar y contactar al dueño, o de la política de la plataforma implicada. Por eso conviene pegar la dirección, revisar los primeros y últimos caracteres y, para montos grandes, <a href="/articulos/como-enviar-recibir-cripto.html">hacer antes un envío de prueba</a>.</p>
+        <p>El problema grave es cuando copias una dirección <em>válida</em> pero que no es la tuya: la transacción sale, se confirma y el USDT llega a esa dirección. En ese caso la recuperación depende de si puedes identificar y contactar al dueño, o de la política de la plataforma implicada. Revisar algunos caracteres ayuda, pero para importes importantes conviene usar una dirección guardada, un código QR o una transferencia de prueba, ya que existen ataques de <em>address poisoning</em> con direcciones visualmente parecidas.</p>
 
         <h2>Causa 5: falta el MEMO / Tag</h2>
-        <p>Algunas redes y, sobre todo, los depósitos a exchanges, usan un campo adicional llamado <strong>MEMO</strong>, <strong>Tag</strong> o <strong>Destination Tag</strong>. Sirve para distinguir a qué usuario concreto corresponde un depósito cuando mucha gente comparte la misma dirección.</p>
-        <p>Si el destino te lo exigía y lo dejaste vacío, el USDT llega técnicamente a la plataforma, pero esta no puede saber que es tuyo. La solución es contactar con su soporte y aportar el <strong>TxID, el importe y la hora exacta</strong> del envío; con esa información suelen poder atribuirte los fondos, aunque el proceso puede tardar días.</p>
+        <p>En los activos y redes que utilizan <strong>MEMO</strong>, <strong>Tag</strong> o <strong>Destination Tag</strong> para depósitos en plataformas custodiales, este campo sirve para distinguir a qué usuario concreto corresponde un depósito cuando mucha gente comparte la misma dirección.</p>
+        <p>Si el destino te lo exigía y lo dejaste vacío, el USDT llega técnicamente a la plataforma, pero esta no puede saber que es tuyo. La solución es contactar con su soporte y aportar el <strong>TxID, el importe y la fecha</strong> del envío; el soporte puede intentar identificar el depósito y, si la plataforma dispone de un proceso de recuperación, indicarte los siguientes pasos.</p>
 
         <h2>Cómo comprobar la transacción en el explorador</h2>
-        <p>El explorador es la herramienta que te dice, sin intermediarios, qué pasó de verdad con tu envío. Necesitas el <strong>TxID</strong> (a veces llamado «hash»). Lo encontrarás en el historial de retiros o envíos de la plataforma desde la que salió el USDT.</p>
+        <p>El explorador te permite comprobar directamente el estado y los datos registrados en la blockchain. Necesitas el <strong>TxID</strong> (a veces llamado «hash»). Lo encontrarás en el historial de retiros o envíos de la plataforma desde la que salió el USDT.</p>
         <ol>
             <li><strong>Identifica la red</strong> que usaste. Cada red tiene su propio explorador.</li>
             <li><strong>Abre el explorador correcto:</strong> TronScan (tronscan.org) para TRC-20, Etherscan (etherscan.io) para ERC-20, BscScan (bscscan.com) para BEP-20.</li>
             <li><strong>Pega el TxID</strong> en el buscador y abre la transacción.</li>
-            <li><strong>Mira el estado:</strong> «Success» o «Confirmed» significa que ya está en la cadena; «Pending» que sigue esperando; «Failed» o «Out of gas» que no llegó a completarse.</li>
+            <li><strong>Mira el estado:</strong> «Success» o «Confirmed» significa que la transacción se ejecutó en esa red; «Pending» que sigue esperando; «Failed» o «Out of gas» que no se completó on-chain, aunque en algunos casos pudo consumirse una comisión.</li>
             <li><strong>Comprueba la dirección de destino y la red</strong> para confirmar que coinciden con lo que esperabas.</li>
         </ol>
-        <p>Recuerda: «Success» en el explorador habla de la blockchain, no de la plataforma. Aun así, es la prueba más sólida de que tu dinero salió y hacia dónde.</p>
+        <p>Recuerda: «Success» en el explorador habla de la blockchain, no de la plataforma. Confirma que la transacción se ejecutó en esa red y muestra hacia qué dirección se registró.</p>
 
         <h2>Cuándo contactar con el soporte</h2>
         <p>No hace falta escribir a soporte a los cinco minutos. Espera un margen razonable según la red y las confirmaciones que exija la plataforma. Contacta con soporte cuando:</p>
         <ul>
-            <li>Han pasado <strong>varias horas</strong> (o el margen normal de esa red) y el saldo no aparece.</li>
+            <li>Ha superado el <strong>tiempo estimado</strong> que muestra la plataforma o el número de confirmaciones requerido por esa red, y el saldo no aparece.</li>
             <li>El explorador dice <strong>«confirmada»</strong> pero la plataforma no acredita el depósito.</li>
             <li>Enviaste por la <strong>red equivocada</strong> o sin el <strong>MEMO/Tag</strong> obligatorio.</li>
-            <li>La transacción aparece como <strong>fallida</strong> y no te devolvieron los fondos.</li>
+            <li>La transacción aparece como <strong>fallida</strong> y el saldo no volvió a tu cuenta.</li>
         </ul>
+        <p>Si la plataforma marca el retiro como «fallido» pero el saldo no volvió a tu cuenta, revisa el historial y contacta con soporte: en un retiro de exchange el proceso puede seguir en revisión interna aunque on-chain figure como no completado.</p>
 
         <h2>Qué información preparar para el soporte</h2>
         <p>Para que te resuelvan el caso en la primera respuesta, prepara estos datos. Sin el TxID, el soporte apenas puede hacer nada:</p>
@@ -212,37 +255,44 @@
             <h2>Preguntas frecuentes</h2>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Cuánto tarda en llegar una transferencia de USDT?</div>
+                <div class="faq-item__question">¿Qué hago si el TxID dice Success pero el USDT no aparece?</div>
                 <div class="faq-item__answer">
-                    <p>Depende de la red. TRC-20 (Tron) suele confirmarse en segundos y acreditarse en minutos; ERC-20 (Ethereum) necesita más bloques y puede tardar de varios minutos a más de una hora si la red está congestionada o la plataforma exige muchas confirmaciones. El explorador te dice si ya está confirmada on-chain.</p>
+                    <p>Comprueba la red, el contrato del token y las confirmaciones que exige el destino. Si el destino es un exchange, puede que aún no haya acreditado el depósito internamente. Si controlas la wallet de destino, revisa si soporta esa red o si falta añadir el token.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Puedo recuperar USDT enviado por la red equivocada?</div>
+                <div class="faq-item__question">¿Cuánto tiempo debo esperar antes de contactar con soporte?</div>
                 <div class="faq-item__answer">
-                    <p>En muchos casos sí, pero depende de a quién se lo enviaste. Si la dirección es tuya (tu wallet) y soporta la red que usaste, solo tienes que añadir esa red o importar la wallet con la misma clave. Si fue a un exchange, contacta con su soporte con el TxID: suelen poder recuperarlo, a veces con una comisión. Un <a href="/articulos/puentes-cross-chain.html">bridge</a> sirve para pasar entre redes de forma voluntaria, no para rescatar un envío ya hecho.</p>
+                    <p>Espera hasta superar el tiempo estimado que muestra la plataforma o el número de confirmaciones requerido por esa red. No hay un margen único: depende de la red y de la plataforma.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Qué significa «pendiente» en el explorador?</div>
+                <div class="faq-item__question">¿Qué pasa si envié USDT por la red equivocada?</div>
                 <div class="faq-item__answer">
-                    <p>Que la transacción aún no se ha incluido en un bloque confirmado. Puede estar esperando confirmaciones, o tener una comisión de gas baja que la retrasa en redes como Ethereum. No significa que el dinero se haya perdido.</p>
+                    <p>Depende de quién controla la dirección de destino. Si es tu wallet y soporta esa red, puede que solo tengas que cambiar de red para ver el saldo. Si fue a un exchange, contacta con soporte. Lo tratamos a fondo en la <a href="/articulos/usdt-red-equivocada/">guía de recuperación por red equivocada</a>.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Perdí mi USDT si escribí mal la dirección?</div>
+                <div class="faq-item__question">¿Puedo recuperar USDT enviado sin MEMO/Tag?</div>
                 <div class="faq-item__answer">
-                    <p>Depende. Si la dirección era inválida, la mayoría de wallets y exchanges rechazan el envío antes de emitirlo. Si era una dirección válida pero de otra persona, los fondos salieron y la recuperación depende de la colaboración de esa dirección o del soporte de la plataforma. Por eso conviene probar primero con una cantidad pequeña.</p>
+                    <p>Contacta con el soporte de la plataforma y aporta el TxID, el importe y la fecha. El soporte puede intentar identificar el depósito y, si existe un proceso de recuperación, indicarte los siguientes pasos.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-item__question">¿Qué hago si no me dieron el TxID?</div>
+                <div class="faq-item__question">¿Qué significa Pending, Success y Failed?</div>
                 <div class="faq-item__answer">
-                    <p>Revisa el historial de retiros o envíos de la plataforma desde la que enviaste: el TxID (o «hash») aparece ahí una vez emitida la transacción. Si el envío fue rechazado antes de emitirse, no habrá TxID y los fondos no salieron de tu cuenta.</p>
+                    <p>Pending: la red aún no la confirma. Success o Confirmed: la transacción se ejecutó en esa red. Failed: no se completó on-chain, aunque pudo consumirse una comisión.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">¿Debo volver a enviar USDT si la primera transferencia no llega?</div>
+                <div class="faq-item__answer">
+                    <p>No. Una segunda transferencia no cancela ni corrige la primera y solo suma comisiones. Comprueba primero el TxID y el estado en el explorador antes de enviar nada más.</p>
                 </div>
             </div>
         </section>
@@ -273,12 +323,12 @@
         <!-- CTA -->
         <div class="cta-card">
             <h2>Envía USDT con comisiones reducidas</h2>
-            <p>Regístrate con un código de referido y obtén un 20% de descuento en comisiones de trading de por vida. Recuerda la región: <strong>OKX</strong> opera con licencia MiCA en la UE y también en Latinoamérica; <strong>Binance</strong> es la opción más líquida en Latinoamérica.</p>
+            <p>Regístrate con un código de referido y obtén un descuento en comisiones de trading. Los servicios disponibles y los descuentos pueden variar según tu país y la entidad que presta el servicio.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance — Código BN522</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX — Código OK800</a>
             </div>
-            <p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+            <p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la entidad que presta el servicio. Revisa qué servicios están habilitados para tu cuenta y tu ubicación.</p>
         </div>
     </main>
 
