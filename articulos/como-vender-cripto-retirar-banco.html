@@ -201,7 +201,7 @@
         <p>Puede ser en un <strong>exchange</strong> (Binance, OKX, Coinbase), en una <strong>wallet caliente</strong> (<a href="/articulos/crear-configurar-metamask.html">MetaMask</a>, Trust Wallet) o en una <strong>hardware wallet</strong> (<a href="/articulos/hot-wallet-vs-cold-wallet.html">Ledger, Trezor</a>). Si están en una wallet propia, necesitarás usar algún servicio de conversión a moneda fiat —por ejemplo un exchange, un proveedor de salida o P2P— dependiendo de lo que esté disponible en tu país.</p>
 
         <h3>2. No todas las criptomonedas se venden igual</h3>
-        <p>Bitcoin (BTC) y Ethereum (ETH) suelen tener más pares y liquidez, pero no todos los exchanges ofrecen pares directos con todas las monedas locales. Si tienes altcoins menos conocidas o tokens DeFi, puede que necesites primero convertirlas a BTC, ETH o USDT antes de pasarlas a moneda fiat.</p>
+        <p>Bitcoin (BTC) y Ethereum (ETH) suelen tener más pares y liquidez, pero no todos los exchanges ofrecen pares directos con todas las monedas locales. Si tienes altcoins menos conocidas o tokens DeFi, puede que necesites convertirlas primero a un activo que tenga un par o una vía de retiro disponible en esa plataforma.</p>
 
         <h3>3. Vender puede generar una obligación fiscal</h3>
         <p>Vender criptomonedas puede generar una obligación fiscal dependiendo de tu país, del tipo de operación y del resultado obtenido. No existe una única regla válida para toda América Latina. Hablaremos de esto más adelante.</p>
@@ -238,6 +238,10 @@
                     <td>No aparece tu moneda local</td>
                     <td>Revisa otra ruta antes de convertir dos veces</td>
                 </tr>
+                <tr>
+                    <td>No quieres depositar primero en un exchange custodial</td>
+                    <td>Revisa proveedores de salida o P2P disponibles en tu país</td>
+                </tr>
             </tbody>
         </table>
 
@@ -255,7 +259,20 @@
                 <li>Ve a "Depositar" y selecciona la criptomoneda que quieres ingresar.</li>
                 <li>Copia la dirección de depósito que te proporciona el exchange.</li>
                 <li>Desde tu wallet externa, envía los fondos a esa dirección.</li>
-                <li><strong>Importante:</strong> verifica que la red blockchain sea la correcta (ERC-20, TRC-20, BEP-20, etc.).</li>
+                <li><strong>Importante:</strong> verifica que el exchange admita exactamente ese activo en esa red (por ejemplo ERC-20, TRC-20 o BEP-20). El error suele estar en la combinación de activo, red y soporte del destino, no solo en la red.</li>
+            </ol>
+        </div>
+
+        <div class="step-box">
+            <span class="step-num">CHECKLIST</span>
+            <h3>Desde una wallet propia, comprueba antes de vender</h3>
+            <ol>
+                <li>¿El exchange admite ese token?</li>
+                <li>¿Admite esa red?</li>
+                <li>¿Hay un mínimo de depósito?</li>
+                <li>¿Necesita memo o tag?</li>
+                <li>¿Qué recibes después de vender?</li>
+                <li>¿Existe retiro a tu moneda local?</li>
             </ol>
         </div>
 
@@ -283,15 +300,35 @@
             <ol>
                 <li>Ve a "Retirar" y selecciona moneda fiat (tu moneda local).</li>
                 <li>Elige el método de retirada disponible (transferencia local, instantánea u otro).</li>
-                <li>Introduce tu cuenta y el nombre del titular. Muchos proveedores exigen que la cuenta bancaria esté a nombre del mismo titular verificado: si los datos no coinciden, el retiro puede rechazarse o requerir revisión adicional.</li>
+                <li>Introduce tu cuenta y el nombre del titular. Muchos proveedores exigen que la cuenta bancaria esté a nombre del mismo titular verificado: si los datos no coinciden, el retiro puede rechazarse o requerir revisión adicional. El nombre, documento o país del titular pueden tener que coincidir con los datos verificados en la plataforma, según el proveedor.</li>
                 <li>Confirma la retirada. Es posible que el exchange te pida verificación 2FA adicional.</li>
             </ol>
             <p>El plazo y la comisión dependen del país, del banco y del proveedor de pagos. La pantalla de retiro debe mostrarte el coste y el tiempo estimado antes de confirmar.</p>
         </div>
 
         <div class="highlight-box">
-            <p>💰 <strong>Sobre las comisiones:</strong> Las comisiones de depósito y retiro fiat cambian según el país y el método. Revisa siempre el coste que aparece en tu cuenta antes de confirmar. Algunos enlaces de registro pueden incluir beneficios promocionales, pero las condiciones dependen de la campaña y pueden cambiar.</p>
+            <p>💰 <strong>Sobre las comisiones:</strong> Las comisiones de depósito y retiro fiat cambian según el país y el método. Revisa siempre el coste que aparece en tu cuenta antes de confirmar.</p>
         </div>
+
+        <h3>El coste real no es solo la comisión de trading</h3>
+        <p>Al vender y retirar, conviene sumar todos los costes del recorrido, no solo la comisión de la orden:</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Coste</th>
+                    <th>Dónde aparece</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Spread</td><td>En la cotización de venta</td></tr>
+                <tr><td>Trading fee</td><td>En la orden</td></tr>
+                <tr><td>Conversión intermedia</td><td>Si haces dos cambios</td></tr>
+                <tr><td>Retiro fiat</td><td>En la pantalla de retiro</td></tr>
+                <tr><td>Red blockchain</td><td>Si primero depositas desde wallet</td></tr>
+                <tr><td>P2P spread</td><td>En el precio del anuncio</td></tr>
+                <tr><td>Banco/proveedor</td><td>Puede aplicar cargos propios</td></tr>
+            </tbody>
+        </table>
 
         <!-- Section 4 -->
         <h2 id="metodo-2">Método 2: Vender por P2P (peer-to-peer)</h2>
@@ -316,7 +353,7 @@
         </ul>
 
         <div class="warning-box">
-            <p>⚠️ <strong>Precaución con el P2P:</strong> Opera solo con usuarios que tengan buena reputación y muchas operaciones completadas. Nunca liberes las criptos antes de confirmar que el dinero ha llegado a tu cuenta. No confirmes el pago solo por una captura o comprobante que te envíe el comprador: <strong>revisa el saldo directamente en tu banco</strong>. Y no aceptes que te pague un tercero si las reglas de la plataforma lo prohíben o si el nombre no coincide con el pedido.</p>
+            <p>⚠️ <strong>Precaución con el P2P:</strong> Revisa reputación, volumen de operaciones completadas, antigüedad del perfil y condiciones del anuncio, pero recuerda que un historial amplio no garantiza una operación concreta. Nunca liberes las criptos antes de confirmar que el dinero ha llegado a tu cuenta. No confirmes el pago solo por una captura o comprobante que te envíe el comprador: <strong>revisa el saldo directamente en tu banco</strong>. Y no aceptes que te pague un tercero si las reglas de la plataforma lo prohíben o si el nombre no coincide con el pedido: los pagos desde cuentas de terceros pueden complicar disputas y controles bancarios.</p>
         </div>
 
         <!-- Section 5 -->
@@ -356,13 +393,13 @@
                 <tr>
                     <td><strong>Tarjeta crypto</strong></td>
                     <td>Conversión + posibles cargos</td>
-                    <td>Inmediato al gastar</td>
+                    <td>Variable / inmediato según operación</td>
                     <td>Disponibilidad y emisor</td>
                 </tr>
                 <tr>
                     <td><strong>Cajero</strong></td>
                     <td>Suele ser más caro</td>
-                    <td>Rápido</td>
+                    <td>Variable / inmediato según operación</td>
                     <td>Comisión, spread, límites</td>
                 </tr>
             </tbody>
@@ -378,6 +415,8 @@
             <li><strong>Mínimo y máximo</strong> permitidos.</li>
             <li><strong>Tiempo estimado</strong> de llegada.</li>
             <li><strong>Banco o proveedor</strong> de pagos.</li>
+            <li><strong>Concepto o referencia del pago</strong>, si el proveedor lo exige.</li>
+            <li><strong>Cuenta receptora habilitada para ese tipo de transferencia</strong>, si aplica.</li>
             <li><strong>Documentación de origen de fondos</strong>, por si el banco la solicita.</li>
         </ul>
 
@@ -396,14 +435,14 @@
         <p>El método para calcular el costo, las reglas de compensación y la obligación de declarar cambian según el país. En algunos países las pérdidas pueden tener efectos fiscales, pero las reglas de compensación y los plazos varían. Consulta la normativa de tu país o a un profesional.</p>
 
         <div class="highlight-box">
-            <p>🧮 <strong>Sobre las herramientas de seguimiento:</strong> herramientas como Koinly o CoinTracker pueden ayudarte a organizar operaciones y estimar ganancias y pérdidas, aunque el resultado debe revisarse según las reglas de tu país. Conserva el historial durante el plazo exigido por la autoridad fiscal de tu país.</p>
+            <p>🧮 <strong>Sobre las herramientas de seguimiento:</strong> herramientas como Koinly o CoinTracker pueden ayudarte a organizar operaciones y estimar ganancias y pérdidas, aunque el resultado debe revisarse según las reglas de tu país. No sustituyen el criterio fiscal local ni la documentación original del exchange. Conserva el historial durante el plazo exigido por la autoridad fiscal de tu país.</p>
         </div>
 
         <!-- Section 9 -->
         <h2 id="errores-comunes">Errores comunes al vender cripto</h2>
 
         <h3>❌ Enviar criptos por la red equivocada</h3>
-        <p>Si envías USDT por una red distinta a la que espera el exchange, tus fondos pueden no llegar y la recuperación puede ser difícil. <strong>Verifica dos veces la red</strong> antes de enviar. Repasa nuestra <a href="/articulos/como-enviar-recibir-cripto.html">guía para enviar y recibir criptomonedas</a>.</p>
+        <p>Si envías USDT por una red distinta a la que espera el exchange, tus fondos pueden no acreditarse correctamente o requerir recuperación; el resultado depende de la red, el activo y quién controla el destino. <strong>Verifica dos veces la red</strong> antes de enviar. Repasa nuestra <a href="/articulos/como-enviar-recibir-cripto.html">guía para enviar y recibir criptomonedas</a>.</p>
 
         <h3>❌ No verificar el titular bancario</h3>
         <p>Muchos proveedores exigen que la cuenta bancaria esté a nombre del mismo titular verificado. Si los datos no coinciden, el retiro puede rechazarse o requerir revisión adicional.</p>
