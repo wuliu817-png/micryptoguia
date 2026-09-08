@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Qué son las claves privadas, públicas y direcciones crypto. La analogía del buzón, la seed phrase y por qué nunca debes compartir tu clave privada.">
+    <meta name="description" content="Qué son la clave privada, la clave pública y la dirección crypto, cómo se relacionan entre sí y con tu wallet, y qué puedes compartir y qué debes mantener en secreto.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://micryptoguia.com/articulos/claves-privadas-direcciones.html">
-    <meta property="og:title" content="Claves Privadas, Públicas y Direcciones Crypto | Explicación 2026 — MiCryptoGuía">
-    <meta property="og:description" content="Entiende qué son las claves privadas, públicas y direcciones crypto. Aprende la analogía del buzón, qué es la seed phrase y por qué nunca debes compartir tu clave privada.">
+    <meta property="og:title" content="Clave privada, clave pública y dirección crypto: qué son y cómo se relacionan — MiCryptoGuía">
+    <meta property="og:description" content="Qué son la clave privada, la clave pública y la dirección crypto, cómo se relacionan con tu wallet y tu seed phrase, y qué puedes compartir y qué no.">
     <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es">
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Claves Privadas, Públicas y Direcciones Crypto | Explicación 2026</title>
+    <title>Clave privada, clave pública y dirección crypto: qué son y cómo se relacionan</title>
     <style>
         .article-page{padding:140px 24px 80px;max-width:800px;margin:0 auto}
         .article-page h1{font-size:2.2rem;font-weight:800;margin-bottom:8px;color:var(--text-primary);line-height:1.2}
@@ -63,11 +63,11 @@
         {
           "@type": "Article",
           "@id": "https://micryptoguia.com/articulos/claves-privadas-direcciones.html#article",
-          "headline": "Claves Privadas, Públicas y Direcciones Crypto | Explicación Completa 2026",
-          "description": "Entiende qué son las claves privadas, públicas y direcciones crypto. Aprende la analogía del buzón, qué es la seed phrase y por qué nunca debes compartir tu clave privada.",
+          "headline": "Clave privada, clave pública y dirección crypto: qué son y cómo se relacionan",
+          "description": "Qué son la clave privada, la clave pública y la dirección crypto, cómo se relacionan con tu wallet y tu seed phrase, y qué puedes compartir y qué no.",
           "inLanguage": "es",
           "datePublished": "2026-08-02",
-          "dateModified": "2026-09-05",
+          "dateModified": "2026-09-08",
           "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "publisher": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://micryptoguia.com/articulos/claves-privadas-direcciones.html" }
@@ -76,12 +76,12 @@
           "@type": "FAQPage",
           "@id": "https://micryptoguia.com/articulos/claves-privadas-direcciones.html#faq",
           "mainEntity": [
-            { "@type": "Question", "name": "¿Qué es una clave privada en criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "Una clave privada es un número secreto de 256 bits que te da control total sobre los fondos de una dirección crypto. Es como la contraseña maestra de tu cuenta bancaria: quien la posee, posee los fondos. Si alguien obtiene tu clave privada, puede vaciar tu wallet sin que puedas hacer nada para impedirlo." } },
-            { "@type": "Question", "name": "¿Cuál es la diferencia entre clave privada y clave pública?", "acceptedAnswer": { "@type": "Answer", "text": "La clave privada es secreta y sirve para firmar transacciones y gastar fondos. La clave pública se deriva matemáticamente de la privada y sirve para verificar firmas y generar direcciones. Con la clave pública puedes verificar que una firma es válida, pero no puedes crear firmas nuevas. La analogía del buzón: clave pública = ranura para echar cartas, clave privada = llave para abrir el buzón." } },
-            { "@type": "Question", "name": "¿Qué es una seed phrase y para qué sirve?", "acceptedAnswer": { "@type": "Answer", "text": "La seed phrase (frase semilla) es una lista de 12, 18 o 24 palabras en inglés que funciona como copia de seguridad maestra de todas tus claves privadas. A partir de estas palabras se generan matemáticamente todas las claves privadas de tu wallet. Si pierdes el acceso a tu wallet, puedes restaurar todos tus fondos en cualquier dispositivo introduciendo la seed phrase. Es la pieza más importante de seguridad en crypto." } },
-            { "@type": "Question", "name": "¿Se puede adivinar una clave privada?", "acceptedAnswer": { "@type": "Answer", "text": "No, es matemáticamente imposible con la tecnología actual. Una clave privada de Bitcoin o Ethereum tiene 256 bits, lo que significa que hay 2^256 combinaciones posibles — un número comparable al número estimado de átomos en el universo observable. Incluso con todos los ordenadores del mundo trabajando durante miles de millones de años, no podrías adivinar una clave privada aleatoria." } },
-            { "@type": "Question", "name": "¿Dónde debo guardar mi seed phrase de forma segura?", "acceptedAnswer": { "@type": "Answer", "text": "La seed phrase debe guardarse en papel o metal (nunca solo en digital) en al menos dos ubicaciones físicas separadas. NUNCA la guardes en una foto del móvil, en un documento de Word, en la nube (Google Drive, iCloud), ni la compartas con nadie. El método más seguro es grabarla en una placa de acero resistente al fuego y guardarla en lugares seguros. No necesita conexión a internet: es completamente offline." } },
-            { "@type": "Question", "name": "¿Qué pasa si pierdo mi clave privada o seed phrase?", "acceptedAnswer": { "@type": "Answer", "text": "Pierdes el acceso a tus fondos de forma permanente e irreversible. No hay un botón de 'recuperar contraseña', no hay servicio de atención al cliente al que llamar. En la blockchain, el control de los fondos depende exclusivamente de la clave privada. Se estima que entre un 15% y un 20% de todos los bitcoins existentes están perdidos para siempre porque sus dueños perdieron las claves privadas." } }
+            { "@type": "Question", "name": "¿Qué es una clave privada en criptomonedas?", "acceptedAnswer": { "@type": "Answer", "text": "Una clave privada permite generar firmas válidas para autorizar movimientos desde las direcciones asociadas. En Bitcoin y muchas redes que usan curvas elípticas, se representa dentro de un espacio criptográfico extremadamente grande. Quien obtiene la clave privada puede autorizar transacciones desde esa dirección." } },
+            { "@type": "Question", "name": "¿Cuál es la diferencia entre clave privada y clave pública?", "acceptedAnswer": { "@type": "Answer", "text": "La clave privada es secreta y firma transacciones. La clave pública se deriva de la privada y sirve para verificar firmas. La dirección, derivada a su vez de la clave pública, es lo que compartes para recibir fondos. A partir de la pública no es computacionalmente viable reconstruir la privada con la tecnología actual." } },
+            { "@type": "Question", "name": "¿Qué es una seed phrase y para qué sirve?", "acceptedAnswer": { "@type": "Answer", "text": "La seed phrase es una frase de recuperación, normalmente de 12 o 24 palabras, que actúa como copia de seguridad de tus claves. Muchas wallets usan estándares como BIP39, pero no todas funcionan igual. Permite reconstruir las claves y direcciones derivadas por esa wallet, siempre que uses estándares y rutas de derivación compatibles." } },
+            { "@type": "Question", "name": "¿Se puede adivinar una clave privada?", "acceptedAnswer": { "@type": "Answer", "text": "La fuerza bruta contra una clave generada correctamente no es un riesgo práctico hoy. Los ataques reales suelen dirigirse al usuario, al dispositivo o a la forma en que se almacenó la seed." } },
+            { "@type": "Question", "name": "¿Dónde debo guardar mi seed phrase de forma segura?", "acceptedAnswer": { "@type": "Answer", "text": "Guarda una copia de recuperación offline en un lugar seguro y privado. Para almacenamiento a largo plazo, algunas personas utilizan soportes resistentes al fuego y al agua. Lo importante es que el respaldo permanezca legible, privado y accesible solo para quien corresponda. Evita fotos del móvil, notas en la nube y cualquier sistema conectado a internet." } },
+            { "@type": "Question", "name": "¿Qué pasa si pierdo mi clave privada o seed phrase?", "acceptedAnswer": { "@type": "Answer", "text": "Si pierdes la clave y no tienes un respaldo válido, podrías perder la capacidad de mover esos fondos. La blockchain sigue registrando los saldos, pero sin la clave no puedes autorizar transacciones desde esa dirección. No existe una entidad que pueda recuperarla por ti. Por eso el respaldo offline es lo más importante." } }
           ]
         }
       ]
@@ -105,16 +105,18 @@
 
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">🔐 Seguridad</span>
 
-        <h1>Claves Privadas, Públicas y Direcciones: La Criptografía Detrás de tus Criptomonedas</h1>
-        <p class="article-meta">Publicado el 2 de agosto, 2026 · Actualizado: 5 de septiembre, 2026 &nbsp;|&nbsp; Tiempo de lectura: ~10 min &nbsp;|&nbsp; Por MiCryptoGuía</p>
+        <h1>Clave privada, clave pública y dirección crypto: qué son y cómo se relacionan</h1>
+        <p class="article-meta">Publicado el 2 de agosto, 2026 · Actualizado: septiembre 2026 &nbsp;|&nbsp; Tiempo de lectura: ~10 min &nbsp;|&nbsp; Por MiCryptoGuía</p>
 
-        <p><strong>Tu criptomoneda no está "dentro" de tu wallet. Lo que realmente tienes es una clave privada — un número secreto que te otorga el derecho de mover fondos en la blockchain.</strong> Entender la relación entre clave privada, clave pública, dirección y frase semilla (seed phrase) es el fundamento más importante de la seguridad en crypto. Si no entiendes estos conceptos, realmente no entiendes cómo funcionan las criptomonedas.</p>
+        <p style="font-size:1.05rem;color:var(--text-primary);line-height:1.6;margin-bottom:20px;">Aprende qué puede compartirse, qué debe mantenerse secreto y cómo se relacionan las claves con tu wallet y tu seed phrase.</p>
 
-        <p>Este artículo desglosa cada concepto con la famosa analogía del buzón — la forma más intuitiva de visualizar cómo funciona la criptografía de las criptomonedas. Vamos a ello.</p>
+        <p><strong>Tus criptomonedas no están guardadas físicamente dentro de la wallet. La blockchain registra los saldos y movimientos, mientras que tus claves te permiten autorizar transacciones desde las direcciones que controlas. La clave privada es la pieza secreta que permite firmar esas transacciones.</strong></p>
+
+        <p>Entender estos conceptos te ayuda a usar una wallet con mucha más seguridad. A lo largo del artículo usamos la analogía del buzón para visualizar cómo se relacionan.</p>
 
         <div class="speed-read">
-            <h3>⚠️ Estadística Impactante</h3>
-            <p style="color:var(--text-secondary);font-size:.9rem;line-height:1.6;margin:0;">Se estima que entre <strong>3 y 4 millones de bitcoins</strong> (de un total de 21 millones) están perdidos para siempre. No porque hayan sido robados, sino porque sus dueños <strong>perdieron las claves privadas</strong>. A precio actual, eso son más de 200 mil millones de dólares en fondos inaccesibles. Entre las historias reales más famosas: James Howells, un ingeniero británico que en 2013 tiró por error un disco duro con 8.000 bitcoins (hoy valorados en ~400 millones de dólares). El disco duro está en un vertedero de Gales y el ayuntamiento le ha denegado repetidamente el permiso para excavar. <strong>Tu clave privada NO es recuperable. Sin ella, tus fondos no existen.</strong></p>
+            <h3>Por qué perder una clave puede ser un problema serio</h3>
+            <p style="color:var(--text-secondary);font-size:.9rem;line-height:1.6;margin:0;">Se estima que una parte importante de los bitcoins existentes podría estar inaccesible por pérdida de claves o dispositivos antiguos, aunque no existe una cifra exacta verificable. Sin la clave o un respaldo válido, los fondos pueden seguir registrados en la blockchain, pero tú ya no podrás moverlos.</p>
         </div>
 
         <!-- El diagrama secuencial de las claves crypto - analogía del buzón -->
@@ -130,10 +132,10 @@
             <span class="arrow">→</span>
             <div class="key-box">Clave Pública<br><small>Se puede compartir</small></div>
             <span class="arrow">→</span>
-            <span style="display:inline-block;background:var(--bg-surface);border-radius:var(--radius-md);padding:4px 12px;font-size:.75rem;color:var(--text-muted);margin:0 8px;">hash<br>criptográfico</span>
+            <span style="display:inline-block;background:var(--bg-surface);border-radius:var(--radius-md);padding:4px 12px;font-size:.75rem;color:var(--text-muted);margin:0 8px;">función<br>derivación</span>
             <span class="arrow">→</span>
             <div class="key-box" style="border:1px solid var(--green);">Dirección<br><small>Compartible — para recibir fondos</small></div>
-            <p style="color:var(--text-muted);font-size:.8rem;margin-top:16px;">La flecha solo funciona hacia la derecha. Es imposible hacer el camino inverso.</p>
+            <p style="color:var(--text-muted);font-size:.8rem;margin-top:16px;">En la práctica, derivar la clave privada a partir de la clave pública es computacionalmente inviable con la tecnología actual.</p>
         </div>
 
         <table class="comparison-table">
@@ -148,78 +150,80 @@
             <tbody>
                 <tr>
                     <td><strong>Clave Privada</strong></td>
-                    <td>Número secreto de 256 bits que firma transacciones y demuestra propiedad de los fondos</td>
+                    <td>Número secreto que firma transacciones y permite autorizar movimientos</td>
                     <td>❌ NUNCA</td>
-                    <td>La llave del buzón — solo tú la tienes, abre el buzón para sacar el contenido</td>
+                    <td>La llave que permite autorizar movimientos</td>
                 </tr>
                 <tr>
                     <td><strong>Clave Pública</strong></td>
                     <td>Derivada matemáticamente de la privada. Verifica que una firma es auténtica</td>
                     <td>✅ Sí (al hacer transacciones se revela)</td>
-                    <td>El mecanismo interno del buzón — verifica que la llave es la correcta</td>
+                    <td>Pieza matemática usada para verificar firmas</td>
                 </tr>
                 <tr>
                     <td><strong>Dirección</strong></td>
-                    <td>Versión "hasheada" de la clave pública. Es lo que compartes para recibir fondos</td>
+                    <td>Identificador público derivado criptográficamente de las claves de la wallet</td>
                     <td>✅ Sí (es pública)</td>
-                    <td>La ubicación del buzón — la compartes para que te envíen cartas</td>
+                    <td>La dirección del buzón, donde te envían fondos</td>
                 </tr>
             </tbody>
         </table>
 
+        <p>El proceso exacto para generar una dirección depende de cada blockchain. En Bitcoin y Ethereum, la forma de generar la dirección no es exactamente la misma.</p>
+
         <h2 id="analogia-buzon">La analogía del buzón explicada paso a paso</h2>
 
-        <p>Esta es probablemente la mejor analogía jamás creada para explicar la criptografía de las criptomonedas:</p>
-
-        <p><strong>Imagina que cada dirección crypto es un buzón de correos transparente en la calle.</strong></p>
+        <p>Para visualizarlo, imagina que cada dirección crypto es un buzón de correos transparente en la calle:</p>
 
         <ol>
-            <li><strong>La dirección es la ubicación del buzón</strong> (ejemplo: "Calle Mayor 42, Madrid"). Cualquiera que conozca esa dirección puede enviarte cartas (criptomonedas). La dirección es pública y la compartes sin miedo. Es como tu número de cuenta: la gente lo necesita para enviarte dinero, y no pasa nada por compartirlo.</li>
+            <li><strong>La dirección es la ubicación del buzón</strong> (ejemplo: "Calle Mayor 42, Madrid"). Cualquiera que conozca esa dirección puede enviarte fondos. La dirección es pública y la compartes sin miedo. Es como tu número de cuenta: la gente lo necesita para enviarte dinero, y no pasa nada por compartirlo.</li>
 
-            <li><strong>La clave pública es la ranura del buzón.</strong> Permite a cualquiera depositar cartas dentro del buzón. Sirve para verificar que las cartas que llegaron realmente se depositaron correctamente. Sin embargo, con la ranura no puedes sacar cartas — solo meter.</li>
+            <li><strong>La clave pública es una pieza matemática derivada de la privada.</strong> Se usa para comprobar que una firma es válida, sin revelar la clave privada. No necesitas imaginarla como un objeto físico: es la parte que verifica.</li>
 
-            <li><strong>La clave privada es la llave física que abre el buzón.</strong> Es lo único que te permite sacar las cartas (gastar las criptomonedas). Si alguien consigue tu llave, puede vaciar tu buzón. Si pierdes la llave, nunca más podrás acceder al contenido del buzón.</li>
+            <li><strong>La clave privada es la llave que autoriza movimientos.</strong> Es lo único que te permite gastar los fondos. Si alguien consigue tu llave, puede mover tus criptomonedas. Si la pierdes, no podrás acceder al contenido del buzón.</li>
         </ol>
 
-        <p><strong>El buzón es transparente:</strong> cualquiera que pase por delante puede ver cuántas cartas (criptomonedas) hay dentro. En la blockchain, todas las transacciones y saldos son públicos. Pero solo quien tiene la llave privada puede mover lo que hay dentro.</p>
+        <p><strong>El buzón es transparente:</strong> cualquiera que pase por delante puede ver cuánto hay dentro. En la blockchain, todas las transacciones y saldos son públicos. Pero solo quien tiene la clave privada puede mover lo que hay dentro.</p>
 
         <div class="highlight-box">
-            <p><strong>🔑 En esencia:</strong> Tu dirección es lo que muestras al mundo para que te paguen. Tu clave privada es lo que proteges con tu vida porque te permite gastar. La frase semilla (seed phrase) es la copia de seguridad de todas tus claves privadas. Si entiendes esto, entiendes el 90% de la seguridad en crypto.</p>
+            <p><strong>🔑 En esencia:</strong> tu dirección es lo que muestras para recibir fondos; tu clave privada es lo que debes mantener en secreto porque autoriza movimientos; la seed phrase es la copia de seguridad que recupera tus claves. Entender esta relación evita muchos de los errores más graves de autocustodia.</p>
         </div>
 
         <h2 id="criptografia">Cómo funciona la criptografía detrás de las claves</h2>
 
-        <p>Las criptomonedas usan un sistema llamado <strong>criptografía de clave pública</strong> (o criptografía asimétrica). La magia matemática es esta:</p>
+        <p>Las criptomonedas usan un sistema llamado <strong>criptografía de clave pública</strong> (o criptografía asimétrica). La idea matemática básica es esta:</p>
 
-        <p>A partir de tu clave privada (un número aleatorio de 256 bits), tu wallet genera automáticamente tu clave pública usando una función matemática llamada <strong>multiplicación de curva elíptica</strong>. Esta función tiene una propiedad crucial: <strong>es fácil de calcular en una dirección, pero computacionalmente imposible de invertir</strong>.</p>
+        <p>A partir de tu clave privada, tu wallet genera automáticamente tu clave pública usando una función matemática llamada <strong>multiplicación de curva elíptica</strong>. Esta función tiene una propiedad importante: <strong>es fácil de calcular en una dirección, pero en la práctica no es viable invertirla con la tecnología actual</strong>.</p>
 
-        <p>Es como mezclar dos colores de pintura: mezclar azul y amarillo para obtener verde es fácil. Pero mirar el verde y separarlo otra vez en azul y amarillo exactos es imposible. Así funciona la criptografía: con tu clave privada puedes generar la pública, pero con la pública es matemáticamente imposible reconstruir la privada.</p>
+        <p>Es como mezclar dos colores de pintura: mezclar azul y amarillo para obtener verde es fácil, pero separar el verde otra vez en azul y amarillo exactos no es viable. Con tu clave privada puedes generar la pública, pero a partir de la pública no es computacionalmente viable reconstruir la privada.</p>
 
         <p>La dirección es un paso adicional: se aplica una función hash (SHA-256 y RIPEMD-160 en Bitcoin, Keccak-256 en Ethereum) a la clave pública para acortarla y añadir una capa extra de seguridad.</p>
 
         <div class="highlight-box">
-            <p><strong>🧮 Dato matemático:</strong> Una clave privada de Bitcoin tiene 256 bits. El número de claves privadas posibles es 2^256, aproximadamente 115 quattuorvigintillones. Para ponerlo en perspectiva: es un número mayor que la cantidad estimada de átomos en el universo observable (~10^80). La probabilidad de que alguien genere tu misma clave privada es, a efectos prácticos, cero.</p>
+            <p><strong>🧮 Sobre el tamaño del espacio de claves:</strong> En Bitcoin, una clave privada utiliza un espacio de 256 bits, es decir 2²⁵⁶ combinaciones posibles: una cantidad tan grande que probar todas las combinaciones no es viable con la tecnología actual. Esto no significa que las claves estén a salvo por sí solas: los ataques reales suelen dirigirse al usuario, al dispositivo o a la forma en que se almacenó la seed.</p>
         </div>
 
         <h2 id="seed-phrase">Qué es la seed phrase y cómo genera todas tus claves</h2>
 
         <p>Si cada dirección tiene su propia clave privada, y puedes tener cientos de direcciones, ¿cómo recuerdas todas esas claves sin volverte loco? Aquí entra la <strong>seed phrase</strong> (frase semilla o frase de recuperación).</p>
 
-        <p>La seed phrase es una lista de <strong>12, 18 o 24 palabras</strong> en inglés (siguiendo el estándar BIP39) que funciona como <strong>copia de seguridad maestra</strong>. A partir de esas palabras, tu wallet puede generar matemáticamente <strong>todas</strong> las claves privadas que necesitarás jamás — incluso las que aún no has usado.</p>
+        <p>Muchas wallets usan frases de recuperación de 12 o 24 palabras basadas en estándares como BIP39. El formato exacto depende de la wallet. No todas las wallets ni todos los sistemas de recuperación funcionan exactamente igual.</p>
+
+        <p>La seed phrase funciona como <strong>copia de seguridad maestra</strong>: a partir de esas palabras, la wallet permite reconstruir las claves y direcciones derivadas por esa wallet, siempre que se utilicen los mismos estándares y rutas de derivación compatibles.</p>
 
         <p>El proceso funciona así:</p>
         <ol>
             <li>Tu wallet genera 128-256 bits de entropía aleatoria.</li>
-            <li>Esa entropía se codifica como 12-24 palabras en inglés de una lista estandarizada de 2048 palabras.</li>
+            <li>Esa entropía se codifica como 12-24 palabras de una lista estandarizada.</li>
             <li>Usando el estándar BIP32 (HD Wallets), esas palabras generan una "llave maestra".</li>
-            <li>La llave maestra puede derivar un número ilimitado de claves privadas hijas, cada una para una dirección diferente.</li>
+            <li>La llave maestra puede derivar claves privadas hijas, cada una para una dirección diferente.</li>
         </ol>
 
         <div class="warning-box">
-            <p><strong>⚠️ Regla de oro absoluta:</strong> NUNCA introduzcas tu seed phrase en un sitio web, ni se la envíes a nadie, ni la guardes en una foto en tu móvil, ni en la nube. Si alguien — un "soporte técnico", un "administrador", un "amigo" — te pide tu seed phrase, es una estafa. El 100% de las veces. La seed phrase solo se introduce en tu wallet (MetaMask, Trust Wallet, Ledger) para restaurar el acceso, y siempre offline si es posible.</p>
+            <p><strong>⚠️ Si alguien — un "soporte técnico", un "administrador", un "amigo" — te pide tu seed phrase, es una señal clara de estafa.</strong> Introduce la frase de recuperación únicamente cuando el proceso oficial de tu wallet lo requiera. Si usas una hardware wallet, sigue el procedimiento del propio dispositivo y evita escribir su seed en una computadora, navegador o página web.</p>
         </div>
 
-        <h2 id="seguridad">Reglas de oro para proteger tus claves privadas</h2>
+        <h2 id="seguridad">Cómo proteger tus claves y tu seed phrase</h2>
 
         <table class="comparison-table">
             <thead>
@@ -229,63 +233,81 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>✅ Guardar la seed phrase en papel, en al menos dos ubicaciones físicas distintas</td><td>❌ Guardarla en una nota del móvil, documento Word, Google Drive o foto</td></tr>
-                <tr><td>✅ Usar una placa de acero resistente al fuego para backup a largo plazo</td><td>❌ Confiar solo en papel (el fuego o el agua pueden destruirlo)</td></tr>
-                <tr><td>✅ Verificar que has anotado correctamente las palabras (intenta restaurar una wallet vacía)</td><td>❌ Escribir mal una palabra o en orden incorrecto</td></tr>
-                <tr><td>✅ Usar una hardware wallet (Ledger, Trezor) para cantidades significativas</td><td>❌ Dejar grandes cantidades en exchanges o hot wallets</td></tr>
-                <tr><td>✅ Mantener la seed phrase completamente offline siempre</td><td>❌ Compartir la seed phrase con nadie bajo ninguna circunstancia</td></tr>
-                <tr><td>✅ Considerar una passphrase adicional (BIP39 passphrase / "13ª palabra")</td><td>❌ Usar solo protección por contraseña sin seed phrase de backup</td></tr>
+                <tr><td>✅ Guardar la seed phrase offline en un lugar seguro y privado</td><td>❌ Guardarla en una nota del móvil, documento Word, Google Drive o foto</td></tr>
+                <tr><td>✅ Considerar un soporte resistente al fuego y al agua para el largo plazo</td><td>❌ Confiar solo en papel sin prever fuego o agua</td></tr>
+                <tr><td>✅ Verificar que has anotado correctamente las palabras</td><td>❌ Escribir mal una palabra o en orden incorrecto</td></tr>
+                <tr><td>✅ Considerar una hardware wallet cuando el valor lo justifique</td><td>❌ Dejar grandes cantidades en exchanges o hot wallets sin evaluarlo</td></tr>
+                <tr><td>✅ Mantener la seed phrase completamente offline</td><td>❌ Compartir la seed phrase con nadie</td></tr>
+                <tr><td>✅ Considerar una passphrase adicional de BIP39</td><td>❌ Usar solo protección por contraseña sin respaldo de seed</td></tr>
             </tbody>
         </table>
 
-        <h2 id="historias-reales">Historias reales de personas que perdieron el acceso</h2>
+        <p>Sobre la passphrase de BIP39: no es simplemente "una palabra más" añadida a la frase. Es una cadena adicional que define una wallet derivada distinta. Si la pierdes u olvidas, también puedes perder el acceso a la wallet derivada con ella, así que añade complejidad al respaldo.</p>
 
-        <p>Estas historias no son leyendas urbanas. Son casos reales y documentados:</p>
+        <h2 id="que-intentan-robar">Lo que los atacantes intentan robar de verdad</h2>
 
-        <div class="warning-box">
-            <p><strong>⚠️ Stefan Thomas (2021):</strong> Este programador alemán tiene una wallet con 7.002 bitcoins (más de 350 millones de dólares). El problema: perdió el papel donde anotó la contraseña de su IronKey (un USB cifrado que contiene su clave privada). El dispositivo solo permite 10 intentos de contraseña. Thomas ya ha gastado 8. Le quedan 2 intentos antes de que el dispositivo se autodestruya y los bitcoins sean inaccesibles para siempre. A día de hoy, sigue sin poder acceder.</p>
-        </div>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Dato</th>
+                    <th>¿Puede compartirse?</th>
+                    <th>Riesgo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Dirección</strong></td><td>Sí</td><td>Privacidad</td></tr>
+                <tr><td><strong>Clave pública</strong></td><td>Normalmente sí</td><td>Bajo</td></tr>
+                <tr><td><strong>Clave privada</strong></td><td>Nunca</td><td>Control de fondos</td></tr>
+                <tr><td><strong>Seed phrase</strong></td><td>Nunca</td><td>Control de todas las wallets derivadas</td></tr>
+                <tr><td><strong>Passphrase</strong></td><td>Nunca</td><td>Puede ser necesaria para recuperar una wallet</td></tr>
+                <tr><td><strong>TxID</strong></td><td>Sí</td><td>Privacidad limitada</td></tr>
+            </tbody>
+        </table>
 
-        <p>Otro caso impactante es el de <strong>Gerald Cotten</strong>, fundador del exchange canadiense QuadrigaCX. En 2018, Cotten falleció repentinamente durante un viaje a India llevándose consigo la única clave privada que controlaba las cold wallets del exchange. Resultado: 215 millones de dólares en criptomonedas de 76.000 clientes quedaron bloqueados para siempre. El exchange quebró y los clientes perdieron todo.</p>
+        <p>La mayor parte de los robos de criptomonedas no se producen por fuerza bruta contra una clave, sino por phishing, malware, seed phrases filtradas, wallets falsas o capturas de pantalla y copias en la nube. La clave en sí es segura; el eslabón débil suele ser cómo se maneja el respaldo.</p>
 
-        <p>Estos casos extremos ilustran el principio fundamental de las criptomonedas: <strong>con gran poder viene gran responsabilidad</strong>. Nadie puede recuperar tu clave privada. No existe un departamento de atención al cliente de la blockchain.</p>
+        <h2 id="historias-reales">Un caso real de pérdida de acceso</h2>
+
+        <p>Estos problemas no son teóricos. Un caso muy citado es el de un programador que perdió el papel con la contraseña de un USB cifrado que contenía la clave de su wallet. El dispositivo permite un número limitado de intentos de contraseña y después se bloquea. Años después, sigue sin poder acceder a esos fondos.</p>
+
+        <p>La autocustodia elimina algunos intermediarios, pero también traslada al usuario la responsabilidad de conservar las claves y los respaldos. No existe un "botón de recuperar contraseña" en la blockchain, ni una entidad a la que pedir ayuda.</p>
 
         <div class="faq-section">
             <h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
 
             <div class="faq-item">
                 <h3>¿Qué es una clave privada en criptomonedas?</h3>
-                <p>Una clave privada es un número secreto de 256 bits que te da control total sobre los fondos asociados a una dirección crypto. Es la prueba matemática de que eres el propietario legítimo. Quien posee la clave privada, posee los fondos. Si alguien la obtiene, puede transferir tus criptomonedas sin tu consentimiento y de forma irreversible. Protégela como protegerías las llaves de una caja fuerte con los ahorros de toda tu vida.</p>
+                <p>Una clave privada permite generar firmas válidas para autorizar movimientos desde las direcciones asociadas. En Bitcoin y muchas redes que usan curvas elípticas, se representa dentro de un espacio criptográfico extremadamente grande. Quien obtiene la clave privada puede autorizar transacciones desde esa dirección.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Cuál es la diferencia entre clave privada y clave pública?</h3>
-                <p>La clave privada es secreta: firma transacciones y demuestra propiedad. La clave pública se deriva matemáticamente de la privada: verifica firmas y genera direcciones. La dirección (que es un hash de la clave pública) es lo que compartes para recibir fondos. La magia: de la privada puedes generar la pública, pero de la pública nunca puedes reconstruir la privada. Es un camino de una sola dirección.</p>
+                <p>La clave privada es secreta y firma transacciones. La clave pública se deriva de la privada y sirve para verificar firmas. La dirección, derivada a su vez de la clave pública, es lo que compartes para recibir fondos. A partir de la pública no es computacionalmente viable reconstruir la privada con la tecnología actual.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Qué es una seed phrase y para qué sirve?</h3>
-                <p>La seed phrase (frase semilla) es una lista de 12, 18 o 24 palabras en inglés que funciona como copia de seguridad de <strong>todas</strong> tus claves privadas. Es la pieza más importante de seguridad que tienes. Si pierdes tu dispositivo, instalas cualquier wallet compatible, introduces la seed phrase y todos tus fondos vuelven a aparecer. Debes guardarla en papel o metal, en al menos dos ubicaciones físicas seguras. Nunca en digital.</p>
+                <p>La seed phrase es una frase de recuperación, normalmente de 12 o 24 palabras, que actúa como copia de seguridad de tus claves. Muchas wallets usan estándares como BIP39, pero no todas funcionan igual. Permite reconstruir las claves y direcciones derivadas por esa wallet, siempre que uses estándares y rutas de derivación compatibles.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Se puede adivinar o hackear una clave privada?</h3>
-                <p>No, es imposible con la tecnología actual o previsible. El espacio de búsqueda es 2^256 combinaciones (más que átomos en el universo). Incluso si tuvieras todos los ordenadores del planeta trabajando durante miles de millones de años, no podrías encontrar una clave privada específica. Sin embargo, las claves generadas con poca aleatoriedad (entropía débil) o almacenadas de forma insegura sí pueden ser robadas.</p>
+                <p>La fuerza bruta contra una clave generada correctamente no es un riesgo práctico hoy. Los ataques reales suelen dirigirse al usuario, al dispositivo o a la forma en que se almacenó la seed. Las claves generadas con poca aleatoriedad (entropía débil) o almacenadas de forma insegura sí pueden ser robadas.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Dónde debo guardar mi seed phrase de forma segura?</h3>
-                <p>Recomendación por orden de importancia: (1) Grabar las palabras en una placa de acero resistente al fuego (Cryptosteel, Billfodl) guardada en una caja fuerte o lugar seguro. (2) Papel de archivo libre de ácido en dos ubicaciones geográficas distintas. NUNCA en: fotos del móvil, apps de notas, documentos de Word, Google Drive, iCloud, o cualquier sistema conectado a internet. Considera añadir una passphrase (palabra adicional secreta) que solo tú conozcas.</p>
+                <p>Guarda una copia de recuperación offline en un lugar seguro y privado. Para almacenamiento a largo plazo, algunas personas utilizan soportes resistentes al fuego y al agua. Lo importante es que el respaldo permanezca legible, privado y accesible solo para quien corresponda. Evita fotos del móvil, notas en la nube y cualquier sistema conectado a internet.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Qué pasa si pierdo mi clave privada o seed phrase?</h3>
-                <p>Pierdes el acceso a tus fondos de forma permanente, irreversible y absoluta. No hay atención al cliente, no hay "recuperar contraseña", no hay entidad que pueda ayudarte. Se estima que entre un 15-20% de todos los bitcoins (3-4 millones de BTC) están perdidos para siempre por pérdida de claves. La blockchain es inmutable y descentralizada: no hay terceros con poder para revertir o recuperar nada. Por eso la copia de seguridad es lo más importante.</p>
+                <p>Si pierdes la clave y no tienes un respaldo válido, podrías perder la capacidad de mover esos fondos. La blockchain sigue registrando los saldos, pero sin la clave no puedes autorizar transacciones desde esa dirección. No existe una entidad que pueda recuperarla por ti. Por eso el respaldo offline es lo más importante.</p>
             </div>
         </div>
 
         <div class="highlight-box" style="margin:24px 0;background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:14px 20px">
-            <p style="margin:0;font-size:.82rem;color:var(--text-muted);"><strong>📢 Transparencia:</strong> Algunos enlaces son de afiliado. Si te registras, podemos recibir una comisión sin costo extra. <a href="../sobre.html" style="color:var(--accent)">Más info →</a></p>
+            <p style="margin:0;font-size:.82rem;color:var(--text-muted);"><strong>📢 Transparencia:</strong> Algunos enlaces pueden ser de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin coste adicional para ti. Esto no cambia los criterios editoriales ni las conclusiones del artículo. <a href="../sobre.html" style="color:var(--accent)">Más info →</a></p>
         </div>
 
         <div class="internal-links">
@@ -307,19 +329,19 @@
             </ul>
         </div>
 
-        <h2 id="conclusion">Conclusión: Tu clave privada, tu responsabilidad</h2>
-        <p>La criptografía de clave pública es la base sobre la que se sostiene todo el ecosistema de las criptomonedas. Sin ella, no existiría la propiedad digital descentralizada. Entender cómo funciona — y sobre todo, entender la responsabilidad que conlleva custodiar tus propias claves — es el paso más importante que darás como usuario de criptomonedas.</p>
+        <h2 id="conclusion">Conclusión: custodia y responsabilidad</h2>
+        <p>La criptografía de clave pública es la base sobre la que se sostiene el ecosistema de las criptomonedas. Entender cómo se relacionan la clave privada, la clave pública, la dirección y la seed phrase — y sobre todo, qué implica custodiar tus propias claves — es el paso más importante que darás como usuario.</p>
 
-        <p>El mantra que debes recordar siempre: <strong>"Not your keys, not your coins"</strong> (si no tienes tus claves, no tienes tus monedas). Si tus criptomonedas están en un exchange, técnicamente no son tuyas: el exchange tiene las claves. Si quieres poseerlas de verdad, necesitas una wallet bajo tu control con tu propia seed phrase respaldada de forma segura.</p>
+        <p>Cuando mantienes criptomonedas en un exchange custodial, normalmente el exchange controla las claves privadas asociadas a los fondos y tú dependes de la plataforma para autorizar retiros. Con una wallet de autocustodia, tú controlas las claves, pero también asumes la responsabilidad de protegerlas.</p>
 
         <div class="cta-card">
             <h2>Protege tus criptomonedas desde el primer día</h2>
-            <p>Si todavía no tienes una wallet propia, empieza por crear una. MetaMask es la wallet más popular para Ethereum y compatible con todos los exchanges principales. Y si compras crypto en Binance u OKX, usa nuestros códigos de descuento para ahorrar en comisiones.</p>
+            <p>Si aún no tienes una wallet propia, puedes empezar por aprender cómo crear una y cómo guardar su respaldo. Y si decides operar, revisa las condiciones de cada plataforma antes de registrarte.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
-<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la entidad que presta el servicio. Revisa qué servicios están habilitados para tu cuenta y tu ubicación.</p>
         </div>
 
     </main>
