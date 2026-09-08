@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guía de Solana para principiantes: usa Phantom Wallet, compra SOL, haz staking y usa Jupiter, Magic Eden y más DApps del ecosistema Solana.">
+    <meta name="description" content="Guía de Solana para principiantes: cómo funciona, qué wallets usar en 2026 (Phantom y MetaMask), cómo se estructuran sus comisiones y cómo explorar sus dApps.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://micryptoguia.com/articulos/solana-guia-principiantes.html">
-    <meta property="og:title" content="Solana para Principiantes: Wallets, DeFi y NFTs | Guía 2026 — MiCryptoGuía">
-    <meta property="og:description" content="Aprende a usar Solana desde cero: Phantom Wallet, comprar SOL, hacer staking, usar Jupiter DEX y explorar NFTs en Magic Eden. Guía completa en español.">
+    <meta property="og:title" content="Solana para principiantes: cómo funciona, wallets, comisiones y dApps — MiCryptoGuía">
+    <meta property="og:description" content="Aprende qué es Solana, cómo funciona su consenso, qué wallets son compatibles en 2026, cómo se calculan las comisiones y qué revisar antes de firmar una operación.">
     <meta property="og:image" content="https://micryptoguia.com/img/og-image.svg">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es">
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Solana para Principiantes: Wallets, DeFi y NFTs | Guía 2026</title>
+    <title>Solana para principiantes: cómo funciona, wallets, comisiones y dApps — MiCryptoGuía</title>
     <style>
         .article-page { padding: 140px 24px 80px; max-width: 800px; margin: 0 auto; }
         .article-page h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; color: var(--text-primary); line-height: 1.2; }
@@ -59,11 +59,11 @@
       "@graph": [
         {
           "@type": "Article",
-          "headline": "Solana para Principiantes: Wallets, DeFi y NFTs | Guía 2026",
-          "description": "Aprende a usar Solana desde cero: Phantom Wallet, comprar SOL, hacer staking, usar Jupiter DEX y explorar NFTs en Magic Eden. Guía completa en español.",
+          "headline": "Solana para principiantes: cómo funciona, wallets, comisiones y dApps",
+          "description": "Aprende qué es Solana, cómo funciona su consenso, qué wallets son compatibles en 2026, cómo se calculan las comisiones y qué revisar antes de firmar una operación.",
           "author": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com" },
           "datePublished": "2026-08-07",
-          "dateModified": "2026-09-05",
+          "dateModified": "2026-09-08",
           "inLanguage": "es",
           "publisher": { "@type": "Organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://micryptoguia.com/articulos/solana-guia-principiantes.html" }
@@ -71,12 +71,12 @@
         {
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "¿Solana es mejor que Ethereum?", "acceptedAnswer": { "@type": "Answer", "text": "No es una cuestión de mejor o peor, sino de qué necesitas. Solana es más rápida y barata, ideal para uso diario, gaming, NFTs y trading de memecoins. Ethereum es más segura, más descentralizada y tiene un ecosistema más maduro. Para la mayoría, lo óptimo es usar ambas: Ethereum para operaciones grandes y reserva de valor, Solana para el día a día." } },
-            { "@type": "Question", "name": "¿Cuánto SOL necesito para empezar?", "acceptedAnswer": { "@type": "Answer", "text": "Técnicamente puedes empezar con 0.01 SOL (unos céntimos). Para interactuar con DApps, hacer swaps y probar el ecosistema, se recomienda empezar con al menos 20-50 de tu moneda local en SOL. Las comisiones son tan bajas que 50 de tu moneda local en Solana rinden mucho más que 50 de tu moneda local en Ethereum." } },
-            { "@type": "Question", "name": "¿Puedo usar MetaMask con Solana?", "acceptedAnswer": { "@type": "Answer", "text": "No directamente. MetaMask está diseñado para Ethereum y blockchains compatibles con EVM. Solana tiene una arquitectura diferente y necesita su propia wallet, siendo Phantom la más popular. La buena noticia es que Phantom también soporta Ethereum y Polygon, por lo que puede usarse como wallet única para múltiples ecosistemas." } },
-            { "@type": "Question", "name": "¿Es seguro hacer staking de SOL?", "acceptedAnswer": { "@type": "Answer", "text": "El staking nativo de SOL es muy seguro: tus SOL nunca salen de tu wallet, solo se delegan a un validador, sin riesgo de hackeo de smart contract. El único riesgo es que el validador tenga mal rendimiento o sea penalizado (slashing), en cuyo caso se pierde una pequeña parte de las recompensas, no los SOL originales. El staking líquido (Marinade, Jito) conlleva riesgos adicionales de smart contract." } },
-            { "@type": "Question", "name": "¿Solana tiene comisiones ocultas?", "acceptedAnswer": { "@type": "Answer", "text": "No como tal. La comisión base de red es de aproximadamente 0.0002 de tu moneda local por transacción. Los DEX y DApps cobran sus propias comisiones: Jupiter alrededor de 0.1-0.3% por swap, Magic Eden alrededor de 2% por venta de NFT. La diferencia clave con Ethereum es que en Solana no se paga un gas fee adicional elevado por cada operación." } },
-            { "@type": "Question", "name": "¿Por qué SOL ha subido o bajado tanto de precio?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de SOL lo determinan la oferta y la demanda en los exchanges. Los factores principales son el crecimiento del ecosistema Solana, el sentimiento general del mercado crypto, las noticias sobre interrupciones o mejoras técnicas como Firedancer, y la actividad de memecoins. SOL es más volátil que ETH, con subidas más pronunciadas en mercados alcistas y caídas más fuertes en los bajistas." } }
+            { "@type": "Question", "name": "¿Solana es mejor que Ethereum?", "acceptedAnswer": { "@type": "Answer", "text": "No se trata de que una sea mejor que la otra, sino de diseños con objetivos distintos. Solana apuesta por velocidad y coste bajo en una sola capa; Ethereum prioriza un ecosistema más maduro y escalar mediante capas adicionales. Muchas personas usan ambas según lo que necesitan en cada momento." } },
+            { "@type": "Question", "name": "¿Cuánto SOL necesito para empezar?", "acceptedAnswer": { "@type": "Answer", "text": "No hay un mínimo técnico elevado: puedes empezar con una cantidad pequeña que estés dispuesto a usar para aprender. Lo recomendable es empezar con poco, probar cómo funciona la red y aumentar solo si te sientes cómodo con los riesgos." } },
+            { "@type": "Question", "name": "¿Puedo usar MetaMask con Solana?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. MetaMask añadió soporte nativo para Solana en 2026, lo que permite gestionar SOL y tokens SPL desde la misma extensión que usas para redes EVM. Asegúrate de tener la versión actualizada de MetaMask. Phantom, Solflare y otras wallets también son compatibles con Solana." } },
+            { "@type": "Question", "name": "¿Es seguro hacer staking de SOL?", "acceptedAnswer": { "@type": "Answer", "text": "El staking nativo delega tus SOL a un validador sin que salgan de tu wallet, pero no está exento de riesgos: el rendimiento no está garantizado, el validador puede tener un mal desempeño o ser penalizado, y el precio de SOL puede bajar mientras tus fondos están delegados. El staking líquido añade además el riesgo de smart contract." } },
+            { "@type": "Question", "name": "¿Solana tiene comisiones ocultas?", "acceptedAnswer": { "@type": "Answer", "text": "La comisión de red de Solana suele ser baja, pero puede subir en momentos de congestión mediante tarifas de prioridad. Además, cada dApp o DEX cobra sus propias comisiones. Antes de confirmar, revisa siempre el desglose que muestra tu wallet en la pantalla de firma." } },
+            { "@type": "Question", "name": "¿Por qué SOL sube o baja tanto de precio?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de SOL, como el de cualquier criptomoneda, lo determina la oferta y la demanda en los exchanges. Influyen el crecimiento del ecosistema, el sentimiento general del mercado y las noticias sobre la red. Es un activo volátil, y los movimientos pasados no garantizan resultados futuros." } }
           ]
         }
       ]
@@ -122,13 +122,13 @@
             <nav class="article-breadcrumb" aria-label="Breadcrumb">
                 <a href="../">Inicio</a> &raquo;
                 <a href="../#guias">Guías</a> &raquo;
-                <span>Solana para Principiantes</span>
+                <span>Solana para principiantes</span>
             </nav>
 
         <span class="section-tag" style="display:inline-block;margin-bottom:12px;">📘 Guías</span>
-        <h1>Solana para Principiantes: Wallets, DeFi y NFTs</h1>
+        <h1>Solana para principiantes: cómo funciona, wallets, comisiones y dApps</h1>
         <div class="article-meta">
-            <span>Actualizado: 5 Sep 2026</span> &nbsp;·&nbsp;
+            <span>Actualizado: 8 Sep 2026</span> &nbsp;·&nbsp;
             <span>⏱️ 12 min lectura</span> &nbsp;·&nbsp;
             <span>🌱 Principiante</span>
         </div>
@@ -136,7 +136,7 @@
         <!-- Speed Read -->
         <div class="speed-read">
             <h3>💡 En pocas palabras</h3>
-            <p>Solana es una blockchain de alto rendimiento diseñada para ser <strong>rápida, barata y fácil de usar</strong>. A diferencia de Ethereum, donde una transacción puede costar varios dólares, en Solana cuesta fracciones de céntimo y se confirma en menos de un segundo. Esto la ha convertido en la segunda blockchain más usada del mundo para DeFi, NFTs y memecoins. En esta guía aprenderás a configurar Phantom Wallet, comprar tus primeros SOL, hacer staking, usar aplicaciones como Jupiter y Magic Eden, y entender las diferencias clave con Ethereum.</p>
+            <p>Solana es una blockchain de capa 1 diseñada para ser <strong>rápida y de bajo coste en su capa base</strong>. En lugar de escalar con capas adicionales, apuesta por un diseño propio que combina Proof of History para ordenar el tiempo y Proof of Stake para el consenso. En esta guía aprenderás cómo funciona, qué wallets puedes usar en 2026 (Phantom y MetaMask ya conviven en este ecosistema), cómo se estructuran sus comisiones y cómo explorar sus dApps con criterio y sin mitos.</p>
         </div>
 
         <!-- Table of Contents -->
@@ -144,63 +144,93 @@
             <h2>📑 Índice de Contenidos</h2>
             <ol>
                 <li><a href="#que-es">¿Qué es Solana y por qué es diferente?</a></li>
-                <li><a href="#proof-of-history">Proof of History: el secreto de su velocidad</a></li>
-                <li><a href="#phantom-wallet">Phantom Wallet: crea tu primera wallet en Solana</a></li>
+                <li><a href="#proof-of-history">Proof of History: qué es y qué no es</a></li>
+                <li><a href="#wallets">Wallets para Solana en 2026: Phantom y MetaMask</a></li>
                 <li><a href="#comprar-sol">Cómo comprar SOL y hacer tu primera transacción</a></li>
-                <li><a href="#ecosistema">El ecosistema Solana: DApps que deberías conocer</a></li>
-                <li><a href="#staking">Staking de SOL: genera ingresos pasivos</a></li>
+                <li><a href="#ecosistema">El ecosistema Solana: dApps para conocer</a></li>
+                <li><a href="#staking">Staking de SOL: cómo funciona y qué riesgos tiene</a></li>
                 <li><a href="#riesgos">Riesgos y limitaciones de Solana</a></li>
                 <li><a href="#elegir-ecosistema">Cómo elegir entre Solana y Ethereum</a></li>
                 <li><a href="#comparativa">Comparativa: Solana vs Ethereum</a></li>
+                <li><a href="#antes-de-firmar">Qué revisar antes de firmar una operación</a></li>
                 <li><a href="#faq">Preguntas frecuentes (FAQ)</a></li>
                 <li><a href="#conclusion">Conclusión y próximos pasos</a></li>
             </ol>
         </nav>
 
         <!-- Answer immediately -->
-        <p>Solana es una blockchain de capa 1 (layer 1) lanzada en 2020 por Anatoly Yakovenko, un ex-ingeniero de Qualcomm. Su promesa es sencilla pero ambiciosa: ser una blockchain <strong>tan rápida y barata que pueda soportar aplicaciones a escala mundial</strong> sin las limitaciones de velocidad y coste que sufren redes como Ethereum. Con capacidad para procesar miles de transacciones por segundo a un coste medio de 0.0002 de tu moneda local por operación, Solana se ha consolidado en 2026 como la segunda blockchain más activa del ecosistema crypto.</p>
+        <p>Solana es una blockchain de capa 1 (layer 1) lanzada en 2020, pensada para ejecutar muchas operaciones de forma rápida y con comisiones bajas en su capa base. Su enfoque técnico es distinto al de Ethereum: en vez de resolver la escalabilidad con capas adicionales, busca velocidad y coste bajo desde el propio diseño de la red. Antes de usar SOL, conviene entender qué hace diferente a la red, qué wallets funcionan hoy y qué riesgos operativos implica manejarla.</p>
 
         <!-- Section 1: What is Solana -->
         <h2 id="que-es">¿Qué es Solana y Por Qué es Diferente?</h2>
-        <p>Para entender Solana, primero hay que entender el problema que resuelve. Ethereum es seguro y descentralizado, pero <strong>lento y caro</strong>: en momentos de congestión, una transacción puede costar 20 de tu moneda local, 50 de tu moneda local o más y tardar varios minutos en confirmarse. Esto hace inviable usar Ethereum para cosas cotidianas como comprar un café, enviar 5 de tu moneda local a un amigo o tradear pequeñas cantidades.</p>
+        <p>Para entender Solana, primero hay que entender el problema que resuelve. Ethereum es seguro y descentralizado, pero su capa base es <strong>lenta y sus comisiones variables</strong>: en momentos de congestión, una operación puede encarecerse y tardar más en confirmarse. Eso hace que usar la capa base de Ethereum para cosas cotidianas —enviar cantidades pequeñas o probar aplicaciones— resulte incómodo.</p>
 
-        <p>Solana adopta un enfoque radicalmente distinto. En lugar de resolver la velocidad con capas adicionales (como hacen los layer 2 de Ethereum: Arbitrum, Optimism, zkSync), <strong>Solana es rápida desde la base</strong>. Procesa todo en una sola capa gracias a una combinación de innovaciones técnicas, siendo la más importante un mecanismo llamado Proof of History (Prueba de Historia).</p>
+        <p>Solana adopta un enfoque distinto. En lugar de resolver la velocidad con capas adicionales (como hacen los layer 2 de Ethereum: Arbitrum, Optimism, zkSync), <strong>busca la velocidad y el bajo coste desde la propia capa base</strong>. Para lograrlo combina varias piezas técnicas: un mecanismo para ordenar el tiempo llamado Proof of History, un consenso por Proof of Stake y una máquina que ejecuta transacciones en paralelo.</p>
 
-        <p>En números concretos, Solana ofrece:</p>
+        <p>Sus características principales, en términos generales:</p>
         <ul>
-            <li><strong>Velocidad:</strong> Hasta 65,000 transacciones por segundo (en teoría). En la práctica, procesa entre 2,000 y 4,000 TPS en uso normal.</li>
-            <li><strong>Coste:</strong> ~0.0002 de tu moneda local por transacción. Sí, has leído bien: 5,000 transacciones cuestan aproximadamente 1 euro.</li>
-            <li><strong>Tiempo de confirmación:</strong> ~0.4 segundos por bloque. Tus operaciones se confirman en menos de un segundo.</li>
-            <li><strong>Ecosistema:</strong> Cientos de DApps funcionando en una sola capa sin necesidad de puentes ni rollups.</li>
+            <li><strong>Velocidad:</strong> Está diseñada para procesar muchas transacciones a la vez. Las cifras exactas de TPS varían según la carga de la red y conviene consultarlas en fuentes actualizadas.</li>
+            <li><strong>Coste:</strong> La comisión de red es baja en comparación con Ethereum, aunque puede subir en momentos de congestión mediante tarifas de prioridad.</li>
+            <li><strong>Tiempo de confirmación:</strong> Los bloques son cortos, por lo que las operaciones suelen sentirse casi inmediatas en condiciones normales.</li>
+            <li><strong>Ecosistema:</strong> Cientos de dApps funcionan en una sola capa, sin necesidad de puentes entre rollups.</li>
         </ul>
 
         <div class="highlight-box">
-            <p><strong>💡 Dato clave:</strong> A fecha de agosto de 2026, el valor total bloqueado (TVL) de Solana en DeFi ronda los <strong>5.000 millones de dólares</strong>, según DeFiLlama, y su token nativo SOL se mantiene entre las criptomonedas más valiosas del mundo por capitalización de mercado.</p>
+            <p><strong>💡 Dato clave:</strong> En 2026, el ecosistema de Solana concentra una parte relevante de la actividad on-chain en DeFi, NFTs y memecoins. Puedes consultar métricas actualizadas en <a href="https://defillama.com/chain/Solana" target="_blank" rel="noopener">DeFiLlama</a> o en el explorador <a href="https://solscan.io/" target="_blank" rel="noopener">Solscan</a>.</p>
         </div>
 
         <!-- Section 2: Proof of History -->
-        <h2 id="proof-of-history">Proof of History: El Secreto de su Velocidad</h2>
-        <p>La innovación más importante de Solana es <strong>Proof of History (PoH)</strong>, y aunque suena técnico, el concepto es sorprendentemente intuitivo.</p>
+        <h2 id="proof-of-history">Proof of History: Qué Es y Qué No Es</h2>
+        <p>La pieza más comentada de Solana es <strong>Proof of History (PoH)</strong>, y a menudo se le atribuye más de lo que realmente hace. Conviene aclarar el punto desde el principio: <strong>PoH no es el mecanismo de consenso de Solana</strong>. El acuerdo entre validadores lo establece el Proof of Stake (PoS). PoH es, en cambio, una especie de reloj criptográfico interno.</p>
 
-        <p>Imagina que en una carrera de relevos, cada corredor tuviera que preguntar al anterior "¿ya has corrido tu parte?" antes de empezar. Eso es más o menos como funcionan la mayoría de blockchains: los validadores tienen que coordinarse constantemente sobre qué transacciones van en qué orden, lo que consume tiempo y ancho de banda.</p>
+        <p>Imagina que en una carrera de relevos cada corredor tuviera que preguntar al anterior "¿ya has corrido tu parte?" antes de empezar. Eso es más o menos como se coordinan la mayoría de blockchains: los validadores deben ponerse de acuerdo constantemente sobre el orden de las transacciones, lo que consume tiempo y comunicación.</p>
 
-        <p>Proof of History resuelve esto creando un <strong>reloj criptográfico interno</strong> dentro de la propia blockchain. Antes de incluir transacciones, los validadores de Solana generan una secuencia de hashes que demuestra que el tiempo ha pasado, como un sello de tiempo incorporado. Esto permite que todas las transacciones se ordenen automáticamente sin que los validadores tengan que coordinarse entre sí para decidir el orden. Es como si cada transacción llevara impresa la hora exacta en que ocurrió, eliminando una enorme cantidad de comunicación innecesaria.</p>
+        <p>Proof of History ayuda con ese problema generando una <strong>secuencia de hashes que funciona como un sello de tiempo</strong>: demuestra que el tiempo ha pasado y permite ordenar las transacciones sin tanta coordinación entre validadores. Es como si cada operación llevara impresa la hora en que ocurrió.</p>
 
-        <p>Gracias a PoH combinado con Proof of Stake (PoS), Solana puede procesar transacciones en paralelo (no una detrás de otra, sino muchas a la vez) y mantener todo sincronizado sin sacrificar seguridad. Esta es la razón técnica por la que cuesta céntimos en lugar de dólares.</p>
+        <p>Pero la velocidad de Solana no depende solo de PoH. Otra pieza clave es la <strong>ejecución en paralelo</strong>: en lugar de procesar las transacciones una detrás de otra, la red puede ejecutar a la vez aquellas que no dependen entre sí. En resumen, PoH aporta orden y sincronización, el PoS aporta el consenso, y la ejecución en paralelo aporta parte de la velocidad.</p>
 
-        <!-- Section 3: Phantom Wallet -->
-        <h2 id="phantom-wallet">Phantom Wallet: Crea tu Primera Wallet en Solana</h2>
-        <p>Si vienes del ecosistema Ethereum, Phantom es el equivalente a <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> para Solana — pero con una interfaz mucho más pulida. Es una extensión de navegador (Chrome, Brave, Firefox, Edge) y también tiene app móvil para iOS y Android.</p>
+        <!-- Section 3: Wallets -->
+        <h2 id="wallets">Wallets para Solana en 2026: Phantom y MetaMask</h2>
+        <p>Durante años, Solana exigía una wallet propia, y <a href="https://phantom.app/" target="_blank" rel="noopener">Phantom</a> se convirtió en la más usada del ecosistema. Hoy el panorama es distinto: <strong>ya no necesitas una wallet exclusiva de Solana</strong>. Phantom ha ampliado su soporte a otras redes, y MetaMask añadió soporte nativo para Solana en 2026.</p>
 
-        <h3>Cómo instalar Phantom paso a paso</h3>
+        <div class="comparison-table">
+            <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Wallet</th>
+                    <th>Compatibilidad con Solana</th>
+                    <th>Notas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Phantom</strong></td>
+                    <td>Solana + Ethereum + Bitcoin, entre otras</td>
+                    <td>Nació en Solana. Tiene extensión y app móvil. La extensión para Firefox dejó de recibir actualizaciones: usa Chrome, Brave, Edge o la app.</td>
+                </tr>
+                <tr>
+                    <td><strong>MetaMask</strong></td>
+                    <td>Solana (SOL y tokens SPL) + redes EVM</td>
+                    <td>Añadió soporte nativo para Solana en 2026. Asegúrate de tener la versión actualizada de la extensión.</td>
+                </tr>
+                <tr>
+                    <td><strong>Otras (Solflare, Backpack, etc.)</strong></td>
+                    <td>Solana</td>
+                    <td>Alternativas con enfoques distintos: staking, integración con hardware wallets, etc.</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <h3>Cómo instalar una wallet paso a paso</h3>
         <ol>
-            <li><strong>Ve a <a href="https://phantom.app/" target="_blank" rel="noopener">phantom.app</a></strong> y descarga la extensión para tu navegador o la app para tu móvil. Verifica que la URL es correcta: hay muchas falsificaciones.</li>
-            <li><strong>Crea una wallet nueva.</strong> Phantom te pedirá que guardes una <strong>frase semilla de 12 palabras</strong>. Escríbela en papel, en orden, y guárdala en un lugar seguro. Sin esta frase, pierdes el acceso a tus fondos para siempre. Nunca la guardes en un archivo digital, en la nube o en una foto del móvil.</li>
+            <li><strong>Ve a la web oficial</strong> de la wallet que elijas (por ejemplo, <a href="https://phantom.app/" target="_blank" rel="noopener">phantom.app</a>) y descarga la extensión o la app. Verifica siempre la URL: hay muchas falsificaciones.</li>
+            <li><strong>Crea una wallet nueva.</strong> La wallet te pedirá que guardes una <strong>frase semilla de recuperación</strong>. Escríbela en papel, en orden, y guárdala en un lugar seguro. Sin esta frase, pierdes el acceso a tus fondos. No la guardes en un archivo digital, en la nube o en una foto del celular.</li>
             <li><strong>Crea una contraseña</strong> para desbloquear la extensión en tu día a día. Es solo para este dispositivo: la frase semilla es la llave maestra.</li>
             <li><strong>¡Ya está!</strong> Tu wallet de Solana está lista. Verás un saldo de 0 SOL. El siguiente paso es conseguir tus primeros SOL.</li>
         </ol>
 
-        <p>A diferencia de MetaMask, Phantom soporta <strong>Solana, Ethereum y Polygon</strong> en la misma interfaz, lo que la convierte en una opción muy cómoda si operas en varios ecosistemas. Para una guía más detallada sobre wallets en general, consulta nuestro artículo sobre <a href="/articulos/hot-wallet-vs-cold-wallet.html">hot wallets vs cold wallets</a>.</p>
+        <p>Si vienes del ecosistema Ethereum, puedes usar <a href="/articulos/crear-configurar-metamask.html">MetaMask</a> para Solana sin cambiar de herramienta. Para una guía más detallada sobre wallets en general, consulta nuestro artículo sobre <a href="/articulos/hot-wallet-vs-cold-wallet.html">hot wallets vs cold wallets</a>.</p>
 
         <div class="highlight-box">
             <p><strong>🔐 Seguridad:</strong> Nunca compartas tu frase semilla con nadie. Ningún administrador, soporte técnico o "persona de Phantom" te la va a pedir. Si alguien te pide tu frase semilla, es una estafa, siempre, sin excepción. Para más consejos, lee nuestra <a href="/articulos/seguridad-criptomonedas.html">guía de seguridad crypto</a>.</p>
@@ -209,87 +239,86 @@
         <!-- Section 4: How to buy SOL -->
         <h2 id="comprar-sol">Cómo Comprar SOL y Hacer tu Primera Transacción</h2>
 
-        <h3>Opción A: Comprar SOL en un exchange centralizado (recomendado para empezar)</h3>
+        <h3>Opción A: Comprar SOL en un exchange centralizado</h3>
         <ol>
-            <li><strong>Regístrate en un exchange:</strong> Binance y OKX tienen pares SOL/USDT con gran liquidez y comisiones competitivas.</li>
-            <li><strong>Deposita tu moneda local</strong> por transferencia local (gratuita) o con tarjeta.</li>
+            <li><strong>Regístrate en un exchange:</strong> Binance y OKX tienen pares SOL/USDT con buena liquidez.</li>
+            <li><strong>Deposita tu moneda local</strong> por transferencia local o con tarjeta, según lo que ofrezca el exchange en tu país.</li>
             <li><strong>Compra SOL al precio de mercado</strong> o con una orden límite al precio que quieras.</li>
-            <li><strong>Retira tus SOL a Phantom:</strong> En la sección de retiradas, selecciona SOL, pega tu dirección de Phantom (la ves al abrir la extensión, empieza por una letra/número largo) y confirma. En unos segundos, los SOL aparecerán en tu wallet.</li>
+            <li><strong>Retira tus SOL a tu wallet:</strong> En la sección de retiros, selecciona SOL, pega tu dirección (la ves al abrir la extensión) y confirma. Los SOL aparecerán en tu wallet una vez que la red y el exchange procesen el retiro.</li>
         </ol>
 
-        <h3>Opción B: Comprar SOL directamente desde Phantom</h3>
-        <p>Phantom tiene integrados proveedores como MoonPay y Stripe que te permiten comprar SOL con tarjeta de crédito sin salir de la wallet. Es más rápido pero las comisiones suelen ser más altas (3-5% frente al 0.1% de un exchange). Para primeras compras pequeñas puede valer la pena por la comodidad.</p>
+        <h3>Opción B: Comprar SOL directamente desde la wallet</h3>
+        <p>Algunas wallets integran proveedores como MoonPay o Stripe que te permiten comprar SOL con tarjeta sin salir de la app. Es más cómodo, pero suelen cobrar comisiones más altas que un exchange. Para compras pequeñas puede valer la pena por la comodidad; para cantidades mayores conviene comparar precios.</p>
 
         <h3>Tu primera transacción: enviar SOL</h3>
-        <p>Una vez tengas SOL en Phantom, prueba a enviar una cantidad pequeña (0.01 SOL, unos céntimos) a otra wallet o de vuelta al exchange. Verás que la transacción se completa en <strong>menos de un segundo</strong> y te cuesta una fracción de céntimo. Esta experiencia — instantánea y casi gratis — es la razón por la que tanta gente prefiere Solana para el uso diario.</p>
+        <p>Una vez tengas SOL en tu wallet, prueba a enviar una cantidad pequeña a otra dirección o de vuelta al exchange. En condiciones normales, la transacción se confirma rápido y cuesta poco. Esa combinación —rápida y de bajo coste— es la razón por la que mucha gente usa Solana para el día a día.</p>
 
         <!-- Section 5: Ecosystem -->
-        <h2 id="ecosistema">El Ecosistema Solana: DApps que Deberías Conocer</h2>
-        <p>Solana no es solo una blockchain rápida: tiene un ecosistema vibrante de aplicaciones descentralizadas que cubren todas las categorías. Aquí tienes las más importantes en 2026:</p>
+        <h2 id="ecosistema">El Ecosistema Solana: dApps para Conocer</h2>
+        <p>Solana no es solo una blockchain rápida: tiene un ecosistema amplio de aplicaciones descentralizadas. Estas son algunas de las más conocidas en 2026, agrupadas por categoría:</p>
 
         <h3>🔄 DEX (Exchanges Descentralizados)</h3>
-        <p><strong><a href="https://jup.ag/" target="_blank" rel="noopener">Jupiter</a></strong> es el DEX más importante de Solana. Funciona como un agregador: busca el mejor precio entre todos los exchanges descentralizados de Solana (Raydium, Orca, Lifinity y más) y ejecuta tu operación al mejor tipo de cambio posible. También ofrece limit orders, DCA (compra periódica automática) y puentes entre blockchains. Si solo vas a usar una DApp en Solana, que sea Jupiter. Si ya conoces Uniswap en Ethereum, la experiencia es similar pero mucho más rápida y barata. Consulta nuestra <a href="/articulos/como-usar-uniswap.html">guía de Uniswap</a> para entender los fundamentos de un DEX.</p>
+        <p><strong><a href="https://jup.ag/" target="_blank" rel="noopener">Jupiter</a></strong> es un agregador de DEX: busca el mejor precio entre varios exchanges descentralizados de Solana (como Raydium u Orca) y ejecuta tu operación al tipo de cambio que encuentre. También ofrece limit orders y DCA (compra periódica). Si ya conoces Uniswap en Ethereum, la experiencia es similar pero sobre la infraestructura de Solana. Consulta nuestra <a href="/articulos/como-usar-uniswap.html">guía de Uniswap</a> para entender los fundamentos de un DEX.</p>
 
         <h3>🎨 NFTs</h3>
-        <p><strong><a href="https://magiceden.io/" target="_blank" rel="noopener">Magic Eden</a></strong> es el marketplace de NFTs dominante en Solana. Aquí puedes comprar y vender NFTs de colecciones como Mad Lads, Claynosaurz y Famous Fox Federation. A diferencia de OpenSea en Ethereum, las comisiones en Magic Eden son mínimas y las transacciones instantáneas. Para una introducción completa a los NFTs, lee nuestra <a href="/articulos/que-es-nft.html">guía de NFTs para principiantes</a>.</p>
+        <p><strong><a href="https://magiceden.io/" target="_blank" rel="noopener">Magic Eden</a></strong> es uno de los marketplaces de NFT con más actividad en Solana. Aquí puedes ver colecciones y comprar o vender NFTs. Para una introducción completa al tema, lee nuestra <a href="/articulos/que-es-nft.html">guía de NFTs para principiantes</a>.</p>
 
         <h3>🥩 Staking Líquido</h3>
-        <p><strong><a href="https://marinade.finance/" target="_blank" rel="noopener">Marinade Finance</a></strong> y <strong><a href="https://jito.network/" target="_blank" rel="noopener">Jito</a></strong> son los principales protocolos de staking líquido en Solana. Depositas SOL, recibes un token derivado (mSOL o JitoSOL) que representa tu SOL depositado más los intereses generados, y puedes usar ese token en otras DApps mientras sigues ganando rendimiento. Es como tener el pastel y comértelo al mismo tiempo.</p>
+        <p><strong><a href="https://marinade.finance/" target="_blank" rel="noopener">Marinade Finance</a></strong> y <strong><a href="https://jito.network/" target="_blank" rel="noopener">Jito</a></strong> son dos protocolos de staking líquido muy usados en Solana. Depositas SOL, recibes un token derivado (mSOL o JitoSOL) que representa tu depósito, y puedes usar ese token en otras dApps mientras sigues ganando rendimiento. Es una estrategia más avanzada, con los riesgos propios de un smart contract.</p>
 
         <h3>🐶 Memecoins</h3>
-        <p>Solana se ha convertido en el hogar de las memecoins más activas del mercado. Tokens como <strong>WIF (dogwifhat)</strong> y <strong>BONK</strong> nacieron en Solana y movieron miles de millones en volumen. La combinación de comisiones casi nulas y transacciones instantáneas hace de Solana la red ideal para el trading de memecoins. Para más información, consulta nuestra <a href="/articulos/que-son-memecoins.html">guía completa de memecoins</a>.</p>
+        <p>Solana se ha convertido en una red con mucha actividad de memecoins. La combinación de comisiones bajas y transacciones rápidas atrae a muchos usuarios a este tipo de activos. Ten en cuenta que las memecoins son especialmente volátiles y de alto riesgo. Para más información, consulta nuestra <a href="/articulos/que-son-memecoins.html">guía completa de memecoins</a>.</p>
 
         <h3>📊 DeFi</h3>
-        <p>Además de Jupiter y Marinade, el ecosistema DeFi de Solana incluye plataformas de préstamo como <strong>Kamino</strong> y <strong>Marginfi</strong>, exchanges de derivados como <strong>Drift Protocol</strong>, y gestores de liquidez automatizados como <strong>Meteora</strong>. La experiencia es similar a la de Aave o Compound en Ethereum, pero con las ventajas de velocidad y coste de Solana.</p>
+        <p>Además de Jupiter y Marinade, el ecosistema DeFi de Solana incluye plataformas de préstamo como <strong>Kamino</strong> y <strong>Marginfi</strong>, exchanges de derivados como <strong>Drift Protocol</strong> y gestores de liquidez automatizados como <strong>Meteora</strong>. La experiencia es comparable a la de protocolos en Ethereum, pero sobre la infraestructura de Solana.</p>
 
         <!-- Section 6: Staking -->
-        <h2 id="staking">Staking de SOL: Genera Ingresos Pasivos</h2>
-        <p>Hacer staking de SOL es una de las formas más sencillas de generar rendimiento con tus criptomonedas. El proceso es mucho más simple que en Ethereum:</p>
+        <h2 id="staking">Staking de SOL: Cómo Funciona y Qué Riesgos Tiene</h2>
+        <p>El staking de SOL es una forma de obtener rendimiento a cambio de delegar tus tokens para ayudar a asegurar la red. Conviene entender cómo funciona y qué riesgos conlleva antes de empezar.</p>
 
-        <h3>Staking nativo (desde Phantom)</h3>
+        <h3>Staking nativo (desde la wallet)</h3>
         <ol>
-            <li>Abre Phantom y haz clic en tu saldo de SOL.</li>
-            <li>Selecciona "Stake" (Apostar).</li>
-            <li>Elige un validador. Phantom te sugerirá algunos con buenas comisiones y rendimiento. Busca validadores con comisión baja (0-5%) y buen historial de uptime.</li>
-            <li>Introduce la cantidad de SOL que quieres stakear y confirma.</li>
-            <li>Tus SOL empezarán a generar rendimiento (~6-8% anual en 2026).</li>
+            <li>Abre tu wallet y selecciona tu saldo de SOL.</li>
+            <li>Busca la opción de "Stake" o "Apostar".</li>
+            <li>Elige un validador. Compara su comisión y su historial de actividad antes de decidir.</li>
+            <li>Introduce la cantidad de SOL que quieres delegar y confirma.</li>
+            <li>Tu rendimiento dependerá del validador, de la inflación de la red y de las condiciones del mercado; no es una cifra fija.</li>
         </ol>
 
-        <p>A diferencia del staking de Ethereum (que requiere 32 ETH para ser validador), en Solana <strong>no hay mínimo</strong>: puedes stakear desde 0.01 SOL. Además, el periodo de des-staking es de solo 2-3 días (frente al proceso más largo de Ethereum). Para una introducción más amplia al concepto de staking, consulta nuestra <a href="/articulos/como-hacer-staking.html">guía de staking de Ethereum</a> — los fundamentos aplican a cualquier blockchain.</p>
+        <p>A diferencia del staking de Ethereum (que exige 32 ETH para montar un validador propio), en Solana <strong>no hay un mínimo elevado</strong> para delegar. Además, al deshacer el staking hay un periodo de espera (llamado "cooldown") antes de disponer de tus SOL, y ese plazo puede variar. Para una introducción más amplia al concepto, consulta nuestra <a href="/articulos/como-hacer-staking.html">guía de staking de Ethereum</a>: los fundamentos aplican a cualquier blockchain.</p>
 
-        <div class="highlight-box">
-            <p><strong>💡 Consejo:</strong> Si quieres usar tus SOL en DeFi mientras ganas staking, considera el staking líquido con Marinade o Jito. Recibirás mSOL o JitoSOL que puedes depositar en otras DApps para generar rendimiento adicional. Es una estrategia más avanzada pero potencialmente más rentable.</p>
+        <div class="warning-box">
+            <p><strong>⚠️ Tenlo en cuenta:</strong> El staking nativo delega tus SOL sin sacarlos de tu wallet, pero no es una renta garantizada. El validador puede tener mal desempeño o ser penalizado, y el precio de SOL puede bajar mientras tus fondos están delegados. El staking líquido añade además el riesgo de smart contract.</p>
         </div>
 
         <!-- Section 7: Risks -->
         <h2 id="riesgos">Riesgos y Limitaciones de Solana</h2>
-        <p>Ninguna blockchain es perfecta, y Solana tiene sus propios problemas que debes conocer antes de invertir:</p>
+        <p>Ninguna blockchain es perfecta, y Solana tiene sus propios problemas que conviene conocer antes de usarla:</p>
 
         <div class="warning-box">
-            <p><strong>⚠️ Advertencia YMYL:</strong> Este contenido es educativo. Invertir en criptomonedas, incluyendo SOL, conlleva riesgos. El precio de SOL puede fluctuar significativamente. No inviertas dinero que no puedas permitirte perder.</p>
+            <p><strong>⚠️ Advertencia:</strong> Este contenido es educativo. Invertir en criptomonedas, incluyendo SOL, conlleva riesgos y el precio puede fluctuar de forma significativa. No uses dinero que no puedas permitirte perder.</p>
         </div>
 
         <ul>
-            <li><strong>Historial de cortes de red:</strong> Solana ha sufrido varias interrupciones totales de la red en su historia (2022, 2023), donde la blockchain dejó de producir bloques durante horas. Aunque la frecuencia ha disminuido drásticamente con mejoras como Firedancer (un segundo cliente validador), el riesgo de interrupciones no ha desaparecido por completo.</li>
-            <li><strong>Centralización relativa:</strong> Ejecutar un validador de Solana es caro (requiere hardware potente), lo que hace que menos gente pueda permitírselo en comparación con Ethereum. Esto concentra el poder de validación en menos manos. Dicho esto, la comunidad de Solana está trabajando activamente en reducir los requisitos de hardware.</li>
-            <li><strong>Competencia feroz:</strong> Solana compite directamente con Sui y Aptos (otras blockchains de alto rendimiento), con los layer 2 de Ethereum (Arbitrum, Base, Optimism), y con la propia Ethereum si logra escalar lo suficiente. No hay garantía de que Solana mantenga su posición dominante.</li>
-            <li><strong>Menor madurez que Ethereum:</strong> Aunque Solana ha crecido enormemente, Ethereum sigue teniendo más desarrolladores, más aplicaciones, más TVL y más infraestructura (oráculos, indexadores, herramientas de desarrollo). Para aplicaciones que requieren máxima seguridad, Ethereum sigue siendo la opción preferida.</li>
-            <li><strong>Volatilidad de SOL:</strong> SOL ha experimentado caídas de más del 90% en mercados bajistas anteriores. Como con cualquier criptomoneda, la volatilidad es extrema y las ganancias pasadas no garantizan resultados futuros.</li>
+            <li><strong>Historial de cortes de red:</strong> Solana ha sufrido interrupciones totales en el pasado, en las que la blockchain dejó de producir bloques. La frecuencia ha bajado con mejoras como Firedancer (un segundo cliente validador), pero el riesgo no ha desaparecido por completo.</li>
+            <li><strong>Centralización relativa:</strong> Ejecutar un validador de Solana exige hardware potente, lo que limita quién puede hacerlo en comparación con Ethereum. Eso concentra el poder de validación en menos manos, aunque la comunidad trabaja en reducir los requisitos.</li>
+            <li><strong>Competencia:</strong> Solana compite con otras blockchains de alto rendimiento (como Sui y Aptos), con los layer 2 de Ethereum (Arbitrum, Base, Optimism) y con la propia Ethereum. No hay garantía de que mantenga su posición.</li>
+            <li><strong>Menor madurez que Ethereum:</strong> Ethereum sigue teniendo más desarrolladores, más aplicaciones y más infraestructura. Para algunos casos de uso, esa madurez puede ser un factor relevante.</li>
+            <li><strong>Volatilidad de SOL:</strong> SOL ha tenido caídas fuertes en mercados bajistas anteriores. Como con cualquier criptomoneda, la volatilidad es alta y las ganancias pasadas no garantizan resultados futuros.</li>
+            <li><strong>Riesgo operativo y de usuario:</strong> Gran parte de las pérdidas en crypto no vienen de fallos de la red, sino de errores del usuario: caer en phishing, firmar transacciones maliciosas o enviar fondos a una dirección equivocada. La educación y el hábito de revisar antes de firmar son tu principal defensa.</li>
         </ul>
 
         <!-- Section 8: Cómo elegir -->
         <h2 id="elegir-ecosistema">Cómo Elegir Entre Solana y Ethereum</h2>
-        <p>Una de las dudas más comunes al empezar es si hay que elegir un ecosistema y descartar el otro. La respuesta corta es que no: son herramientas distintas para momentos distintos, y la mayoría de usuarios con experiencia las combinan.</p>
-
-        <p>La lógica más habitual es la siguiente: Ethereum se reserva para lo que exige máxima seguridad y un ecosistema más maduro (grandes cantidades, DeFi complejo, interoperabilidad con la mayor parte del sector), mientras que Solana cubre el uso diario (swaps, NFTs, staking, probar DApps nuevas) gracias a sus comisiones casi nulas.</p>
+        <p>Una de las dudas más comunes al empezar es si hay que elegir un ecosistema y descartar el otro. La respuesta corta es que no: son herramientas con diseños distintos, y mucha gente las combina según lo que va a hacer.</p>
 
         <ul>
-            <li><strong>No es una competición.</strong> Operar en ambos ecosistemas no implica elegir un ganador, sino usar la red adecuada para cada operación.</li>
-            <li><strong>La experiencia de usuario importa.</strong> Phantom destaca por su facilidad de uso frente a wallets más veteranas, lo que reduce la fricción para quien empieza.</li>
-            <li><strong>Los costes condicionan el aprendizaje.</strong> Cuando una transacción cuesta una fracción de céntimo, se interactúa más, se prueban más aplicaciones y se aprende más rápido; cuando cada clic cuesta 20 de tu moneda local, el miedo al error paraliza.</li>
+            <li><strong>No es una competición.</strong> Usar ambos ecosistemas no implica elegir un ganador, sino elegir la red adecuada para cada operación.</li>
+            <li><strong>El coste condiciona el aprendizaje.</strong> Cuando una transacción cuesta poco, se interactúa más, se prueban más aplicaciones y se aprende más rápido; cuando cada operación encarece, el miedo al error paraliza.</li>
+            <li><strong>La experiencia de usuario importa.</strong> Las wallets modernas han reducido la fricción para quien empieza, lo que facilita probar ambos ecosistemas.</li>
         </ul>
 
-        <p>Quien empieza en crypto hoy puede seguir un camino razonable: entender primero los fundamentos en Ethereum (Bitcoin, smart contracts, MetaMask) y explorar Solana en paralelo, porque la diferencia de experiencia de usuario solo se aprecia probándola y, con comisiones de fracciones de céntimo, probarla no cuesta nada.</p>
+        <p>Quien empieza en crypto hoy puede entender primero los fundamentos y explorar Solana en paralelo, porque la diferencia de experiencia de usuario solo se aprecia probándola y, con comisiones bajas, probar no cuesta mucho. Lo importante es entender qué estás haciendo antes de mover dinero real.</p>
 
         <!-- Section 9: Comparison -->
         <h2 id="comparativa">Comparativa: Solana vs Ethereum</h2>
@@ -313,33 +342,28 @@
                     <td>ETH</td>
                 </tr>
                 <tr>
-                    <td><strong>Velocidad (TPS)</strong></td>
-                    <td>✅ 2,000-4,000</td>
-                    <td>⚠️ ~15 (L1) + L2s</td>
+                    <td><strong>Enfoque de escalado</strong></td>
+                    <td>Capa única de alto rendimiento</td>
+                    <td>Capa base + redes de capa 2</td>
                 </tr>
                 <tr>
-                    <td><strong>Coste por transacción</strong></td>
-                    <td>✅ ~0.0002 de tu moneda local</td>
-                    <td>❌ 2-50 de tu moneda local (varía mucho)</td>
-                </tr>
-                <tr>
-                    <td><strong>Tiempo de bloque</strong></td>
-                    <td>✅ ~0.4 segundos</td>
-                    <td>⚠️ ~12 segundos</td>
+                    <td><strong>Coste de transacción</strong></td>
+                    <td>Bajo en la capa base; sube con congestión</td>
+                    <td>Variable; puede subir mucho con congestión</td>
                 </tr>
                 <tr>
                     <td><strong>Mecanismo de consenso</strong></td>
-                    <td>PoH + PoS</td>
-                    <td>PoS (desde The Merge)</td>
+                    <td>Proof of Stake (con Proof of History para ordenar)</td>
+                    <td>Proof of Stake</td>
                 </tr>
                 <tr>
-                    <td><strong>Wallet principal</strong></td>
-                    <td>Phantom</td>
-                    <td>MetaMask</td>
+                    <td><strong>Wallets compatibles (2026)</strong></td>
+                    <td>Phantom, MetaMask, Solflare y otras</td>
+                    <td>MetaMask y otras EVM</td>
                 </tr>
                 <tr>
-                    <td><strong>DEX principal</strong></td>
-                    <td>Jupiter</td>
+                    <td><strong>DEX</strong></td>
+                    <td>Jupiter (agregador)</td>
                     <td>Uniswap</td>
                 </tr>
                 <tr>
@@ -349,31 +373,38 @@
                 </tr>
                 <tr>
                     <td><strong>Madurez del ecosistema</strong></td>
-                    <td>⚠️ ~5 años</td>
-                    <td>✅ ~10 años</td>
+                    <td>Más joven (desde 2020)</td>
+                    <td>Más maduro (desde 2015)</td>
                 </tr>
                 <tr>
-                    <td><strong>TVL (DeFi)</strong></td>
-                    <td>⚠️ ~$5B (2026)</td>
-                    <td>✅ ~$45B (2026)</td>
-                </tr>
-                <tr>
-                    <td><strong>Desarrolladores</strong></td>
-                    <td>⚠️ Creciente, pero menos</td>
-                    <td>✅ El mayor ecosistema</td>
+                    <td><strong>TVL en DeFi</strong></td>
+                    <td>Menor que Ethereum</td>
+                    <td>El mayor del ecosistema DeFi</td>
                 </tr>
                 <tr>
                     <td><strong>Fiabilidad de red</strong></td>
-                    <td>⚠️ Historial de cortes (mejorando)</td>
-                    <td>✅ Nunca se ha detenido desde 2015</td>
+                    <td>Tuvo cortes en el pasado (frecuencia en descenso)</td>
+                    <td>Mayor historial de estabilidad</td>
                 </tr>
                 <tr>
-                    <td><strong>Mejor para</strong></td>
-                    <td>✅ Uso diario, gaming, NFTs, memecoins</td>
-                    <td>✅ Seguridad, alto valor, DeFi complejo</td>
+                    <td><strong>Usos habituales</strong></td>
+                    <td>Swaps, NFTs, memecoins, uso diario</td>
+                    <td>DeFi complejo, interoperabilidad, depósito de valor</td>
                 </tr>
             </tbody>
         </table>
+
+        <!-- Section 10: Qué revisar antes de firmar -->
+        <h2 id="antes-de-firmar">Qué Revisar Antes de Firmar una Operación en Solana</h2>
+        <p>La mayoría de los errores costosos en crypto ocurren al firmar sin mirar. Antes de confirmar cualquier operación en Solana, revisa esta lista:</p>
+        <ol>
+            <li><strong>La dirección de destino completa.</strong> No te fíes solo de que empiece y acabe con los caracteres correctos: copia y compara la dirección entera.</li>
+            <li><strong>El token y el contrato exactos.</strong> Confirma que estás moviendo el activo que crees, no un token con un nombre parecido.</li>
+            <li><strong>El importe y la comisión.</strong> La wallet muestra el desglose antes de firmar. Revisa cuánto envías y cuánto se descuenta.</li>
+            <li><strong>A qué dApp o contrato das aprobación.</strong> Desconfía de las aprobaciones que no reconoces o que piden permisos amplios.</li>
+            <li><strong>Quién te pide la frase semilla.</strong> Nadie legítimo te la va a pedir. Si aparece ese mensaje, es una estafa.</li>
+            <li><strong>El estado de la red.</strong> Si una operación tarda, consulta <a href="https://status.solana.com/" target="_blank" rel="noopener">status.solana.com</a> o el explorador antes de reenviar fondos.</li>
+        </ol>
 
         <!-- FAQ -->
         <div class="faq-section">
@@ -381,60 +412,63 @@
 
             <div class="faq-item">
                 <h3>¿Solana es mejor que Ethereum?</h3>
-                <p>No es una cuestión de "mejor" o "peor", sino de qué necesitas. Solana es más rápida y barata, ideal para uso diario, gaming, NFTs y trading de memecoins. Ethereum es más segura, más descentralizada y tiene un ecosistema más maduro, ideal para grandes cantidades de dinero y DeFi complejo. Para la mayoría de usuarios, lo óptimo es usar ambas: Ethereum como reserva de valor y para operaciones grandes, Solana para el día a día. Es como preguntarse si un coche deportivo es mejor que un camión: depende de lo que vayas a transportar.</p>
+                <p>No se trata de que una sea mejor que la otra, sino de diseños con objetivos distintos. Solana apuesta por velocidad y coste bajo en una sola capa; Ethereum prioriza un ecosistema más maduro y escalar mediante capas adicionales. Muchas personas usan ambas según lo que necesitan en cada momento, como quien usa herramientas distintas para trabajos distintos.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Cuánto SOL necesito para empezar?</h3>
-                <p>Técnicamente, puedes empezar con 0.01 SOL (unos céntimos de euro). Sin embargo, para interactuar con DApps, hacer swaps y probar el ecosistema, se recomienda empezar con al menos 20-50 de tu moneda local en SOL. Con 50 de tu moneda local tienes suficiente para probar Phantom, hacer varios swaps en Jupiter, comprar algún NFT barato y experimentar con staking. Las comisiones son tan bajas que 50 de tu moneda local en Solana rinden mucho más que 50 de tu moneda local en Ethereum.</p>
+                <p>No hay un mínimo técnico elevado: puedes empezar con una cantidad pequeña que estés dispuesto a usar para aprender. Lo recomendable es empezar con poco, probar cómo funciona la red y aumentar solo si te sientes cómodo con los riesgos. Nadie necesita una suma concreta para dar sus primeros pasos.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Puedo usar MetaMask con Solana?</h3>
-                <p>No directamente. MetaMask está diseñado para Ethereum y blockchains compatibles con EVM (Ethereum Virtual Machine) como Polygon, BSC, Arbitrum y Optimism. Solana tiene una arquitectura completamente diferente, por lo que necesita su propia wallet. La más popular es <strong>Phantom</strong> (phantom.app), que tiene una interfaz similar a MetaMask pero es exclusiva para Solana. La buena noticia es que Phantom también soporta Ethereum y Polygon, así que puedes usarla como tu wallet única para múltiples ecosistemas.</p>
+                <p>Sí. MetaMask añadió soporte nativo para Solana en 2026, lo que permite gestionar SOL y tokens SPL desde la misma extensión que usas para redes EVM. Asegúrate de tener la versión actualizada de MetaMask. Phantom, Solflare y otras wallets también son compatibles con Solana.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Es seguro hacer staking de SOL?</h3>
-                <p>El staking nativo de SOL (desde Phantom o una wallet) es muy seguro: tus SOL nunca salen de tu wallet, simplemente se delegan a un validador. No hay riesgo de hackeo del smart contract porque no estás depositando en un contrato. El único riesgo es que el validador al que delegas tenga un mal rendimiento o sea penalizado (slashing), en cuyo caso podrías perder una pequeña parte de tus recompensas, pero no tus SOL originales. El staking líquido (Marinade, Jito) conlleva riesgos adicionales de smart contract, como cualquier protocolo DeFi.</p>
+                <p>El staking nativo delega tus SOL a un validador sin que salgan de tu wallet, pero no está exento de riesgos: el rendimiento no está garantizado, el validador puede tener un mal desempeño o ser penalizado, y el precio de SOL puede bajar mientras tus fondos están delegados. El staking líquido añade además el riesgo de smart contract.</p>
             </div>
 
             <div class="faq-item">
                 <h3>¿Solana tiene comisiones ocultas?</h3>
-                <p>No como tal, pero hay costes a considerar. La comisión base de red es la mencionada (~0.0002 de tu moneda local por transacción). Sin embargo, los DEX y otras DApps cobran sus propias comisiones: Jupiter cobra ~0.1-0.3% por swap, Magic Eden ~2% por venta de NFT, y los protocolos de staking líquido se llevan un pequeño porcentaje de las recompensas. Estos costes son similares a los de Ethereum en porcentaje, pero la gran diferencia es que en Solana no pagas el "gas fee" adicional por cada operación. En Ethereum, un swap de 100 de tu moneda local puede costar 15 de tu moneda local de gas + 0.3% del DEX. En Solana, ese mismo swap costaría 0.3% del DEX + 0.0002 de tu moneda local de gas. La diferencia es enorme en términos prácticos.</p>
+                <p>La comisión de red de Solana suele ser baja, pero puede subir en momentos de congestión mediante tarifas de prioridad. Además, cada dApp o DEX cobra sus propias comisiones. Antes de confirmar, revisa siempre el desglose que muestra tu wallet en la pantalla de firma: ahí se ve todo lo que vas a pagar.</p>
             </div>
 
             <div class="faq-item">
-                <h3>¿Por qué SOL ha subido/bajado tanto de precio?</h3>
-                <p>El precio de SOL, como el de cualquier criptomoneda, está determinado por la oferta y la demanda en los exchanges. Los factores que más afectan a SOL incluyen: (1) el crecimiento del ecosistema Solana (más usuarios → más demanda de SOL para pagar comisiones); (2) el sentimiento general del mercado crypto; (3) las noticias sobre interrupciones de red o mejoras técnicas como Firedancer; (4) la actividad de memecoins en Solana (los ciclos de hype atraen nuevos usuarios y capital). SOL ha demostrado ser más volátil que ETH, con subidas más pronunciadas en mercados alcistas pero también caídas más fuertes en los bajistas.</p>
+                <h3>¿Por qué SOL sube o baja tanto de precio?</h3>
+                <p>El precio de SOL, como el de cualquier criptomoneda, lo determina la oferta y la demanda en los exchanges. Influyen el crecimiento del ecosistema, el sentimiento general del mercado y las noticias sobre la red. Es un activo volátil, y los movimientos pasados no garantizan resultados futuros.</p>
             </div>
         </div>
 
         <!-- Section 11: Conclusion -->
         <h2 id="conclusion">Conclusión y Próximos Pasos</h2>
-        <p>Solana representa una de las innovaciones más importantes en el espacio blockchain de los últimos años. Su propuesta de valor es clara y contundente: transacciones instantáneas, comisiones insignificantes y una experiencia de usuario que no intimida a los nuevos. No es perfecta — tiene un historial de interrupciones y un ecosistema menos maduro que Ethereum — pero para el uso diario, es difícil de superar.</p>
+        <p>Solana es una blockchain con un diseño distinto al de Ethereum: apuesta por la velocidad y el bajo coste en su capa base, y en 2026 es fácil empezar a usarla porque wallets como Phantom y MetaMask ya conviven en el ecosistema. No es perfecta —tiene un historial de cortes y un ecosistema menos maduro—, pero entender cómo funciona es útil para cualquiera que quiera manejarse con criterio en crypto.</p>
 
-        <p>Si vienes del ecosistema Ethereum, probar Solana te abrirá los ojos a lo que es posible cuando una blockchain está diseñada para ser rápida desde la base. Si estás empezando en crypto desde cero, Solana puede ser incluso un mejor punto de entrada que Ethereum precisamente por sus bajas comisiones: puedes aprender, experimentar y equivocarte sin que cada error te cueste 20 de tu moneda local.</p>
+        <p>Lo importante no es decidir "cuál blockchain es mejor", sino entender el mecanismo de cada red, gestionar los riesgos operativos y empezar con cantidades pequeñas mientras aprendes. La clave está en el hábito: revisar antes de firmar, verificar direcciones y no entregar jamás tu frase semilla.</p>
 
-        <p>Aquí tienes un plan de acción para empezar hoy mismo:</p>
+        <p>Para empezar con criterio, estos pasos te sirven de guía:</p>
 
         <ol>
-            <li><strong>Instala Phantom</strong> (<a href="https://phantom.app/" target="_blank" rel="noopener">phantom.app</a>) y guarda tu frase semilla de forma segura.</li>
-            <li><strong>Compra tus primeros SOL</strong> en un exchange seguro (consulta los pasos detallados en la <a href="#comprar-sol">sección "Cómo comprar SOL"</a> más arriba).</li>
-            <li><strong>Haz un swap de prueba en Jupiter</strong> (jup.ag). Cambia 0.1 SOL por USDC y viceversa para experimentar la velocidad y el coste.</li>
-            <li><strong>Stakea una pequeña cantidad de SOL</strong> desde Phantom para empezar a generar rendimiento.</li>
-            <li><strong>Explora Magic Eden</strong> y mira algunas colecciones de NFTs en Solana. Compara la experiencia con OpenSea en Ethereum.</li>
-            <li><strong>Lee sobre los fundamentos</strong> en nuestros artículos de <a href="/articulos/blockchain-explicacion-sencilla.html">blockchain</a> y <a href="/articulos/ethereum-smart-contracts.html">Ethereum</a> para entender el contexto más amplio.</li>
+            <li><strong>Entiende la red primero.</strong> Lee sobre Proof of History, Proof of Stake y ejecución en paralelo en las <a href="https://solana.com/" target="_blank" rel="noopener">fuentes oficiales de Solana</a> antes de mover dinero.</li>
+            <li><strong>Elige una wallet</strong> (Phantom o MetaMask) e instálala desde su web oficial, guardando la frase semilla de forma segura.</li>
+            <li><strong>Prueba con cantidades pequeñas</strong> para familiarizarte con las comisiones y los tiempos de confirmación, sin arriesgar más de lo necesario.</li>
+            <li><strong>Revisa antes de firmar</strong> cada operación siguiendo la lista de la sección anterior.</li>
+            <li><strong>Consulta fuentes actualizadas</strong> (documentación de Solana, exploradores, estado de la red) antes de tomar decisiones.</li>
         </ol>
 
         <!-- Sources -->
         <div class="highlight-box" style="margin: 28px 0; background: var(--blue-bg, rgba(77,124,254,0.1)); border: 1px solid var(--blue, #4d7cfe); border-radius: var(--radius-md); padding: 20px 24px;">
         <p style="margin:0 0 8px 0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">🔗 Fuentes y referencias</p>
         <ul style="list-style:none;padding:0;margin:0;">
-          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://solana.com/" target="_blank" rel="noopener" style="color:var(--accent);">Solana.com</a> — Web oficial y documentación</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://solana.com/docs/core/fees" target="_blank" rel="noopener" style="color:var(--accent);">Solana Docs — Fees</a> — Cómo se estructuran las comisiones en Solana</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://solana.com/news/solana-changelog-august-20-2026" target="_blank" rel="noopener" style="color:var(--accent);">Solana Changelog (20 Ago 2026)</a> — Novedades recientes del protocolo</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://help.phantom.com/" target="_blank" rel="noopener" style="color:var(--accent);">Phantom Help — Supported networks</a> — Redes compatibles con Phantom</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://help.phantom.com/" target="_blank" rel="noopener" style="color:var(--accent);">Phantom Help — Supported platforms</a> — Navegadores y plataformas compatibles</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://support.metamask.io/" target="_blank" rel="noopener" style="color:var(--accent);">MetaMask Support — Navigate Solana</a> — Soporte nativo de MetaMask para Solana</li>
+          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://status.solana.com/" target="_blank" rel="noopener" style="color:var(--accent);">status.solana.com</a> — Estado de la red Solana</li>
           <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://defillama.com/chain/Solana" target="_blank" rel="noopener" style="color:var(--accent);">DeFiLlama — Solana</a> — TVL, protocolos y métricas</li>
           <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://solscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Solscan</a> — Explorador de bloques de Solana</li>
-          <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://phantom.app/" target="_blank" rel="noopener" style="color:var(--accent);">Phantom</a> — Wallet oficial para Solana</li>
         </ul>
         </div>
 
@@ -452,13 +486,13 @@
 
         <!-- CTA -->
         <div class="cta-card">
-            <h2>¿Listo para descubrir Solana?</h2>
-            <p>Si decides usar Binance u OKX, puedes comprar tus primeros SOL y registrarte con los códigos de MiCryptoGuía para obtener un descuento en comisiones.</p>
+            <h2>¿Listo para explorar Solana?</h2>
+            <p>Si decides usar Binance u OKX para comprar tus primeros SOL, puedes registrarte con los códigos de MiCryptoGuía para obtener un descuento en comisiones.</p>
             <div class="cta-buttons">
                 <a href="https://www.binance.com/join?ref=BN522" target="_blank" rel="nofollow sponsored" class="btn btn-primary btn-lg"><img src="/img/binance-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">Binance (BN522) →</a>
                 <a href="https://www.okx.com/en-us/join/ok800" target="_blank" rel="nofollow sponsored" class="btn btn-secondary btn-lg"><img src="/img/okx-logo.jpg" alt="" width="22" height="22" style="border-radius:50%;vertical-align:middle;margin-right:6px">OKX (OK800) →</a>
             </div>
-<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la normativa local. En el EEE, verifica qué entidad regulada presta el servicio antes de abrir una cuenta. En América Latina, Binance y OKX funcionan con normalidad.</p>
+<p>🌍 <em>Nota regional:</em> La disponibilidad de cada exchange y de sus servicios varía según el país y la entidad que presta el servicio. Revisa qué servicios están habilitados para tu cuenta y tu ubicación.</p>
         </div>
     </main>
 
