@@ -2625,3 +2625,22 @@ img {
         padding: 110px 16px 50px;
     }
 }
+
+/* ===== Glosario colapsable ===== */
+.glosario-more {
+    margin-top: 16px;
+}
+.glosario-more summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    list-style: none;
+    user-select: none;
+}
+.glosario-more summary::after {
+    content: " ▾";
+}
+.glosario-more[open] summary::after {
+    content: " ▴";
+}
