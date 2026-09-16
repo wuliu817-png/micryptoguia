@@ -350,6 +350,27 @@
     });
   }
 
+  // ===== Hero 统计自动计数 =====
+  // 文章数从 sitemap.xml 取（release.py sitemap 每次发版都会刷新它），术语数直接数页面词汇表，
+  // 都写真实数量，避免首页数字手工维护过期。
+  var statGuias = document.getElementById('statGuias');
+  var statTerminos = document.getElementById('statTerminos');
+
+  if (statTerminos) {
+    var nTerms = document.querySelectorAll('dl.glosario-grid dt').length;
+    if (nTerms) statTerminos.textContent = nTerms + '+';
+  }
+
+  if (statGuias) {
+    fetch('/sitemap.xml')
+      .then(function (r) { return r.text(); })
+      .then(function (xml) {
+        var nGuides = (xml.match(/<loc>[^<]*\/articulos\//g) || []).length;
+        if (nGuides) statGuias.textContent = nGuides + '+';
+      })
+      .catch(function () { /* sitemap 拿不到时保留 HTML 里的静态回退值 */ });
+  }
+
   console.log('🚀 MiCryptoGuía - Ready!');
   console.log('💡 Tip: Press Cmd+K (or Ctrl+K) to search');
   console.log('🌓 Click the sun/moon icon to toggle theme');
