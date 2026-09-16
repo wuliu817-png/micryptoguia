@@ -21,8 +21,10 @@ micryptoguia.com 发版辅助脚本
 """
 
 import argparse
+import html
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -41,6 +43,9 @@ TOP_PAGES = {
     "index.html": ("weekly", "1.0"),
     "sitemap.html": ("weekly", "0.7"),
     "sobre.html": ("monthly", "0.6"),
+    "politica-editorial.html": ("yearly", "0.3"),
+    "politica-de-correcciones.html": ("yearly", "0.3"),
+    "politica-publicitaria.html": ("yearly", "0.3"),
     "privacidad.html": ("yearly", "0.3"),
     "terminos.html": ("yearly", "0.3"),
 }
@@ -76,7 +81,8 @@ def collect_pages():
       - 新式目录结构  articulos/<slug>/index.html（干净 URL，无 .html）
     """
     pages = []
-    for name in ["index.html", "sobre.html", "privacidad.html", "terminos.html", "sitemap.html"]:
+    for name in ["index.html", "sobre.html", "privacidad.html", "terminos.html", "sitemap.html",
+                 "politica-editorial.html", "politica-de-correcciones.html", "politica-publicitaria.html"]:
         cf, pr = TOP_PAGES[name]
         pages.append((name, cf, pr))
     articles = []
@@ -115,6 +121,40 @@ def refresh_sitemap():
     for relpath, cf, pr in pages:
         print(f"   {git_lastmod(relpath)}  {url_for(relpath)}")
     return pages
+
+
+def extract_meta(relpath):
+    """从 HTML 抽 <title> 和 meta description（用于搜索索引）。"""
+    try:
+        with open(relpath, encoding="utf-8") as f:
+            text = f.read()
+    except OSError:
+        return None, ""
+    m = re.search(r"<title>(.*?)</title>", text, re.S)
+    title = html.unescape(m.group(1)).strip() if m else None
+    m = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', text)
+    desc = html.unescape(m.group(1)).strip() if m else ""
+    return title, desc
+
+
+def refresh_search_index(pages):
+    """生成 search.json：文章标题+描述+绝对 URL，供站内搜索动态加载。"""
+    items = []
+    for relpath, _cf, _pr in pages:
+        if not relpath.startswith("articulos/"):
+            continue
+        title, desc = extract_meta(relpath)
+        slug = relpath.replace("articulos/", "").replace("/index.html", "").replace(".html", "")
+        items.append({
+            "title": title or slug.replace("-", " ").title(),
+            "desc": desc,
+            "url": url_for(relpath),
+            "keywords": (slug + " " + (title or "")).lower(),
+        })
+    with open("search.json", "w", encoding="utf-8") as f:
+        json.dump(items, f, ensure_ascii=False, indent=2)
+    print(f"✅ search.json 已生成：{len(items)} 篇文章")
+    return items
 
 
 def changed_urls_from_git():
@@ -167,8 +207,9 @@ def submit_indexnow(urls):
 
 
 def cmd_sitemap(_args):
-    refresh_sitemap()
-    print("\n下一步：git add sitemap.xml && git commit && git push")
+    pages = refresh_sitemap()
+    refresh_search_index(pages)
+    print("\n下一步：git add sitemap.xml search.json && git commit && git push")
 
 
 def cmd_indexnow(args):

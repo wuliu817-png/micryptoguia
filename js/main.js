@@ -42,58 +42,33 @@
       { title: 'Herramientas Útiles', desc: 'CoinMarketCap, CoinGecko, DefiLlama, Etherscan, Dune Analytics', url: '#herramientas', keywords: 'herramientas coinmarketcap coingecko defillama etherscan dune analytics' },
     ];
 
-    // Articles
-    const articles = [
-      { title: 'Qué es Bitcoin', desc: 'Guía completa para principiantes: cómo funciona Bitcoin, por qué tiene valor y cómo empezar', url: 'articulos/que-es-bitcoin.html', keywords: 'bitcoin que es bitcoin criptomoneda descentralizada satoshi nakamoto' },
-      { title: 'Cómo comprar Bitcoin', desc: 'Guía paso a paso para comprar Bitcoin por primera vez en Binance u OKX', url: 'articulos/como-comprar-bitcoin.html', keywords: 'comprar bitcoin como comprar bitcoin exchange binance okx kyc' },
-      { title: 'Crear y configurar MetaMask', desc: 'Guía completa para instalar, configurar y proteger MetaMask paso a paso', url: 'articulos/crear-configurar-metamask.html', keywords: 'metamask crear metamask configurar wallet billetera web3' },
-      { title: 'Blockchain explicada', desc: 'Qué es blockchain, cómo funciona y por qué es importante — explicación sencilla', url: 'articulos/blockchain-explicacion-sencilla.html', keywords: 'blockchain cadena bloques como funciona explicacion sencilla' },
-      { title: 'Binance vs OKX', desc: 'Comparativa completa de exchanges: comisiones, seguridad, experiencia de usuario', url: 'articulos/binance-vs-okx.html', keywords: 'binance okx comparativa exchange cual elegir comisiones seguridad' },
-      { title: 'Cómo hacer staking', desc: 'Guía de staking de criptomonedas: cómo generar ingresos pasivos con tus criptos', url: 'articulos/como-hacer-staking.html', keywords: 'staking como hacer staking ingresos pasivos pos proof of stake' },
-      { title: 'Seguridad crypto: 10 reglas', desc: '10 reglas de oro para proteger tus criptomonedas de hackers y estafas', url: 'articulos/seguridad-criptomonedas.html', keywords: 'seguridad crypto proteger fondos estafas phishing 2fa clave privada' },
-      { title: 'Qué es USDT', desc: 'Guía completa de USDT: qué es, cómo funciona y para qué sirve la stablecoin', url: 'articulos/que-es-usdt.html', keywords: 'usdt stablecoin tether que es como usar comprar' },
-      { title: 'Cómo usar Uniswap', desc: 'Guía paso a paso para intercambiar tokens en Uniswap, el DEX más grande', url: 'articulos/como-usar-uniswap.html', keywords: 'uniswap dex intercambiar tokens defi swap amm' },
-      { title: 'Hot Wallet vs Cold Wallet', desc: 'Comparativa de wallets: cuál elegir según tu nivel de experiencia y cantidad', url: 'articulos/hot-wallet-vs-cold-wallet.html', keywords: 'hot wallet cold wallet metamask trust ledger trezor billetera' },
-      { title: 'Sobre MiCryptoGuía', desc: 'Conoce al autor y la misión de MiCryptoGuía', url: 'sobre.html', keywords: 'sobre autor contacto misión equipo' },
-      { title: 'Ethereum y Smart Contracts', desc: 'Qué es Ethereum, cómo funcionan los contratos inteligentes y sus aplicaciones', url: 'articulos/ethereum-smart-contracts.html', keywords: 'ethereum smart contracts contratos inteligentes gas evm' },
-      { title: 'Claves Privadas y Direcciones', desc: 'Entiende las claves privadas, públicas y direcciones crypto', url: 'articulos/claves-privadas-direcciones.html', keywords: 'clave privada clave pública dirección wallet seguridad' },
-      { title: 'Cómo Enviar y Recibir Cripto', desc: 'Guía paso a paso para enviar y recibir criptomonedas sin errores', url: 'articulos/como-enviar-recibir-cripto.html', keywords: 'enviar recibir criptomonedas transferencia red gas fee' },
-      { title: 'Verificación KYC en Exchanges', desc: 'Guía completa del proceso KYC: documentos, tiempos y consejos', url: 'articulos/verificacion-kyc-exchanges.html', keywords: 'kyc verificación identidad exchange registro documentos' },
-      { title: 'Análisis Técnico Básico', desc: 'Aprende a leer gráficos de velas, soporte, resistencia e indicadores', url: 'articulos/analisis-tecnico-basico.html', keywords: 'análisis técnico velas trading rsi soporte resistencia' },
-      { title: 'Yield Farming', desc: 'Guía de yield farming: liquidity pools, impermanent loss y plataformas', url: 'articulos/yield-farming.html', keywords: 'yield farming liquidity pool impermanent loss aave compound' },
-      { title: 'Cartera Crypto Diversificada', desc: 'Cómo crear y gestionar una cartera de criptomonedas diversificada', url: 'articulos/cartera-crypto-diversificada.html', keywords: 'cartera diversificada portfolio dca rebalanceo inversión' },
-      { title: 'Impuestos Criptomonedas España', desc: 'Guía fiscal: cómo declarar criptomonedas en España', url: 'articulos/impuestos-criptomonedas-espana.html', keywords: 'impuestos criptomonedas españa irpf declaración fiscal hacienda' },
-      { title: 'Verificar Smart Contracts', desc: 'Cómo verificar contratos inteligentes en Etherscan y detectar estafas', url: 'articulos/verificar-smart-contracts.html', keywords: 'verificar smart contract etherscan seguridad token estafa' },
-      { title: 'Puentes Cross-Chain', desc: 'Cómo mover fondos entre blockchains usando puentes cross-chain', url: 'articulos/puentes-cross-chain.html', keywords: 'puente cross-chain bridge mover fondos ethereum arbitrum layerzero' },
-      { title: 'Análisis On-Chain con Dune', desc: 'Guía de análisis on-chain usando Dune Analytics para investigar proyectos', url: 'articulos/analisis-on-chain-dune.html', keywords: 'análisis on-chain dune analytics datos blockchain tvl métricas' },
-    ];
-
-    articles.forEach(function (a) {
-      index.push(a);
-    });
-
     sections.forEach(function (s) {
       index.push(s);
     });
 
-    // Glossary terms
-    var glossaryTerms = [
-      'Altcoin', 'ATH', 'AMM', 'Blockchain', 'CEX', 'DeFi', 'DEX', 'DYOR', 'FOMO', 'FUD',
-      'Gas Fee', 'HODL', 'KYC', 'Liquidity Pool', 'Market Cap', 'NFT', 'PoS', 'PoW',
-      'Private Key', 'Rug Pull', 'Seed Phrase', 'Smart Contract', 'Stablecoin', 'TVL', 'Yield Farming'
-    ];
-
-    glossaryTerms.forEach(function (term) {
-      index.push({
-        title: 'Glosario: ' + term,
-        desc: 'Definición de ' + term + ' en el glosario crypto',
-        url: '#glosario',
-        keywords: term.toLowerCase()
-      });
+    // Glossary terms：直接读页面词汇表，避免写死过期
+    document.querySelectorAll('dl.glosario-grid dt').forEach(function (dt) {
+      var term = dt.textContent.trim();
+      if (term) {
+        index.push({
+          title: 'Glosario: ' + term,
+          desc: 'Definición de ' + term + ' en el glosario crypto',
+          url: '#glosario',
+          keywords: term.toLowerCase()
+        });
+      }
     });
 
     return index;
   }
+
+  // 文章搜索条目：从 search.json 动态加载（release.py sitemap 每次发版自动生成）
+  fetch('/search.json')
+    .then(function (r) { return r.json(); })
+    .then(function (items) {
+      items.forEach(function (a) { searchIndex.push(a); });
+    })
+    .catch(function () { /* search.json 不存在时只有章节和词汇表可搜 */ });
 
   // ===== Theme Toggle =====
   function getTheme() {
