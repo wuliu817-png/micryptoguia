@@ -183,8 +183,10 @@ img {
 }
 
 .logo-icon {
-    font-size: 1.5rem;
-    color: var(--accent);
+    width: 28px;
+    height: 28px;
+    display: block;
+    flex-shrink: 0;
 }
 
 .logo-accent {

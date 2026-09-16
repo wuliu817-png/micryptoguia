@@ -8,6 +8,10 @@
       <stop offset="0%" stop-color="#f7931a"/>
       <stop offset="100%" stop-color="#fbb040"/>
     </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
   <!-- Background -->
@@ -20,16 +24,27 @@
     <!-- skip full grid for simplicity, just a few lines -->
   </g>
 
-  <!-- Bitcoin symbol -->
-  <text x="600" y="280" text-anchor="middle" font-size="120" font-family="sans-serif" font-weight="bold" fill="url(#accent)">₿</text>
+  <!-- Logo icon -->
+  <g transform="translate(520, 95) scale(2.5)">
+    <rect width="64" height="64" rx="14" fill="url(#accent)"/>
+    <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#shine)"/>
+    <rect x="1.5" y="1.5" width="61" height="61" rx="13" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+    <g stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M18 17 H46"/>
+      <path d="M18 47 H46"/>
+      <path d="M24 17 V47"/>
+      <path d="M24 17 C24 17, 41 15, 41 22 C41 30, 24 32, 24 32"/>
+      <path d="M24 33 C24 33, 41 32, 41 39 C41 47, 24 47, 24 47"/>
+    </g>
+  </g>
 
   <!-- Title -->
-  <text x="600" y="380" text-anchor="middle" font-size="64" font-family="Inter, sans-serif" font-weight="800" fill="#eeeff4">
+  <text x="600" y="385" text-anchor="middle" font-size="64" font-family="Inter, sans-serif" font-weight="800" fill="#eeeff4">
     Mi<tspan fill="url(#accent)">Crypto</tspan>Guía
   </text>
 
   <!-- Subtitle -->
-  <text x="600" y="440" text-anchor="middle" font-size="28" font-family="Inter, sans-serif" font-weight="400" fill="#9ca3c8">
+  <text x="600" y="445" text-anchor="middle" font-size="28" font-family="Inter, sans-serif" font-weight="400" fill="#9ca3c8">
     Tu guía completa de criptomonedas en español
   </text>
 
