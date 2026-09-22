@@ -94,6 +94,14 @@ def collect_pages():
             articles.append(f"articulos/{name}/index.html")
     for relpath in sorted(articles):
         pages.append((relpath, "monthly", "0.8"))
+    authors = []
+    if os.path.isdir("autor"):
+        for name in os.listdir("autor"):
+            full = os.path.join("autor", name)
+            if os.path.isdir(full) and os.path.isfile(os.path.join(full, "index.html")):
+                authors.append(f"autor/{name}/index.html")
+    for relpath in sorted(authors):
+        pages.append((relpath, "monthly", "0.5"))
     return pages
 
 
