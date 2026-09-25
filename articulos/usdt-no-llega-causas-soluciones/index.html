@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tu transferencia de USDT no llega: las principales causas (pendiente, red incorrecta, confirmaciones, dirección, MEMO) y cómo comprobarla en el explorador.">
+    <meta name="description" content="Tu transferencia de USDT no llega: causas (pendiente, red, confirmaciones, dirección, MEMO), tiempos por red, caso P2P y cómo comprobarlo en el explorador.">
     <meta name="keywords" content="transferencia USDT no llega, USDT pendiente, USDT red incorrecta, USDT no aparece, TxID, tronscan, etherscan, bscscan">
     <meta name="author" content="Carlos Martínez">
     <meta name="robots" content="index, follow">
@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://micryptoguia.com/articulos/usdt-no-llega-causas-soluciones/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Mi transferencia de USDT no llega: causas y soluciones — MiCryptoGuía">
+    <meta property="og:title" content="Mi transferencia de USDT no llega: causas y soluciones (2026) — MiCryptoGuía">
     <meta property="og:description" content="Tu USDT no aparece en el destino: cómo comprobar si está pendiente, si hubo un problema de red, dirección o MEMO, y qué revisar en el explorador.">
     <meta property="og:url" content="https://micryptoguia.com/articulos/usdt-no-llega-causas-soluciones/">
     <meta property="og:type" content="article">
@@ -30,19 +30,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
 
-    <title>Mi transferencia de USDT no llega: causas y soluciones</title>
+    <title>Mi transferencia de USDT no llega: causas y soluciones (2026)</title>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Mi transferencia de USDT no llega: causas y soluciones",
+      "headline": "Mi transferencia de USDT no llega: causas y soluciones (2026)",
       "description": "Las principales causas por las que una transferencia de USDT no llega (pendiente, red incorrecta, confirmaciones, falta de MEMO, dirección errónea) y cómo comprobarla en el explorador.",
       "author": { "@type": "Person", "@id": "https://micryptoguia.com/autor/carlos-martinez/#person", "name": "Carlos Martínez", "url": "https://micryptoguia.com/autor/carlos-martinez/" },
 
       "publisher": { "@type": "Organization", "@id": "https://micryptoguia.com/#organization", "name": "MiCryptoGuía", "url": "https://micryptoguia.com/" },
       "datePublished": "2026-09-02",
-      "dateModified": "2026-09-08",
+      "dateModified": "2026-09-25",
       "inLanguage": "es",
       "isPartOf": { "@type": "WebSite", "@id": "https://micryptoguia.com/#website" }
     }
@@ -57,7 +57,8 @@
         { "@type": "Question", "name": "¿Qué pasa si envié USDT por la red equivocada?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de quién controla la dirección de destino. Si es tu wallet y soporta esa red, puede que solo tengas que cambiar de red para ver el saldo. Si fue a un exchange, contacta con soporte. Lo tratamos a fondo en la guía de recuperación por red equivocada." } },
         { "@type": "Question", "name": "¿Puedo recuperar USDT enviado sin MEMO/Tag?", "acceptedAnswer": { "@type": "Answer", "text": "Contacta con el soporte de la plataforma y aporta el TxID, el importe y la fecha. El soporte puede intentar identificar el depósito y, si existe un proceso de recuperación, indicarte los siguientes pasos." } },
         { "@type": "Question", "name": "¿Qué significa Pending, Success y Failed?", "acceptedAnswer": { "@type": "Answer", "text": "Pending: la red aún no la confirma. Success o Confirmed: la transacción se ejecutó en esa red. Failed: no se completó on-chain, aunque pudo consumirse una comisión." } },
-        { "@type": "Question", "name": "¿Debo volver a enviar USDT si la primera transferencia no llega?", "acceptedAnswer": { "@type": "Answer", "text": "No. Una segunda transferencia no cancela ni corrige la primera y solo suma comisiones. Comprueba primero el TxID y el estado en el explorador antes de enviar nada más." } }
+        { "@type": "Question", "name": "¿Debo volver a enviar USDT si la primera transferencia no llega?", "acceptedAnswer": { "@type": "Answer", "text": "No. Una segunda transferencia no cancela ni corrige la primera y solo suma comisiones. Comprueba primero el TxID y el estado en el explorador antes de enviar nada más." } },
+        { "@type": "Question", "name": "Compré USDT por P2P y pagué, pero no me llegó. ¿Qué hago?", "acceptedAnswer": { "@type": "Answer", "text": "Es un problema de orden, no de blockchain: el vendedor debe confirmar el pago para que se libere el USDT en custodia. Si el temporizador vence sin confirmación, pulsa «Apelar» y sube el comprobante de pago; la plataforma revisa y puede liberar los USDT." } }
       ]
     }
     </script>
@@ -95,7 +96,7 @@
             <span>Mi transferencia de USDT no llega</span>
         </nav>
 
-        <h1>Mi transferencia de USDT no llega: causas y soluciones</h1>
+        <h1>Mi transferencia de USDT no llega: causas y soluciones (2026)</h1>
         <div class="article-byline">Por <a href="/autor/carlos-martinez/">Carlos Martínez</a> · Editor de MiCryptoGuía</div>
         <div class="article-meta">
             <span>💸 Transferencias</span>
@@ -213,6 +214,47 @@
         <p>Que el explorador diga «confirmada» no siempre significa que el saldo esté disponible. Los exchanges y otros servicios pueden exigir un <strong>número distinto de confirmaciones</strong> antes de acreditar el depósito, como protección contra reorganizaciones de la cadena o dobles gastos.</p>
         <p>Por eso puedes ver la transacción como exitosa en el explorador y, aun así, que tu saldo tarde en aparecer. Cada plataforma fija sus propios requisitos, y en redes con bloques más lentos este paso suma tiempo extra. Es una causa frecuente de la situación «confirmada pero todavía no acreditada».</p>
 
+        <p>Aquí tienes los órdenes de magnitud habituales por red. No son cifras oficiales fijas: cada plataforma fija y ajusta las suyas.</p>
+        <div style="overflow-x:auto;margin:20px 0;">
+            <table style="width:100%;border-collapse:collapse;border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Red</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Explorador</th>
+                        <th style="text-align:left;padding:12px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-color);font-size:0.85rem;">Tiempo típico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Tron (TRC-20)</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);"><a href="https://tronscan.org/" target="_blank" rel="noopener">TronScan</a></td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">segundos a pocos minutos</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">BNB Chain (BEP-20)</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);"><a href="https://bscscan.com/" target="_blank" rel="noopener">BscScan</a></td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">menos de 1 minuto</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Ethereum (ERC-20)</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);"><a href="https://etherscan.io/" target="_blank" rel="noopener">Etherscan</a></td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">1–15 min (más con congestión)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">Solana (SPL)</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);"><a href="https://solscan.io/" target="_blank" rel="noopener">Solscan</a></td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">segundos</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">TON (Jetton)</td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);"><a href="https://tonscan.org/" target="_blank" rel="noopener">Tonscan</a></td>
+                        <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">menos de 1 minuto</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>La regla práctica: si el explorador ya dice «Success» y aun así no ves el saldo, el retraso casi siempre está en la acreditación interna del destino (más confirmaciones, revisión manual), no en la red. En redes lentas como Ethereum los exchanges suelen pedir más confirmaciones que en redes rápidas como Tron.</p>
+
         <h2>Causa 4: la dirección es incorrecta</h2>
         <p>Copiar mal una dirección suele acabar de dos formas. Si el resultado no es una dirección válida (por ejemplo, le falta un carácter o tiene uno de más), la mayoría de wallets y exchanges <strong>rechazan el envío antes de emitirlo</strong> y tus fondos no salen.</p>
         <p>El problema grave es cuando copias una dirección <em>válida</em> pero que no es la tuya: la transacción sale, se confirma y el USDT llega a esa dirección. En ese caso la recuperación depende de si puedes identificar y contactar al dueño, o de la política de la plataforma implicada. Revisar algunos caracteres ayuda, pero para importes importantes conviene usar una dirección guardada, un código QR o una transferencia de prueba, ya que existen ataques de <em>address poisoning</em> con direcciones visualmente parecidas.</p>
@@ -220,6 +262,15 @@
         <h2>Causa 5: falta el MEMO / Tag</h2>
         <p>En los activos y redes que utilizan <strong>MEMO</strong>, <strong>Tag</strong> o <strong>Destination Tag</strong> para depósitos en plataformas custodiales, este campo sirve para distinguir a qué usuario concreto corresponde un depósito cuando mucha gente comparte la misma dirección.</p>
         <p>Si el destino te lo exigía y lo dejaste vacío, el USDT llega técnicamente a la plataforma, pero esta no puede saber que es tuyo. La solución es contactar con su soporte y aportar el <strong>TxID, el importe y la fecha</strong> del envío; el soporte puede intentar identificar el depósito y, si la plataforma dispone de un proceso de recuperación, indicarte los siguientes pasos.</p>
+
+        <h2>Caso aparte: compraste por P2P y el USDT no aparece</h2>
+        <p>Si llegaste aquí porque compraste USDT en el mercado <strong>P2P</strong> (persona a persona) y pagaste pero no lo ves en tu cuenta, es un problema distinto al de una transferencia on-chain: aquí no hay un TxID que rastrear, sino una <strong>orden con custodia (escrow)</strong> que gestiona la plataforma.</p>
+        <ul>
+            <li><strong>Pagaste y no se liberó el USDT.</strong> El vendedor debe confirmar manualmente que recibió tu pago. Si el temporizador vence sin confirmación, pulsa <strong>«Apelar»</strong> y sube el comprobante de pago; la plataforma revisa y puede liberar los USDT de forma forzosa.</li>
+            <li><strong>El vendedor canceló la orden.</strong> Si todavía no pagaste, abre una orden nueva con otro vendedor. Si ya pagaste, abre una apelación o contacta con soporte y adjunta el comprobante.</li>
+            <li><strong>El monto no coincide.</strong> Negocia con el vendedor el reembolso del exceso o el pago de la diferencia; si no hay acuerdo, recurre a la apelación.</li>
+        </ul>
+        <p>En resumen: en P2P el dinero suele estar retenido en custodia y no se pierde, pero tienes que actuar antes de que la orden se cierre. Si en cambio enviaste USDT desde tu wallet o desde tu cuenta del exchange, vuelve al flujo del <strong>TxID</strong> explicado arriba.</p>
 
         <h2>Cómo comprobar la transacción en el explorador</h2>
         <p>El explorador te permite comprobar directamente el estado y los datos registrados en la blockchain. Necesitas el <strong>TxID</strong> (a veces llamado «hash»). Lo encontrarás en el historial de retiros o envíos de la plataforma desde la que salió el USDT.</p>
@@ -240,6 +291,7 @@
             <li>Enviaste por la <strong>red equivocada</strong> o sin el <strong>MEMO/Tag</strong> obligatorio.</li>
             <li>La transacción aparece como <strong>fallida</strong> y el saldo no volvió a tu cuenta.</li>
         </ul>
+        <p>Antes de abrir un ticket, comprueba si tu plataforma tiene una <strong>recuperación de depósito de autoservicio</strong>: algunas (como Binance) te dejan pegar el TxID y rellenan los datos solas si la transacción cumple sus condiciones. Si existe, suele ser más rápido que esperar a un agente.</p>
         <p>Si la plataforma marca el retiro como «fallido» pero el saldo no volvió a tu cuenta, revisa el historial y contacta con soporte: en un retiro de exchange el proceso puede seguir en revisión interna aunque on-chain figure como no completado.</p>
 
         <h2>Qué información preparar para el soporte</h2>
@@ -252,6 +304,13 @@
             <li><strong>Fecha y hora</strong> aproximadas del envío.</li>
             <li>Una <strong>captura de pantalla</strong> del historial o del explorador, si la tienes.</li>
         </ul>
+
+        <h2>No caigas en estafas de «recuperación»</h2>
+        <div class="warning-box">
+            <p class="warning-box__title">⚠️ Nadie legítimo te pedirá tu frase semilla para «recuperar» fondos</p>
+            <p>Ningún exchange, wallet ni servicio oficial te va a pedir tu <strong>frase semilla</strong>, tu <strong>clave privada</strong> ni un <strong>pago</strong> para «liberar» o «recuperar» un depósito. Quien te lo pida está intentando robarte.</p>
+            <p>Desconfía también de los servicios externos que prometen «recuperar criptomonedas perdidas» a cambio de una comisión, y de quienes te escriben por privado (Telegram, X, Discord) haciéndose pasar por soporte. La única vía real es el <strong>soporte oficial</strong> de la plataforma, siempre desde su app o su web — nunca desde un enlace que te pasaron por chat.</p>
+        </div>
 
         <!-- FAQ -->
         <section class="faq-section" id="faq">
@@ -298,6 +357,13 @@
                     <p>No. Una segunda transferencia no cancela ni corrige la primera y solo suma comisiones. Comprueba primero el TxID y el estado en el explorador antes de enviar nada más.</p>
                 </div>
             </div>
+
+            <div class="faq-item">
+                <div class="faq-item__question">Compré USDT por P2P y pagué, pero no me llegó. ¿Qué hago?</div>
+                <div class="faq-item__answer">
+                    <p>Es un problema de orden, no de blockchain: el vendedor debe confirmar el pago para que se libere el USDT en custodia. Si el temporizador vence sin confirmación, pulsa «Apelar» y sube el comprobante de pago; la plataforma revisa y puede liberar los USDT.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Related -->
@@ -320,6 +386,7 @@
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://etherscan.io/" target="_blank" rel="noopener" style="color:var(--accent);">Etherscan</a> — explorador de Ethereum (ERC-20)</li>
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://bscscan.com/" target="_blank" rel="noopener" style="color:var(--accent);">BscScan</a> — explorador de BNB Chain (BEP-20)</li>
                 <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.binance.com/en/support" target="_blank" rel="noopener" style="color:var(--accent);">Binance Support</a> — confirmaciones requeridas y recuperación de depósitos</li>
+                <li style="font-size:0.85rem;margin-bottom:4px;color:var(--text-secondary);">• <a href="https://www.binance.com/es-AR/support/faq/detail/a6f58adc6f5640f8af08aa70a55760f7" target="_blank" rel="noopener" style="color:var(--accent);">Binance: verificar el estado de una transacción</a> — estados y acreditación del depósito</li>
             </ul>
         </div>
 
